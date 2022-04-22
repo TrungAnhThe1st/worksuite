@@ -1,5 +1,6 @@
 <?php
 
 return array (
-  'next' => 'next',
+  'previous' => '&laquo; Trước',
+  'next' => 'Tiếp theo &raquo;',
 );
