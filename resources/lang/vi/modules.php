@@ -496,7 +496,7 @@ return array (
     'employeeName' => 'Tên nhân viên',
     'startDate' => 'Ngày bắt đầu',
     'endDate' => 'Ngày cuối',
-    'logTime' => 'Thời gian công việc',
+    'logTime' => 'Thêm nhật ký công việc',
     'startTimer' => 'Bắt đầu hẹn giờ',
     'stopTimer' => 'Hẹn giờ dừng',
     'selectProject' => 'Chọn dự án',
