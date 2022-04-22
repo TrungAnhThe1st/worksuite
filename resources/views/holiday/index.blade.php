@@ -18,7 +18,8 @@
             <div class="select-month">
                 <select class="form-control select-picker" name="month" id="month" data-live-search="true" data-size="8">
                     @foreach ($months as $month)
-                        <option @if ($currentMonth == $loop->iteration) selected @endif value="{{ $loop->iteration }}">{{ ucfirst($month) }}</option>
+                        {{-- <option @if ($currentMonth == $loop->iteration) selected @endif value="{{ $loop->iteration }}">{{ ucfirst($month) }}</option> --}}
+                        <option @if ($currentMonth == $loop->iteration) selected @endif value="{{ $loop->iteration }}">@lang('app.' . $month)</option>
                     @endforeach
                 </select>
             </div>
