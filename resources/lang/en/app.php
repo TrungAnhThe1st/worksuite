@@ -98,7 +98,7 @@ return array (
   'square' => 'Square',
   'flutterwave' => 'Flutterwave',
   'offline' => 'Offline',
-  'menu' => 
+  'menu' =>
   array (
     'home' => 'Home',
     'holiday' => 'Holiday',
@@ -407,11 +407,11 @@ return array (
   'customers' => 'Customers',
   'sign' => 'Sign',
   'subject' => 'Subject',
-  'contracts' => 
+  'contracts' =>
   array (
     'description' => 'Description',
   ),
-  'pusher' => 
+  'pusher' =>
   array (
     'appId' => 'App Id',
     'appKey' => 'App Key',
@@ -424,7 +424,7 @@ return array (
   'signed' => 'Signed',
   'download' => 'Download',
   'applyToInvoice' => 'Apply To Invoice',
-  'credit-notes' => 
+  'credit-notes' =>
   array (
     'invoiceDate' => 'Invoice Date',
     'invoiceAmount' => 'Invoice Amount',
@@ -433,42 +433,42 @@ return array (
     'remainingAmount' => 'Remaining Amount',
     'amountCredited' => 'Amount Credited',
   ),
-  'onesignal' => 
+  'onesignal' =>
   array (
     'actionMessage' => 'We\'d like to show you notifications for the latest news and updates.',
     'acceptButtonText' => 'ALLOW',
     'cancelButtonText' => 'NO THANKS',
-    'tip' => 
+    'tip' =>
     array (
-      'state' => 
+      'state' =>
       array (
         'unsubscribed' => 'Subscribe to notifications',
         'subscribed' => 'You\'re subscribed to notifications',
         'blocked' => 'You\'ve blocked notifications',
       ),
     ),
-    'message' => 
+    'message' =>
     array (
       'prenotify' => 'Click to subscribe to notifications',
-      'action' => 
+      'action' =>
       array (
         'subscribed' => 'Thanks for subscribing!',
         'resubscribed' => 'You\'re subscribed to notifications',
         'unsubscribed' => 'You won\'t receive notifications again',
       ),
     ),
-    'dialog' => 
+    'dialog' =>
     array (
-      'main' => 
+      'main' =>
       array (
         'title' => 'Manage Site Notifications',
-        'button' => 
+        'button' =>
         array (
           'subscribe' => 'SUBSCRIBE',
           'unsubscribe' => 'UNSUBSCRIBE',
         ),
       ),
-      'blocked' => 
+      'blocked' =>
       array (
         'title' => 'Unblock Notifications',
         'message' => 'Follow these instructions to allow notifications:',
@@ -480,6 +480,7 @@ return array (
   'ticketFiles' => 'Ticket Files',
   'file' => 'Files',
   'renew' => 'Renew',
+  'renewdate' => 'Renewal date',
   'upload' => 'Upload',
   'paymentReminder' => 'Payment Reminder',
   'leadAgent' => 'Lead Agent',
@@ -524,7 +525,7 @@ return array (
   'mins' => 'mins',
   'receipt' => 'Receipt',
   'callback' => 'Callback',
-  'socialAuthSettings' => 
+  'socialAuthSettings' =>
   array (
     'google' => 'Google',
     'facebook' => 'Facebook',
@@ -542,7 +543,7 @@ return array (
   'saveSend' => 'Save & Send',
   'saveDraft' => 'Save as Draft',
   'send' => 'Send',
-  'months' => 
+  'months' =>
   array (
     'January' => 'January',
     'February' => 'February',
@@ -619,7 +620,7 @@ return array (
   'fields' => 'Field',
   'closed' => 'Closed',
   'cancelEstimate' => 'Cancel Estimate',
-  'weeks' => 
+  'weeks' =>
   array (
     'Sun' => 'Su',
     'Mon' => 'Mo',
@@ -629,7 +630,7 @@ return array (
     'Fri' => 'Fr',
     'Sat' => 'Sa',
   ),
-  'monthsShort' => 
+  'monthsShort' =>
   array (
     'Jan' => 'Jan',
     'Feb' => 'Feb',
@@ -717,7 +718,7 @@ return array (
   'stripePublishableKey' => 'Stripe Publishable Key',
   'stripeSecret' => 'Stripe Secret',
   'stripeWebhookSecret' => 'Stripe Webhook Secret',
-  'storageSetting' => 
+  'storageSetting' =>
   array (
     'selectStorage' => 'Select Storage',
     'local' => 'Local (Default)',
