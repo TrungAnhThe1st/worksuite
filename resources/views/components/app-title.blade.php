@@ -14,7 +14,9 @@
                         @php $link .= '/' . Request::segment($i); @endphp
 
                         @if (Request::segment($i) != 'account')
-                            <a href="<?= $link ?>" class="text-lightest">{{ ucwords(str_replace('-', ' ', Request::segment($i))) }}</a> &bull;
+                            <!-- <a href="<= $link ?>" class="text-lightest">@lang('app.menu.' . str_replace('-', ' ', Request::segment($i)))</a> &bull; -->
+                            <!-- <a href="<= $link >" class="text-lightest">@lang('app.menu.' . str_replace('-', ' ', Request::segment($i)))</a> &bull; -->
+                            <a href="<?= $link ?>" class="text-lightest">@lang('app.menu.' . (str_replace('-', ' ', Request::segment($i)))) </a> &bull;
                         @endif
                     @else
                         {{ $pageTitle }}
@@ -31,3 +33,4 @@
     </div>
 </div>
 <!-- PAGE TITLE END -->
+
