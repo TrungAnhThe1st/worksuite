@@ -11,7 +11,7 @@
                     <label class="f-14 text-dark-grey mb-12 text-capitalize w-100" for="usr">@lang('modules.holiday.officeHolidayMarkDays')</label>
                     <div class="d-flex mt-2">
                         @forelse ($holidaysArray as $key => $holidayData)
-                            <x-forms.checkbox class="mr-2 mr-lg-2 mr-md-2" :fieldLabel="$holidayData" fieldName="office_holiday_days[]" :fieldId="$key" :fieldValue="$key" fieldRequired="true" checked="" />
+                            <x-forms.checkbox class="mr-2 mr-lg-2 mr-md-2" :fieldLabel="__('app.' . lcfirst($holidayData))" fieldName="office_holiday_days[]" :fieldId="$key" :fieldValue="$key" fieldRequired="true" checked="" />
                         @empty
                             <p>@lang('messages.holidayDataNotFound')</p>
                         @endforelse

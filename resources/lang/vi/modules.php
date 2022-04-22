@@ -243,7 +243,7 @@ return array (
     'createLinkLabel' => 'Tạo liên kết mời các thành viên tham gia.',
     'allowAnyEmail' => 'Cho phép bất kỳ địa chỉ email nào',
     'onlyAllow' => 'Chỉ cho phép các địa chỉ email có tên miền ',
-    'message' => 'Thêm tin nhắn (optional)',
+    'message' => 'Thêm tin nhắn (tùy chọn)',
     'exEmployee' => 'Ex Nhân viên',
     'dateOfBirth' => 'Ngày sinh',
   ),

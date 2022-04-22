@@ -102,6 +102,7 @@ return array (
   array (
     'home' => 'Trang chủ',
     'holiday' => 'Ngày nghỉ',
+    'holidays' => 'Ngày nghỉ',
     'dashboard' => 'Bảng điều khiển',
     'knowledgebase' => 'Kiến thức cơ bản',
     'clients' => 'Khách hàng',
