@@ -49,7 +49,7 @@ $deleteLeavePermission = user()->permission('delete_leave');
                 <div class="card-body">
 
                     @php
-                        $leaveType = '<span class="badge badge-success" style="background-color:' . $leave->type->color . '">' . $leave->type->type_name . '</span>';
+                        $leaveType = '<span class="badge badge-success" style="background-color:' . $leave->type->color . '">' . __('app.leaveTypes.' . lcfirst($leave->type->type_name)) . '</span>';
                         
                         if ($leave->status == 'approved') {
                             $class = 'text-light-green';
