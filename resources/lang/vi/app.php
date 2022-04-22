@@ -136,6 +136,7 @@ return array (
     'timeLogs' => 'Nhật ký',
     'tasks' => 'Công việc',
     'attendance' => 'Điểm danh',
+    'attendances' => 'Điểm danh',
     'estimates' => 'Ước tính',
     'expenses' => 'Chi phí',
     'leaves' => 'Nghỉ phép',
