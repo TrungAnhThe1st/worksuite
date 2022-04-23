@@ -26,7 +26,7 @@ return array (
   'confirmPassword' => 'Xác nhận mật khẩu',
   'signInToDifferentDomain' => 'Đăng nhập vào tên miền khác',
   'phone' => 'Điện thoại',
-  'mobile' => 'Di động',
+  'mobile' => 'Số điện thoại',
   'createdAt' => 'Đã tạo',
   'action' => 'Hành động',
   'search' => 'Tìm kiếm',
@@ -102,6 +102,7 @@ return array (
   array (
     'home' => 'Trang chủ',
     'holiday' => 'Ngày nghỉ',
+    'holidays' => 'Ngày nghỉ',
     'dashboard' => 'Bảng điều khiển',
     'knowledgebase' => 'Kiến thức cơ bản',
     'clients' => 'Khách hàng',
@@ -136,6 +137,7 @@ return array (
     'timeLogs' => 'Nhật ký',
     'tasks' => 'Công việc',
     'attendance' => 'Điểm danh',
+    'attendances' => 'Điểm danh',
     'estimates' => 'Ước tính',
     'expenses' => 'Chi phí',
     'leaves' => 'Nghỉ phép',
@@ -747,7 +749,7 @@ return array (
   'twoFactorCodeEmail' => 'Mã xác thực email hai yếu tố',
   'twoFactorRecoveryCode' => 'Mã khôi phục xác thực hai yếu tố',
   'clickHere' => 'click here',
-  'itsYou' => 'Đó là bạn',
+  'itsYou' => 'Bạn',
   'withoutDueDate' => 'Không có ngày đến hạn',
   'regenerate' => 'Tái tạo',
   'authenticationRequired' => 'Yêu cầu xác thực',
@@ -795,4 +797,10 @@ return array (
   'details' => 'Chi tiết',
   'profile' => 'Hồ sơ',
   'orderMarkAsComplete' => 'Đánh dấu là hoàn thành',
+  'leaveTypes' =>
+  array (
+    'casual' => 'Thông thường',
+    'sick' => 'Ốm',
+    'earned' => 'Được phép',
+  ),
 );
