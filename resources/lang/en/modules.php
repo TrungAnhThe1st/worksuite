@@ -1665,4 +1665,20 @@ return array (
     'both' => 'Both',
     'validate2FA' => 'Validate 2FA',
   ),
+  'attribute'=>
+  array (
+    'memo' => 'memo',
+    'heading' => 'heading',
+    'column name' => 'column name',
+    'label color' => 'label color',
+    'start date' => 'start date',
+    'due date' => 'due date',
+    'project name' => 'project name',
+    'deadline' => 'deadline',
+    'client' => 'client',
+    'subject' => 'subject',
+    'contract type' => 'contract type',
+    'amount' => 'amount',
+    'comment' => 'comment',
+  ),
 );
