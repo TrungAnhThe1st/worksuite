@@ -10,17 +10,13 @@
                         </div>
                         <div class="col-md-4 text-right">
                             <div class="dropdown">
-                                <button
-                                    class="btn btn-lg f-14 px-2 py-1 text-dark-grey text-capitalize rounded  dropdown-toggle"
-                                    type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <button class="btn btn-lg f-14 px-2 py-1 text-dark-grey text-capitalize rounded  dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fa fa-ellipsis-h"></i>
                                 </button>
 
-                                <div class="dropdown-menu dropdown-menu-right border-grey rounded b-shadow-4 p-0"
-                                     aria-labelledby="dropdownMenuLink" tabindex="0">
+                                <div class="dropdown-menu dropdown-menu-right border-grey rounded b-shadow-4 p-0" aria-labelledby="dropdownMenuLink" tabindex="0">
 
-                                    <a class="cursor-pointer d-block text-dark-grey f-13 px-3 py-2 openRightModal"
-                                       href="{{ route('project-template-task.edit', $task->id) }}">@lang('app.edit')
+                                    <a class="cursor-pointer d-block text-dark-grey f-13 px-3 py-2 openRightModal" href="{{ route('project-template-task.edit', $task->id) }}">@lang('app.edit')
                                         @lang('app.task')</a>
 
                                     <hr class="my-1">
@@ -36,9 +32,9 @@
                         <p class="mb-0 text-lightest f-14 w-30 d-inline-block text-capitalize">@lang('app.project')</p>
                         <p class="mb-0 text-dark-grey f-14">
                             @if ($task->project_template_id)
-                                    {{ $task->projectTemplate->project_name }}
+                            {{ $task->projectTemplate->project_name }}
                             @else
-                                --
+                            --
                             @endif
                         </p>
 
@@ -48,13 +44,13 @@
                             @lang('modules.tasks.priority')</p>
                         <p class="mb-0 text-dark-grey f-14">
                             @if ($task->priority == 'high')
-                                <i class="fa fa-circle mr-1 text-red f-10"></i>
+                            <i class="fa fa-circle mr-1 text-red f-10"></i>
                             @elseif ($task->priority == 'medium')
-                                <i class="fa fa-circle mr-1 text-yellow f-10"></i>
+                            <i class="fa fa-circle mr-1 text-yellow f-10"></i>
                             @else
-                                <i class="fa fa-circle mr-1 text-dark-green f-10"></i>
+                            <i class="fa fa-circle mr-1 text-dark-green f-10"></i>
                             @endif
-                            @lang($task->priority)
+                            @lang('modules.tasks.' . $task->priority)
                         </p>
                     </div>
 
@@ -62,19 +58,17 @@
                         <p class="mb-0 text-lightest f-14 w-30 d-inline-block text-capitalize">
                             @lang('modules.tasks.assignTo')</p>
                         <p class="mb-0 text-dark-grey f-14">
-                        @foreach ($task->usersMany as $item)
-                            <div class="taskEmployeeImg rounded-circle mr-1">
-                                <a href="{{ route('employees.show', $item->id) }}">
-                                    <img data-toggle="tooltip" data-original-title="{{ ucwords($item->name) }}"
-                                         src="{{ $item->image_url }}">
-                                </a>
-                            </div>
-                            @endforeach
-                            </p>
+                            @foreach ($task->usersMany as $item)
+                        <div class="taskEmployeeImg rounded-circle mr-1">
+                            <a href="{{ route('employees.show', $item->id) }}">
+                                <img data-toggle="tooltip" data-original-title="{{ ucwords($item->name) }}" src="{{ $item->image_url }}">
+                            </a>
+                        </div>
+                        @endforeach
+                        </p>
                     </div>
 
-                    <x-cards.data-row :label="__('modules.tasks.taskCategory')"
-                                      :value="$task->category->category_name ?? '--'" html="true" />
+                    <x-cards.data-row :label="__('modules.tasks.taskCategory')" :value="$task->category->category_name ?? '--'" html="true" />
                     <x-cards.data-row :label="__('app.description')" :value="$task->description" html="true" />
 
                 </div>
@@ -83,15 +77,13 @@
             <!-- TASK TABS START -->
             <div class="bg-additional-grey rounded my-3">
 
-                <a class="mb-0 d-block d-lg-none text-dark-grey s-b-mob-sidebar" onclick="openSettingsSidebar()"><i
-                        class="fa fa-ellipsis-v"></i></a>
+                <a class="mb-0 d-block d-lg-none text-dark-grey s-b-mob-sidebar" onclick="openSettingsSidebar()"><i class="fa fa-ellipsis-v"></i></a>
 
                 <div class="s-b-inner s-b-notifications bg-white b-shadow-4 rounded">
 
                     <x-tab-section class="task-tabs">
 
-                        <x-tab-item class="ajax-tab" :active="(request('view') === 'sub_task' || !request('view'))"
-                                    link="#">
+                        <x-tab-item class="ajax-tab" :active="(request('view') === 'sub_task' || !request('view'))" link="#">
                             @lang('modules.tasks.subTask')</x-tab-item>
                     </x-tab-section>
 
@@ -166,6 +158,5 @@
 
             init(RIGHT_MODAL);
         });
-
     </script>
 </div>
