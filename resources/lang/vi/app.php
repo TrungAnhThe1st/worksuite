@@ -809,4 +809,8 @@ return array (
     'sick' => 'Ốm',
     'earned' => 'Được phép',
   ),
+//   'required' =>
+//   array (
+//     'Description' => 'Mô tả',
+//   ),
 );
