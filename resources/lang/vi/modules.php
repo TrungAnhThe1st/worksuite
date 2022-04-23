@@ -244,7 +244,7 @@ return array (
     'allowAnyEmail' => 'Cho phép bất kỳ địa chỉ email nào',
     'onlyAllow' => 'Chỉ cho phép các địa chỉ email có tên miền ',
     'message' => 'Thêm tin nhắn (tùy chọn)',
-    'exEmployee' => 'Ex Nhân viên',
+    'exEmployee' => 'Cựu nhân viên',
     'dateOfBirth' => 'Ngày sinh',
   ),
   'projects' =>

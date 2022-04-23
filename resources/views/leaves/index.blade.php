@@ -94,7 +94,7 @@ $approveRejectPermission = user()->permission('approve_or_reject_leaves');
                             data-container="body" data-size="8">
                             <option value="all">@lang('app.all')</option>
                             @foreach ($leaveTypes as $leaveType)
-                                <option value="{{ $leaveType->id }}">{{ ucwords($leaveType->type_name) }}</option>
+                                <option value="{{ $leaveType->id }}">@lang('app.leaveTypes.' . lcfirst($leaveType->type_name))</option>
                             @endforeach
                         </select>
                     </div>
