@@ -46,9 +46,9 @@ class RenewRequest extends CoreRequest
     public function messages()
     {
         return [
-            'amount.required' => 'The amount field is required.',
-            'start_date.required' => 'The start date field is required.',
-            'end_date.required' => 'The end date field is required.'
+            'amount.required' => __('messages.The amount field is required.'),
+            'start_date.required' => __('messages.The start date field is required.'),
+            'end_date.required' => __('messages.The end date field is required.')
         ];
     }
 

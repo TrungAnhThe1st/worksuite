@@ -1665,4 +1665,20 @@ return array (
     'both' => 'Cả hai',
     'validate2FA' => 'Xác thực 2FA',
   ),
+  'attribute'=>
+  array (
+    'memo' => 'ghi chú',
+    'heading' => 'tiêu đề',
+    'column name' => 'tên cột',
+    'label color' => 'màu nhãn',
+    'start date' => 'ngày bắt đầu',
+    'due date' => 'ngày đến hạn',
+    'project name' => 'tên dự án',
+    'deadline' => 'hạn chót',
+    'client' => 'khách hàng',
+    'subject' => 'tiêu đề',
+    'contract type' => 'loại hợp đồng',
+    'amount' => 'giá trị',
+    'comment' => 'nhận xét',
+  ),
 );
