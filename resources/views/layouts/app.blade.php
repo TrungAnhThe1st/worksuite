@@ -258,7 +258,7 @@
                             aria-hidden="true">×</span></button>
                 </div>
                 <div class="modal-body">
-                    Loading...
+                    Đang tải...
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn-cancel rounded mr-3" data-dismiss="modal">Close</button>
@@ -278,7 +278,7 @@
                             aria-hidden="true">×</span></button>
                 </div>
                 <div class="modal-body">
-                    Loading...
+                    Đang tải...
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn-cancel rounded mr-3" data-dismiss="modal">Close</button>
@@ -298,7 +298,7 @@
                             aria-hidden="true">×</span></button>
                 </div>
                 <div class="modal-body bg-grey">
-                    Loading...
+                    Đang tải...
                 </div>
 
             </div>
