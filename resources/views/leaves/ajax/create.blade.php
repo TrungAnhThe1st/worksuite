@@ -52,7 +52,7 @@ $approveRejectPermission = user()->permission('approve_or_reject_leaves');
                                 @if (isset($leaveQuotas))
                                     @foreach ($leaveQuotas as $leaveQuota)
                                         @if ($leaveQuota->no_of_leaves > 0)
-                                            <option value="{{ $leaveQuota->leaveType->id }}">{{ ucwords($leaveQuota->leaveType->type_name) }}
+                                            <option value="{{ $leaveQuota->leaveType->id }}">@lang('app.leaveTypes.' . lcfirst($leaveQuota->leaveType->type_name))
                                             </option>                                    
                                         @endif
                                     @endforeach                                    
