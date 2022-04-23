@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 23, 2022 lúc 04:21 AM
+-- Thời gian đã tạo: Th4 23, 2022 lúc 05:03 AM
 -- Phiên bản máy phục vụ: 10.4.22-MariaDB
 -- Phiên bản PHP: 8.0.14
 
@@ -1599,7 +1599,59 @@ CREATE TABLE `holidays` (
 --
 
 INSERT INTO `holidays` (`id`, `date`, `occassion`, `created_at`, `updated_at`, `added_by`, `last_updated_by`, `event_id`) VALUES
-(1, '2022-04-30', 'Giải phóng miền Nam', '2022-04-22 07:18:47', '2022-04-22 07:18:48', 1, 1, NULL);
+(1, '2022-04-30', 'Giải phóng miền Nam', '2022-04-22 07:18:47', '2022-04-22 07:18:48', 1, 1, NULL),
+(2, '2022-01-02', 'Sunday', '2022-04-22 20:02:25', '2022-04-22 20:02:25', 1, 1, NULL),
+(3, '2022-01-09', 'Sunday', '2022-04-22 20:02:25', '2022-04-22 20:02:25', 1, 1, NULL),
+(4, '2022-01-16', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(5, '2022-01-23', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(6, '2022-01-30', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(7, '2022-02-06', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(8, '2022-02-13', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(9, '2022-02-20', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(10, '2022-02-27', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(11, '2022-03-06', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(12, '2022-03-13', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(13, '2022-03-20', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(14, '2022-03-27', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(15, '2022-04-03', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(16, '2022-04-10', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(17, '2022-04-17', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(18, '2022-04-24', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(19, '2022-05-01', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(20, '2022-05-08', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(21, '2022-05-15', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(22, '2022-05-22', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(23, '2022-05-29', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(24, '2022-06-05', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(25, '2022-06-12', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(26, '2022-06-19', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(27, '2022-06-26', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(28, '2022-07-03', 'Sunday', '2022-04-22 20:02:26', '2022-04-22 20:02:26', 1, 1, NULL),
+(29, '2022-07-10', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(30, '2022-07-17', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(31, '2022-07-24', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(32, '2022-07-31', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(33, '2022-08-07', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(34, '2022-08-14', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(35, '2022-08-21', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(36, '2022-08-28', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(37, '2022-09-04', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(38, '2022-09-11', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(39, '2022-09-18', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(40, '2022-09-25', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(41, '2022-10-02', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(42, '2022-10-09', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(43, '2022-10-16', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(44, '2022-10-23', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(45, '2022-10-30', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(46, '2022-11-06', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(47, '2022-11-13', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(48, '2022-11-20', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(49, '2022-11-27', 'Sunday', '2022-04-22 20:02:27', '2022-04-22 20:02:27', 1, 1, NULL),
+(50, '2022-12-04', 'Sunday', '2022-04-22 20:02:28', '2022-04-22 20:02:28', 1, 1, NULL),
+(51, '2022-12-11', 'Sunday', '2022-04-22 20:02:28', '2022-04-22 20:02:28', 1, 1, NULL),
+(52, '2022-12-18', 'Sunday', '2022-04-22 20:02:28', '2022-04-22 20:02:28', 1, 1, NULL),
+(53, '2022-12-25', 'Sunday', '2022-04-22 20:02:28', '2022-04-22 20:02:28', 1, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -2175,7 +2227,7 @@ CREATE TABLE `leaves` (
 --
 
 INSERT INTO `leaves` (`id`, `user_id`, `leave_type_id`, `duration`, `leave_date`, `reason`, `status`, `reject_reason`, `created_at`, `updated_at`, `paid`, `added_by`, `last_updated_by`, `event_id`) VALUES
-(8, 1, 1, 'single', '2022-04-22', 'f', 'pending', NULL, '2022-04-22 02:12:19', '2022-04-22 02:12:19', 0, 1, 1, NULL);
+(8, 1, 1, 'single', '2022-04-22', 'f', 'approved', NULL, '2022-04-22 02:12:19', '2022-04-22 20:03:06', 0, 1, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -10026,11 +10078,13 @@ INSERT INTO `notifications` (`id`, `type`, `notifiable_type`, `notifiable_id`, `
 ('41f76935-0037-4bb1-9e80-55a86b069bfd', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":4,\"user_id\":1,\"leave_type_id\":3,\"duration\":\"single\",\"leave_date\":\"2022-04-27T00:00:00+00:00\",\"reason\":\"gg\",\"status\":\"pending\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-04-27\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 00:40:12', '2022-04-22 00:40:12'),
 ('4941d2c8-4d49-4201-adba-a0217c8678da', 'App\\Notifications\\NewLeaveRequest', 'App\\Models\\User', 1, '{\"id\":7,\"user_id\":1,\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 02:11:26', '2022-04-22 02:11:26'),
 ('521d800b-52a3-49f5-b4d8-6565a41e9840', 'App\\Notifications\\NewTicketRequester', 'App\\Models\\User', 3, '{\"id\":1,\"created_at\":\"2022-04-23 02:10:19\",\"subject\":\"concert\",\"user_id\":3,\"status\":\"open\",\"agent_id\":null}', NULL, '2022-04-22 19:10:22', '2022-04-22 19:10:22'),
+('5dbf11cb-5df4-4509-9822-b9155e8f3183', 'App\\Notifications\\LeaveStatusApprove', 'App\\Models\\User', 1, '{\"id\":8,\"user_id\":1,\"leave_type_id\":1,\"duration\":\"single\",\"leave_date\":\"2022-04-22T00:00:00+00:00\",\"reason\":\"f\",\"status\":\"approved\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-04-22\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-23T01:00:05+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 20:03:06', '2022-04-22 20:03:06'),
 ('6be2b602-9371-4ae3-bd65-50d8f49fa29f', 'App\\Notifications\\LeaveStatusUpdate', 'App\\Models\\User', 1, '{\"id\":2,\"user_id\":1,\"leave_type_id\":3,\"duration\":\"multiple\",\"leave_date\":\"2022-10-04T00:00:00+00:00\",\"reason\":\"th\\u01b0\\u1edfng\",\"status\":\"pending\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-10-04\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 00:27:42', '2022-04-22 00:27:42'),
 ('7545338b-dc0d-4aad-8b27-f2b202061841', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":1,\"user_id\":1,\"leave_type_id\":1,\"duration\":\"single\",\"leave_date\":\"2022-04-22T00:00:00+00:00\",\"reason\":\"jjj\",\"status\":\"approved\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-04-22\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":null,\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":null,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":null,\"hourly_rate\":null,\"slack_username\":null,\"department_id\":null,\"designation_id\":null,\"joining_date\":\"2022-04-21T16:52:52+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":null,\"designation\":null}}}', NULL, '2022-04-21 20:25:58', '2022-04-21 20:25:58'),
 ('98e92cc9-9ed6-42a7-aa3a-cd01f0235efc', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":5,\"user_id\":1,\"leave_type_id\":2,\"duration\":\"single\",\"leave_date\":\"2022-05-20T00:00:00+00:00\",\"reason\":\"om\",\"status\":\"approved\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-05-20\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 01:53:26', '2022-04-22 01:53:26'),
 ('ad47722a-68cc-4979-931f-d32757e39fa7', 'App\\Notifications\\NewLeaveRequest', 'App\\Models\\User', 1, '{\"id\":8,\"user_id\":1,\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 02:12:22', '2022-04-22 02:12:22'),
-('b3a52e44-ca48-4872-8b97-06bb4741245a', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":6,\"user_id\":1,\"leave_type_id\":1,\"duration\":\"single\",\"leave_date\":\"2022-04-26T00:00:00+00:00\",\"reason\":\"app.leaveTypes.sd\",\"status\":\"pending\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-04-26\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 02:01:02', '2022-04-22 02:01:02');
+('b3a52e44-ca48-4872-8b97-06bb4741245a', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":6,\"user_id\":1,\"leave_type_id\":1,\"duration\":\"single\",\"leave_date\":\"2022-04-26T00:00:00+00:00\",\"reason\":\"app.leaveTypes.sd\",\"status\":\"pending\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-04-26\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 02:01:02', '2022-04-22 02:01:02'),
+('da853078-2b6a-436f-b942-909e84c8c9a6', 'App\\Notifications\\TaskCompleted', 'App\\Models\\User', 1, '{\"id\":1,\"created_at\":\"2022-04-22 13:57:49\",\"heading\":\"ba vuexy\",\"completed_on\":\"2022-04-23 00:00:00\"}', NULL, '2022-04-22 19:51:40', '2022-04-22 19:51:40');
 
 -- --------------------------------------------------------
 
@@ -11531,7 +11585,7 @@ CREATE TABLE `projects` (
 --
 
 INSERT INTO `projects` (`id`, `project_name`, `project_summary`, `project_admin`, `start_date`, `deadline`, `notes`, `category_id`, `client_id`, `team_id`, `feedback`, `manual_timelog`, `client_view_task`, `allow_client_notification`, `completion_percent`, `calculate_task_progress`, `created_at`, `updated_at`, `deleted_at`, `project_budget`, `currency_id`, `hours_allocated`, `status`, `added_by`, `last_updated_by`, `hash`, `public`) VALUES
-(1, 'Quản lý dân cư', '<p>Pending</p>', NULL, '2022-04-30', NULL, '<p>NOthings</p>', 1, 3, 1, NULL, 'disable', 'disable', 'disable', 0, 'true', '2022-04-22 18:20:40', '2022-04-22 18:20:40', NULL, 100000.00, 1, 200.00, 'not started', 1, 1, 'mSQP9IHueuoCWTYxOUTWNG7xv81fdKLv', 0);
+(1, 'Quản lý dân cư', '<p>Pending</p>', NULL, '2022-04-30', NULL, '<p>NOthings</p>', 1, 3, 1, NULL, 'enable', 'disable', 'disable', 78, 'false', '2022-04-22 18:20:40', '2022-04-22 19:30:40', NULL, 100000.00, 1, 200.00, 'in progress', 1, 1, 'mSQP9IHueuoCWTYxOUTWNG7xv81fdKLv', 0);
 
 -- --------------------------------------------------------
 
@@ -11556,7 +11610,8 @@ INSERT INTO `project_activity` (`id`, `project_id`, `activity`, `created_at`, `u
 (2, 1, 'Phạm Tiến Đức được thêm vào làm thành viên dự án.', '2022-04-22 18:20:42', '2022-04-22 18:20:42'),
 (3, 1, 'messages.addedAsNewProject', '2022-04-22 18:20:44', '2022-04-22 18:20:44'),
 (4, 1, 'messages.newFileUploadedToTheProject', '2022-04-22 18:20:49', '2022-04-22 18:20:49'),
-(5, 1, 'messages.newTaskAddedToTheProject', '2022-04-22 18:41:16', '2022-04-22 18:41:16');
+(5, 1, 'messages.newTaskAddedToTheProject', '2022-04-22 18:41:16', '2022-04-22 18:41:16'),
+(6, 1, 'modules.projects.projectUpdated', '2022-04-22 19:30:40', '2022-04-22 19:30:40');
 
 -- --------------------------------------------------------
 
@@ -11742,6 +11797,13 @@ CREATE TABLE `project_templates` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `project_templates`
+--
+
+INSERT INTO `project_templates` (`id`, `project_name`, `category_id`, `client_id`, `project_summary`, `notes`, `feedback`, `client_view_task`, `allow_client_notification`, `manual_timelog`, `created_at`, `updated_at`) VALUES
+(1, 'Translate', 1, NULL, '<p>Template</p>', '<p><br></p>', NULL, 'disable', 'disable', 'enable', '2022-04-22 19:31:12', '2022-04-22 19:31:12');
+
 -- --------------------------------------------------------
 
 --
@@ -11838,7 +11900,8 @@ CREATE TABLE `project_time_logs` (
 --
 
 INSERT INTO `project_time_logs` (`id`, `project_id`, `task_id`, `user_id`, `start_time`, `end_time`, `memo`, `total_hours`, `total_minutes`, `edited_by_user`, `created_at`, `updated_at`, `hourly_rate`, `earnings`, `approved`, `approved_by`, `invoice_id`, `added_by`, `last_updated_by`, `total_break_minutes`) VALUES
-(1, NULL, 1, 1, '2022-04-22 13:57:50', '2022-04-22 13:58:04', 'ba vuexy', '0', '0', 1, '2022-04-22 06:57:50', '2022-04-22 06:58:04', 0, 0, 1, NULL, NULL, 1, 1, NULL);
+(1, NULL, 1, 1, '2022-04-22 13:57:50', '2022-04-22 13:58:04', 'ba vuexy', '0', '0', 1, '2022-04-22 06:57:50', '2022-04-22 06:58:04', 0, 0, 1, NULL, NULL, 1, 1, NULL),
+(2, 1, 2, 2, '2022-04-23 04:15:00', '2022-04-23 04:15:00', '12', '0', '0', 1, '2022-04-22 19:51:02', '2022-04-22 19:51:02', 0, 0, 1, NULL, NULL, 1, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -12454,7 +12517,7 @@ CREATE TABLE `tasks` (
 --
 
 INSERT INTO `tasks` (`id`, `heading`, `description`, `due_date`, `start_date`, `project_id`, `task_category_id`, `priority`, `status`, `board_column_id`, `column_priority`, `completed_on`, `created_by`, `recurring_task_id`, `dependent_task_id`, `created_at`, `updated_at`, `milestone_id`, `is_private`, `billable`, `estimate_hours`, `estimate_minutes`, `added_by`, `last_updated_by`, `hash`, `repeat`, `repeat_complete`, `repeat_count`, `repeat_type`, `repeat_cycles`, `event_id`) VALUES
-(1, 'ba vuexy', NULL, '2022-04-22', '2022-04-22', NULL, NULL, 'medium', 'incomplete', 1, 0, NULL, 1, NULL, NULL, '2022-04-22 06:57:49', '2022-04-22 06:57:49', NULL, 0, 1, 0, 0, 1, 1, '9E5o7fo1L82FTWSQ1E0xgenwqkGdnKjE', 0, 0, NULL, 'day', NULL, NULL),
+(1, 'ba vuexy', NULL, '2022-04-22', '2022-04-22', NULL, NULL, 'medium', 'incomplete', 2, 0, '2022-04-23 00:00:00', 1, NULL, NULL, '2022-04-22 06:57:49', '2022-04-22 19:51:40', NULL, 0, 1, 0, 0, 1, 1, '9E5o7fo1L82FTWSQ1E0xgenwqkGdnKjE', 0, 0, NULL, 'day', NULL, NULL),
 (2, 'Shuper', '<p>sup</p>', '2022-05-20', '2022-05-19', 1, 1, 'low', 'incomplete', 1, 0, NULL, 1, NULL, NULL, '2022-04-22 18:41:16', '2022-04-22 18:41:16', NULL, 0, 1, 0, 0, 1, 1, 'wZszgt1JfP0YhIz0Za9NLoonwUQUcV7Y', 0, 0, NULL, 'day', NULL, NULL);
 
 -- --------------------------------------------------------
@@ -12553,7 +12616,8 @@ INSERT INTO `task_history` (`id`, `task_id`, `sub_task_id`, `user_id`, `details`
 (2, 1, NULL, 1, 'timerStartedBy', NULL, '2022-04-22 06:57:50', '2022-04-22 06:57:50'),
 (3, 1, NULL, 1, 'timerStoppedBy', NULL, '2022-04-22 06:58:05', '2022-04-22 06:58:05'),
 (4, 2, NULL, 1, 'createActivity', 1, '2022-04-22 18:41:16', '2022-04-22 18:41:16'),
-(5, 2, NULL, 1, 'fileActivity', 1, '2022-04-22 18:41:18', '2022-04-22 18:41:18');
+(5, 2, NULL, 1, 'fileActivity', 1, '2022-04-22 18:41:18', '2022-04-22 18:41:18'),
+(6, 1, NULL, 1, 'statusActivity', 2, '2022-04-22 19:51:43', '2022-04-22 19:51:43');
 
 -- --------------------------------------------------------
 
@@ -15777,7 +15841,7 @@ ALTER TABLE `google_calendar_modules`
 -- AUTO_INCREMENT cho bảng `holidays`
 --
 ALTER TABLE `holidays`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT cho bảng `invoices`
@@ -16077,7 +16141,7 @@ ALTER TABLE `projects`
 -- AUTO_INCREMENT cho bảng `project_activity`
 --
 ALTER TABLE `project_activity`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT cho bảng `project_category`
@@ -16125,7 +16189,7 @@ ALTER TABLE `project_settings`
 -- AUTO_INCREMENT cho bảng `project_templates`
 --
 ALTER TABLE `project_templates`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `project_template_members`
@@ -16155,7 +16219,7 @@ ALTER TABLE `project_template_task_users`
 -- AUTO_INCREMENT cho bảng `project_time_logs`
 --
 ALTER TABLE `project_time_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `project_time_log_breaks`
@@ -16341,7 +16405,7 @@ ALTER TABLE `task_files`
 -- AUTO_INCREMENT cho bảng `task_history`
 --
 ALTER TABLE `task_history`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT cho bảng `task_labels`
