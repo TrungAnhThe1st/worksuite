@@ -560,7 +560,7 @@ return array (
     'December' => 'Tháng 12',
   ),
   'languageSetting' => 'Cài đặt Ngôn ngữ',
-  'archive' => 'Archive',
+  'archive' => 'Lưu trữ',
   'selectCurrency' => 'Chọn tiền tệ',
   'currency' => 'Tiền tệ',
   'draft' => 'Bản nháp',

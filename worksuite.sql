@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 22, 2022 lúc 06:01 PM
+-- Thời gian đã tạo: Th4 23, 2022 lúc 04:21 AM
 -- Phiên bản máy phục vụ: 10.4.22-MariaDB
 -- Phiên bản PHP: 8.0.14
 
@@ -164,6 +164,13 @@ CREATE TABLE `client_details` (
   `added_by` int(10) UNSIGNED DEFAULT NULL,
   `last_updated_by` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `client_details`
+--
+
+INSERT INTO `client_details` (`id`, `user_id`, `company_name`, `address`, `shipping_address`, `postal_code`, `state`, `city`, `office`, `website`, `note`, `linkedin`, `facebook`, `twitter`, `skype`, `gst_number`, `created_at`, `updated_at`, `category_id`, `sub_category_id`, `added_by`, `last_updated_by`) VALUES
+(1, 3, 'Cầu Giấy', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-22 18:16:19', '2022-04-22 18:16:19', NULL, NULL, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -10006,14 +10013,19 @@ CREATE TABLE `notifications` (
 --
 
 INSERT INTO `notifications` (`id`, `type`, `notifiable_type`, `notifiable_id`, `data`, `read_at`, `created_at`, `updated_at`) VALUES
+('004bc070-73fa-4641-a481-8d209802be42', 'App\\Notifications\\NewTask', 'App\\Models\\User', 2, '{\"id\":2,\"created_at\":\"2022-04-23 01:41:16\",\"heading\":\"Shuper\"}', NULL, '2022-04-22 18:41:17', '2022-04-22 18:41:17'),
+('00b11179-9c1b-4015-afc2-96ccb179d5fd', 'App\\Notifications\\NewProject', 'App\\Models\\User', 3, '{\"id\":1,\"project_name\":\"Qu\\u1ea3n l\\u00fd d\\u00e2n c\\u01b0\",\"project_summary\":\"<p>Pending<\\/p>\",\"project_admin\":null,\"start_date\":\"2022-04-30T00:00:00+00:00\",\"deadline\":null,\"notes\":\"<p>NOthings<\\/p>\",\"category_id\":1,\"client_id\":3,\"team_id\":1,\"feedback\":null,\"manual_timelog\":\"disable\",\"client_view_task\":\"disable\",\"allow_client_notification\":\"disable\",\"completion_percent\":0,\"calculate_task_progress\":\"true\",\"deleted_at\":null,\"project_budget\":100000,\"currency_id\":1,\"hours_allocated\":200,\"status\":\"not started\",\"added_by\":1,\"last_updated_by\":1,\"hash\":\"mSQP9IHueuoCWTYxOUTWNG7xv81fdKLv\",\"public\":0,\"isProjectAdmin\":false}', NULL, '2022-04-22 18:20:44', '2022-04-22 18:20:44'),
 ('0eda9d91-dacd-4635-b885-4f33ae77ce29', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":7,\"user_id\":1,\"leave_type_id\":3,\"duration\":\"single\",\"leave_date\":\"2022-05-28T00:00:00+00:00\",\"reason\":\"v\",\"status\":\"pending\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-05-28\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 02:11:23', '2022-04-22 02:11:23'),
 ('1144a572-a2ae-4222-98ff-ee97689383c1', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":8,\"user_id\":1,\"leave_type_id\":1,\"duration\":\"single\",\"leave_date\":\"2022-04-22T00:00:00+00:00\",\"reason\":\"f\",\"status\":\"pending\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-04-22\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 02:12:19', '2022-04-22 02:12:19'),
+('12335bc9-9107-4e7a-854c-7ab3b417de44', 'App\\Notifications\\NewProjectMember', 'App\\Models\\User', 2, '{\"project_id\":1,\"project\":\"Qu\\u1ea3n l\\u00fd d\\u00e2n c\\u01b0\"}', NULL, '2022-04-22 18:20:42', '2022-04-22 18:20:42'),
 ('14af870c-1f4a-4f72-a4fd-c4c2ab068258', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":3,\"user_id\":1,\"leave_type_id\":2,\"duration\":\"single\",\"leave_date\":\"2022-04-29T00:00:00+00:00\",\"reason\":\"om\",\"status\":\"approved\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-04-29\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 00:37:52', '2022-04-22 00:37:52'),
+('216d6ca4-5116-4b28-a7eb-b70ed9493b4f', 'App\\Notifications\\NewTicket', 'App\\Models\\User', 1, '{\"id\":1,\"created_at\":\"2022-04-23 02:10:19\",\"subject\":\"concert\",\"user_id\":3,\"status\":\"open\",\"agent_id\":null}', NULL, '2022-04-22 19:10:19', '2022-04-22 19:10:19'),
 ('21c4d1ca-434c-413f-bd68-e26a4113d8a0', 'App\\Notifications\\NewLeaveRequest', 'App\\Models\\User', 1, '{\"id\":6,\"user_id\":1,\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 02:01:05', '2022-04-22 02:01:05'),
 ('22b49c64-7107-4a5c-a87b-8f1e64816370', 'App\\Notifications\\MultipleLeaveApplication', 'App\\Models\\User', 1, '{\"id\":2,\"user_id\":1,\"leave_type_id\":1,\"duration\":\"multiple\",\"leave_date\":\"2022-10-04T00:00:00+00:00\",\"reason\":\"th\\u01b0\\u1edfng\",\"status\":\"pending\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-10-04\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 00:26:10', '2022-04-22 00:26:10'),
 ('2e4905f8-3e82-4b43-a0ad-bbe94721b57c', 'App\\Notifications\\NewLeaveRequest', 'App\\Models\\User', 1, '{\"id\":5,\"user_id\":1,\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 01:53:29', '2022-04-22 01:53:29'),
 ('41f76935-0037-4bb1-9e80-55a86b069bfd', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":4,\"user_id\":1,\"leave_type_id\":3,\"duration\":\"single\",\"leave_date\":\"2022-04-27T00:00:00+00:00\",\"reason\":\"gg\",\"status\":\"pending\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-04-27\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 00:40:12', '2022-04-22 00:40:12'),
 ('4941d2c8-4d49-4201-adba-a0217c8678da', 'App\\Notifications\\NewLeaveRequest', 'App\\Models\\User', 1, '{\"id\":7,\"user_id\":1,\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 02:11:26', '2022-04-22 02:11:26'),
+('521d800b-52a3-49f5-b4d8-6565a41e9840', 'App\\Notifications\\NewTicketRequester', 'App\\Models\\User', 3, '{\"id\":1,\"created_at\":\"2022-04-23 02:10:19\",\"subject\":\"concert\",\"user_id\":3,\"status\":\"open\",\"agent_id\":null}', NULL, '2022-04-22 19:10:22', '2022-04-22 19:10:22'),
 ('6be2b602-9371-4ae3-bd65-50d8f49fa29f', 'App\\Notifications\\LeaveStatusUpdate', 'App\\Models\\User', 1, '{\"id\":2,\"user_id\":1,\"leave_type_id\":3,\"duration\":\"multiple\",\"leave_date\":\"2022-10-04T00:00:00+00:00\",\"reason\":\"th\\u01b0\\u1edfng\",\"status\":\"pending\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-10-04\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 00:27:42', '2022-04-22 00:27:42'),
 ('7545338b-dc0d-4aad-8b27-f2b202061841', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":1,\"user_id\":1,\"leave_type_id\":1,\"duration\":\"single\",\"leave_date\":\"2022-04-22T00:00:00+00:00\",\"reason\":\"jjj\",\"status\":\"approved\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-04-22\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":null,\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":null,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":null,\"hourly_rate\":null,\"slack_username\":null,\"department_id\":null,\"designation_id\":null,\"joining_date\":\"2022-04-21T16:52:52+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":null,\"designation\":null}}}', NULL, '2022-04-21 20:25:58', '2022-04-21 20:25:58'),
 ('98e92cc9-9ed6-42a7-aa3a-cd01f0235efc', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":5,\"user_id\":1,\"leave_type_id\":2,\"duration\":\"single\",\"leave_date\":\"2022-05-20T00:00:00+00:00\",\"reason\":\"om\",\"status\":\"approved\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-05-20\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 01:53:26', '2022-04-22 01:53:26'),
@@ -11514,6 +11526,13 @@ CREATE TABLE `projects` (
   `public` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `projects`
+--
+
+INSERT INTO `projects` (`id`, `project_name`, `project_summary`, `project_admin`, `start_date`, `deadline`, `notes`, `category_id`, `client_id`, `team_id`, `feedback`, `manual_timelog`, `client_view_task`, `allow_client_notification`, `completion_percent`, `calculate_task_progress`, `created_at`, `updated_at`, `deleted_at`, `project_budget`, `currency_id`, `hours_allocated`, `status`, `added_by`, `last_updated_by`, `hash`, `public`) VALUES
+(1, 'Quản lý dân cư', '<p>Pending</p>', NULL, '2022-04-30', NULL, '<p>NOthings</p>', 1, 3, 1, NULL, 'disable', 'disable', 'disable', 0, 'true', '2022-04-22 18:20:40', '2022-04-22 18:20:40', NULL, 100000.00, 1, 200.00, 'not started', 1, 1, 'mSQP9IHueuoCWTYxOUTWNG7xv81fdKLv', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -11527,6 +11546,17 @@ CREATE TABLE `project_activity` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `project_activity`
+--
+
+INSERT INTO `project_activity` (`id`, `project_id`, `activity`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Nguyễn Xuân Khiêm được thêm vào làm thành viên dự án.', '2022-04-22 18:20:41', '2022-04-22 18:20:41'),
+(2, 1, 'Phạm Tiến Đức được thêm vào làm thành viên dự án.', '2022-04-22 18:20:42', '2022-04-22 18:20:42'),
+(3, 1, 'messages.addedAsNewProject', '2022-04-22 18:20:44', '2022-04-22 18:20:44'),
+(4, 1, 'messages.newFileUploadedToTheProject', '2022-04-22 18:20:49', '2022-04-22 18:20:49'),
+(5, 1, 'messages.newTaskAddedToTheProject', '2022-04-22 18:41:16', '2022-04-22 18:41:16');
 
 -- --------------------------------------------------------
 
@@ -11542,6 +11572,14 @@ CREATE TABLE `project_category` (
   `added_by` int(10) UNSIGNED DEFAULT NULL,
   `last_updated_by` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `project_category`
+--
+
+INSERT INTO `project_category` (`id`, `category_name`, `created_at`, `updated_at`, `added_by`, `last_updated_by`) VALUES
+(1, 'Sàn', '2022-04-22 18:14:16', '2022-04-22 18:14:16', 1, 1),
+(2, 'AI', '2022-04-22 18:14:30', '2022-04-22 18:14:30', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -11567,6 +11605,13 @@ CREATE TABLE `project_files` (
   `last_updated_by` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `project_files`
+--
+
+INSERT INTO `project_files` (`id`, `user_id`, `project_id`, `filename`, `hashname`, `size`, `description`, `google_url`, `dropbox_link`, `created_at`, `updated_at`, `external_link_name`, `external_link`, `added_by`, `last_updated_by`) VALUES
+(1, 1, 1, 'database.txt', '165b191bdec9ac54e42166240646279e.txt', '526', NULL, NULL, NULL, '2022-04-22 18:20:46', '2022-04-22 18:20:46', NULL, NULL, 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -11583,6 +11628,14 @@ CREATE TABLE `project_members` (
   `added_by` int(10) UNSIGNED DEFAULT NULL,
   `last_updated_by` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `project_members`
+--
+
+INSERT INTO `project_members` (`id`, `user_id`, `project_id`, `created_at`, `updated_at`, `hourly_rate`, `added_by`, `last_updated_by`) VALUES
+(1, 2, 1, NULL, NULL, 0, 1, 1),
+(2, 1, 1, NULL, NULL, 0, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -12131,7 +12184,8 @@ CREATE TABLE `role_user` (
 INSERT INTO `role_user` (`user_id`, `role_id`) VALUES
 (1, 1),
 (1, 2),
-(2, 2);
+(2, 2),
+(3, 3);
 
 -- --------------------------------------------------------
 
@@ -12352,8 +12406,8 @@ CREATE TABLE `taskboard_columns` (
 --
 
 INSERT INTO `taskboard_columns` (`id`, `column_name`, `slug`, `label_color`, `priority`, `created_at`, `updated_at`) VALUES
-(1, 'Incomplete', 'incomplete', '#d21010', 1, '2022-04-21 02:23:04', '2022-04-21 02:26:49'),
-(2, 'Completed', 'completed', '#679c0d', 2, '2022-04-21 02:24:43', '2022-04-21 02:26:49');
+(1, 'Chưa hoàn thành', 'incomplete', '#d21010', 1, '2022-04-21 02:23:04', '2022-04-21 02:26:49'),
+(2, 'Hoàn thành', 'completed', '#679c0d', 2, '2022-04-21 02:24:43', '2022-04-21 02:26:49');
 
 -- --------------------------------------------------------
 
@@ -12400,7 +12454,8 @@ CREATE TABLE `tasks` (
 --
 
 INSERT INTO `tasks` (`id`, `heading`, `description`, `due_date`, `start_date`, `project_id`, `task_category_id`, `priority`, `status`, `board_column_id`, `column_priority`, `completed_on`, `created_by`, `recurring_task_id`, `dependent_task_id`, `created_at`, `updated_at`, `milestone_id`, `is_private`, `billable`, `estimate_hours`, `estimate_minutes`, `added_by`, `last_updated_by`, `hash`, `repeat`, `repeat_complete`, `repeat_count`, `repeat_type`, `repeat_cycles`, `event_id`) VALUES
-(1, 'ba vuexy', NULL, '2022-04-22', '2022-04-22', NULL, NULL, 'medium', 'incomplete', 1, 0, NULL, 1, NULL, NULL, '2022-04-22 06:57:49', '2022-04-22 06:57:49', NULL, 0, 1, 0, 0, 1, 1, '9E5o7fo1L82FTWSQ1E0xgenwqkGdnKjE', 0, 0, NULL, 'day', NULL, NULL);
+(1, 'ba vuexy', NULL, '2022-04-22', '2022-04-22', NULL, NULL, 'medium', 'incomplete', 1, 0, NULL, 1, NULL, NULL, '2022-04-22 06:57:49', '2022-04-22 06:57:49', NULL, 0, 1, 0, 0, 1, 1, '9E5o7fo1L82FTWSQ1E0xgenwqkGdnKjE', 0, 0, NULL, 'day', NULL, NULL),
+(2, 'Shuper', '<p>sup</p>', '2022-05-20', '2022-05-19', 1, 1, 'low', 'incomplete', 1, 0, NULL, 1, NULL, NULL, '2022-04-22 18:41:16', '2022-04-22 18:41:16', NULL, 0, 1, 0, 0, 1, 1, 'wZszgt1JfP0YhIz0Za9NLoonwUQUcV7Y', 0, 0, NULL, 'day', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -12416,6 +12471,13 @@ CREATE TABLE `task_category` (
   `added_by` int(10) UNSIGNED DEFAULT NULL,
   `last_updated_by` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `task_category`
+--
+
+INSERT INTO `task_category` (`id`, `category_name`, `created_at`, `updated_at`, `added_by`, `last_updated_by`) VALUES
+(1, 'Ship', '2022-04-22 18:28:19', '2022-04-22 18:28:19', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -12458,6 +12520,13 @@ CREATE TABLE `task_files` (
   `last_updated_by` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `task_files`
+--
+
+INSERT INTO `task_files` (`id`, `user_id`, `task_id`, `filename`, `description`, `google_url`, `hashname`, `size`, `dropbox_link`, `external_link`, `external_link_name`, `created_at`, `updated_at`, `added_by`, `last_updated_by`) VALUES
+(1, 1, 2, 'Khu đô thị sẽ có 3 khu nhà chính.docx', NULL, NULL, 'dd62c2f8ceb592858bdd5bf3a12ffde1.docx', '15767', NULL, NULL, NULL, '2022-04-22 18:41:18', '2022-04-22 18:41:18', 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -12482,7 +12551,9 @@ CREATE TABLE `task_history` (
 INSERT INTO `task_history` (`id`, `task_id`, `sub_task_id`, `user_id`, `details`, `board_column_id`, `created_at`, `updated_at`) VALUES
 (1, 1, NULL, 1, 'createActivity', 1, '2022-04-22 06:57:49', '2022-04-22 06:57:49'),
 (2, 1, NULL, 1, 'timerStartedBy', NULL, '2022-04-22 06:57:50', '2022-04-22 06:57:50'),
-(3, 1, NULL, 1, 'timerStoppedBy', NULL, '2022-04-22 06:58:05', '2022-04-22 06:58:05');
+(3, 1, NULL, 1, 'timerStoppedBy', NULL, '2022-04-22 06:58:05', '2022-04-22 06:58:05'),
+(4, 2, NULL, 1, 'createActivity', 1, '2022-04-22 18:41:16', '2022-04-22 18:41:16'),
+(5, 2, NULL, 1, 'fileActivity', 1, '2022-04-22 18:41:18', '2022-04-22 18:41:18');
 
 -- --------------------------------------------------------
 
@@ -12498,6 +12569,13 @@ CREATE TABLE `task_labels` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `task_labels`
+--
+
+INSERT INTO `task_labels` (`id`, `label_id`, `task_id`, `created_at`, `updated_at`) VALUES
+(1, 1, 2, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -12512,6 +12590,13 @@ CREATE TABLE `task_label_list` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `task_label_list`
+--
+
+INSERT INTO `task_label_list` (`id`, `label_name`, `color`, `description`, `created_at`, `updated_at`) VALUES
+(1, 'gấp', '#69D100', 'gấp', '2022-04-22 18:40:17', '2022-04-22 18:40:17');
 
 -- --------------------------------------------------------
 
@@ -12549,7 +12634,8 @@ CREATE TABLE `task_users` (
 --
 
 INSERT INTO `task_users` (`id`, `task_id`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, NULL, NULL);
+(1, 1, 1, NULL, NULL),
+(2, 2, 2, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -12640,6 +12726,13 @@ CREATE TABLE `tickets` (
   `added_by` int(10) UNSIGNED DEFAULT NULL,
   `last_updated_by` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tickets`
+--
+
+INSERT INTO `tickets` (`id`, `user_id`, `subject`, `status`, `priority`, `agent_id`, `channel_id`, `type_id`, `close_date`, `created_at`, `updated_at`, `deleted_at`, `mobile`, `country_id`, `added_by`, `last_updated_by`) VALUES
+(1, 3, 'concert', 'closed', 'low', NULL, NULL, NULL, '2022-04-23', '2022-04-22 19:10:19', '2022-04-22 19:10:58', NULL, NULL, NULL, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -12769,6 +12862,13 @@ CREATE TABLE `ticket_replies` (
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `ticket_replies`
+--
+
+INSERT INTO `ticket_replies` (`id`, `ticket_id`, `user_id`, `message`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 1, 1, '<p>none</p>', '2022-04-22 19:10:22', '2022-04-22 19:10:22', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -12876,7 +12976,13 @@ CREATE TABLE `universal_search` (
 INSERT INTO `universal_search` (`id`, `searchable_id`, `module_type`, `title`, `route_name`, `created_at`, `updated_at`) VALUES
 (1, 1, NULL, 'Phạm Tiến Đức', 'employees.show', '2022-04-21 02:52:52', '2022-04-21 02:52:52'),
 (2, 2, 'employee', 'Nguyễn Xuân Khiêm', 'employees.show', '2022-04-22 02:20:12', '2022-04-22 02:20:12'),
-(3, 1, 'task', 'ba vuexy', 'tasks.edit', '2022-04-22 06:57:49', '2022-04-22 06:57:49');
+(3, 1, 'task', 'ba vuexy', 'tasks.edit', '2022-04-22 06:57:49', '2022-04-22 06:57:49'),
+(4, 3, 'client', 'Lê Minh Hiếu', 'clients.show', '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(5, 3, 'client', 'cuongnew87@gmail.com', 'clients.show', '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(6, 3, 'client', 'Cầu Giấy', 'clients.show', '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(7, 1, 'project', 'Quản lý dân cư', 'projects.show', '2022-04-22 18:20:44', '2022-04-22 18:20:44'),
+(8, 2, 'task', 'Shuper', 'tasks.edit', '2022-04-22 18:41:17', '2022-04-22 18:41:17'),
+(9, 1, 'ticket', 'concert', 'tickets.show', '2022-04-22 19:10:22', '2022-04-22 19:10:22');
 
 -- --------------------------------------------------------
 
@@ -12921,8 +13027,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed`, `two_factor_email_confirmed`, `remember_token`, `image`, `mobile`, `gender`, `salutation`, `locale`, `status`, `login`, `onesignal_player_id`, `created_at`, `updated_at`, `last_login`, `email_notifications`, `country_id`, `dark_theme`, `rtl`, `two_fa_verify_via`, `two_factor_code`, `two_factor_expires_at`, `admin_approval`, `permission_sync`) VALUES
-(1, 'Phạm Tiến Đức', 'cuongnew37@gmail.com', '$2y$10$B7TOco4bpT8bnFnRn4t0.uCePOrww41oXLLxupe5hFEk/8BupaYzC', NULL, NULL, 0, 0, 'QPm937G0aDb65wCDXIWE1f5ATQIpOS0kqjGMGBPtUqRGzwgggxTkVlP07zcK', NULL, '0976947340', 'male', NULL, 'VI', 'active', 'enable', NULL, '2022-04-21 02:52:51', '2022-04-22 06:51:08', '2022-04-22 06:51:08', 1, 232, 0, 0, NULL, NULL, NULL, 1, 1),
-(2, 'Nguyễn Xuân Khiêm', 'ducpham0307@gmail.com', '$2y$10$wokiLOPYY9tvjK9M4ul.T./8FMGMwr.xr6/PuC9YSYT3S/6WQea4.', NULL, NULL, 0, 0, NULL, NULL, '13456789645', 'male', NULL, 'en', 'active', 'enable', NULL, '2022-04-22 02:20:11', '2022-04-22 02:20:11', NULL, 0, 1, 0, 0, NULL, NULL, NULL, 1, 1);
+(1, 'Phạm Tiến Đức', 'cuongnew37@gmail.com', '$2y$10$B7TOco4bpT8bnFnRn4t0.uCePOrww41oXLLxupe5hFEk/8BupaYzC', NULL, NULL, 0, 0, 'QPm937G0aDb65wCDXIWE1f5ATQIpOS0kqjGMGBPtUqRGzwgggxTkVlP07zcK', NULL, '0976947340', 'male', NULL, 'VI', 'active', 'enable', NULL, '2022-04-21 02:52:51', '2022-04-22 18:00:05', '2022-04-22 18:00:05', 1, 232, 0, 0, NULL, NULL, NULL, 1, 1),
+(2, 'Nguyễn Xuân Khiêm', 'ducpham0307@gmail.com', '$2y$10$wokiLOPYY9tvjK9M4ul.T./8FMGMwr.xr6/PuC9YSYT3S/6WQea4.', NULL, NULL, 0, 0, NULL, NULL, '13456789645', 'male', NULL, 'en', 'active', 'enable', NULL, '2022-04-22 02:20:11', '2022-04-22 02:20:11', NULL, 0, 1, 0, 0, NULL, NULL, NULL, 1, 1),
+(3, 'Lê Minh Hiếu', 'cuongnew87@gmail.com', '$2y$10$NHHTZWoiMxC4G6x8rQLXY.qKU26uKVnNCt1P8MQp7A.GWuHc3FaHa', NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 'en', 'active', 'disable', NULL, '2022-04-22 18:16:19', '2022-04-22 18:16:19', NULL, 0, NULL, 0, 0, NULL, NULL, NULL, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -13564,7 +13671,266 @@ INSERT INTO `user_permissions` (`id`, `user_id`, `permission_id`, `permission_ty
 (515, 2, 264, 5, '2022-04-22 02:20:12', '2022-04-22 02:20:12'),
 (516, 2, 265, 5, '2022-04-22 02:20:12', '2022-04-22 02:20:12'),
 (517, 2, 266, 5, '2022-04-22 02:20:12', '2022-04-22 02:20:12'),
-(518, 2, 267, 5, '2022-04-22 02:20:12', '2022-04-22 02:20:12');
+(518, 2, 267, 5, '2022-04-22 02:20:12', '2022-04-22 02:20:12'),
+(519, 3, 1, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(520, 3, 2, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(521, 3, 3, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(522, 3, 4, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(523, 3, 5, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(524, 3, 6, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(525, 3, 7, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(526, 3, 8, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(527, 3, 9, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(528, 3, 10, 2, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(529, 3, 11, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(530, 3, 12, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(531, 3, 13, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(532, 3, 14, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(533, 3, 15, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(534, 3, 16, 2, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(535, 3, 17, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(536, 3, 18, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(537, 3, 19, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(538, 3, 20, 2, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(539, 3, 21, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(540, 3, 22, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(541, 3, 23, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(542, 3, 24, 2, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(543, 3, 25, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(544, 3, 26, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(545, 3, 27, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(546, 3, 28, 2, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(547, 3, 29, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(548, 3, 30, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(549, 3, 31, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(550, 3, 32, 2, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(551, 3, 33, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(552, 3, 34, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(553, 3, 35, 1, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(554, 3, 36, 3, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(555, 3, 37, 1, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(556, 3, 38, 1, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(557, 3, 39, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(558, 3, 40, 2, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(559, 3, 41, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(560, 3, 42, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(561, 3, 43, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(562, 3, 44, 2, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(563, 3, 45, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(564, 3, 46, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(565, 3, 47, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(566, 3, 48, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(567, 3, 49, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(568, 3, 50, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(569, 3, 51, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(570, 3, 52, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(571, 3, 53, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(572, 3, 54, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(573, 3, 55, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(574, 3, 56, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(575, 3, 57, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(576, 3, 58, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(577, 3, 59, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(578, 3, 60, 4, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(579, 3, 61, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(580, 3, 62, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(581, 3, 63, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(582, 3, 64, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(583, 3, 65, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(584, 3, 66, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(585, 3, 67, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(586, 3, 68, 2, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(587, 3, 69, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(588, 3, 70, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(589, 3, 71, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(590, 3, 72, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(591, 3, 73, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(592, 3, 74, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(593, 3, 75, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(594, 3, 76, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(595, 3, 77, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(596, 3, 78, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(597, 3, 79, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(598, 3, 80, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(599, 3, 81, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(600, 3, 82, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(601, 3, 83, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(602, 3, 84, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(603, 3, 85, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(604, 3, 86, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(605, 3, 87, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(606, 3, 88, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(607, 3, 89, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(608, 3, 90, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(609, 3, 91, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(610, 3, 92, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(611, 3, 93, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(612, 3, 94, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(613, 3, 95, 4, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(614, 3, 96, 4, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(615, 3, 98, 1, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(616, 3, 99, 4, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(617, 3, 100, 4, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(618, 3, 101, 1, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(619, 3, 102, 1, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(620, 3, 103, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(621, 3, 104, 5, '2022-04-22 18:16:19', '2022-04-22 18:16:19'),
+(622, 3, 105, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(623, 3, 106, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(624, 3, 107, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(625, 3, 108, 4, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(626, 3, 109, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(627, 3, 110, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(628, 3, 111, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(629, 3, 112, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(630, 3, 113, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(631, 3, 114, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(632, 3, 115, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(633, 3, 116, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(634, 3, 117, 4, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(635, 3, 118, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(636, 3, 119, 4, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(637, 3, 120, 4, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(638, 3, 121, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(639, 3, 122, 4, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(640, 3, 123, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(641, 3, 124, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(642, 3, 125, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(643, 3, 126, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(644, 3, 127, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(645, 3, 128, 4, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(646, 3, 129, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(647, 3, 131, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(648, 3, 132, 4, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(649, 3, 133, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(650, 3, 134, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(651, 3, 135, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(652, 3, 136, 4, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(653, 3, 137, 4, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(654, 3, 138, 1, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(655, 3, 139, 1, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(656, 3, 140, 4, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(657, 3, 141, 4, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(658, 3, 142, 1, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(659, 3, 143, 1, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(660, 3, 144, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(661, 3, 145, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(662, 3, 146, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(663, 3, 147, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(664, 3, 148, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(665, 3, 149, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(666, 3, 150, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(667, 3, 151, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(668, 3, 152, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(669, 3, 153, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(670, 3, 154, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(671, 3, 155, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(672, 3, 156, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(673, 3, 157, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(674, 3, 158, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(675, 3, 159, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(676, 3, 160, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(677, 3, 161, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(678, 3, 163, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(679, 3, 164, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(680, 3, 165, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(681, 3, 166, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(682, 3, 167, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(683, 3, 168, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(684, 3, 169, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(685, 3, 170, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(686, 3, 171, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(687, 3, 172, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(688, 3, 173, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(689, 3, 174, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(690, 3, 175, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(691, 3, 176, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(692, 3, 177, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(693, 3, 178, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(694, 3, 179, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(695, 3, 180, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(696, 3, 181, 4, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(697, 3, 182, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(698, 3, 183, 4, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(699, 3, 184, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(700, 3, 185, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(701, 3, 186, 4, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(702, 3, 187, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(703, 3, 188, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(704, 3, 189, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(705, 3, 191, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(706, 3, 192, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(707, 3, 193, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(708, 3, 194, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(709, 3, 195, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(710, 3, 196, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(711, 3, 197, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(712, 3, 198, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(713, 3, 199, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(714, 3, 200, 4, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(715, 3, 201, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(716, 3, 202, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(717, 3, 203, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(718, 3, 204, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(719, 3, 205, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(720, 3, 206, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(721, 3, 207, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(722, 3, 208, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(723, 3, 209, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(724, 3, 210, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(725, 3, 211, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(726, 3, 212, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(727, 3, 213, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(728, 3, 214, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(729, 3, 215, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(730, 3, 216, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(731, 3, 217, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(732, 3, 218, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(733, 3, 219, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(734, 3, 220, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(735, 3, 221, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(736, 3, 222, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(737, 3, 223, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(738, 3, 224, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(739, 3, 225, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(740, 3, 226, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(741, 3, 227, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(742, 3, 228, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(743, 3, 229, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(744, 3, 230, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(745, 3, 231, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(746, 3, 232, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(747, 3, 233, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(748, 3, 234, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(749, 3, 235, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(750, 3, 236, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(751, 3, 237, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(752, 3, 238, 2, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(753, 3, 239, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(754, 3, 240, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(755, 3, 241, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(756, 3, 242, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(757, 3, 243, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(758, 3, 244, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(759, 3, 245, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(760, 3, 246, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(761, 3, 247, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(762, 3, 248, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(763, 3, 249, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(764, 3, 250, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(765, 3, 251, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(766, 3, 252, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(767, 3, 253, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(768, 3, 254, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(769, 3, 259, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(770, 3, 260, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(771, 3, 261, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(772, 3, 262, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(773, 3, 263, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(774, 3, 264, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(775, 3, 265, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(776, 3, 266, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
+(777, 3, 267, 5, '2022-04-22 18:16:20', '2022-04-22 18:16:20');
 
 -- --------------------------------------------------------
 
@@ -15105,7 +15471,7 @@ ALTER TABLE `client_contacts`
 -- AUTO_INCREMENT cho bảng `client_details`
 --
 ALTER TABLE `client_details`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `client_docs`
@@ -15705,31 +16071,31 @@ ALTER TABLE `product_sub_category`
 -- AUTO_INCREMENT cho bảng `projects`
 --
 ALTER TABLE `projects`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `project_activity`
 --
 ALTER TABLE `project_activity`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `project_category`
 --
 ALTER TABLE `project_category`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `project_files`
 --
 ALTER TABLE `project_files`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `project_members`
 --
 ALTER TABLE `project_members`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `project_milestones`
@@ -15951,13 +16317,13 @@ ALTER TABLE `taskboard_columns`
 -- AUTO_INCREMENT cho bảng `tasks`
 --
 ALTER TABLE `tasks`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `task_category`
 --
 ALTER TABLE `task_category`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `task_comments`
@@ -15969,25 +16335,25 @@ ALTER TABLE `task_comments`
 -- AUTO_INCREMENT cho bảng `task_files`
 --
 ALTER TABLE `task_files`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `task_history`
 --
 ALTER TABLE `task_history`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `task_labels`
 --
 ALTER TABLE `task_labels`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `task_label_list`
 --
 ALTER TABLE `task_label_list`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `task_notes`
@@ -15999,7 +16365,7 @@ ALTER TABLE `task_notes`
 -- AUTO_INCREMENT cho bảng `task_users`
 --
 ALTER TABLE `task_users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `taxes`
@@ -16023,7 +16389,7 @@ ALTER TABLE `theme_settings`
 -- AUTO_INCREMENT cho bảng `tickets`
 --
 ALTER TABLE `tickets`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `ticket_agent_groups`
@@ -16059,7 +16425,7 @@ ALTER TABLE `ticket_groups`
 -- AUTO_INCREMENT cho bảng `ticket_replies`
 --
 ALTER TABLE `ticket_replies`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `ticket_reply_templates`
@@ -16095,13 +16461,13 @@ ALTER TABLE `translate_settings`
 -- AUTO_INCREMENT cho bảng `universal_search`
 --
 ALTER TABLE `universal_search`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `users_chat`
@@ -16137,7 +16503,7 @@ ALTER TABLE `user_leadboard_settings`
 -- AUTO_INCREMENT cho bảng `user_permissions`
 --
 ALTER TABLE `user_permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=519;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=778;
 
 --
 -- AUTO_INCREMENT cho bảng `user_taskboard_settings`
