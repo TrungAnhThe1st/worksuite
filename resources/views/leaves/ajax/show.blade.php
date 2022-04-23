@@ -23,7 +23,7 @@ $deleteLeavePermission = user()->permission('delete_leave');
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right border-grey rounded b-shadow-4 p-0"
                                         aria-labelledby="dropdownMenuLink" tabindex="0">
-                                        
+
                                             @if ($editLeavePermission == 'all'
                                             || ($editLeavePermission == 'added' && user()->id == $leave->added_by)
                                             || ($editLeavePermission == 'owned' && user()->id == $leave->user_id)
@@ -49,8 +49,8 @@ $deleteLeavePermission = user()->permission('delete_leave');
                 <div class="card-body">
 
                     @php
-                        $leaveType = '<span class="badge badge-success" style="background-color:' . $leave->type->color . '">' . __('app.leaveTypes.' . lcfirst($leave->type->type_name)) . '</span>';
-                        
+                        $leaveType = '<span class="badge badge-success" style="padding: 5px; font-size: 15px; background-color:' . $leave->type->color . '">' . __('app.leaveTypes.' . lcfirst($leave->type->type_name)) . '</span>';
+
                         if ($leave->status == 'approved') {
                             $class = 'text-light-green';
                             $status = __('app.approved');
@@ -62,9 +62,9 @@ $deleteLeavePermission = user()->permission('delete_leave');
                             $status = __('app.rejected');
                         }
                         $paidStatus = '<i class="fa fa-circle mr-1 ' . $class . ' f-10"></i> ' . $status;
-                        
+
                         $reject_reason = !is_null($leave->reject_reason) ? $leave->reject_reason : '--';
-                        
+
                     @endphp
 
                     <div class="col-12 px-0 pb-3 d-lg-flex d-md-flex d-block">
