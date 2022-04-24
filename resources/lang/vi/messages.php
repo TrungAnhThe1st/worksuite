@@ -75,7 +75,7 @@ return array (
   'employeeUpdated' => 'Đã cập nhật thông tin nhân viên thành công.',
   'adminCannotDelete' => 'Không thể xóa người dùng quản trị viên.',
   'employeeDeleted' => 'Đã xóa nhân viên thành công.',
-  'roleCannotChange' => 'Không thể thay đổi vai trò của người dùng này.',
+  'roleCannotChange' => 'Không thể thay đổi chức vụ của người dùng này.',
   'roleAssigned' => 'Các vai trò đã được chỉ định thành công.',
   'estimateCreated' => 'Đã tạo ước tính thành công.',
   'estimateUpdated' => 'Đã cập nhật ước tính thành công.',

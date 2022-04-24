@@ -45,7 +45,7 @@ class HolidayDataTable extends BaseDataTable
                 return $row->occassion;
             })
             ->addColumn('day', function ($row) {
-                return $row->date->format('l');
+                return  __('app.' . lcfirst($row->date->format('l')));
             })
             ->addColumn('action', function ($row) {
 
