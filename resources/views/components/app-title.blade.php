@@ -32,7 +32,3 @@
     </div>
 </div>
 <!-- PAGE TITLE END -->
-<<<<<<< HEAD
-=======
-
->>>>>>> e3da024178ed517fabd9fb8f9513a91f9d18441d
