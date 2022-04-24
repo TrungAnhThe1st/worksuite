@@ -44,7 +44,7 @@ class LeavesQuotaController extends AccountBaseController
 
             foreach ($leaveQuotas->leaveTypes as $leaveQuota) {
                 if ($leaveQuota->no_of_leaves > 0) {
-                    $options .= '<option value="' . $leaveQuota->leaveType->id . '"> ' .  $leaveQuota->leaveType->type_name . ' </option>';
+                    $options .= '<option value="' . $leaveQuota->leaveType->id . '"> ' .  __('app.leaveTypes.' . lcfirst($leaveQuota->leaveType->type_name)) . ' </option>';
                 }
             }
         }
@@ -54,7 +54,7 @@ class LeavesQuotaController extends AccountBaseController
             $options = '';
             
             foreach ($leaveQuotas as $leaveQuota) {
-                $options .= '<option value="' . $leaveQuota->id . '"> ' .  $leaveQuota->type_name . ' </option>';
+                $options .= '<option value="' . $leaveQuota->id . '"> ' .  __('app.leaveTypes.' . lcfirst($leaveQuota->type_name)) . ' </option>';
             }
         }
 

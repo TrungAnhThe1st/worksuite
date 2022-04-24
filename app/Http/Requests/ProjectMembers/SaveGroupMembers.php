@@ -33,7 +33,7 @@ class SaveGroupMembers extends CoreRequest
     public function messages()
     {
         return [
-            'group_id.0.required' => 'Choose at-least 1 '
+            'group_id.0.required' => __('messages.Choose at-least 1')
         ];
     }
 

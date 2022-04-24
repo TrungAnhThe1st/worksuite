@@ -10,7 +10,8 @@
                     <h5 class="mb-0 f-13">{{ $currentDate->format($global->date_format) }}
                     </h5>
                     <p class="mb-0 f-13 text-dark-grey">
-                        <label class="badge badge-secondary">{{ $currentDate->format('l') }}</label>
+                        {{-- <label class="badge badge-secondary">{{ $currentDate->format('l') }}</label> --}}
+                        <label class="badge badge-secondary">@lang('app.' . lcfirst($currentDate->format('l')))</label>
                     </p>
                 </div>
             </td>
@@ -60,7 +61,8 @@
                     <h5 class="mb-0 f-13">{{ $currentDate->format($global->date_format) }}
                     </h5>
                     <p class="mb-0 f-13 text-dark-grey">
-                        <span class="badge badge-secondary">{{ $currentDate->format('l') }}</span>
+                        {{-- <span class="badge badge-secondary">{{ $currentDate->format('l') }}</span> --}}
+                        <label class="badge badge-secondary">@lang('app.' . lcfirst($currentDate->format('l')))</label>
                     </p>
                 </div>
             </td>

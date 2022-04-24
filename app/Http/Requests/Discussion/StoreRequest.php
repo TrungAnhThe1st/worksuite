@@ -33,7 +33,7 @@ class StoreRequest extends FormRequest
                     $commnet = trim(str_replace('<p><br></p>', '', $value));
 
                     if ($commnet == '') {
-                        $fail(ucfirst($attribute) . ' ' . __('app.required'));
+                        $fail(ucfirst(__('modules.attribute.' . $attribute)) . ' ' . __('app.required'));
                     }
                 }
             ]
