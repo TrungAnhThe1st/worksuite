@@ -1,7 +1,8 @@
 <?php
 
-return array(
-  'dashboard' => array(
+return array (
+  'dashboard' => 
+  array (
     'totalClients' => 'Total Clients',
     'newClients' => 'New Clients',
     'totalEmployees' => 'Total Employees',
@@ -110,9 +111,10 @@ return array(
     'verificationPending' => 'Account verification pending',
     'verificationPendingInfo' => 'Your account verification is pending by the owner.',
     'birthday' => 'Birthdays',
-    'inDays' => 'in :days days'
+    'inDays' => 'in :days days',
   ),
-  'client' => array(
+  'client' => 
+  array (
     'createNote' => 'Add Note',
     'noteTitle' => 'Note Title',
     'noteType' => 'Note Type',
@@ -154,9 +156,10 @@ return array(
     'clientSubCategory' => 'Client Sub Category',
     'profileInfo' => 'Profile Info',
     'clientCanLogin' => 'Can user login to app?',
-    'salutation' => 'Salutation'
+    'salutation' => 'Salutation',
   ),
-  'credit-notes' => array(
+  'credit-notes' => 
+  array (
     'currency' => 'Currency',
     'creditNoteDate' => 'Credit Note Date',
     'isRecurringPayment' => 'Is it a recurring payments?',
@@ -189,11 +192,13 @@ return array(
     'partial' => 'Partial',
     'uploadInvoice' => 'Upload Invoice',
   ),
-  'contacts' => array(
+  'contacts' => 
+  array (
     'addContact' => 'Add Contact',
     'contactName' => 'Contact Name',
   ),
-  'employees' => array(
+  'employees' => 
+  array (
     'addNewEmployee' => 'Add New Employee',
     'createTitle' => 'Add Employee Info',
     'employeeName' => 'Employee Name',
@@ -240,9 +245,10 @@ return array(
     'onlyAllow' => 'Only allow email addresses with domain ',
     'message' => 'Add a message (optional)',
     'exEmployee' => 'Ex employee',
-    'dateOfBirth' => 'Date of Birth'
+    'dateOfBirth' => 'Date of Birth',
   ),
-  'projects' => array(
+  'projects' => 
+  array (
     'addNewProject' => 'Add New Project',
     'projectName' => 'Project Name',
     'projectMembers' => 'Project Members',
@@ -317,7 +323,8 @@ return array(
     'createPublicProject' => 'Create Public Project',
     'projectAdminInfo' => 'Project Admin can add project member, tasks, discussions, notes, files, milestones',
   ),
-  'tasks' => array(
+  'tasks' => 
+  array (
     'selectProject' => 'Select Project',
     'hideCompletedTask' => 'Hide completed task',
     'newTask' => 'New Task',
@@ -390,7 +397,8 @@ return array(
     'copyTaskLink' => 'Copy Task Link',
     'timerPausedBy' => 'Timer paused',
   ),
-  'invoices' => array(
+  'invoices' => 
+  array (
     'addInvoice' => 'Create Invoice',
     'paid' => 'Paid',
     'unpaid' => 'Unpaid',
@@ -462,12 +470,12 @@ return array(
     'note' => 'note for recipient',
     'placeOrder' => 'Place Order',
     'cardInfo' => 'Card Info',
-    'canceled' => 'Canceled',
     'calculateTax' => 'Calculate Tax',
     'afterDiscount' => 'After Discount',
     'beforeDiscount' => 'Before Discount',
   ),
-  'issues' => array(
+  'issues' => 
+  array (
     'pending' => 'Pending',
     'addIssue' => 'Add Issue',
     'updateIssue' => 'Update Issue',
@@ -476,7 +484,8 @@ return array(
     'markResolved' => 'Mark Resolved',
     'reportedOn' => 'Reported On',
   ),
-  'timeLogs' => array(
+  'timeLogs' => 
+  array (
     'whoLogged' => 'Who Logged',
     'startTime' => 'Start Time',
     'endTime' => 'End Time',
@@ -503,11 +512,13 @@ return array(
     'paused' => 'Paused',
     'break' => 'Break',
   ),
-  'taskCalendar' => array(
+  'taskCalendar' => 
+  array (
     'note' => 'Calendar shows the due tasks on their due dates.',
     'taskDetail' => 'Task Detail',
   ),
-  'notices' => array(
+  'notices' => 
+  array (
     'addNotice' => 'Add New Notice',
     'notice' => 'Notice',
     'noticeHeading' => 'Notice Heading',
@@ -516,7 +527,8 @@ return array(
     'toEmployee' => 'To Employees',
     'toClients' => 'To Clients',
   ),
-  'knowledgeBase' => array(
+  'knowledgeBase' => 
+  array (
     'addknowledgebase' => 'Add New Article',
     'knowledgeDetails' => 'Article Details',
     'knowledgeDesc' => 'Description',
@@ -528,31 +540,37 @@ return array(
     'toEmployee' => 'For Employees',
     'toClients' => 'For Clients',
   ),
-  'sticky' => array(
+  'sticky' => 
+  array (
     'addNote' => 'Add Note',
     'lastUpdated' => 'Updated',
     'colors' => 'Color Code',
   ),
-  'taskReport' => array(
+  'taskReport' => 
+  array (
     'taskToComplete' => 'Total Tasks',
     'completedTasks' => 'Completed Tasks',
     'pendingTasks' => 'Pending Tasks',
     'chartTitle' => 'Pie Chart',
   ),
-  'leaveReport' => array(
+  'leaveReport' => 
+  array (
     'leaveReport' => 'Leave Report',
   ),
-  'timeLogReport' => array(
+  'timeLogReport' => 
+  array (
     'chartTitle' => 'Time Log Bar Chart',
   ),
-  'financeReport' => array(
+  'financeReport' => 
+  array (
     'showAmountIn' => 'Show amount in ',
     'selectCurrency' => 'Select Currency',
     'chartTitle' => 'Earnings Bar Chart',
     'financeReport' => 'Earnings Bar Chart',
     'noteText' => 'The earnings are calculated with latest exchange rate for different currencies.',
   ),
-  'accountSettings' => array(
+  'accountSettings' => 
+  array (
     'updateTitle' => 'Update Settings',
     'companyName' => 'Company Name',
     'companyEmail' => 'Company Email',
@@ -609,7 +627,8 @@ return array(
     'autocompleteSearch' => 'Autocomplete Search',
     'businessMapLocation' => 'Business Location on Map',
   ),
-  'profile' => array(
+  'profile' => 
+  array (
     'updateTitle' => 'Update Profile Info',
     'yourName' => 'Your Name',
     'yourEmail' => 'Your Email',
@@ -621,7 +640,8 @@ return array(
     'uploadPicture' => 'Upload your picture',
     'companyLogo' => 'Company Logo',
   ),
-  'emailSettings' => array(
+  'emailSettings' => 
+  array (
     'notificationTitle' => 'Email Notification Settings',
     'notificationSubtitle' => 'Select the events for which an email should be sent to user.',
     'configTitle' => 'Mail Configuration',
@@ -662,7 +682,8 @@ return array(
     'mailConnection' => 'Enable Email Queue',
     'mailConnectionInfo' => '<p>To speed up the emailing process, the system will add the emails in queue and will send them via cron job.</p>  <p> Choose <u>No</u> to send email immediately <strong>(Slower)</strong>.</p><p>Choose <u>Yes</u> to send emails in background <strong>(Faster)</strong>.</p><p><em>*Make sure cron job is configured properly to use email queueing.</em></p>',
   ),
-  'moduleSettings' => array(
+  'moduleSettings' => 
+  array (
     'employeeModuleTitle' => 'Modules',
     'clientModuleTitle' => 'Client Module Title',
     'employeeSubTitle' => 'Select the modules which you want to enable.',
@@ -675,7 +696,8 @@ return array(
     'step1' => 'Step 1',
     'step2' => 'Step 2',
   ),
-  'currencySettings' => array(
+  'currencySettings' => 
+  array (
     'addNewCurrency' => 'Add New Currency',
     'currencyName' => 'Currency Name',
     'currencySymbol' => 'Currency Symbol',
@@ -698,7 +720,90 @@ return array(
     'leftWithSpace' => 'Left With Space',
     'rightWithSpace' => 'Right With Space',
   ),
-  'messages' => array(
+  'attendance' => 
+  array (
+    'present' => 'Present',
+    'absent' => 'Absent',
+    'hoursClocked' => 'Hours Clocked',
+    'late' => 'Late',
+    'halfDay' => 'Half Day',
+    'markAttendance' => 'Mark Attendance',
+    'officeStartTime' => 'Office Start Time',
+    'officeEndTime' => 'Office End Time',
+    'halfDayMarkTime' => 'Half-day Mark Time',
+    'lateMark' => 'Late mark after (minutes)',
+    'allowSelfClock' => 'Allowed Employee self Clock-In/Clock-Out',
+    'everyonePresent' => 'Everyone`s present today',
+    'clock_in' => 'Clock In',
+    'clockedIn' => 'Clocked In',
+    'clock_out' => 'Clock Out',
+    'clockedOut' => 'Clocked Out',
+    'working_from' => 'Working From',
+    'workFrom' => 'Office, Home, etc.',
+    'officeOpenDays' => 'Office opens on',
+    'totalWorkingDays' => 'Working Days',
+    'daysPresent' => 'Days Present',
+    'viewFullAttendance' => 'View Full Attendance',
+    'currentTime' => 'Current Time',
+    'attendanceByDate' => 'Attendance By Date',
+    'attendanceByMember' => 'Attendance by Member',
+    'attendanceByHour' => 'Attendance by Hour',
+    'attendanceByLocation' => 'Attendance by Location',
+    'holiday' => 'Holiday',
+    'holidays' => 'Holidays',
+    'holidayfor' => 'Holiday for',
+    'checkininday' => 'Maximum check-in allowed in a day?',
+    'maxColckIn' => 'Maximum check-ins reached.',
+    'attendanceDetail' => 'Attendance Detail',
+    'yes' => 'Yes',
+    'no' => 'No',
+    'leave' => 'On Leave',
+    'leaveFor' => 'Leave for',
+    'checkForIp' => 'Clock-in check with added IP address',
+    'checkForRadius' => 'Clock-in check with added location Radius',
+    'radius' => 'Radius (in meter)',
+    'ipAddress' => 'IP Address',
+    'notClockOut' => 'Did not clock out',
+    'saveCurrentLocation' => 'Save Clock-In Location',
+    'attendanceReminderStatus' => 'Attendance Reminder Status',
+    'ReminderAfterMinutes' => 'Reminder After Minutes',
+    'showOnMap' => 'Show on Map',
+  ),
+  'gdpr' => 
+  array (
+    'optIn' => 'OPT IN',
+    'optOut' => 'OPT OUT',
+    'purpose' => 'Purpose',
+    'ipAddress' => 'IP Address',
+    'additionalDescription' => 'Additional Description',
+    'consent' => 'Consent',
+    'purposeDescription' => 'Purpose Description',
+    'disagree' => 'I Disagree',
+    'agree' => 'I Agree',
+    'publicPageConsentInformationBlock' => 'Public page consent information block',
+    'gdprTopInformationBlock' => 'GDPR page top information block',
+    'termsAndCondition' => 'Terms and Conditions',
+    'privacyAndPolicy' => 'Privacy and Policy',
+    'gdpr' => 'GDPR',
+    'customers' => 'Customers',
+    'staffMember' => 'Staff Member',
+    'requestDataRemoval' => 'Request Data Removal',
+    'dataRemovalDescription' => 'Briefly describe the purpose of removal of data',
+    'removalRequestSuccess' => 'Removal request has been sent to the admin. You will informed once it is approved',
+    'enableGdpr' => 'Enable GDPR',
+    'showGdprLinkInNavigation' => 'Show GDPR link in customers area navigation',
+    'showGdprLinkInFooter' => 'Show GDPR link in customers area footer',
+    'enableCustomerToExportData' => 'Enable customers to export their data',
+    'enableCustomerToRequestForDataRemove' => 'Enable customers to request for data remove',
+    'enableLeadTorequestForDataRemove' => 'Enable leads to request for data removal (via public form)',
+    'enableTNCToCustomersFooter' => 'Enable Terms & Conditions to customers footer',
+    'viewConsent' => 'View Consent',
+    'allowLeadToUpdateDataFromPublicForm' => 'Allow leads to update their data from public form',
+    'enableConsentForCustomers' => 'Enable consent for customers',
+    'enableConsentForLeads' => 'Enable consent for Leads',
+  ),
+  'messages' => 
+  array (
     'startConversation' => 'New Conversation',
     'chooseMember' => 'Choose Member',
     'message' => 'Message',
@@ -713,12 +818,50 @@ return array(
     'members' => 'Project Members',
     'typing' => 'typing',
   ),
+  'proposal' => 
+  array (
+    'publicLink' => 'Public Link',
+    'createProposal' => 'Create Proposal',
+    'updateProposal' => 'Update Proposal',
+    'createTitle' => 'Add Proposal Info',
+    'updateTitle' => 'Update Proposal Info',
+    'addNewLead' => 'Add New Proposal',
+    'viewDetails' => 'View Details',
+    'title' => ' Lead Proposal',
+    'proposal' => ' Lead Proposal',
+    'validTill' => 'Valid Till',
+    'waiting' => 'Waiting',
+    'accepted' => 'Accepted',
+    'declined' => 'Declined',
+    'convertProposalTitle' => 'Convert Proposal To Invoice',
+    'edit' => 'Edit',
+    'action' => 'Action',
+    'view' => 'View',
+    'delete' => 'Delete',
+    'download' => 'Download',
+    'rejectConfirm' => 'Reject Confirm',
+    'requireSignature' => 'Require customer signature for approval',
+    'sendProposal' => 'Send Proposal',
+  ),
   'taskDetail' => 'Task Detail',
-  'projectCategory' => array(
+  'projectCategory' => 
+  array (
     'addProjectCategory' => 'Add Project Category',
     'categoryName' => 'Category Name',
   ),
-  'themeSettings' => array(
+  'discussions' => 
+  array (
+    'replied' => 'replied at',
+    'posted' => 'posted on',
+    'lastCreated' => 'Last Created',
+    'lastModified' => 'Last Modified',
+    'discussionCategory' => 'Discussion Category',
+    'bestReply' => 'Best Reply',
+    'removeBestReply' => 'Remove as Best Reply',
+    'goBestReply' => 'Go To Best Reply',
+  ),
+  'themeSettings' => 
+  array (
     'adminPanelTheme' => 'Admin Panel Theme',
     'projectAdminPanelTheme' => 'Project Admin Panel Theme',
     'employeePanelTheme' => 'Employee Panel Theme',
@@ -744,9 +887,11 @@ return array(
     'faviconSize' => 'Recommended size: 16 X 16 (Pixels)',
     'sidebarBrandingStyle' => 'Sidebar Branding Style',
   ),
-  'estimates' => array(
-    'createEstimate' => 'Create Estimate',
+  'estimates' => 
+  array (
+    'copyLink' => 'Copy Public Link',
     'validTill' => 'Valid Till',
+    'createEstimate' => 'Create Estimate',
     'waiting' => 'Waiting',
     'accepted' => 'Accepted',
     'declined' => 'Declined',
@@ -775,12 +920,40 @@ return array(
     'sendEstimate' => 'Send Estimate',
     'draft' => 'Draft',
     'canceled' => 'Canceled',
-    'copyLink' => 'Copy Public Link',
     'uploadSignature' => 'Upload Signature',
   ),
-  'payments' => array(
-    'addPayment' => 'Add Payment',
+  'expenses' => 
+  array (
+    'itemName' => 'Item Name',
+    'purchaseFrom' => 'Purchased From',
+    'purchaseDate' => 'Purchase Date',
+    'addExpense' => 'Add Expense',
+    'updateExpense' => 'Update Expense',
+    'editExpense' => 'Edit Expense',
+    'infinite' => 'For Infinite Expenses',
+    'expenseCategory' => 'Expense Category',
+    'attachBill' => 'Attach Bill',
+    'removeBill' => 'Remove Bill',
+    'approvedBy' => 'Approved By',
+  ),
+  'expensesRecurring' => 
+  array (
+    'itemName' => 'Item Name',
+    'created_at' => 'Created On',
+    'addExpense' => 'Add Recurring Expense',
+    'purchaseDate' => 'Purchase Date',
+    'purchaseFrom' => 'Purchased From',
+    'updateExpense' => 'Update Expense',
+    'infinite' => 'For Infinite Expenses',
+    'dayOfWeek' => 'Day Of Week',
+    'dayOfMonth' => 'Day Of Month',
+    'lastPaymentDate' => 'Last Payment Date',
+  ),
+  'payments' => 
+  array (
     'paidOn' => 'Paid On',
+    'addPayment' => 'Add Payment',
+    'paymentLink' => 'View Payment Page',
     'selectInvoice' => 'Select Invoice',
     'paymentGateway' => 'Payment Gateway',
     'transactionId' => 'Transaction Id',
@@ -797,7 +970,6 @@ return array(
     'totalDue' => 'Total Due',
     'paymentDetailNotFound' => 'Payment details not found.',
     'paymentDetails' => 'Payment details',
-    'paymentLink' => 'View Payment Page',
     'razorpayStatus' => 'Razorpay Status',
     'payStack' => 'Paystack',
     'paystackKey' => 'Paystack Key',
@@ -824,133 +996,140 @@ return array(
     'squareAccessToken' => 'Square Access Token',
     'amountInWords' => 'Amount received in words',
   ),
-
-  'paystack' => array(
-    'client_name' => 'Name',
-    'client_email' => 'Email',
-    'details' => 'Paystack Details',
+  'holiday' => 
+  array (
+    'date' => 'Date',
+    'occasion' => 'Occasion',
+    'day' => 'Day',
+    'title' => 'Holiday',
+    'addNewHoliday' => 'Add Holiday',
+    'viewDetails' => 'View Details',
+    'createHoliday' => 'Create Holiday',
+    'followUpNotFound' => 'No Holiday found',
+    'markSunday' => ' Mark Default Holidays',
+    'action' => 'Action',
+    'listOf' => 'List Of',
+    'viewOnCalendar' => 'View on Calendar',
+    'markHoliday' => 'Mark Holiday',
+    'officeHolidayMarkDays' => 'Mark day for Holiday',
   ),
-  'flutterwave' => array(
-    'client_name' => 'Name',
-    'client_email' => 'Email',
-    'client_phone' => 'Phone',
-    'details' => 'Flutterwave Details',
-   'somethingWentWrong' => 'Something went wrong please try again later.',
+  'lead' => 
+  array (
+    'changeToClient' => 'Change To Client',
+    'addFollowUp' => 'Add Follow Up',
+    'companyName' => 'Company Name',
+    'mobile' => 'Mobile',
+    'nextFollowUp' => 'Next Follow Up',
+    'leadAgent' => 'Lead Agent',
+    'createTitle' => 'Add Lead Info',
+    'updateTitle' => 'Update Lead Info',
+    'proposal' => 'Proposal',
+    'leadDetails' => 'Lead Details',
+    'clientName' => 'Lead Name',
+    'companyDetails' => 'Company Details',
+    'website' => 'Website',
+    'address' => 'Address',
+    'clientEmail' => 'Lead Email',
+    'emailNote' => 'Lead will login using this email.',
+    'password' => 'Password',
+    'passwordNote' => 'Client will login using this password.',
+    'passwordUpdateNote' => 'Client will login using this password. (Leave blank to keep current password)',
+    'addNewLead' => 'Add New Lead',
+    'viewDetails' => 'View Details',
+    'leadSource' => 'Lead Source',
+    'leadStatus' => 'Lead Status',
+    'leadFollowUp' => 'Follow Up Next',
+    'remark' => 'Remark',
+    'profile' => 'Profile',
+    'followUp' => 'Follow Up',
+    'note' => 'Note',
+    'email' => 'Email',
+    'source' => 'Source',
+    'status' => 'Status',
+    'leadDetail' => 'Lead Detail',
+    'all' => 'All',
+    'lead' => 'Lead',
+    'client' => 'Client',
+    'pending' => 'Pending',
+    'edit' => 'Edit',
+    'action' => 'Action',
+    'view' => 'View',
+    'file' => 'Files',
+    'kanbanboard' => 'Kanban Board',
+    'defaultLeadStatus' => 'Default Lead Status',
+    'leadForm' => 'Lead Form',
+    'iframeSnippet' => 'Iframe Code Snippet',
+    'leadCategory' => 'Lead Category',
+    'visibleToLead' => 'Visible To Lead',
+    'leadEmailInfo' => 'Email will be used to send proposals.',
   ),
-  'mollie' => array(
-    'client_name' => 'Name',
-    'client_email' => 'Email',
-    'details' => 'Mollie Details',
-    ),
-  'payfast' => array(
-    'client_name' => 'Name',
-    'client_email' => 'Email',
-    'details' => 'Payfast Details',
-    'redirectMessage' => 'You will redirect to Payfast payment page.',
-    ),
-    'authorize' => array(
-        'details' => 'Authorize Payment',
-        'nameOnCard' => 'Name on Card',
-        'cardNumber' => 'Card Number',
-        'cvv' => 'CVV',
-        'expMonth' => 'Expiry Month',
-        'expYear' => 'Expiry Year',
-        'errorMessage' => 'There were some issue with the payment. Please try again later.',
-        'errorNoResponse' => 'No response returned',
-    ),
-    'square' => array(
-        'details' => 'Square Payment',
-        'redirectMessage' => 'You will redirect to Square payment page.',
-    ),
-  'expenses' => array(
-    'addExpense' => 'Add Expense',
-    'editExpense' => 'Edit Expense',
-    'itemName' => 'Item Name',
-    'purchaseDate' => 'Purchase Date',
-    'purchaseFrom' => 'Purchased From',
-    'updateExpense' => 'Update Expense',
-    'infinite' => 'For Infinite Expenses',
-    'expenseCategory' => 'Expense Category',
-    'attachBill' => 'Attach Bill',
-    'removeBill' => 'Remove Bill',
-    'approvedBy' => 'Approved By',
+  'leaves' => 
+  array (
+    'halfDay' => 'Half Day',
+    'addLeave' => 'Add Leave',
+    'myLeaves' => 'My Leaves',
+    'leaveType' => 'Leave Type',
+    'reason' => 'Reason for absence',
+    'assignLeave' => 'Assign Leave',
+    'addLeaveType' => 'Add Leave Type',
+    'editLeave' => 'Edit Leave',
+    'selectDuration' => 'Select Duration',
+    'leaveDate' => 'Leave Date',
+    'single' => 'Single',
+    'multiple' => 'Multiple',
+    'hours' => 'Hours',
+    'selectDates' => 'Select Dates',
+    'rejectReason' => 'Reason for leave rejection',
+    'applicantName' => 'Applicant Name',
+    'updateLeave' => 'Update Leave',
+    'pendingLeaves' => 'Pending Leaves',
+    'applyLeave' => 'Apply Leave',
+    'noOfLeaves' => 'No of Leaves',
+    'countLeavesFromDateOfJoining' => 'Count leaves from the date of joining',
+    'countLeavesFromStartOfYear' => 'Count leaves from the start of the year',
+    'leavesTaken' => 'Leaves Taken',
+    'remainingLeaves' => 'Remaining Leaves',
+    'tableView' => 'Table View',
+    'calendarView' => 'Calendar View',
+    'leaveRequest' => 'Leave Request',
+    'upcomingLeaves' => 'Upcoming Leaves',
+    'leavePaidStatus' => 'Leave Paid Status',
   ),
-  'expensesRecurring' => array(
-    'addExpense' => 'Add Recurring Expense',
-    'itemName' => 'Item Name',
-    'purchaseDate' => 'Purchase Date',
-    'purchaseFrom' => 'Purchased From',
-    'updateExpense' => 'Update Expense',
-    'infinite' => 'For Infinite Expenses',
-    'created_at' => 'Created On',
-    'dayOfWeek' => 'Day Of Week',
-    'dayOfMonth' => 'Day Of Month',
-    'lastPaymentDate' => 'Last Payment Date',
+  'orders' => 
+  array (
+    'orderDate' => 'Order Date',
+    'createOrder' => 'Create Order',
+    'orderNumber' => 'Order Number',
   ),
-  'invoiceSettings' => array(
-    'invoicePrefix' => 'Invoice Prefix',
-    'template' => 'Template',
-    'dueAfter' => 'Due after',
-    'invoiceTerms' => 'Terms and Conditions',
-    'updateTitle' => 'Update Finance Settings',
-    'invoiceDigit' => 'Invoice Number Digits',
-    'invoiceLookLike' => 'Invoice Number Example',
-    'estimatePrefix' => 'Estimate Prefix',
-    'estimateDigit' => 'Estimate Number Digits',
-    'estimateLookLike' => 'Estimate Number Example',
-    'credit_notePrefix' => 'Credit Note Prefix',
-    'credit_noteDigit' => 'Credit Note Digits',
-    'credit_noteLookLike' => 'Credit Note Number Example',
-    'logo' => 'Invoice Logo',
+  'productImage' => 'Product Image',
+  'productCategory' => 
+  array (
+    'productCategory' => 'Product Category',
+    'productSubCategory' => 'Product Sub Category',
+    'subCategory' => 'Sub Category',
+    'subCategoryName' => 'Sub Category Name',
+    'category' => 'Category',
   ),
-  'mobile' => array(
-    'camera' => 'Camera',
-    'gallery' => 'Gallery',
-    'maximumFileSize' => 'Maximum File Size',
-
-  ),
-  'slackSettings' => array(
-    'updateTitle' => 'Update Slack Settings',
-    'uploadSlackLogo' => 'Upload Notification Logo',
-    'notificationSubtitle' => 'Select the events for which an notification should be sent to user.',
-    'sendTestNotification' => 'Send Test Notification',
-    'slackWebhook' => 'Slack Webhook',
-    'slackNotificationLogo' => 'Notification Logo',
-    'notificationTitle' => 'Slack Notification Settings',
-  ),
-  'update' => array(
-    'systemDetails' => 'System Details',
-    'updateTitle' => 'Update To New Version',
-    'updateDatabase' => 'Update Database',
-    'fileReplaceAlert' => 'To update the worksuite to new version check documentation for the instructions.',
-    'updateDatabaseButton' => 'Click to update database',
-    'newUpdate' => 'New update available',
-    'updateNow' => 'Update Now',
-    'updateAlternate' => 'If the <b>Update Now</b> button does not work then follow the <b> manual update</b> instructions as mentioned in the documentation.',
-    'updateManual' => 'Update Alternate Method',
-    'updateFiles' => 'Update Files',
-    'install' => 'Install',
-    'downloadUpdateFile' => 'Download Update File',
-    'moduleFile' => 'After uploading the zip, you will see the modules below. Click on install button to install or update the respective module',
-  ),
-  'incomeVsExpenseReport' => array(
-    'totalIncome' => 'Total Income',
-    'totalExpense' => 'Total Expense',
-    'chartTitle' => 'Bar Chart',
-  ),
-  'tickets' => array(
+  'tickets' => 
+  array (
+    'agent' => 'Agent',
+    'ticket' => 'Ticket',
+    'ticketSubject' => 'Ticket Subject',
+    'requesterName' => 'Requester Name',
+    'requestedOn' => 'Requested On',
+    'addTicket' => 'Create Ticket',
     'ticketDetail' => 'Ticket Details',
     'agents' => 'Agents',
     'notAssigned' => 'Not assigned',
     'priority' => 'Priority',
     'selectPriority' => 'Select Priority',
     'newTicket' => 'New Ticket',
+    'groupName' => 'Group Name',
     'chooseAgents' => 'Choose Agents',
     'assignGroup' => 'Assign Group',
     'addGroup' => 'Add group',
     'group' => 'Group',
     'manageGroups' => 'Manage Groups',
-    'groupName' => 'Group Name',
     'ticketType' => 'Ticket Type',
     'addType' => 'Add Type',
     'channelName' => 'Channel Name',
@@ -958,15 +1137,10 @@ return array(
     'template' => 'Template',
     'templateHeading' => 'Template Heading',
     'templateText' => 'Template Text',
-    'addTicket' => 'Create Ticket',
-    'ticket' => 'Ticket',
-    'ticketSubject' => 'Ticket Subject',
     'ticketDescription' => 'Ticket Description',
     'applyTemplate' => 'Apply Template',
-    'agent' => 'Agent',
     'tags' => 'Tags',
     'addChannel' => 'Add Channel',
-    'requesterName' => 'Requester Name',
     'requester' => 'Requester',
     'reply' => 'Reply',
     'replies' => 'Replies',
@@ -975,7 +1149,6 @@ return array(
     'totalOpenTickets' => 'Open Tickets',
     'totalPendingTickets' => 'Pending Tickets',
     'totalResolvedTickets' => 'Resolved Tickets',
-    'requestedOn' => 'Requested On',
     'requestTicket' => 'Request Support Ticket',
     'closeTicket' => 'Close Ticket',
     'goToAgentDashboard' => 'Go To Agent Dashboard',
@@ -1005,68 +1178,67 @@ return array(
     'googleCaptcha' => 'Google Captcha',
     'message' => 'Message',
   ),
-  'attendance' => array(
-    'officeStartTime' => 'Office Start Time',
-    'officeEndTime' => 'Office End Time',
-    'halfDayMarkTime' => 'Half-day Mark Time',
-    'lateMark' => 'Late mark after (minutes)',
-    'allowSelfClock' => 'Allowed Employee self Clock-In/Clock-Out',
-    'markAttendance' => 'Mark Attendance',
-    'everyonePresent' => 'Everyone`s present today',
-    'clock_in' => 'Clock In',
-    'clockedIn' => 'Clocked In',
-    'late' => 'Late',
-    'clock_out' => 'Clock Out',
-    'clockedOut' => 'Clocked Out',
-    'halfDay' => 'Half Day',
-    'working_from' => 'Working From',
-    'workFrom' => 'Office, Home, etc.',
-    'officeOpenDays' => 'Office opens on',
-    'totalWorkingDays' => 'Working Days',
-    'daysPresent' => 'Days Present',
-    'absent' => 'Absent',
-    'viewFullAttendance' => 'View Full Attendance',
-    'present' => 'Present',
-    'currentTime' => 'Current Time',
-    'attendanceByDate' => 'Attendance By Date',
-    'attendanceByMember' => 'Attendance by Member',
-    'attendanceByHour' => 'Attendance by Hour',
-    'attendanceByLocation' => 'Attendance by Location',
-    'holiday' => 'Holiday',
-    'holidays' => 'Holidays',
-    'holidayfor' => 'Holiday for',
-    'checkininday' => 'Maximum check-in allowed in a day?',
-    'maxColckIn' => 'Maximum check-ins reached.',
-    'attendanceDetail' => 'Attendance Detail',
-    'yes' => 'Yes',
-    'no' => 'No',
-    'leave' => 'On Leave',
-    'leaveFor' => 'Leave for',
-    'checkForIp' => 'Clock-in check with added IP address',
-    'checkForRadius' => 'Clock-in check with added location Radius',
-    'radius' => 'Radius (in meter)',
-    'ipAddress' => 'IP Address',
-    'hoursClocked' => 'Hours Clocked',
-    'notClockOut' => 'Did not clock out',
-    'attendanceReminderStatus' => 'Attendance Reminder Status',
-    'ReminderAfterMinutes' => 'Reminder After Minutes',
-    'saveCurrentLocation' => 'Save Clock-In Location',
-    'showOnMap' => 'Show on Map',
+  'contracts' => 
+  array (
+    'contractNumber' => 'Contract Number',
+    'contractType' => 'Contract Type',
+    'contractValue' => 'Contract Value',
+    'setZero' => 'Set value to Zero if contract does not have cost.',
+    'alternateAddress' => 'Alternate Address',
+    'notes' => 'Notes',
+    'companyLogo' => 'Company Logo',
+    'discussion' => 'Discussion',
+    'contractRenewalHistory' => 'Contract Renewal History',
+    'renewContract' => 'Renew Contract',
+    'createContract' => 'Create Contract',
+    'summery' => 'Summary',
+    'createContractType' => 'Create Contract Type',
+    'addComment' => 'Add Comment',
+    'endDate' => 'End Date',
+    'totalContracts' => 'Total Contracts',
+    'expired' => 'Expired',
+    'active' => 'Active',
+    'aboutToExpire' => 'About To Expire',
+    'manageContractType' => 'Manage Contract Type',
+    'addContractType' => 'Add Contract Type',
+    'editDiscussion' => 'Edit Discussion',
+    'discussionUpdated' => 'Discussion successfully updated.',
+    'discussionDeleted' => 'Discussion successfully deleted.',
+    'discussionAdded' => 'Discussion successfully added.',
+    'renewedThisContract' => 'renewed this contract',
+    'newStartDate' => 'New start date',
+    'newEndDate' => 'New end date',
+    'newAmount' => 'New Contract Value',
+    'keepSignature' => 'Keep Customer Signature',
+    'contractName' => 'Contract Name',
+    'noValue' => 'No Value',
+    'noEndDate' => 'No End Date',
+    'streetAddress1' => 'Street Address 1',
+    'streetAddress2' => 'Street Address 2',
   ),
-  'customFields' => array(
-    'label' => 'Label',
-    'addField' => 'Add Field',
-    'editField' => 'Edit Field',
+  'emergencyContact' => 
+  array (
+    'emergencyContact' => 'Emergency Contacts',
+    'viewEmergencyContact' => 'View Emergency Contact',
+    'editEmergencyContact' => 'Edit Emergency Contact',
+    'addNewEmergencyContact' => 'Add New Emergency Contact',
   ),
-  'events' => array(
+  'paystack' => 
+  array (
+    'client_name' => 'Name',
+    'client_email' => 'Email',
+    'details' => 'Paystack Details',
+  ),
+  'events' => 
+  array (
     'addEvent' => 'Add Event',
     'eventName' => 'Event Name',
+    'startOn' => 'Start On',
+    'endOn' => 'End On',
     'startOnDate' => 'Starts On Date',
     'startOnTime' => 'Starts On Time',
     'endOnDate' => 'Ends On Date',
     'endOnTime' => 'Ends On Time',
-    'startOn' => 'Start On',
-    'endOn' => 'End On',
     'addAttendees' => 'Add Attendees',
     'allEmployees' => 'All Employees',
     'where' => 'Where',
@@ -1078,17 +1250,100 @@ return array(
     'attendees' => 'Attendees',
     'remindBefore' => 'Remind before',
   ),
-  'payroll' => array(
-    'addPayroll' => 'Add Payroll',
-    'amountPaid' => 'Amount Paid',
-    'updatePayroll' => 'Update Payroll',
-    'projectPayrollReport' => 'Project Payroll Report',
-    'totalEarning' => 'Total Earning',
+  'flutterwave' => 
+  array (
+    'client_name' => 'Name',
+    'client_email' => 'Email',
+    'client_phone' => 'Phone',
+    'details' => 'Flutterwave Details',
+    'somethingWentWrong' => 'Something went wrong please try again later.',
   ),
-  'roles' => array(
-    'addRole' => 'Manage Role',
+  'mollie' => 
+  array (
+    'client_name' => 'Name',
+    'client_email' => 'Email',
+    'details' => 'Mollie Details',
   ),
-  'permission' => array(
+  'payfast' => 
+  array (
+    'client_name' => 'Name',
+    'client_email' => 'Email',
+    'details' => 'Payfast Details',
+    'redirectMessage' => 'You will redirect to Payfast payment page.',
+  ),
+  'authorize' => 
+  array (
+    'details' => 'Authorize Payment',
+    'nameOnCard' => 'Name on Card',
+    'cardNumber' => 'Card Number',
+    'cvv' => 'CVV',
+    'expMonth' => 'Expiry Month',
+    'expYear' => 'Expiry Year',
+    'errorMessage' => 'There were some issue with the payment. Please try again later.',
+    'errorNoResponse' => 'No response returned',
+  ),
+  'square' => 
+  array (
+    'details' => 'Square Payment',
+    'redirectMessage' => 'You will redirect to Square payment page.',
+  ),
+  'invoiceSettings' => 
+  array (
+    'invoicePrefix' => 'Invoice Prefix',
+    'template' => 'Template',
+    'dueAfter' => 'Due after',
+    'invoiceTerms' => 'Terms and Conditions',
+    'updateTitle' => 'Update Finance Settings',
+    'invoiceDigit' => 'Invoice Number Digits',
+    'invoiceLookLike' => 'Invoice Number Example',
+    'estimatePrefix' => 'Estimate Prefix',
+    'estimateDigit' => 'Estimate Number Digits',
+    'estimateLookLike' => 'Estimate Number Example',
+    'credit_notePrefix' => 'Credit Note Prefix',
+    'credit_noteDigit' => 'Credit Note Digits',
+    'credit_noteLookLike' => 'Credit Note Number Example',
+    'logo' => 'Invoice Logo',
+  ),
+  'mobile' => 
+  array (
+    'camera' => 'Camera',
+    'gallery' => 'Gallery',
+    'maximumFileSize' => 'Maximum File Size',
+  ),
+  'slackSettings' => 
+  array (
+    'updateTitle' => 'Update Slack Settings',
+    'uploadSlackLogo' => 'Upload Notification Logo',
+    'notificationSubtitle' => 'Select the events for which an notification should be sent to user.',
+    'sendTestNotification' => 'Send Test Notification',
+    'slackWebhook' => 'Slack Webhook',
+    'slackNotificationLogo' => 'Notification Logo',
+    'notificationTitle' => 'Slack Notification Settings',
+  ),
+  'update' => 
+  array (
+    'systemDetails' => 'System Details',
+    'updateTitle' => 'Update To New Version',
+    'updateDatabase' => 'Update Database',
+    'fileReplaceAlert' => 'To update the worksuite to new version check documentation for the instructions.',
+    'updateDatabaseButton' => 'Click to update database',
+    'newUpdate' => 'New update available',
+    'updateNow' => 'Update Now',
+    'updateAlternate' => 'If the <b>Update Now</b> button does not work then follow the <b> manual update</b> instructions as mentioned in the documentation.',
+    'updateManual' => 'Update Alternate Method',
+    'updateFiles' => 'Update Files',
+    'install' => 'Install',
+    'downloadUpdateFile' => 'Download Update File',
+    'moduleFile' => 'After uploading the zip, you will see the modules below. Click on install button to install or update the respective module',
+  ),
+  'incomeVsExpenseReport' => 
+  array (
+    'totalIncome' => 'Total Income',
+    'totalExpense' => 'Total Expense',
+    'chartTitle' => 'Bar Chart',
+  ),
+  'permission' => 
+  array (
     'projectNote' => 'User can view the basic details of projects assigned to him even without any permission.',
     'attendanceNote' => 'User can view his own attendance even without any permission.',
     'taskNote' => 'User can view the tasks assigned to him even without any permission.',
@@ -1096,119 +1351,49 @@ return array(
     'eventNote' => 'User can view the events to be attended by him as default even without any permission.',
     'holidayNote' => 'User can view the holidays as default even without any permission.',
     'selectAll' => 'Select All',
+    'deselectAll' => 'Deselect All',
     'addRoleMember' => 'Manage Role Members',
     'addMembers' => 'Add Members',
     'roleName' => 'Role Name',
-    'deselectAll' => 'Deselect All',
     'permissions' => 'Permissions',
-    'importFromRole' => 'Import from Role'
+    'importFromRole' => 'Import from Role',
   ),
-  'leaves' => array(
-    'assignLeave' => 'Assign Leave',
-    'addLeaveType' => 'Add Leave Type',
-    'addLeave' => 'Add Leave',
-    'editLeave' => 'Edit Leave',
-    'leaveType' => 'Leave Type',
-    'selectDuration' => 'Select Duration',
-    'leaveDate' => 'Leave Date',
-    'single' => 'Single',
-    'multiple' => 'Multiple',
-    'halfDay' => 'Half Day',
-    'hours' => 'Hours',
-    'selectDates' => 'Select Dates',
-    'reason' => 'Reason for absence',
-    'rejectReason' => 'Reason for leave rejection',
-    'applicantName' => 'Applicant Name',
-    'updateLeave' => 'Update Leave',
-    'pendingLeaves' => 'Pending Leaves',
-    'applyLeave' => 'Apply Leave',
-    'noOfLeaves' => 'No of Leaves',
-    'countLeavesFromDateOfJoining' => 'Count leaves from the date of joining',
-    'countLeavesFromStartOfYear' => 'Count leaves from the start of the year',
-    'leavesTaken' => 'Leaves Taken',
-    'remainingLeaves' => 'Remaining Leaves',
-    'myLeaves' => 'My Leaves',
-    'tableView' => 'Table View',
-    'calendarView' => 'Calendar View',
-    'leaveRequest' => 'Leave Request',
-    'upcomingLeaves' => 'Upcoming Leaves',
-    'leavePaidStatus' => 'Leave Paid Status',
+  'customFields' => 
+  array (
+    'label' => 'Label',
+    'addField' => 'Add Field',
+    'editField' => 'Edit Field',
+  ),
+  'import' => 
+  array (
+    'file' => 'Upload File (file must be a file of type: xls, xlsx, csv)',
+    'containsHeadings' => 'File Contains Headings Row',
+  ),
+  'payroll' => 
+  array (
+    'addPayroll' => 'Add Payroll',
+    'amountPaid' => 'Amount Paid',
+    'updatePayroll' => 'Update Payroll',
+    'projectPayrollReport' => 'Project Payroll Report',
+    'totalEarning' => 'Total Earning',
+  ),
+  'roles' => 
+  array (
+    'addRole' => 'Manage Role',
+  ),
+  'stripeCustomerAddress' => 
+  array (
+    'city' => 'City',
+    'state' => 'State',
+    'postalCode' => 'Postal code',
+    'country' => 'Country',
+    'details' => 'Address Details',
+    'name' => 'Name',
+    'line1' => 'Address Line',
   ),
   'low' => 'Low',
-  'lead' => array(
-    'createTitle' => 'Add Lead Info',
-    'companyDetails' => 'Company Details',
-    'companyName' => 'Company Name',
-    'website' => 'Website',
-    'address' => 'Address',
-    'leadDetails' => 'Lead Details',
-    'clientName' => 'Lead Name',
-    'clientEmail' => 'Lead Email',
-    'emailNote' => 'Lead will login using this email.',
-    'password' => 'Password',
-    'passwordNote' => 'Client will login using this password.',
-    'passwordUpdateNote' => 'Client will login using this password. (Leave blank to keep current password)',
-    'mobile' => 'Mobile',
-    'updateTitle' => 'Update Lead Info',
-    'addNewLead' => 'Add New Lead',
-    'viewDetails' => 'View Details',
-    'leadSource' => 'Lead Source',
-    'leadStatus' => 'Lead Status',
-    'leadFollowUp' => 'Follow Up Next',
-    'remark' => 'Remark',
-    'proposal' => 'Proposal',
-    'profile' => 'Profile',
-    'followUp' => 'Follow Up',
-    'note' => 'Note',
-    'email' => 'Email',
-    'source' => 'Source',
-    'status' => 'Status',
-    'leadDetail' => 'Lead Detail',
-    'nextFollowUp' => 'Next Follow Up',
-    'all' => 'All',
-    'lead' => 'Lead',
-    'client' => 'Client',
-    'pending' => 'Pending',
-    'changeToClient' => 'Change To Client',
-    'addFollowUp' => 'Add Follow Up',
-    'edit' => 'Edit',
-    'action' => 'Action',
-    'view' => 'View',
-    'file' => 'Files',
-    'leadAgent' => 'Lead Agent',
-    'kanbanboard' => 'Kanban Board',
-    'defaultLeadStatus' => 'Default Lead Status',
-    'leadForm' => 'Lead Form',
-    'iframeSnippet' => 'Iframe Code Snippet',
-    'leadCategory' => 'Lead Category',
-    'visibleToLead' => 'Visible To Lead',
-    'leadEmailInfo' => 'Email will be used to send proposals.',
-  ),
-  'proposal' => array(
-    'createTitle' => 'Add Proposal Info',
-    'updateTitle' => 'Update Proposal Info',
-    'addNewLead' => 'Add New Proposal',
-    'viewDetails' => 'View Details',
-    'title' => ' Lead Proposal',
-    'proposal' => ' Lead Proposal',
-    'createProposal' => 'Create Proposal',
-    'validTill' => 'Valid Till',
-    'waiting' => 'Waiting',
-    'accepted' => 'Accepted',
-    'declined' => 'Declined',
-    'updateProposal' => 'Update Proposal',
-    'convertProposalTitle' => 'Convert Proposal To Invoice',
-    'edit' => 'Edit',
-    'action' => 'Action',
-    'view' => 'View',
-    'delete' => 'Delete',
-    'download' => 'Download',
-    'publicLink' => 'Public Link',
-    'rejectConfirm' => 'Reject Confirm',
-    'requireSignature' => 'Require customer signature for approval',
-    'sendProposal' => 'Send Proposal',
-  ),
-  'followup' => array(
+  'followup' => 
+  array (
     'newFollowUp' => 'New Follow Up',
     'updateFollow' => 'Update Follow Up',
     'addNewLead' => 'Add New Proposal',
@@ -1225,23 +1410,26 @@ return array(
     'followUpNotFound' => 'No follow up found',
     'followUpNote' => 'Follow up add and edit functionality will work when lead <b>next follow up</b> is set to <b>YES</b>.',
   ),
-  'holiday' => array(
-    'title' => 'Holiday',
-    'addNewHoliday' => 'Add Holiday',
-    'viewDetails' => 'View Details',
-    'createHoliday' => 'Create Holiday',
-    'followUpNotFound' => 'No Holiday found',
-    'markSunday' => ' Mark Default Holidays',
-    'date' => 'Date',
-    'occasion' => 'Occasion',
-    'day' => 'Day',
-    'action' => 'Action',
-    'listOf' => 'List Of',
-    'viewOnCalendar' => 'View on Calendar',
-    'markHoliday' => 'Mark Holiday',
-    'officeHolidayMarkDays' => 'Mark day for Holiday',
+  'checklist' => 
+  array (
+    'installation' => 'Installation',
+    'installationInfo' => 'Upload files on server and configure the database.',
+    'accountSetup' => 'Account Setup',
+    'accountSetupInfo' => 'Setup admin account details.',
+    'companyLogo' => 'Add Company Logo',
+    'companyLogoInfo' => 'This logo will show on Login, Register and Sidebar menu.',
+    'emailSetup' => 'Configure Email Settings',
+    'configureEmailSetting' => 'Email setup is required to send emails to users for project, tasks, etc.',
+    'crontSetup' => 'Setup Cron Job',
+    'cronSetupInfo' => 'Cron job setup is required to send reminder notifications and background tasks.',
+    'favicon' => 'Add Favicon',
+    'faviconInfo' => 'This icon shows near the page title on the browser.',
+    'profileImage' => 'Add Profile Picture',
+    'profileImageInfo' => 'Add your profile picture.',
+    'checklistInfo' => 'We have prepared a list of things that will help you get there quickly.',
   ),
-  'offlinePayment' => array(
+  'offlinePayment' => 
+  array (
     'title' => 'Offline Payment Method',
     'method' => 'Method',
     'description' => 'Description',
@@ -1249,7 +1437,19 @@ return array(
     'active' => 'Active',
     'inActive' => 'Inactive',
   ),
-  'projectTemplate' => array(
+  'databaseBackup' => 
+  array (
+    'createDatabaseBackup' => 'Create Database Backup',
+    'autobackup' => 'Auto Backup Settings',
+    'enableCron' => 'Enable (Requires Cron)',
+    'hourOfDayForbackup' => 'Hour of day to perform backup',
+    'createBackupAfterDay' => 'Create backup every X days',
+    'deleteBackupAfter' => 'Auto delete backups older then X days (set -1 to disable)',
+    'backup' => 'Backup',
+    'backupSize' => 'Backup Size',
+  ),
+  'projectTemplate' => 
+  array (
     'addNewTemplate' => 'Add New Template',
     'projectName' => 'Template Name',
     'projectMembers' => 'Template Members',
@@ -1285,7 +1485,8 @@ return array(
     'clientTaskNotification' => 'Send task notification to client?',
     'manualTimelog' => 'Allow manual time logs',
   ),
-  'templateTasks' => array(
+  'templateTasks' => 
+  array (
     'newTask' => 'New Template Task',
     'lastCreated' => 'Last Created',
     'dueSoon' => 'Due Soon',
@@ -1306,27 +1507,43 @@ return array(
     'subTask' => 'Sub Template Task',
     'comment' => 'Comment',
   ),
-  'logTimeSetting' => array(
+  'expenseCategory' => 
+  array (
+    'assignToRole' => 'Assign To Roles',
+    'addExpenseCategory' => 'Add Expense Category',
+    'categoryName' => 'Category Name',
+    'allowRoles' => 'Allow Roles',
+  ),
+  'logTimeSetting' => 
+  array (
     'title' => 'Log Time Setting',
     'project' => 'Project',
     'task' => 'Task',
     'autoStopTimerAfterOfficeTime' => 'Stop timer automatically after office time.',
     'approvalRequired' => 'Timelog will require approval',
   ),
-  'taskCategory' => array(
+  'taskCategory' => 
+  array (
     'addTaskCategory' => 'Task Category',
     'categoryName' => 'Category Name',
     'manageTaskCategory' => 'Manage Task Category',
     'taskCategory' => 'Task Category',
   ),
-  'pushSettings' => array(
+  'pushSettings' => 
+  array (
     'updateTitle' => 'Update Push Notification Settings',
     'oneSignalAppId' => 'One Signal App ID',
     'oneSignalRestApiKey' => 'One Signal Rest API Key',
     'notificationTitle' => 'Push Notification Settings',
   ),
+  'googleCalendar' => 
+  array (
+    'clientId' => 'Client ID',
+    'clientSecret' => 'Client Secret',
+  ),
   'timelogAlreadyExist' => 'Time-log already exist for this user.',
-  'module' => array(
+  'module' => 
+  array (
     'clients' => 'Clients',
     'employees' => 'Employees',
     'projects' => 'Projects',
@@ -1363,127 +1580,38 @@ return array(
     'knowledgebase' => 'Knowledge Base',
     'emergency_contact' => 'Emergency Contact',
   ),
-  'projectSettings' => array(
+  'languageSettings' => 
+  array (
+    'googleTranslationAPI' => 'Google Translation API key',
+    'googleTranslationAPIMessage' => 'Enable Cloud Translation API from Google Cloud Console and create API key.',
+    'translate' => 'Translate',
+    'autoTranslate' => 'Auto Translate Setting',
+  ),
+  'projectSettings' => 
+  array (
     'sendNotificationsTo' => 'Send Reminder To',
   ),
   'loginAgain' => 'You will have to login again to see the changes.',
-  'gdpr' => array(
-    'gdpr' => 'GDPR',
-    'customers' => 'Customers',
-    'purpose' => 'Purpose',
-    'ipAddress' => 'IP Address',
-    'staffMember' => 'Staff Member',
-    'additionalDescription' => 'Additional Description',
-    'purposeDescription' => 'Purpose Description',
-    'optIn' => 'OPT IN',
-    'optOut' => 'OPT OUT',
-    'consent' => 'Consent',
-    'requestDataRemoval' => 'Request Data Removal',
-    'dataRemovalDescription' => 'Briefly describe the purpose of removal of data',
-    'removalRequestSuccess' => 'Removal request has been sent to the admin. You will informed once it is approved',
-    'enableGdpr' => 'Enable GDPR',
-    'showGdprLinkInNavigation' => 'Show GDPR link in customers area navigation',
-    'showGdprLinkInFooter' => 'Show GDPR link in customers area footer',
-    'gdprTopInformationBlock' => 'GDPR page top information block',
-    'enableCustomerToExportData' => 'Enable customers to export their data',
-    'enableCustomerToRequestForDataRemove' => 'Enable customers to request for data remove',
-    'enableLeadTorequestForDataRemove' => 'Enable leads to request for data removal (via public form)',
-    'enableTNCToCustomersFooter' => 'Enable Terms & Conditions to customers footer',
-    'termsAndCondition' => 'Terms and Conditions',
-    'privacyAndPolicy' => 'Privacy and Policy',
-    'allowLeadToUpdateDataFromPublicForm' => 'Allow leads to update their data from public form',
-    'enableConsentForCustomers' => 'Enable consent for customers',
-    'enableConsentForLeads' => 'Enable consent for Leads',
-    'publicPageConsentInformationBlock' => 'Public page consent information block',
-    'viewConsent' => 'View Consent',
-    'agree' => 'I Agree',
-    'disagree' => 'I Disagree',
-
-  ),
-  'contracts' => array(
-    'createContract' => 'Create Contract',
-    'createContractType' => 'Create Contract Type',
-    'contractType' => 'Contract Type',
-    'summery' => 'Summary',
-    'discussion' => 'Discussion',
-    'addComment' => 'Add Comment',
-    'contractValue' => 'Contract Value',
-    'contractNumber' => 'Contract Number',
-    'endDate' => 'End Date',
-    'totalContracts' => 'Total Contracts',
-    'expired' => 'Expired',
-    'active' => 'Active',
-    'aboutToExpire' => 'About To Expire',
-    'manageContractType' => 'Manage Contract Type',
-    'addContractType' => 'Add Contract Type',
-    'notes' => 'Notes',
-    'editDiscussion' => 'Edit Discussion',
-    'discussionUpdated' => 'Discussion successfully updated.',
-    'discussionDeleted' => 'Discussion successfully deleted.',
-    'discussionAdded' => 'Discussion successfully added.',
-    'renewContract' => 'Renew Contract',
-    'renewedThisContract' => 'renewed this contract',
-    'newStartDate' => 'New start date',
-    'newEndDate' => 'New end date',
-    'newAmount' => 'New Contract Value',
-    'contractRenewalHistory' => 'Contract Renewal History',
-    'keepSignature' => 'Keep Customer Signature',
-    'contractName' => 'Contract Name',
-    'alternateAddress' => 'Alternate Address',
-    'companyLogo' => 'Company Logo',
-    'noValue' => 'No Value',
-    'noEndDate' => 'No End Date',
-    'streetAddress1' => 'Street Address 1',
-    'streetAddress2' => 'Street Address 2',
-    'setZero' => 'Set value to Zero if contract does not have cost.',
-  ),
-  'burndown' => array(
+  'burndown' => 
+  array (
     'actual' => 'Actual',
     'ideal' => 'Ideal',
   ),
-  'clients' => array(
+  'clients' => 
+  array (
     'addShippingAddress' => 'Add Shipping Address',
     'shippingAddress' => 'Shipping Address',
   ),
-  'discussions' => array(
-    'lastCreated' => 'Last Created',
-    'lastModified' => 'Last Modified',
-    'discussionCategory' => 'Discussion Category',
-    'replied' => 'replied at',
-    'posted' => 'posted on',
-    'bestReply' => 'Best Reply',
-    'removeBestReply' => 'Remove as Best Reply',
-    'goBestReply' => 'Go To Best Reply',
-  ),
-  'stripeCustomerAddress' => array(
-    'details' => 'Address Details',
-    'name' => 'Name',
-    'line1' => 'Address Line',
-    'postalCode' => 'Postal code',
-    'city' => 'City',
-    'state' => 'State',
-    'country' => 'Country',
-  ),
-  'taskLabel' => array(
+  'taskLabel' => 
+  array (
     'createLabel' => 'Create Label',
   ),
-  'recurringInvoice' => array(
+  'recurringInvoice' => 
+  array (
     'allowToClient' => 'Client can stop recurring.',
   ),
-  'expenseCategory' => array(
-    'addExpenseCategory' => 'Add Expense Category',
-    'categoryName' => 'Category Name',
-    'allowRoles' => 'Allow Roles',
-    'assignToRole' => 'Assign To Roles',
-  ),
-  'productCategory' => array(
-    'subCategory' => 'Sub Category',
-    'subCategoryName' => 'Sub Category Name',
-    'category' => 'Category',
-    'productCategory' => 'Product Category',
-    'productSubCategory' => 'Product Sub Category',
-  ),
-  'leads' => array(
+  'leads' => 
+  array (
     'name' => 'Name',
     'client_email' => 'Email',
     'client_name' => 'Name',
@@ -1494,7 +1622,9 @@ return array(
     'mobile' => 'Mobile',
     'message' => 'Message',
   ),
-  'emailNotification' => array(
+  'makeDefaultImage' => 'Set default',
+  'emailNotification' => 
+  array (
     'new-expenseadded-by-admin' => 'New Expense/Added by Admin',
     'new-expenseadded-by-member' => 'New Expense/Added by Member',
     'expense-status-changed' => 'Expense Status Changed',
@@ -1514,40 +1644,14 @@ return array(
     'order-createupdate-notification' => 'Order Create/Update Notification',
     'user-join-via-invitation' => 'User Join Via Invitation',
   ),
-  'languageSettings' => array(
-    'translate' => 'Translate',
-    'autoTranslate' => 'Auto Translate Setting',
-    'googleTranslationAPI' => 'Google Translation API key',
-    'googleTranslationAPIMessage' => 'Enable Cloud Translation API from Google Cloud Console and create API key.',
-  ),
-  'checklist' => array(
-    'checklistInfo' => 'We have prepared a list of things that will help you get there quickly.',
-    'installation' => 'Installation',
-    'installationInfo' => 'Upload files on server and configure the database.',
-    'accountSetup' => 'Account Setup',
-    'accountSetupInfo' => 'Setup admin account details.',
-    'companyLogo' => 'Add Company Logo',
-    'companyLogoInfo' => 'This logo will show on Login, Register and Sidebar menu.',
-    'favicon' => 'Add Favicon',
-    'faviconInfo' => 'This icon shows near the page title on the browser.',
-    'profileImage' => 'Add Profile Picture',
-    'profileImageInfo' => 'Add your profile picture.',
-    'emailSetup' => 'Configure Email Settings',
-    'configureEmailSetting' => 'Email setup is required to send emails to users for project, tasks, etc.',
-    'crontSetup' => 'Setup Cron Job',
-    'cronSetupInfo' => 'Cron job setup is required to send reminder notifications and background tasks.',
-  ),
   'ticketForm' => 'Ticket Form',
-  'orders' => array(
-    'createOrder' => 'Create Order',
-    'orderDate' => 'Order Date',
-    'orderNumber' => 'Order Number'
-  ),
-  'pusher' => array(
+  'pusher' => 
+  array (
     'notificationTitle' => 'Enable Pusher For',
     'userNotifications' => 'User Notifications',
   ),
-  'twofactor' => array(
+  'twofactor' => 
+  array (
     'authenticateVia' => 'Authenticate Via',
     'userNotifications' => 'User Notifications',
     'twoFaInfo' => 'Increase your account\'s security by enabling Two-Factor Authentication (2FA)',
@@ -1560,32 +1664,4 @@ return array(
     'both' => 'Both',
     'validate2FA' => 'Validate 2FA',
   ),
-  'import' => array(
-      'file' => 'Upload File (file must be a file of type: xls, xlsx, csv)',
-      'containsHeadings' => 'File Contains Headings Row',
-  ),
-  'productImage' => 'Product Image',
-  'googleCalendar' => array(
-    'clientId' => 'Client ID',
-    'clientSecret' => 'Client Secret',
-  ),
-  'databaseBackup' => array(
-    'autobackup' => 'Auto Backup Settings',
-    'createDatabaseBackup' => 'Create Database Backup',
-    'backup' => 'Backup',
-    'backupSize' => 'Backup Size',
-    'hourOfDayForbackup' => 'Hour of day to perform backup',
-    'createBackupAfterDay' => 'Create backup every X days',
-    'deleteBackupAfter' => 'Auto delete backups older then X days (set -1 to disable)',
-    'enableCron' => 'Enable (Requires Cron)',
-  ),
-  'makeDefaultImage' => 'Set default',
-  'emergencyContact' => array(
-      'emergencyContact' => 'Emergency Contacts',
-      'viewEmergencyContact' => 'View Emergency Contact',
-      'editEmergencyContact' => 'Edit Emergency Contact',
-      'addNewEmergencyContact' => 'Add New Emergency Contact',
-  ),
-
-
 );
