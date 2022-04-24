@@ -243,6 +243,7 @@ return array (
     'project template task' => 'Công việc mẫu dự án',
     'recurringinvoices' => 'Hóa đơn định kỳ',
     'recurring invoices' => 'Hóa đơn định kỳ',
+    'currency settings' => 'Cài đặt tiền tệ',
   ),
   'language' => 'Ngôn ngữ',
   'delete' => 'Xóa',
