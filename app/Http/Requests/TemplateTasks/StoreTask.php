@@ -35,7 +35,7 @@ class StoreTask extends CoreRequest
     {
         return [
           'project_id.required' => __('messages.chooseProject'),
-          'user_id.0.required' => 'Choose an assignee'
+          'user_id.0.required' => __('messages.choose an assignee')
         ];
     }
 

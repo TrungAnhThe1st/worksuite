@@ -32,7 +32,7 @@ class StoreUserRole extends CoreRequest
     public function messages()
     {
         return [
-            'user_id.0.required' => 'Choose at-least 1 member'
+            'user_id.0.required' => __('messages.Choose at-least 1 member')
         ];
     }
 
