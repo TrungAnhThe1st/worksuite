@@ -1059,7 +1059,7 @@ return array (
     'file' => 'Tệp',
     'kanbanboard' => 'Bảng Kanban',
     'defaultLeadStatus' => 'Trạng thái khách hàng tiềm năng mặc định',
-    'leadForm' => 'Lead Form',
+    'leadForm' => 'Mẫu điền thông tin',
     'iframeSnippet' => 'Đoạn mã iframe',
     'leadCategory' => 'Danh mục khách hàng tiềm năng',
     'visibleToLead' => 'Hiển thị cho khách hàng tiềm năng',
@@ -1622,7 +1622,7 @@ return array (
     'website' => 'Trang web',
     'address' => 'Địa chỉ',
     'mobile' => 'Số điện thoại',
-    'message' => 'Message',
+    'message' => 'Tin nhắn',
   ),
   'makeDefaultImage' => 'Đặt mặc định',
   'emailNotification' =>
@@ -1665,6 +1665,12 @@ return array (
     'verifySmtp' => 'Cài đặt SMTP email chưa được định cấu hình.',
     'both' => 'Cả hai',
     'validate2FA' => 'Xác thực 2FA',
+  ),
+  'ticket' =>
+  array (
+    'Sales' => 'Bán hàng',
+    'Code' => 'Code',
+    'Management' => 'Ban quản lý',
   ),
   'attribute'=>
   array (

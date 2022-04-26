@@ -625,7 +625,7 @@ return array (
   'client_name' => 'Tên khách hàng',
   'selectFollowUpDateRange' => 'Chọn Phạm vi Ngày Theo dõi',
   'contractFiles' => 'Các tệp hợp đồng',
-  'preview' => 'Xem trước',
+  'preview' => 'Bản xem trước',
   'fields' => 'Khoảng trống',
   'closed' => 'Đã đóng cửa',
   'cancelEstimate' => 'Hủy ước tính',
