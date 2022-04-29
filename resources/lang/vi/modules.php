@@ -102,9 +102,9 @@ return array (
     'statusWiseProject' => 'Dự án theo tình trạng',
     'pendingMilestone' => 'Mốc đang chờ xử lý',
     'totalUnassignedTicket' => 'Tổng số vé chưa được giao',
-    'typeWiseTicket' => 'Gõ vé thông thái',
-    'statusWiseTicket' => 'Vé Trạng thái Thông thái',
-    'channelWiseTicket' => 'Vé thông thái kênh',
+    'typeWiseTicket' => 'Vé theo loại',
+    'statusWiseTicket' => 'Vé theo trạng thái',
+    'channelWiseTicket' => 'Vé theo kênh',
     'thisMonth' => 'Tháng này',
     'timelogs' => 'Nhật ký theo dõi',
     'privateTaskInfo' => 'Không bao gồm các Công việc riêng tư',
@@ -122,7 +122,7 @@ return array (
     'visibleToClient' => 'Hiển thị cho Khách hàng',
     'askToReenterPassword' => 'Yêu cầu nhập lại mật khẩu',
     'createTitle' => 'Thêm thông tin khách hàng',
-    'companyDetails' => 'CThêm thông tin khách hàng',
+    'companyDetails' => 'Thêm thông tin khách hàng',
     'companyName' => 'Tên công ty',
     'website' => 'Trang web chính thức',
     'address' => 'Địa chỉ',
@@ -1064,6 +1064,7 @@ return array (
     'leadCategory' => 'Danh mục khách hàng tiềm năng',
     'visibleToLead' => 'Hiển thị cho khách hàng tiềm năng',
     'leadEmailInfo' => 'Email sẽ được sử dụng để gửi đề xuất.',
+    'Notes' => 'Ghi chú',
   ),
   'leaves' =>
   array (
@@ -1729,5 +1730,6 @@ return array (
     'joining date' => 'ngày tham gia',
     'employee id' => 'id nhân viên',
     'billing cycle' => 'chu kỳ thanh toán',
+    'client name' => 'tên khách hàng',
   ),
 );
