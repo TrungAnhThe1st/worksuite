@@ -22,8 +22,7 @@
 
             <x-tab :href="route('leads.show', $lead->id).'?tab=proposals'" :text="__('modules.lead.proposal')" class="proposals" ajax="false" />
 
-            <x-tab :href="route('leads.show', $lead->id).'?tab=notes'" ajax="false" text="Notes"
-            class="notes" />
+            <x-tab :href="route('leads.show', $lead->id).'?tab=notes'" :text="__('modules.lead.Notes')" ajax="false" class="notes" />
 
             @if ($gdpr->enable_gdpr)
                 <x-tab :href="route('leads.show', $lead->id).'?tab=gdpr'" :text="__('app.menu.gdpr')" class="gdpr" ajax="false" />

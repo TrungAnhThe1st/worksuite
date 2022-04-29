@@ -18,6 +18,7 @@
                             <a href="<?= $link ?>" class="text-lightest">@lang('app.menu.' . str_replace('-', '', Request::segment($i)))</a> &bull;
                         @endif
                     @else
+                        <!-- @lang('app.menu.' . $pageTitle) -->
                         {{ $pageTitle }}
                     @endif
                 @endfor
