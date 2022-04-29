@@ -97,8 +97,8 @@
                             <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
                         </x-slot>
                         <div class="accordionItemContent pb-2">
-                            <x-sub-menu-item :link="route('dashboard')" :text="__('app.admin') . ' ' . __('app.menu.dashboard')" />
-                            <x-sub-menu-item :link="route('dashboard.member')" :text="__('app.private') . ' ' . __('app.menu.dashboard')" />
+                            <x-sub-menu-item :link="route('dashboard')" :text=" __('app.menu.dashboard'). ' ' . __('app.admin')" />
+                            <x-sub-menu-item :link="route('dashboard.member')" :text="__('app.menu.dashboard') . ' ' . __('app.private')" />
                         </div>
                     </x-menu-item>
                 @else

@@ -512,7 +512,7 @@ return array (
   'remaining' => 'Còn lại',
   'adjustment' => 'Điều chỉnh',
   'reply' => 'Trả lời',
-  'private' => 'Riêng tư',
+  'private' => 'cá nhân',
   'public' => 'Công khai',
   'today' => 'Hôm nay',
   'selectTeam' => 'Chọn bộ phận...',
