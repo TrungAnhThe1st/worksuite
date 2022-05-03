@@ -36,7 +36,7 @@ $updateLeaveQuotaPermission = user()->permission('update_leaves_quota');
                             @foreach ($employeeLeavesQuotas as $key => $leaveType)
                                 <tr>
                                     <td>
-                                        <x-status :value="$leaveType->leaveType->type_name" :style="'color:'.$leaveType->leaveType->color" />
+                                        <x-status :value="__('app.leaveTypes.' . lcfirst($leaveType->leaveType->type_name))" :style="'color:'.$leaveType->leaveType->color" />
                                     </td>
                                     <td> <input type="number" min="0" value="{{ $leaveType->no_of_leaves }}"
                                             class="form-control height-35 f-14 leave-count-{{ $leaveType->id }}">
