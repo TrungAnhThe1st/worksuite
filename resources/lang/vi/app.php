@@ -245,7 +245,8 @@ return array (
     'recurringinvoices' => 'Hóa đơn định kỳ',
     'recurring invoices' => 'Hóa đơn định kỳ',
     'currency settings' => 'Cài đặt tiền tệ',
-    'lead notes' => 'Ghi chú khách hàng tiềm năng'
+    'lead notes' => 'Ghi chú khách hàng tiềm năng',
+    'proposals' => 'Đề xuất',
   ),
   'language' => 'Ngôn ngữ',
   'delete' => 'Xóa',

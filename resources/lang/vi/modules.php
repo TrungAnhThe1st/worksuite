@@ -425,7 +425,7 @@ return array (
     'billedTo' => 'Thanh toán cho',
     'generatedBy' => 'Tạo bởi',
     'price' => 'Giá',
-    'type' => 'kiểu',
+    'type' => 'Loại',
     'payPaypal' => 'Thanh toán qua Paypal',
     'payPaystack' => 'Thanh toán qua Paystack',
     'payFlutterwave' => 'Thanh toán qua Flutterwave',
@@ -831,7 +831,7 @@ return array (
     'viewDetails' => 'Xem chi tiết',
     'title' => ' Đề xuất khách hàng tiềm năng',
     'proposal' => ' Đề xuất khách hàng tiềm năng',
-    'validTill' => 'Đến khi hợp lệ',
+    'validTill' => 'Có giá trị cho đến khi',
     'waiting' => 'Đang chờ đợi',
     'accepted' => 'Đã chấp nhận',
     'declined' => 'Bị từ chối',
@@ -892,7 +892,7 @@ return array (
   'estimates' =>
   array (
     'copyLink' => 'Sao chép Liên kết Công khai',
-    'validTill' => 'Đến khi hợp lệ',
+    'validTill' => 'Có giá trị cho đến khi',
     'createEstimate' => 'Tạo ước tính',
     'waiting' => 'Đang chờ đợi',
     'accepted' => 'Đã chấp nhận',
@@ -1017,7 +1017,7 @@ return array (
   ),
   'lead' =>
   array (
-    'changeToClient' => 'Thay đổi thành ứng dụng khách',
+    'changeToClient' => 'Chuyển đổi thành khách hàng',
     'addFollowUp' => 'Thêm theo dõi',
     'companyName' => 'Tên công ty',
     'mobile' => 'Số điện thoại',
@@ -1404,7 +1404,7 @@ return array (
     'title' => ' Đề xuất khách hàng tiềm năng',
     'proposal' => ' Đề xuất khách hàng tiềm năng',
     'createProposal' => 'Tạo Đề xuất',
-    'validTill' => 'Đến khi hợp lệ',
+    'validTill' => 'Có giá trị cho đến khi',
     'waiting' => 'Đang chờ đợi',
     'accepted' => 'Đã chấp nhận ',
     'declined' => 'Bị từ chối',
@@ -1673,6 +1673,7 @@ return array (
     'Code' => 'Code',
     'Management' => 'Ban quản lý',
   ),
+  'startTime' => 'Thời gian bắt đầu',
   'attribute'=>
   array (
     'memo' => 'ghi chú',
@@ -1731,5 +1732,7 @@ return array (
     'employee id' => 'id nhân viên',
     'billing cycle' => 'chu kỳ thanh toán',
     'client name' => 'tên khách hàng',
+    'next follow up date' => 'theo dõi tiếp theo',
+    'valid till' => 'có giá trị cho đến khi',
   ),
 );

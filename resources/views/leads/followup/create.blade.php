@@ -17,7 +17,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="bootstrap-timepicker timepicker">
-                            <x-forms.text fieldLabel="Start Time" :fieldPlaceholder="__('placeholders.hours')"
+                            <x-forms.text :fieldLabel="__('modules.startTime')" :fieldPlaceholder="__('placeholders.hours')"
                                 fieldName="start_time" fieldId="start_time" fieldRequired="true"
                                 :fieldValue="\Carbon\Carbon::now($global->timezone)->format($global->time_format)" />
                         </div>
