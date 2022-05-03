@@ -68,7 +68,7 @@
 
             <x-cards.data-row :label="__('modules.lead.leadCategory')" :value="$lead->category->category_name ?? '--'" />
 
-            <x-cards.data-row :label="__('app.lead') . ' ' .__('app.value')" :value="$lead->value ?? '--'" />
+            <x-cards.data-row :label="__('app.value'). ' ' .__('app.lead')" :value="$lead->value ?? '--'" />
 
             <x-cards.data-row :label="__('app.note')" :value="!empty($lead->note) ? $lead->note : '--'" html="true" />
 
