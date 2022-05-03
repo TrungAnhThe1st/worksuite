@@ -98,6 +98,7 @@ return array (
   'square' => 'Square',
   'flutterwave' => 'Flutterwave',
   'offline' => 'Ngoại tuyến',
+  'open tasks' => 'Công việc đang mở',
   'menu' =>
   array (
     'home' => 'Trang chủ',
@@ -150,8 +151,8 @@ return array (
     'rolesPermission' => 'Vai trò & Quyền',
     'stickyNotes' => 'Ghi chú nhanh',
     'teams' => 'Phòng',
-    'tickets' => 'Vé',
-    'ticket' => 'Vé',
+    'tickets' => 'Vé hỗ trợ',
+    'ticket' => 'Vé hỗ trợ',
     'messageSettings' => 'Cài đặt Tin nhắn',
     'reports' => 'Báo cáo',
     'taskReport' => 'Báo cáo Công việc',

@@ -75,7 +75,7 @@
                                     <div class="d-flex flex-wrap justify-content-between">
                                         <span>
                                             <label class="f-12 text-dark-grey mb-12 text-capitalize" for="usr">
-                                                @lang('app.open') @lang('app.menu.tasks') </label>
+                                                @lang('app.open tasks') </label>
                                             <p class="mb-0 f-18 f-w-500">
                                                 <a href="{{ route('tasks.index') . '?assignee=me' }}"
                                                     class="text-dark">

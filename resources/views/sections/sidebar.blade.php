@@ -98,7 +98,7 @@
                         </x-slot>
                         <div class="accordionItemContent pb-2">
                             <x-sub-menu-item :link="route('dashboard')" :text=" __('app.menu.dashboard'). ' ' . __('app.admin')" />
-                            <x-sub-menu-item :link="route('dashboard.member')" :text="__('app.menu.dashboard') . ' ' . __('app.private')" />
+                            <x-sub-menu-item :link="route('dashboard.member')" :text="__('app.menu.dashboard') . ' ' " />
                         </div>
                     </x-menu-item>
                 @else
@@ -312,7 +312,7 @@
 
                 <!-- Knowledge base -->
                 @if (
-                    in_array('knowledgebase', user_modules()) 
+                    in_array('knowledgebase', user_modules())
                     && isset($sidebarUserPermissions['view_knowledgebase'])
                     && $sidebarUserPermissions['view_knowledgebase'] != 5
                 )
