@@ -1244,7 +1244,7 @@ return array (
     'endOnTime' => 'Kết thúc vào giờ',
     'addAttendees' => 'Thêm người tham dự',
     'allEmployees' => 'Tất cả nhân viên',
-    'where' => 'Ở đâu',
+    'where' => 'Địa điểm',
     'repeat' => 'Lặp lại',
     'repeatEvery' => 'Lặp lại mọi lần',
     'cycles' => 'Chu kỳ',
