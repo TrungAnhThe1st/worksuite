@@ -19,6 +19,7 @@ return array (
   'startMeeting' => 'Bắt ​​đầu cuộc họp',
   'id' => 'Id',
   'name' => 'Tên',
+  'Name' => 'Tên',
   'email' => 'Email',
   'slack' => 'Slack',
   'pushNotification' => 'Thông báo đẩy',
