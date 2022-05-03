@@ -62,8 +62,7 @@
                                                                 <option value="">@lang("app.selectAColumn")</option>
                                                                 @if (!empty($heading) && collect($columns)->whereIn('id', $heading[$key])->first())
                                                                     @foreach($columns as $selectKey => $selectColumn)
-                                                                    <option value="{{ $selectColumn['id'] }}" {{ ($heading[$key]==$selectColumn['id']) ? 'selected' : '' }}>{{$selectColumn['name'] }}
-                                                                    </option>
+                                                                    <option value="{{ $selectColumn['id'] }}" {{ ($heading[$key]==$selectColumn['id']) ? 'selected' : '' }}>@lang('app.' . {{ $selectColumn['name'] }})</option>
                                                                     @endforeach
                                                                 @endif
                                                             </select>
