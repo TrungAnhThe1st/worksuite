@@ -1734,5 +1734,6 @@ return array (
     'client name' => 'tên khách hàng',
     'next follow up date' => 'theo dõi tiếp theo',
     'valid till' => 'có giá trị cho đến khi',
+    'import file' => 'tải lên tập tin',
   ),
 );
