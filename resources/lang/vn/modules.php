@@ -11,7 +11,7 @@ return array (
     'totalPaidInvoices' => 'Hóa đơn đã thanh toán',
     'totalTickets' => 'Load',
     'totalOpenTickets' => 'Mở vé',
-    'openTickets' => 'Vé đang mở',
+    'openTickets' => 'Vé hỗ trợ đang mở',
     'totalHoursLogged' => 'Tổng số giờ đã ghi',
     'totalPendingTasks' => 'Công việc đang chờ xử lý',
     'totalCompletedTasks' => 'Công việc đã hoàn thành',
@@ -27,7 +27,7 @@ return array (
     'weatherSetLocation' => 'Đặt vị trí hiện tại để xem thời tiết',
     'totalTodayAttendance' => 'Chấm công Hôm nay',
     'newTickets' => 'Mở vé',
-    'totalUnpaidInvoices' => 'Các hóa đơn đến hạn',
+    'totalUnpaidInvoices' => 'Các hóa đơn quá hạn',
     'followUpDate' => 'Theo dõi ngày',
     'pendingFollowUp' => 'Theo dõi đang chờ xử lý',
     'totalLeads' => 'Tổng số khách hàng tiềm năng',
@@ -101,10 +101,10 @@ return array (
     'totalOverdueProject' => 'Tổng dự án quá hạn',
     'statusWiseProject' => 'Dự án theo tình trạng',
     'pendingMilestone' => 'Mốc đang chờ xử lý',
-    'totalUnassignedTicket' => 'Tổng số vé chưa được giao',
-    'typeWiseTicket' => 'Vé theo loại',
-    'statusWiseTicket' => 'Vé theo trạng thái',
-    'channelWiseTicket' => 'Vé theo kênh',
+    'totalUnassignedTicket' => 'Tổng số vé hỗ trợ chưa được giao',
+    'typeWiseTicket' => 'Vé hỗ trợ theo loại',
+    'statusWiseTicket' => 'Vé hỗ trợ theo trạng thái',
+    'channelWiseTicket' => 'Vé hỗ trợ theo kênh',
     'thisMonth' => 'Tháng này',
     'timelogs' => 'Nhật ký theo dõi',
     'privateTaskInfo' => 'Không bao gồm các Công việc riêng tư',
@@ -425,7 +425,7 @@ return array (
     'billedTo' => 'Thanh toán cho',
     'generatedBy' => 'Tạo bởi',
     'price' => 'Giá',
-    'type' => 'kiểu',
+    'type' => 'Loại',
     'payPaypal' => 'Thanh toán qua Paypal',
     'payPaystack' => 'Thanh toán qua Paystack',
     'payFlutterwave' => 'Thanh toán qua Flutterwave',
@@ -831,7 +831,7 @@ return array (
     'viewDetails' => 'Xem chi tiết',
     'title' => ' Đề xuất khách hàng tiềm năng',
     'proposal' => ' Đề xuất khách hàng tiềm năng',
-    'validTill' => 'Đến khi hợp lệ',
+    'validTill' => 'Có giá trị cho đến khi',
     'waiting' => 'Đang chờ đợi',
     'accepted' => 'Đã chấp nhận',
     'declined' => 'Bị từ chối',
@@ -892,7 +892,7 @@ return array (
   'estimates' =>
   array (
     'copyLink' => 'Sao chép Liên kết Công khai',
-    'validTill' => 'Đến khi hợp lệ',
+    'validTill' => 'Có giá trị cho đến khi',
     'createEstimate' => 'Tạo ước tính',
     'waiting' => 'Đang chờ đợi',
     'accepted' => 'Đã chấp nhận',
@@ -1017,7 +1017,7 @@ return array (
   ),
   'lead' =>
   array (
-    'changeToClient' => 'Thay đổi thành ứng dụng khách',
+    'changeToClient' => 'Chuyển đổi thành khách hàng',
     'addFollowUp' => 'Thêm theo dõi',
     'companyName' => 'Tên công ty',
     'mobile' => 'Số điện thoại',
@@ -1116,7 +1116,7 @@ return array (
   'tickets' =>
   array (
     'agent' => 'Đại lý',
-    'ticket' => 'Vé',
+    'ticket' => 'Vé hỗ trợ',
     'ticketSubject' => 'Chủ đề vé',
     'requesterName' => 'Tên người yêu cầu',
     'requestedOn' => 'Đã yêu cầu trên',
@@ -1404,7 +1404,7 @@ return array (
     'title' => ' Đề xuất khách hàng tiềm năng',
     'proposal' => ' Đề xuất khách hàng tiềm năng',
     'createProposal' => 'Tạo Đề xuất',
-    'validTill' => 'Đến khi hợp lệ',
+    'validTill' => 'Có giá trị cho đến khi',
     'waiting' => 'Đang chờ đợi',
     'accepted' => 'Đã chấp nhận ',
     'declined' => 'Bị từ chối',
@@ -1673,6 +1673,7 @@ return array (
     'Code' => 'Code',
     'Management' => 'Ban quản lý',
   ),
+  'startTime' => 'Thời gian bắt đầu',
   'attribute'=>
   array (
     'memo' => 'ghi chú',
@@ -1731,5 +1732,8 @@ return array (
     'employee id' => 'id nhân viên',
     'billing cycle' => 'chu kỳ thanh toán',
     'client name' => 'tên khách hàng',
+    'next follow up date' => 'theo dõi tiếp theo',
+    'valid till' => 'có giá trị cho đến khi',
+    'import file' => 'tải lên tập tin',
   ),
 );

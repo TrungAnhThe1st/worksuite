@@ -600,7 +600,7 @@ return array (
     'ImageFile' => 'chỉ cho phép các định dạng .jpg, .jpeg, .png.',
     'multipleImageFile' => 'chỉ cho phép các định dạng .txt, .pdf, .doc, .xls, .xlsx, .docx, .rtf, .png, .jpg, .jpeg.',
   ),
-  'matchColumnMessage' => 'ui lòng sắp xếp dữ liệu bạn đã tải lên bằng cách đối sánh các cột trong CSV với các trường trong các trường được liên kết.',
+  'matchColumnMessage' => 'Vui lòng sắp xếp dữ liệu bạn đã tải lên bằng cách đối sánh các cột trong CSV với các trường trong các trường được liên kết.',
   'columnMatchSuccess' => '<strong>Làm tốt lắm!</strong> Bạn đã đối sánh thành công tất cả các cột. Vui lòng nhấp vào gửi để lưu.',
   'requiredColumnsUnmatched' => 'Các trường sau là bắt buộc và phải phù hợp với nhau: <strong>:columns</strong>',
   'unmatchedColumns' => '<span id="unmatchedCount">:unmatchCount</span> cột chưa khớp.',

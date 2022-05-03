@@ -536,16 +536,16 @@ if (!function_exists('currency_formatter')) {
 
         switch ($currency_position) {
         case 'right':
-            $amount = $amount . $currency_symbol;
+            $amount = $amount . ' ' . $currency_symbol;
             break;
         case 'left_with_space':
-            $amount = $currency_symbol . ' ' . $amount;
+            $amount = $amount . ' ' . $currency_symbol;
             break;
         case 'right_with_space':
             $amount = $amount . ' ' . $currency_symbol;
             break;
         default:
-            $amount = $currency_symbol . $amount;
+            $amount = $amount . ' ' . $currency_symbol;
             break;
         }
 
