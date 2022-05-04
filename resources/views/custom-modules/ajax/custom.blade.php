@@ -2,7 +2,7 @@
     <x-table class="table-bordered" headType="thead-light">
         <x-slot name="thead">
             <th>@lang('app.name')</th>
-            <th>Purchase Code</th>
+            <th>Mã thanh toán</th>
             <th>@lang('app.currentVersion')</th>
             <th>@lang('app.latestVersion')</th>
             <th class="text-right">@lang('app.status')</th>

@@ -25,7 +25,7 @@
         @empty
             <tr>
                 <td colspan="4">
-                    <x-cards.no-record icon="list" message="No lead category added" />
+                    <x-cards.no-record icon="list" message="Không có danh mục khách hàng tiềm năng nào được thêm vào" />
                 </td>
             </tr>
         @endforelse

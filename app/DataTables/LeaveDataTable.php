@@ -69,7 +69,7 @@ class LeaveDataTable extends BaseDataTable
             })
             ->addColumn('leave_type', function ($row) {
                 // $type = '<span class="badge badge-success" style="background-color:' . $row->color . '">' . $row->type_name . '</span>';
-                $type = '<span class="badge badge-success" style="background-color:' . $row->color . '">' . __('app.leaveTypes.' . lcfirst($row->type_name)) . '</span>';
+                $type = '<span class="badge badge-success" style="background-color:' . $row->color . '">' . $row->type_name . '</span>';
 
                 if ($row->duration == 'half day') {
                     $type .= ' <div class="badge-inverse badge">' . __('modules.leaves.halfDay') . '</div>';

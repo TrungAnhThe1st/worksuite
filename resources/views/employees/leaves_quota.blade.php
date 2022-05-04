@@ -12,7 +12,7 @@
                         <tr>
                             <td style="width:400px">
                                 {{-- <x-status :value="$leaveType->type_name" :style="'color:'.$leaveType->color" /> --}}
-                                <x-status :value="__('app.leaveTypes.' . lcfirst($leaveType->type_name))" :style="'color:'.$leaveType->color" />
+                                <x-status :value="$leaveType->type_name" :style="'color:'.$leaveType->color" />
                             </td>
                             <td>{{ isset($employeeLeavesQuota[$key]) ? $employeeLeavesQuota[$key]->no_of_leaves : 0 }}
                             </td>

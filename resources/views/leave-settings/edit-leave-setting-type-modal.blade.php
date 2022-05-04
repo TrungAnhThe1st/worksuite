@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="col-lg-6">
-                    <x-forms.select fieldId="paid" fieldLabel="Leave Paid Status" fieldName="paid" search="true">
+                    <x-forms.select fieldId="paid" fieldLabel="Trạng thái thanh toán" fieldName="paid" search="true">
                         <option value="1" {{ $leaveType->paid == 1 ? 'selected' : '' }}>@lang('app.paid')</option>
                         <option value="0" {{ $leaveType->paid == 0 ? 'selected' : '' }}>@lang('app.unpaid')</option>
                     </x-forms.select>
