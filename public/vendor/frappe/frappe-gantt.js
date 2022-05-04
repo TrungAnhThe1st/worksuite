@@ -107,7 +107,7 @@ const month_names = {
         '十月',
         '十一月',
         '十二月'
-    ]
+    ],
 };
 
 var date_utils = {

@@ -109,7 +109,7 @@ $addknowledgebasePermission = user()->permission('add_knowledgebase');
                                         class="openRightModal text-darkest-grey d-block">{{ $item->heading }}</a>
                                 </td>
                                 <td>{{ ucfirst($item->knowledgebasecategory->name) }}</td>
-                                <td>{{ ucfirst($item->to) }}</td>
+                                <td>@lang('app.' . $item->to)</td>
                                 <td class="text-right">
                                     @if ($editKnowledgebasePermission == 'all' || ($editKnowledgebasePermission == 'added' && $item->added_by == user()->id))
                                         <div class="task_view">

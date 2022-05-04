@@ -14,7 +14,6 @@
 @endpush
 
 @section('content')
-
     <!-- MESSAGE START -->
     <div class="message_wrapper bg-white border-top-0">
         <!-- MESSAGE HEADER START -->
