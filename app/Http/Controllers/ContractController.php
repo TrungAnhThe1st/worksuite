@@ -290,6 +290,8 @@ class ContractController extends AccountBaseController
         Carbon::setLocale($this->invoiceSetting->locale);
         $pdf->loadView('contracts.contract-pdf', $this->data);
 
+        // echo json_encode($this->data);
+
         $dom_pdf = $pdf->getDomPDF();
         $canvas = $dom_pdf->get_canvas();
         $canvas->page_text(530, 820, 'Page {PAGE_NUM} of {PAGE_COUNT}', null, 10, array(0, 0, 0));

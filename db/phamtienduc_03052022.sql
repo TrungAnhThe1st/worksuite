@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 23, 2022 lúc 07:08 AM
--- Phiên bản máy phục vụ: 10.4.22-MariaDB
--- Phiên bản PHP: 8.0.14
+-- Host: 127.0.0.1
+-- Generation Time: May 03, 2022 at 04:25 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.0.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `worksuite`
+-- Database: `worksuite`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `accept_estimates`
+-- Table structure for table `accept_estimates`
 --
 
 CREATE TABLE `accept_estimates` (
@@ -40,7 +40,7 @@ CREATE TABLE `accept_estimates` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `attendances`
+-- Table structure for table `attendances`
 --
 
 CREATE TABLE `attendances` (
@@ -62,7 +62,7 @@ CREATE TABLE `attendances` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `attendances`
+-- Dumping data for table `attendances`
 --
 
 INSERT INTO `attendances` (`id`, `user_id`, `clock_in_time`, `clock_out_time`, `clock_in_ip`, `clock_out_ip`, `working_from`, `late`, `half_day`, `created_at`, `updated_at`, `added_by`, `last_updated_by`, `latitude`, `longitude`) VALUES
@@ -72,7 +72,7 @@ INSERT INTO `attendances` (`id`, `user_id`, `clock_in_time`, `clock_out_time`, `
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `attendance_settings`
+-- Table structure for table `attendance_settings`
 --
 
 CREATE TABLE `attendance_settings` (
@@ -96,7 +96,7 @@ CREATE TABLE `attendance_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `attendance_settings`
+-- Dumping data for table `attendance_settings`
 --
 
 INSERT INTO `attendance_settings` (`id`, `office_start_time`, `office_end_time`, `halfday_mark_time`, `late_mark_duration`, `clockin_in_day`, `employee_clock_in_out`, `office_open_days`, `ip_address`, `radius`, `radius_check`, `ip_check`, `alert_after`, `alert_after_status`, `created_at`, `updated_at`, `save_current_location`) VALUES
@@ -105,7 +105,7 @@ INSERT INTO `attendance_settings` (`id`, `office_start_time`, `office_end_time`,
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `client_categories`
+-- Table structure for table `client_categories`
 --
 
 CREATE TABLE `client_categories` (
@@ -118,7 +118,7 @@ CREATE TABLE `client_categories` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `client_contacts`
+-- Table structure for table `client_contacts`
 --
 
 CREATE TABLE `client_contacts` (
@@ -137,7 +137,7 @@ CREATE TABLE `client_contacts` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `client_details`
+-- Table structure for table `client_details`
 --
 
 CREATE TABLE `client_details` (
@@ -166,7 +166,7 @@ CREATE TABLE `client_details` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `client_details`
+-- Dumping data for table `client_details`
 --
 
 INSERT INTO `client_details` (`id`, `user_id`, `company_name`, `address`, `shipping_address`, `postal_code`, `state`, `city`, `office`, `website`, `note`, `linkedin`, `facebook`, `twitter`, `skype`, `gst_number`, `created_at`, `updated_at`, `category_id`, `sub_category_id`, `added_by`, `last_updated_by`) VALUES
@@ -175,7 +175,7 @@ INSERT INTO `client_details` (`id`, `user_id`, `company_name`, `address`, `shipp
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `client_docs`
+-- Table structure for table `client_docs`
 --
 
 CREATE TABLE `client_docs` (
@@ -194,7 +194,7 @@ CREATE TABLE `client_docs` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `client_notes`
+-- Table structure for table `client_notes`
 --
 
 CREATE TABLE `client_notes` (
@@ -215,7 +215,7 @@ CREATE TABLE `client_notes` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `client_sub_categories`
+-- Table structure for table `client_sub_categories`
 --
 
 CREATE TABLE `client_sub_categories` (
@@ -229,7 +229,7 @@ CREATE TABLE `client_sub_categories` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `client_user_notes`
+-- Table structure for table `client_user_notes`
 --
 
 CREATE TABLE `client_user_notes` (
@@ -243,7 +243,7 @@ CREATE TABLE `client_user_notes` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `company_addresses`
+-- Table structure for table `company_addresses`
 --
 
 CREATE TABLE `company_addresses` (
@@ -258,7 +258,7 @@ CREATE TABLE `company_addresses` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `company_addresses`
+-- Dumping data for table `company_addresses`
 --
 
 INSERT INTO `company_addresses` (`id`, `address`, `is_default`, `created_at`, `updated_at`, `tax_number`, `tax_name`, `location`) VALUES
@@ -267,7 +267,7 @@ INSERT INTO `company_addresses` (`id`, `address`, `is_default`, `created_at`, `u
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `contracts`
+-- Table structure for table `contracts`
 --
 
 CREATE TABLE `contracts` (
@@ -301,10 +301,17 @@ CREATE TABLE `contracts` (
   `event_id` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `contracts`
+--
+
+INSERT INTO `contracts` (`id`, `client_id`, `subject`, `amount`, `original_amount`, `contract_type_id`, `start_date`, `original_start_date`, `end_date`, `original_end_date`, `description`, `contract_name`, `company_logo`, `alternate_address`, `cell`, `office`, `city`, `state`, `country`, `postal_code`, `contract_detail`, `created_at`, `updated_at`, `added_by`, `last_updated_by`, `hash`, `currency_id`, `event_id`) VALUES
+(1, 3, 'HD đẻ thuê', '10000', '10000.00', 1, '2022-05-03', '2022-05-03', '2022-05-03', '2022-05-03', '', NULL, NULL, 'TDH', '123456789', '455625663', 'Quận Cầu Giấy', 'Hà Nội', 'Vietnam', '100000', '<p>Không</p>', '2022-05-03 05:11:10', '2022-05-03 05:11:10', 1, 1, 'hTIuTeTcUWeo2dDqCJzY4P2FVhnLaIgC', 2, NULL);
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `contract_discussions`
+-- Table structure for table `contract_discussions`
 --
 
 CREATE TABLE `contract_discussions` (
@@ -321,7 +328,7 @@ CREATE TABLE `contract_discussions` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `contract_files`
+-- Table structure for table `contract_files`
 --
 
 CREATE TABLE `contract_files` (
@@ -345,7 +352,7 @@ CREATE TABLE `contract_files` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `contract_renews`
+-- Table structure for table `contract_renews`
 --
 
 CREATE TABLE `contract_renews` (
@@ -364,7 +371,7 @@ CREATE TABLE `contract_renews` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `contract_signs`
+-- Table structure for table `contract_signs`
 --
 
 CREATE TABLE `contract_signs` (
@@ -380,7 +387,7 @@ CREATE TABLE `contract_signs` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `contract_types`
+-- Table structure for table `contract_types`
 --
 
 CREATE TABLE `contract_types` (
@@ -390,10 +397,17 @@ CREATE TABLE `contract_types` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `contract_types`
+--
+
+INSERT INTO `contract_types` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'Thử việc', '2022-05-03 05:08:37', '2022-05-03 05:08:37');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `conversation`
+-- Table structure for table `conversation`
 --
 
 CREATE TABLE `conversation` (
@@ -407,7 +421,7 @@ CREATE TABLE `conversation` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `conversation_reply`
+-- Table structure for table `conversation_reply`
 --
 
 CREATE TABLE `conversation_reply` (
@@ -422,7 +436,7 @@ CREATE TABLE `conversation_reply` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `countries`
+-- Table structure for table `countries`
 --
 
 CREATE TABLE `countries` (
@@ -436,7 +450,7 @@ CREATE TABLE `countries` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `countries`
+-- Dumping data for table `countries`
 --
 
 INSERT INTO `countries` (`id`, `iso`, `name`, `nicename`, `iso3`, `numcode`, `phonecode`) VALUES
@@ -697,7 +711,7 @@ INSERT INTO `countries` (`id`, `iso`, `name`, `nicename`, `iso3`, `numcode`, `ph
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `credit_notes`
+-- Table structure for table `credit_notes`
 --
 
 CREATE TABLE `credit_notes` (
@@ -733,7 +747,7 @@ CREATE TABLE `credit_notes` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `credit_note_items`
+-- Table structure for table `credit_note_items`
 --
 
 CREATE TABLE `credit_note_items` (
@@ -754,7 +768,7 @@ CREATE TABLE `credit_note_items` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `credit_note_item_images`
+-- Table structure for table `credit_note_item_images`
 --
 
 CREATE TABLE `credit_note_item_images` (
@@ -771,7 +785,7 @@ CREATE TABLE `credit_note_item_images` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `currencies`
+-- Table structure for table `currencies`
 --
 
 CREATE TABLE `currencies` (
@@ -787,7 +801,7 @@ CREATE TABLE `currencies` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `currencies`
+-- Dumping data for table `currencies`
 --
 
 INSERT INTO `currencies` (`id`, `currency_name`, `currency_symbol`, `currency_code`, `exchange_rate`, `is_cryptocurrency`, `usd_price`, `created_at`, `updated_at`) VALUES
@@ -799,7 +813,7 @@ INSERT INTO `currencies` (`id`, `currency_name`, `currency_symbol`, `currency_co
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `currency_format_settings`
+-- Table structure for table `currency_format_settings`
 --
 
 CREATE TABLE `currency_format_settings` (
@@ -811,7 +825,7 @@ CREATE TABLE `currency_format_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `currency_format_settings`
+-- Dumping data for table `currency_format_settings`
 --
 
 INSERT INTO `currency_format_settings` (`id`, `currency_position`, `no_of_decimal`, `thousand_separator`, `decimal_separator`) VALUES
@@ -820,7 +834,7 @@ INSERT INTO `currency_format_settings` (`id`, `currency_position`, `no_of_decima
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `custom_fields`
+-- Table structure for table `custom_fields`
 --
 
 CREATE TABLE `custom_fields` (
@@ -836,7 +850,7 @@ CREATE TABLE `custom_fields` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `custom_fields_data`
+-- Table structure for table `custom_fields_data`
 --
 
 CREATE TABLE `custom_fields_data` (
@@ -850,7 +864,7 @@ CREATE TABLE `custom_fields_data` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `custom_field_groups`
+-- Table structure for table `custom_field_groups`
 --
 
 CREATE TABLE `custom_field_groups` (
@@ -860,7 +874,7 @@ CREATE TABLE `custom_field_groups` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `custom_field_groups`
+-- Dumping data for table `custom_field_groups`
 --
 
 INSERT INTO `custom_field_groups` (`id`, `name`, `model`) VALUES
@@ -877,7 +891,7 @@ INSERT INTO `custom_field_groups` (`id`, `name`, `model`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `dashboard_widgets`
+-- Table structure for table `dashboard_widgets`
 --
 
 CREATE TABLE `dashboard_widgets` (
@@ -890,7 +904,7 @@ CREATE TABLE `dashboard_widgets` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `dashboard_widgets`
+-- Dumping data for table `dashboard_widgets`
 --
 
 INSERT INTO `dashboard_widgets` (`id`, `widget_name`, `status`, `created_at`, `updated_at`, `dashboard_type`) VALUES
@@ -957,7 +971,7 @@ INSERT INTO `dashboard_widgets` (`id`, `widget_name`, `status`, `created_at`, `u
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `database_backups`
+-- Table structure for table `database_backups`
 --
 
 CREATE TABLE `database_backups` (
@@ -970,7 +984,7 @@ CREATE TABLE `database_backups` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `database_backup_cron_settings`
+-- Table structure for table `database_backup_cron_settings`
 --
 
 CREATE TABLE `database_backup_cron_settings` (
@@ -982,7 +996,7 @@ CREATE TABLE `database_backup_cron_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `database_backup_cron_settings`
+-- Dumping data for table `database_backup_cron_settings`
 --
 
 INSERT INTO `database_backup_cron_settings` (`id`, `status`, `hour_of_day`, `backup_after_days`, `delete_backup_after_days`) VALUES
@@ -991,7 +1005,7 @@ INSERT INTO `database_backup_cron_settings` (`id`, `status`, `hour_of_day`, `bac
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `designations`
+-- Table structure for table `designations`
 --
 
 CREATE TABLE `designations` (
@@ -1004,7 +1018,7 @@ CREATE TABLE `designations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `designations`
+-- Dumping data for table `designations`
 --
 
 INSERT INTO `designations` (`id`, `name`, `created_at`, `updated_at`, `added_by`, `last_updated_by`) VALUES
@@ -1013,7 +1027,7 @@ INSERT INTO `designations` (`id`, `name`, `created_at`, `updated_at`, `added_by`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `discussions`
+-- Table structure for table `discussions`
 --
 
 CREATE TABLE `discussions` (
@@ -1038,7 +1052,7 @@ CREATE TABLE `discussions` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `discussion_categories`
+-- Table structure for table `discussion_categories`
 --
 
 CREATE TABLE `discussion_categories` (
@@ -1051,7 +1065,7 @@ CREATE TABLE `discussion_categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `discussion_categories`
+-- Dumping data for table `discussion_categories`
 --
 
 INSERT INTO `discussion_categories` (`id`, `order`, `name`, `color`, `created_at`, `updated_at`) VALUES
@@ -1060,7 +1074,7 @@ INSERT INTO `discussion_categories` (`id`, `order`, `name`, `color`, `created_at
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `discussion_files`
+-- Table structure for table `discussion_files`
 --
 
 CREATE TABLE `discussion_files` (
@@ -1082,7 +1096,7 @@ CREATE TABLE `discussion_files` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `discussion_replies`
+-- Table structure for table `discussion_replies`
 --
 
 CREATE TABLE `discussion_replies` (
@@ -1098,7 +1112,7 @@ CREATE TABLE `discussion_replies` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `email_notification_settings`
+-- Table structure for table `email_notification_settings`
 --
 
 CREATE TABLE `email_notification_settings` (
@@ -1113,7 +1127,7 @@ CREATE TABLE `email_notification_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `email_notification_settings`
+-- Dumping data for table `email_notification_settings`
 --
 
 INSERT INTO `email_notification_settings` (`id`, `setting_name`, `send_email`, `send_slack`, `send_push`, `created_at`, `updated_at`, `slug`) VALUES
@@ -1137,7 +1151,7 @@ INSERT INTO `email_notification_settings` (`id`, `setting_name`, `send_email`, `
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `emergency_contacts`
+-- Table structure for table `emergency_contacts`
 --
 
 CREATE TABLE `emergency_contacts` (
@@ -1155,7 +1169,7 @@ CREATE TABLE `emergency_contacts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `emergency_contacts`
+-- Dumping data for table `emergency_contacts`
 --
 
 INSERT INTO `emergency_contacts` (`id`, `user_id`, `name`, `email`, `mobile`, `relation`, `address`, `added_by`, `last_updated_by`, `created_at`, `updated_at`) VALUES
@@ -1164,7 +1178,7 @@ INSERT INTO `emergency_contacts` (`id`, `user_id`, `name`, `email`, `mobile`, `r
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `employee_details`
+-- Table structure for table `employee_details`
 --
 
 CREATE TABLE `employee_details` (
@@ -1187,7 +1201,7 @@ CREATE TABLE `employee_details` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `employee_details`
+-- Dumping data for table `employee_details`
 --
 
 INSERT INTO `employee_details` (`id`, `user_id`, `employee_id`, `address`, `hourly_rate`, `slack_username`, `department_id`, `designation_id`, `created_at`, `updated_at`, `joining_date`, `last_date`, `added_by`, `last_updated_by`, `attendance_reminder`, `date_of_birth`) VALUES
@@ -1197,7 +1211,7 @@ INSERT INTO `employee_details` (`id`, `user_id`, `employee_id`, `address`, `hour
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `employee_docs`
+-- Table structure for table `employee_docs`
 --
 
 CREATE TABLE `employee_docs` (
@@ -1214,7 +1228,7 @@ CREATE TABLE `employee_docs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `employee_docs`
+-- Dumping data for table `employee_docs`
 --
 
 INSERT INTO `employee_docs` (`id`, `user_id`, `name`, `filename`, `hashname`, `size`, `created_at`, `updated_at`, `added_by`, `last_updated_by`) VALUES
@@ -1223,7 +1237,7 @@ INSERT INTO `employee_docs` (`id`, `user_id`, `name`, `filename`, `hashname`, `s
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `employee_leave_quotas`
+-- Table structure for table `employee_leave_quotas`
 --
 
 CREATE TABLE `employee_leave_quotas` (
@@ -1236,7 +1250,7 @@ CREATE TABLE `employee_leave_quotas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `employee_leave_quotas`
+-- Dumping data for table `employee_leave_quotas`
 --
 
 INSERT INTO `employee_leave_quotas` (`id`, `user_id`, `leave_type_id`, `no_of_leaves`, `created_at`, `updated_at`) VALUES
@@ -1250,7 +1264,7 @@ INSERT INTO `employee_leave_quotas` (`id`, `user_id`, `leave_type_id`, `no_of_le
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `employee_skills`
+-- Table structure for table `employee_skills`
 --
 
 CREATE TABLE `employee_skills` (
@@ -1262,7 +1276,7 @@ CREATE TABLE `employee_skills` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `employee_skills`
+-- Dumping data for table `employee_skills`
 --
 
 INSERT INTO `employee_skills` (`id`, `user_id`, `skill_id`, `created_at`, `updated_at`) VALUES
@@ -1272,7 +1286,7 @@ INSERT INTO `employee_skills` (`id`, `user_id`, `skill_id`, `created_at`, `updat
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `employee_teams`
+-- Table structure for table `employee_teams`
 --
 
 CREATE TABLE `employee_teams` (
@@ -1286,7 +1300,7 @@ CREATE TABLE `employee_teams` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `estimates`
+-- Table structure for table `estimates`
 --
 
 CREATE TABLE `estimates` (
@@ -1314,7 +1328,7 @@ CREATE TABLE `estimates` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `estimate_items`
+-- Table structure for table `estimate_items`
 --
 
 CREATE TABLE `estimate_items` (
@@ -1335,7 +1349,7 @@ CREATE TABLE `estimate_items` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `estimate_item_images`
+-- Table structure for table `estimate_item_images`
 --
 
 CREATE TABLE `estimate_item_images` (
@@ -1352,7 +1366,7 @@ CREATE TABLE `estimate_item_images` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `events`
+-- Table structure for table `events`
 --
 
 CREATE TABLE `events` (
@@ -1377,10 +1391,18 @@ CREATE TABLE `events` (
   `event_id` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`id`, `event_name`, `label_color`, `where`, `description`, `start_date_time`, `end_date_time`, `repeat`, `repeat_every`, `repeat_cycles`, `repeat_type`, `send_reminder`, `remind_time`, `remind_type`, `created_at`, `updated_at`, `added_by`, `last_updated_by`, `event_id`) VALUES
+(1, 'Test 1', '#751D1D', 'HN', '<p>Mô tả</p>', '2022-05-03 16:45:00', '2022-05-18 16:45:00', 'no', NULL, NULL, 'day', 'yes', 1, 'day', '2022-05-03 02:51:33', '2022-05-03 02:51:33', 1, 1, NULL),
+(2, 'Sự kiện 2', '#FF0000', 'HN', '<p>e</p>', '2022-05-03 17:00:00', '2022-05-03 18:00:00', 'no', NULL, NULL, 'day', 'no', NULL, 'day', '2022-05-03 03:03:35', '2022-05-03 03:03:35', 1, 1, NULL);
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `event_attendees`
+-- Table structure for table `event_attendees`
 --
 
 CREATE TABLE `event_attendees` (
@@ -1391,10 +1413,21 @@ CREATE TABLE `event_attendees` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `event_attendees`
+--
+
+INSERT INTO `event_attendees` (`id`, `user_id`, `event_id`, `created_at`, `updated_at`) VALUES
+(1, 2, 1, '2022-05-03 02:51:33', '2022-05-03 02:51:33'),
+(2, 1, 1, '2022-05-03 02:51:33', '2022-05-03 02:51:33'),
+(3, 3, 1, '2022-05-03 02:51:34', '2022-05-03 02:51:34'),
+(4, 1, 2, '2022-05-03 03:03:35', '2022-05-03 03:03:35'),
+(5, 3, 2, '2022-05-03 03:03:36', '2022-05-03 03:03:36');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `expenses`
+-- Table structure for table `expenses`
 --
 
 CREATE TABLE `expenses` (
@@ -1423,7 +1456,7 @@ CREATE TABLE `expenses` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `expenses_category`
+-- Table structure for table `expenses_category`
 --
 
 CREATE TABLE `expenses_category` (
@@ -1438,7 +1471,7 @@ CREATE TABLE `expenses_category` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `expenses_category_roles`
+-- Table structure for table `expenses_category_roles`
 --
 
 CREATE TABLE `expenses_category_roles` (
@@ -1452,7 +1485,7 @@ CREATE TABLE `expenses_category_roles` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `expenses_recurring`
+-- Table structure for table `expenses_recurring`
 --
 
 CREATE TABLE `expenses_recurring` (
@@ -1483,7 +1516,7 @@ CREATE TABLE `expenses_recurring` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `failed_jobs`
+-- Table structure for table `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -1499,7 +1532,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `file_storage_settings`
+-- Table structure for table `file_storage_settings`
 --
 
 CREATE TABLE `file_storage_settings` (
@@ -1512,7 +1545,7 @@ CREATE TABLE `file_storage_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `file_storage_settings`
+-- Dumping data for table `file_storage_settings`
 --
 
 INSERT INTO `file_storage_settings` (`id`, `filesystem`, `auth_keys`, `status`, `created_at`, `updated_at`) VALUES
@@ -1521,7 +1554,7 @@ INSERT INTO `file_storage_settings` (`id`, `filesystem`, `auth_keys`, `status`, 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `gdpr_settings`
+-- Table structure for table `gdpr_settings`
 --
 
 CREATE TABLE `gdpr_settings` (
@@ -1545,7 +1578,7 @@ CREATE TABLE `gdpr_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `gdpr_settings`
+-- Dumping data for table `gdpr_settings`
 --
 
 INSERT INTO `gdpr_settings` (`id`, `enable_gdpr`, `show_customer_area`, `show_customer_footer`, `top_information_block`, `enable_export`, `data_removal`, `lead_removal_public_form`, `terms_customer_footer`, `terms`, `policy`, `public_lead_edit`, `consent_customer`, `consent_leads`, `consent_block`, `created_at`, `updated_at`) VALUES
@@ -1554,7 +1587,7 @@ INSERT INTO `gdpr_settings` (`id`, `enable_gdpr`, `show_customer_area`, `show_cu
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `google_calendar_modules`
+-- Table structure for table `google_calendar_modules`
 --
 
 CREATE TABLE `google_calendar_modules` (
@@ -1571,7 +1604,7 @@ CREATE TABLE `google_calendar_modules` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `google_calendar_modules`
+-- Dumping data for table `google_calendar_modules`
 --
 
 INSERT INTO `google_calendar_modules` (`id`, `lead_status`, `leave_status`, `invoice_status`, `contract_status`, `task_status`, `event_status`, `holiday_status`, `created_at`, `updated_at`) VALUES
@@ -1580,7 +1613,7 @@ INSERT INTO `google_calendar_modules` (`id`, `lead_status`, `leave_status`, `inv
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `holidays`
+-- Table structure for table `holidays`
 --
 
 CREATE TABLE `holidays` (
@@ -1595,7 +1628,7 @@ CREATE TABLE `holidays` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `holidays`
+-- Dumping data for table `holidays`
 --
 
 INSERT INTO `holidays` (`id`, `date`, `occassion`, `created_at`, `updated_at`, `added_by`, `last_updated_by`, `event_id`) VALUES
@@ -1656,7 +1689,7 @@ INSERT INTO `holidays` (`id`, `date`, `occassion`, `created_at`, `updated_at`, `
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `invoices`
+-- Table structure for table `invoices`
 --
 
 CREATE TABLE `invoices` (
@@ -1701,7 +1734,7 @@ CREATE TABLE `invoices` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `invoice_items`
+-- Table structure for table `invoice_items`
 --
 
 CREATE TABLE `invoice_items` (
@@ -1722,7 +1755,7 @@ CREATE TABLE `invoice_items` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `invoice_item_images`
+-- Table structure for table `invoice_item_images`
 --
 
 CREATE TABLE `invoice_item_images` (
@@ -1739,7 +1772,7 @@ CREATE TABLE `invoice_item_images` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `invoice_recurring`
+-- Table structure for table `invoice_recurring`
 --
 
 CREATE TABLE `invoice_recurring` (
@@ -1779,7 +1812,7 @@ CREATE TABLE `invoice_recurring` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `invoice_recurring_items`
+-- Table structure for table `invoice_recurring_items`
 --
 
 CREATE TABLE `invoice_recurring_items` (
@@ -1800,7 +1833,7 @@ CREATE TABLE `invoice_recurring_items` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `invoice_recurring_item_images`
+-- Table structure for table `invoice_recurring_item_images`
 --
 
 CREATE TABLE `invoice_recurring_item_images` (
@@ -1817,7 +1850,7 @@ CREATE TABLE `invoice_recurring_item_images` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `invoice_settings`
+-- Table structure for table `invoice_settings`
 --
 
 CREATE TABLE `invoice_settings` (
@@ -1844,7 +1877,7 @@ CREATE TABLE `invoice_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `invoice_settings`
+-- Dumping data for table `invoice_settings`
 --
 
 INSERT INTO `invoice_settings` (`id`, `invoice_prefix`, `invoice_digit`, `estimate_prefix`, `estimate_digit`, `credit_note_prefix`, `credit_note_digit`, `template`, `due_after`, `invoice_terms`, `estimate_terms`, `gst_number`, `show_gst`, `created_at`, `updated_at`, `logo`, `hsn_sac_code_show`, `locale`, `send_reminder`, `tax_calculation_msg`) VALUES
@@ -1853,7 +1886,7 @@ INSERT INTO `invoice_settings` (`id`, `invoice_prefix`, `invoice_digit`, `estima
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `issues`
+-- Table structure for table `issues`
 --
 
 CREATE TABLE `issues` (
@@ -1869,7 +1902,7 @@ CREATE TABLE `issues` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `jobs`
+-- Table structure for table `jobs`
 --
 
 CREATE TABLE `jobs` (
@@ -1885,7 +1918,7 @@ CREATE TABLE `jobs` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `job_batches`
+-- Table structure for table `job_batches`
 --
 
 CREATE TABLE `job_batches` (
@@ -1904,7 +1937,7 @@ CREATE TABLE `job_batches` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `knowledge_bases`
+-- Table structure for table `knowledge_bases`
 --
 
 CREATE TABLE `knowledge_bases` (
@@ -1921,7 +1954,7 @@ CREATE TABLE `knowledge_bases` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `knowledge_categories`
+-- Table structure for table `knowledge_categories`
 --
 
 CREATE TABLE `knowledge_categories` (
@@ -1934,7 +1967,7 @@ CREATE TABLE `knowledge_categories` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `language_settings`
+-- Table structure for table `language_settings`
 --
 
 CREATE TABLE `language_settings` (
@@ -1947,7 +1980,7 @@ CREATE TABLE `language_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `language_settings`
+-- Dumping data for table `language_settings`
 --
 
 INSERT INTO `language_settings` (`id`, `language_code`, `language_name`, `status`, `created_at`, `updated_at`) VALUES
@@ -1974,7 +2007,7 @@ INSERT INTO `language_settings` (`id`, `language_code`, `language_name`, `status
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `leads`
+-- Table structure for table `leads`
 --
 
 CREATE TABLE `leads` (
@@ -2012,7 +2045,7 @@ CREATE TABLE `leads` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lead_agents`
+-- Table structure for table `lead_agents`
 --
 
 CREATE TABLE `lead_agents` (
@@ -2028,7 +2061,7 @@ CREATE TABLE `lead_agents` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lead_category`
+-- Table structure for table `lead_category`
 --
 
 CREATE TABLE `lead_category` (
@@ -2043,7 +2076,7 @@ CREATE TABLE `lead_category` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lead_custom_forms`
+-- Table structure for table `lead_custom_forms`
 --
 
 CREATE TABLE `lead_custom_forms` (
@@ -2060,7 +2093,7 @@ CREATE TABLE `lead_custom_forms` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `lead_custom_forms`
+-- Dumping data for table `lead_custom_forms`
 --
 
 INSERT INTO `lead_custom_forms` (`id`, `field_display_name`, `field_name`, `field_order`, `status`, `created_at`, `updated_at`, `required`, `added_by`, `last_updated_by`) VALUES
@@ -2075,7 +2108,7 @@ INSERT INTO `lead_custom_forms` (`id`, `field_display_name`, `field_name`, `fiel
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lead_files`
+-- Table structure for table `lead_files`
 --
 
 CREATE TABLE `lead_files` (
@@ -2097,7 +2130,7 @@ CREATE TABLE `lead_files` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lead_follow_up`
+-- Table structure for table `lead_follow_up`
 --
 
 CREATE TABLE `lead_follow_up` (
@@ -2115,7 +2148,7 @@ CREATE TABLE `lead_follow_up` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lead_notes`
+-- Table structure for table `lead_notes`
 --
 
 CREATE TABLE `lead_notes` (
@@ -2136,7 +2169,7 @@ CREATE TABLE `lead_notes` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lead_sources`
+-- Table structure for table `lead_sources`
 --
 
 CREATE TABLE `lead_sources` (
@@ -2149,7 +2182,7 @@ CREATE TABLE `lead_sources` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `lead_sources`
+-- Dumping data for table `lead_sources`
 --
 
 INSERT INTO `lead_sources` (`id`, `type`, `created_at`, `updated_at`, `added_by`, `last_updated_by`) VALUES
@@ -2163,7 +2196,7 @@ INSERT INTO `lead_sources` (`id`, `type`, `created_at`, `updated_at`, `added_by`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lead_status`
+-- Table structure for table `lead_status`
 --
 
 CREATE TABLE `lead_status` (
@@ -2177,7 +2210,7 @@ CREATE TABLE `lead_status` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `lead_status`
+-- Dumping data for table `lead_status`
 --
 
 INSERT INTO `lead_status` (`id`, `type`, `created_at`, `updated_at`, `priority`, `default`, `label_color`) VALUES
@@ -2188,7 +2221,7 @@ INSERT INTO `lead_status` (`id`, `type`, `created_at`, `updated_at`, `priority`,
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lead_user_notes`
+-- Table structure for table `lead_user_notes`
 --
 
 CREATE TABLE `lead_user_notes` (
@@ -2202,7 +2235,7 @@ CREATE TABLE `lead_user_notes` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `leaves`
+-- Table structure for table `leaves`
 --
 
 CREATE TABLE `leaves` (
@@ -2223,7 +2256,7 @@ CREATE TABLE `leaves` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `leaves`
+-- Dumping data for table `leaves`
 --
 
 INSERT INTO `leaves` (`id`, `user_id`, `leave_type_id`, `duration`, `leave_date`, `reason`, `status`, `reject_reason`, `created_at`, `updated_at`, `paid`, `added_by`, `last_updated_by`, `event_id`) VALUES
@@ -2233,7 +2266,7 @@ INSERT INTO `leaves` (`id`, `user_id`, `leave_type_id`, `duration`, `leave_date`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `leave_types`
+-- Table structure for table `leave_types`
 --
 
 CREATE TABLE `leave_types` (
@@ -2247,7 +2280,7 @@ CREATE TABLE `leave_types` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `leave_types`
+-- Dumping data for table `leave_types`
 --
 
 INSERT INTO `leave_types` (`id`, `type_name`, `color`, `no_of_leaves`, `created_at`, `updated_at`, `paid`) VALUES
@@ -2258,7 +2291,7 @@ INSERT INTO `leave_types` (`id`, `type_name`, `color`, `no_of_leaves`, `created_
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `log_time_for`
+-- Table structure for table `log_time_for`
 --
 
 CREATE TABLE `log_time_for` (
@@ -2271,7 +2304,7 @@ CREATE TABLE `log_time_for` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `log_time_for`
+-- Dumping data for table `log_time_for`
 --
 
 INSERT INTO `log_time_for` (`id`, `log_time_for`, `auto_timer_stop`, `created_at`, `updated_at`, `approval_required`) VALUES
@@ -2280,7 +2313,7 @@ INSERT INTO `log_time_for` (`id`, `log_time_for`, `auto_timer_stop`, `created_at
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ltm_translations`
+-- Table structure for table `ltm_translations`
 --
 
 CREATE TABLE `ltm_translations` (
@@ -2295,7 +2328,7 @@ CREATE TABLE `ltm_translations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `ltm_translations`
+-- Dumping data for table `ltm_translations`
 --
 
 INSERT INTO `ltm_translations` (`id`, `status`, `locale`, `group`, `key`, `value`, `created_at`, `updated_at`) VALUES
@@ -9148,7 +9181,7 @@ INSERT INTO `ltm_translations` (`id`, `status`, `locale`, `group`, `key`, `value
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `menus`
+-- Table structure for table `menus`
 --
 
 CREATE TABLE `menus` (
@@ -9164,7 +9197,7 @@ CREATE TABLE `menus` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `menus`
+-- Dumping data for table `menus`
 --
 
 INSERT INTO `menus` (`id`, `menu_name`, `translate_name`, `route`, `module`, `icon`, `setting_menu`, `created_at`, `updated_at`) VALUES
@@ -9262,7 +9295,7 @@ INSERT INTO `menus` (`id`, `menu_name`, `translate_name`, `route`, `module`, `ic
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `menu_settings`
+-- Table structure for table `menu_settings`
 --
 
 CREATE TABLE `menu_settings` (
@@ -9276,7 +9309,7 @@ CREATE TABLE `menu_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `menu_settings`
+-- Dumping data for table `menu_settings`
 --
 
 INSERT INTO `menu_settings` (`id`, `main_menu`, `default_main_menu`, `setting_menu`, `default_setting_menu`, `created_at`, `updated_at`) VALUES
@@ -9285,7 +9318,7 @@ INSERT INTO `menu_settings` (`id`, `main_menu`, `default_main_menu`, `setting_me
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `message_settings`
+-- Table structure for table `message_settings`
 --
 
 CREATE TABLE `message_settings` (
@@ -9297,7 +9330,7 @@ CREATE TABLE `message_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `message_settings`
+-- Dumping data for table `message_settings`
 --
 
 INSERT INTO `message_settings` (`id`, `allow_client_admin`, `allow_client_employee`, `created_at`, `updated_at`) VALUES
@@ -9306,7 +9339,7 @@ INSERT INTO `message_settings` (`id`, `allow_client_admin`, `allow_client_employ
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `migrations`
+-- Table structure for table `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -9316,7 +9349,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `migrations`
+-- Dumping data for table `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -9890,7 +9923,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `modules`
+-- Table structure for table `modules`
 --
 
 CREATE TABLE `modules` (
@@ -9902,7 +9935,7 @@ CREATE TABLE `modules` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `modules`
+-- Dumping data for table `modules`
 --
 
 INSERT INTO `modules` (`id`, `module_name`, `description`, `created_at`, `updated_at`) VALUES
@@ -9933,7 +9966,7 @@ INSERT INTO `modules` (`id`, `module_name`, `description`, `created_at`, `update
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `module_settings`
+-- Table structure for table `module_settings`
 --
 
 CREATE TABLE `module_settings` (
@@ -9946,7 +9979,7 @@ CREATE TABLE `module_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `module_settings`
+-- Dumping data for table `module_settings`
 --
 
 INSERT INTO `module_settings` (`id`, `module_name`, `status`, `type`, `created_at`, `updated_at`) VALUES
@@ -10014,7 +10047,7 @@ INSERT INTO `module_settings` (`id`, `module_name`, `status`, `type`, `created_a
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `notices`
+-- Table structure for table `notices`
 --
 
 CREATE TABLE `notices` (
@@ -10032,7 +10065,7 @@ CREATE TABLE `notices` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `notice_views`
+-- Table structure for table `notice_views`
 --
 
 CREATE TABLE `notice_views` (
@@ -10047,7 +10080,7 @@ CREATE TABLE `notice_views` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `notifications`
+-- Table structure for table `notifications`
 --
 
 CREATE TABLE `notifications` (
@@ -10062,12 +10095,13 @@ CREATE TABLE `notifications` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `notifications`
+-- Dumping data for table `notifications`
 --
 
 INSERT INTO `notifications` (`id`, `type`, `notifiable_type`, `notifiable_id`, `data`, `read_at`, `created_at`, `updated_at`) VALUES
 ('004bc070-73fa-4641-a481-8d209802be42', 'App\\Notifications\\NewTask', 'App\\Models\\User', 2, '{\"id\":2,\"created_at\":\"2022-04-23 01:41:16\",\"heading\":\"Shuper\"}', NULL, '2022-04-22 18:41:17', '2022-04-22 18:41:17'),
 ('00b11179-9c1b-4015-afc2-96ccb179d5fd', 'App\\Notifications\\NewProject', 'App\\Models\\User', 3, '{\"id\":1,\"project_name\":\"Qu\\u1ea3n l\\u00fd d\\u00e2n c\\u01b0\",\"project_summary\":\"<p>Pending<\\/p>\",\"project_admin\":null,\"start_date\":\"2022-04-30T00:00:00+00:00\",\"deadline\":null,\"notes\":\"<p>NOthings<\\/p>\",\"category_id\":1,\"client_id\":3,\"team_id\":1,\"feedback\":null,\"manual_timelog\":\"disable\",\"client_view_task\":\"disable\",\"allow_client_notification\":\"disable\",\"completion_percent\":0,\"calculate_task_progress\":\"true\",\"deleted_at\":null,\"project_budget\":100000,\"currency_id\":1,\"hours_allocated\":200,\"status\":\"not started\",\"added_by\":1,\"last_updated_by\":1,\"hash\":\"mSQP9IHueuoCWTYxOUTWNG7xv81fdKLv\",\"public\":0,\"isProjectAdmin\":false}', NULL, '2022-04-22 18:20:44', '2022-04-22 18:20:44'),
+('016b5420-665a-4084-afda-aa4935acf7d2', 'App\\Notifications\\EventInvite', 'App\\Models\\User', 3, '{\"id\":2,\"start_date_time\":\"2022-05-03 17:00:00\",\"event_name\":\"S\\u1ef1 ki\\u1ec7n 2\"}', NULL, '2022-05-03 03:03:39', '2022-05-03 03:03:39'),
 ('0eda9d91-dacd-4635-b885-4f33ae77ce29', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":7,\"user_id\":1,\"leave_type_id\":3,\"duration\":\"single\",\"leave_date\":\"2022-05-28T00:00:00+00:00\",\"reason\":\"v\",\"status\":\"pending\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-05-28\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 02:11:23', '2022-04-22 02:11:23'),
 ('1144a572-a2ae-4222-98ff-ee97689383c1', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":8,\"user_id\":1,\"leave_type_id\":1,\"duration\":\"single\",\"leave_date\":\"2022-04-22T00:00:00+00:00\",\"reason\":\"f\",\"status\":\"pending\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-04-22\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 02:12:19', '2022-04-22 02:12:19'),
 ('11c5e983-b02a-4987-9a65-9ca0268cd0e7', 'App\\Notifications\\NewLeaveRequest', 'App\\Models\\User', 1, '{\"id\":9,\"user_id\":1,\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-23T01:00:05+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 20:18:08', '2022-04-22 20:18:08'),
@@ -10084,15 +10118,20 @@ INSERT INTO `notifications` (`id`, `type`, `notifiable_type`, `notifiable_id`, `
 ('6be2b602-9371-4ae3-bd65-50d8f49fa29f', 'App\\Notifications\\LeaveStatusUpdate', 'App\\Models\\User', 1, '{\"id\":2,\"user_id\":1,\"leave_type_id\":3,\"duration\":\"multiple\",\"leave_date\":\"2022-10-04T00:00:00+00:00\",\"reason\":\"th\\u01b0\\u1edfng\",\"status\":\"pending\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-10-04\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 00:27:42', '2022-04-22 00:27:42'),
 ('7545338b-dc0d-4aad-8b27-f2b202061841', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":1,\"user_id\":1,\"leave_type_id\":1,\"duration\":\"single\",\"leave_date\":\"2022-04-22T00:00:00+00:00\",\"reason\":\"jjj\",\"status\":\"approved\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-04-22\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":null,\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":null,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":null,\"hourly_rate\":null,\"slack_username\":null,\"department_id\":null,\"designation_id\":null,\"joining_date\":\"2022-04-21T16:52:52+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":null,\"designation\":null}}}', NULL, '2022-04-21 20:25:58', '2022-04-21 20:25:58'),
 ('98e92cc9-9ed6-42a7-aa3a-cd01f0235efc', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":5,\"user_id\":1,\"leave_type_id\":2,\"duration\":\"single\",\"leave_date\":\"2022-05-20T00:00:00+00:00\",\"reason\":\"om\",\"status\":\"approved\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-05-20\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 01:53:26', '2022-04-22 01:53:26'),
+('a1a098e6-dd26-4e0d-b808-966ef721dc80', 'App\\Notifications\\NewContract', 'App\\Models\\User', 3, '{\"id\":1,\"client_id\":3,\"subject\":\"HD \\u0111\\u1ebb thu\\u00ea\",\"amount\":\"10000\",\"original_amount\":\"10000.00\",\"contract_type_id\":1,\"start_date\":\"2022-05-03T00:00:00+00:00\",\"original_start_date\":\"2022-05-03\",\"end_date\":\"2022-05-03T00:00:00+00:00\",\"original_end_date\":\"2022-05-03\",\"description\":\"\",\"contract_name\":null,\"company_logo\":null,\"alternate_address\":\"TDH\",\"cell\":\"123456789\",\"office\":\"455625663\",\"city\":\"Qu\\u1eadn C\\u1ea7u Gi\\u1ea5y\",\"state\":\"H\\u00e0 N\\u1ed9i\",\"country\":\"Vietnam\",\"postal_code\":\"100000\",\"contract_detail\":\"<p>Kh\\u00f4ng<\\/p>\",\"added_by\":1,\"last_updated_by\":1,\"hash\":\"hTIuTeTcUWeo2dDqCJzY4P2FVhnLaIgC\",\"currency_id\":2,\"event_id\":null,\"image_url\":\"http:\\/\\/localhost:8087\\/script\\/public\\/img\\/worksuite-logo.png\",\"currency\":{\"id\":2,\"currency_name\":\"Pounds\",\"currency_symbol\":\"\\u00a3\",\"currency_code\":\"GBP\",\"exchange_rate\":null,\"is_cryptocurrency\":\"no\",\"usd_price\":null},\"client\":{\"id\":3,\"name\":\"L\\u00ea Minh Hi\\u1ebfu\",\"email\":\"cuongnew87@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":null,\"gender\":null,\"salutation\":null,\"locale\":\"en\",\"status\":\"active\",\"login\":\"disable\",\"onesignal_player_id\":null,\"last_login\":null,\"email_notifications\":0,\"country_id\":null,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/8ef6f986b5d7f6cb30ea2dfced28d803.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":3,\"role_id\":3}],\"client_details\":{\"id\":1,\"user_id\":3,\"company_name\":\"C\\u1ea7u Gi\\u1ea5y\",\"address\":null,\"shipping_address\":null,\"postal_code\":null,\"state\":null,\"city\":null,\"office\":null,\"website\":null,\"note\":null,\"linkedin\":null,\"facebook\":null,\"twitter\":null,\"skype\":null,\"gst_number\":null,\"category_id\":null,\"sub_category_id\":null,\"added_by\":1,\"last_updated_by\":1},\"session\":null,\"employee_detail\":null}}', NULL, '2022-05-03 05:11:10', '2022-05-03 05:11:10'),
 ('ad47722a-68cc-4979-931f-d32757e39fa7', 'App\\Notifications\\NewLeaveRequest', 'App\\Models\\User', 1, '{\"id\":8,\"user_id\":1,\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 02:12:22', '2022-04-22 02:12:22'),
 ('b3a52e44-ca48-4872-8b97-06bb4741245a', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":6,\"user_id\":1,\"leave_type_id\":1,\"duration\":\"single\",\"leave_date\":\"2022-04-26T00:00:00+00:00\",\"reason\":\"app.leaveTypes.sd\",\"status\":\"pending\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-04-26\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 02:01:02', '2022-04-22 02:01:02'),
+('b54fe83f-54ab-4929-b1bd-d3f549ab8952', 'App\\Notifications\\EventInvite', 'App\\Models\\User', 1, '{\"id\":1,\"start_date_time\":\"2022-05-03 16:45:00\",\"event_name\":\"Test 1\"}', NULL, '2022-05-03 02:51:34', '2022-05-03 02:51:34'),
+('c8c0a458-a3bd-4a6c-aa37-a55a0f318617', 'App\\Notifications\\EventInvite', 'App\\Models\\User', 2, '{\"id\":1,\"start_date_time\":\"2022-05-03 16:45:00\",\"event_name\":\"Test 1\"}', NULL, '2022-05-03 02:51:41', '2022-05-03 02:51:41'),
+('cd7d60f1-9fdb-41c3-beb4-b6d36003d5a6', 'App\\Notifications\\EventInvite', 'App\\Models\\User', 3, '{\"id\":1,\"start_date_time\":\"2022-05-03 16:45:00\",\"event_name\":\"Test 1\"}', NULL, '2022-05-03 02:51:42', '2022-05-03 02:51:42'),
+('d4d905e7-357b-475e-8987-8712ffce589c', 'App\\Notifications\\EventInvite', 'App\\Models\\User', 1, '{\"id\":2,\"start_date_time\":\"2022-05-03 17:00:00\",\"event_name\":\"S\\u1ef1 ki\\u1ec7n 2\"}', NULL, '2022-05-03 03:03:36', '2022-05-03 03:03:36'),
 ('da853078-2b6a-436f-b942-909e84c8c9a6', 'App\\Notifications\\TaskCompleted', 'App\\Models\\User', 1, '{\"id\":1,\"created_at\":\"2022-04-22 13:57:49\",\"heading\":\"ba vuexy\",\"completed_on\":\"2022-04-23 00:00:00\"}', NULL, '2022-04-22 19:51:40', '2022-04-22 19:51:40'),
 ('eb162714-6302-404f-abc3-7abd0c725c14', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":9,\"user_id\":1,\"leave_type_id\":2,\"duration\":\"single\",\"leave_date\":\"2022-04-23T00:00:00+00:00\",\"reason\":\"om\",\"status\":\"approved\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-04-23\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-23T01:00:05+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 20:18:05', '2022-04-22 20:18:05');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `offline_payment_methods`
+-- Table structure for table `offline_payment_methods`
 --
 
 CREATE TABLE `offline_payment_methods` (
@@ -10107,7 +10146,7 @@ CREATE TABLE `offline_payment_methods` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `orders`
+-- Table structure for table `orders`
 --
 
 CREATE TABLE `orders` (
@@ -10131,7 +10170,7 @@ CREATE TABLE `orders` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `order_items`
+-- Table structure for table `order_items`
 --
 
 CREATE TABLE `order_items` (
@@ -10153,7 +10192,7 @@ CREATE TABLE `order_items` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `order_item_images`
+-- Table structure for table `order_item_images`
 --
 
 CREATE TABLE `order_item_images` (
@@ -10167,7 +10206,7 @@ CREATE TABLE `order_item_images` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `organisation_settings`
+-- Table structure for table `organisation_settings`
 --
 
 CREATE TABLE `organisation_settings` (
@@ -10240,7 +10279,7 @@ CREATE TABLE `organisation_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `organisation_settings`
+-- Dumping data for table `organisation_settings`
 --
 
 INSERT INTO `organisation_settings` (`id`, `company_name`, `company_email`, `company_phone`, `logo`, `login_background`, `address`, `website`, `currency_id`, `timezone`, `date_format`, `date_picker_format`, `moment_format`, `time_format`, `locale`, `latitude`, `longitude`, `leaves_start_from`, `active_theme`, `last_updated_by`, `currency_converter_key`, `google_map_key`, `task_self`, `created_at`, `updated_at`, `weather_key`, `purchase_code`, `supported_until`, `google_recaptcha_status`, `google_recaptcha_v2_status`, `google_recaptcha_v2_site_key`, `google_recaptcha_v2_secret_key`, `google_recaptcha_v3_status`, `google_recaptcha_v3_site_key`, `google_recaptcha_v3_secret_key`, `app_debug`, `rounded_theme`, `hide_cron_message`, `system_update`, `logo_background_color`, `before_days`, `after_days`, `on_deadline`, `default_task_status`, `show_review_modal`, `dashboard_clock`, `ticket_form_google_captcha`, `lead_form_google_captcha`, `taskboard_length`, `last_cron_run`, `favicon`, `auth_theme`, `light_logo`, `sidebar_logo_style`, `session_driver`, `allow_client_signup`, `admin_client_signup_approval`, `allowed_file_types`, `google_calendar_status`, `google_client_id`, `google_client_secret`, `google_calendar_verification_status`, `google_id`, `name`, `token`, `allowed_file_size`) VALUES
@@ -10249,7 +10288,7 @@ INSERT INTO `organisation_settings` (`id`, `company_name`, `company_email`, `com
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `password_resets`
+-- Table structure for table `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -10261,7 +10300,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `payments`
+-- Table structure for table `payments`
 --
 
 CREATE TABLE `payments` (
@@ -10293,7 +10332,7 @@ CREATE TABLE `payments` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `payment_gateway_credentials`
+-- Table structure for table `payment_gateway_credentials`
 --
 
 CREATE TABLE `payment_gateway_credentials` (
@@ -10356,7 +10395,7 @@ CREATE TABLE `payment_gateway_credentials` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `payment_gateway_credentials`
+-- Dumping data for table `payment_gateway_credentials`
 --
 
 INSERT INTO `payment_gateway_credentials` (`id`, `paypal_client_id`, `paypal_secret`, `paypal_status`, `live_stripe_client_id`, `live_stripe_secret`, `live_stripe_webhook_secret`, `stripe_status`, `created_at`, `updated_at`, `live_razorpay_key`, `live_razorpay_secret`, `razorpay_status`, `paypal_mode`, `sandbox_paypal_client_id`, `sandbox_paypal_secret`, `test_stripe_client_id`, `test_stripe_secret`, `test_razorpay_key`, `test_razorpay_secret`, `test_stripe_webhook_secret`, `stripe_mode`, `razorpay_mode`, `paystack_key`, `paystack_secret`, `paystack_merchant_email`, `paystack_status`, `paystack_mode`, `test_paystack_key`, `test_paystack_secret`, `test_paystack_merchant_email`, `paystack_payment_url`, `mollie_api_key`, `mollie_status`, `payfast_merchant_id`, `payfast_merchant_key`, `payfast_passphrase`, `payfast_mode`, `payfast_status`, `authorize_api_login_id`, `authorize_transaction_key`, `authorize_environment`, `authorize_status`, `square_application_id`, `square_access_token`, `square_location_id`, `square_environment`, `square_status`, `flutterwave_status`, `flutterwave_mode`, `test_flutterwave_key`, `test_flutterwave_secret`, `test_flutterwave_hash`, `live_flutterwave_key`, `live_flutterwave_secret`, `live_flutterwave_hash`) VALUES
@@ -10365,7 +10404,7 @@ INSERT INTO `payment_gateway_credentials` (`id`, `paypal_client_id`, `paypal_sec
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `permissions`
+-- Table structure for table `permissions`
 --
 
 CREATE TABLE `permissions` (
@@ -10381,7 +10420,7 @@ CREATE TABLE `permissions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `permissions`
+-- Dumping data for table `permissions`
 --
 
 INSERT INTO `permissions` (`id`, `name`, `display_name`, `description`, `module_id`, `created_at`, `updated_at`, `is_custom`, `allowed_permissions`) VALUES
@@ -10648,7 +10687,7 @@ INSERT INTO `permissions` (`id`, `name`, `display_name`, `description`, `module_
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `permission_role`
+-- Table structure for table `permission_role`
 --
 
 CREATE TABLE `permission_role` (
@@ -10658,7 +10697,7 @@ CREATE TABLE `permission_role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `permission_role`
+-- Dumping data for table `permission_role`
 --
 
 INSERT INTO `permission_role` (`permission_id`, `role_id`, `permission_type_id`) VALUES
@@ -11443,7 +11482,7 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`, `permission_type_id`)
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `permission_types`
+-- Table structure for table `permission_types`
 --
 
 CREATE TABLE `permission_types` (
@@ -11454,7 +11493,7 @@ CREATE TABLE `permission_types` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `permission_types`
+-- Dumping data for table `permission_types`
 --
 
 INSERT INTO `permission_types` (`id`, `name`, `created_at`, `updated_at`) VALUES
@@ -11467,7 +11506,7 @@ INSERT INTO `permission_types` (`id`, `name`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `pinned`
+-- Table structure for table `pinned`
 --
 
 CREATE TABLE `pinned` (
@@ -11482,7 +11521,7 @@ CREATE TABLE `pinned` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `products`
+-- Table structure for table `products`
 --
 
 CREATE TABLE `products` (
@@ -11507,7 +11546,7 @@ CREATE TABLE `products` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `product_category`
+-- Table structure for table `product_category`
 --
 
 CREATE TABLE `product_category` (
@@ -11520,7 +11559,7 @@ CREATE TABLE `product_category` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `product_files`
+-- Table structure for table `product_files`
 --
 
 CREATE TABLE `product_files` (
@@ -11536,7 +11575,7 @@ CREATE TABLE `product_files` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `product_sub_category`
+-- Table structure for table `product_sub_category`
 --
 
 CREATE TABLE `product_sub_category` (
@@ -11550,7 +11589,7 @@ CREATE TABLE `product_sub_category` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `projects`
+-- Table structure for table `projects`
 --
 
 CREATE TABLE `projects` (
@@ -11584,7 +11623,7 @@ CREATE TABLE `projects` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `projects`
+-- Dumping data for table `projects`
 --
 
 INSERT INTO `projects` (`id`, `project_name`, `project_summary`, `project_admin`, `start_date`, `deadline`, `notes`, `category_id`, `client_id`, `team_id`, `feedback`, `manual_timelog`, `client_view_task`, `allow_client_notification`, `completion_percent`, `calculate_task_progress`, `created_at`, `updated_at`, `deleted_at`, `project_budget`, `currency_id`, `hours_allocated`, `status`, `added_by`, `last_updated_by`, `hash`, `public`) VALUES
@@ -11593,7 +11632,7 @@ INSERT INTO `projects` (`id`, `project_name`, `project_summary`, `project_admin`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_activity`
+-- Table structure for table `project_activity`
 --
 
 CREATE TABLE `project_activity` (
@@ -11605,7 +11644,7 @@ CREATE TABLE `project_activity` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `project_activity`
+-- Dumping data for table `project_activity`
 --
 
 INSERT INTO `project_activity` (`id`, `project_id`, `activity`, `created_at`, `updated_at`) VALUES
@@ -11619,7 +11658,7 @@ INSERT INTO `project_activity` (`id`, `project_id`, `activity`, `created_at`, `u
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_category`
+-- Table structure for table `project_category`
 --
 
 CREATE TABLE `project_category` (
@@ -11632,7 +11671,7 @@ CREATE TABLE `project_category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `project_category`
+-- Dumping data for table `project_category`
 --
 
 INSERT INTO `project_category` (`id`, `category_name`, `created_at`, `updated_at`, `added_by`, `last_updated_by`) VALUES
@@ -11642,7 +11681,7 @@ INSERT INTO `project_category` (`id`, `category_name`, `created_at`, `updated_at
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_files`
+-- Table structure for table `project_files`
 --
 
 CREATE TABLE `project_files` (
@@ -11664,7 +11703,7 @@ CREATE TABLE `project_files` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `project_files`
+-- Dumping data for table `project_files`
 --
 
 INSERT INTO `project_files` (`id`, `user_id`, `project_id`, `filename`, `hashname`, `size`, `description`, `google_url`, `dropbox_link`, `created_at`, `updated_at`, `external_link_name`, `external_link`, `added_by`, `last_updated_by`) VALUES
@@ -11673,7 +11712,7 @@ INSERT INTO `project_files` (`id`, `user_id`, `project_id`, `filename`, `hashnam
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_members`
+-- Table structure for table `project_members`
 --
 
 CREATE TABLE `project_members` (
@@ -11688,7 +11727,7 @@ CREATE TABLE `project_members` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `project_members`
+-- Dumping data for table `project_members`
 --
 
 INSERT INTO `project_members` (`id`, `user_id`, `project_id`, `created_at`, `updated_at`, `hourly_rate`, `added_by`, `last_updated_by`) VALUES
@@ -11698,7 +11737,7 @@ INSERT INTO `project_members` (`id`, `user_id`, `project_id`, `created_at`, `upd
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_milestones`
+-- Table structure for table `project_milestones`
 --
 
 CREATE TABLE `project_milestones` (
@@ -11720,7 +11759,7 @@ CREATE TABLE `project_milestones` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_notes`
+-- Table structure for table `project_notes`
 --
 
 CREATE TABLE `project_notes` (
@@ -11741,7 +11780,7 @@ CREATE TABLE `project_notes` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_ratings`
+-- Table structure for table `project_ratings`
 --
 
 CREATE TABLE `project_ratings` (
@@ -11759,7 +11798,7 @@ CREATE TABLE `project_ratings` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_settings`
+-- Table structure for table `project_settings`
 --
 
 CREATE TABLE `project_settings` (
@@ -11773,7 +11812,7 @@ CREATE TABLE `project_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `project_settings`
+-- Dumping data for table `project_settings`
 --
 
 INSERT INTO `project_settings` (`id`, `send_reminder`, `remind_time`, `remind_type`, `remind_to`, `created_at`, `updated_at`) VALUES
@@ -11782,7 +11821,7 @@ INSERT INTO `project_settings` (`id`, `send_reminder`, `remind_time`, `remind_ty
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_templates`
+-- Table structure for table `project_templates`
 --
 
 CREATE TABLE `project_templates` (
@@ -11801,7 +11840,7 @@ CREATE TABLE `project_templates` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `project_templates`
+-- Dumping data for table `project_templates`
 --
 
 INSERT INTO `project_templates` (`id`, `project_name`, `category_id`, `client_id`, `project_summary`, `notes`, `feedback`, `client_view_task`, `allow_client_notification`, `manual_timelog`, `created_at`, `updated_at`) VALUES
@@ -11810,7 +11849,7 @@ INSERT INTO `project_templates` (`id`, `project_name`, `category_id`, `client_id
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_template_members`
+-- Table structure for table `project_template_members`
 --
 
 CREATE TABLE `project_template_members` (
@@ -11824,7 +11863,7 @@ CREATE TABLE `project_template_members` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_template_sub_tasks`
+-- Table structure for table `project_template_sub_tasks`
 --
 
 CREATE TABLE `project_template_sub_tasks` (
@@ -11841,7 +11880,7 @@ CREATE TABLE `project_template_sub_tasks` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_template_tasks`
+-- Table structure for table `project_template_tasks`
 --
 
 CREATE TABLE `project_template_tasks` (
@@ -11858,7 +11897,7 @@ CREATE TABLE `project_template_tasks` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_template_task_users`
+-- Table structure for table `project_template_task_users`
 --
 
 CREATE TABLE `project_template_task_users` (
@@ -11872,7 +11911,7 @@ CREATE TABLE `project_template_task_users` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_time_logs`
+-- Table structure for table `project_time_logs`
 --
 
 CREATE TABLE `project_time_logs` (
@@ -11899,7 +11938,7 @@ CREATE TABLE `project_time_logs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `project_time_logs`
+-- Dumping data for table `project_time_logs`
 --
 
 INSERT INTO `project_time_logs` (`id`, `project_id`, `task_id`, `user_id`, `start_time`, `end_time`, `memo`, `total_hours`, `total_minutes`, `edited_by_user`, `created_at`, `updated_at`, `hourly_rate`, `earnings`, `approved`, `approved_by`, `invoice_id`, `added_by`, `last_updated_by`, `total_break_minutes`) VALUES
@@ -11909,7 +11948,7 @@ INSERT INTO `project_time_logs` (`id`, `project_id`, `task_id`, `user_id`, `star
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_time_log_breaks`
+-- Table structure for table `project_time_log_breaks`
 --
 
 CREATE TABLE `project_time_log_breaks` (
@@ -11929,7 +11968,7 @@ CREATE TABLE `project_time_log_breaks` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_user_notes`
+-- Table structure for table `project_user_notes`
 --
 
 CREATE TABLE `project_user_notes` (
@@ -11943,7 +11982,7 @@ CREATE TABLE `project_user_notes` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `proposals`
+-- Table structure for table `proposals`
 --
 
 CREATE TABLE `proposals` (
@@ -11972,7 +12011,7 @@ CREATE TABLE `proposals` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `proposal_items`
+-- Table structure for table `proposal_items`
 --
 
 CREATE TABLE `proposal_items` (
@@ -11993,7 +12032,7 @@ CREATE TABLE `proposal_items` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `proposal_item_images`
+-- Table structure for table `proposal_item_images`
 --
 
 CREATE TABLE `proposal_item_images` (
@@ -12010,7 +12049,7 @@ CREATE TABLE `proposal_item_images` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `proposal_signs`
+-- Table structure for table `proposal_signs`
 --
 
 CREATE TABLE `proposal_signs` (
@@ -12026,7 +12065,7 @@ CREATE TABLE `proposal_signs` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `purpose_consent`
+-- Table structure for table `purpose_consent`
 --
 
 CREATE TABLE `purpose_consent` (
@@ -12040,7 +12079,7 @@ CREATE TABLE `purpose_consent` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `purpose_consent_leads`
+-- Table structure for table `purpose_consent_leads`
 --
 
 CREATE TABLE `purpose_consent_leads` (
@@ -12058,7 +12097,7 @@ CREATE TABLE `purpose_consent_leads` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `purpose_consent_users`
+-- Table structure for table `purpose_consent_users`
 --
 
 CREATE TABLE `purpose_consent_users` (
@@ -12076,7 +12115,7 @@ CREATE TABLE `purpose_consent_users` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `pusher_settings`
+-- Table structure for table `pusher_settings`
 --
 
 CREATE TABLE `pusher_settings` (
@@ -12094,7 +12133,7 @@ CREATE TABLE `pusher_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `pusher_settings`
+-- Dumping data for table `pusher_settings`
 --
 
 INSERT INTO `pusher_settings` (`id`, `pusher_app_id`, `pusher_app_key`, `pusher_app_secret`, `pusher_cluster`, `force_tls`, `status`, `created_at`, `updated_at`, `taskboard`, `messages`) VALUES
@@ -12103,7 +12142,7 @@ INSERT INTO `pusher_settings` (`id`, `pusher_app_id`, `pusher_app_key`, `pusher_
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `push_notification_settings`
+-- Table structure for table `push_notification_settings`
 --
 
 CREATE TABLE `push_notification_settings` (
@@ -12117,7 +12156,7 @@ CREATE TABLE `push_notification_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `push_notification_settings`
+-- Dumping data for table `push_notification_settings`
 --
 
 INSERT INTO `push_notification_settings` (`id`, `onesignal_app_id`, `onesignal_rest_api_key`, `notification_logo`, `status`, `created_at`, `updated_at`) VALUES
@@ -12126,7 +12165,7 @@ INSERT INTO `push_notification_settings` (`id`, `onesignal_app_id`, `onesignal_r
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `push_subscriptions`
+-- Table structure for table `push_subscriptions`
 --
 
 CREATE TABLE `push_subscriptions` (
@@ -12142,7 +12181,7 @@ CREATE TABLE `push_subscriptions` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `quotations`
+-- Table structure for table `quotations`
 --
 
 CREATE TABLE `quotations` (
@@ -12161,7 +12200,7 @@ CREATE TABLE `quotations` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `quotation_items`
+-- Table structure for table `quotation_items`
 --
 
 CREATE TABLE `quotation_items` (
@@ -12179,7 +12218,7 @@ CREATE TABLE `quotation_items` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `removal_requests`
+-- Table structure for table `removal_requests`
 --
 
 CREATE TABLE `removal_requests` (
@@ -12195,7 +12234,7 @@ CREATE TABLE `removal_requests` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `removal_requests_lead`
+-- Table structure for table `removal_requests_lead`
 --
 
 CREATE TABLE `removal_requests_lead` (
@@ -12211,7 +12250,7 @@ CREATE TABLE `removal_requests_lead` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `roles`
+-- Table structure for table `roles`
 --
 
 CREATE TABLE `roles` (
@@ -12224,7 +12263,7 @@ CREATE TABLE `roles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `roles`
+-- Dumping data for table `roles`
 --
 
 INSERT INTO `roles` (`id`, `name`, `display_name`, `description`, `created_at`, `updated_at`) VALUES
@@ -12235,7 +12274,7 @@ INSERT INTO `roles` (`id`, `name`, `display_name`, `description`, `created_at`, 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `role_user`
+-- Table structure for table `role_user`
 --
 
 CREATE TABLE `role_user` (
@@ -12244,7 +12283,7 @@ CREATE TABLE `role_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `role_user`
+-- Dumping data for table `role_user`
 --
 
 INSERT INTO `role_user` (`user_id`, `role_id`) VALUES
@@ -12256,7 +12295,7 @@ INSERT INTO `role_user` (`user_id`, `role_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sessions`
+-- Table structure for table `sessions`
 --
 
 CREATE TABLE `sessions` (
@@ -12271,7 +12310,7 @@ CREATE TABLE `sessions` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `skills`
+-- Table structure for table `skills`
 --
 
 CREATE TABLE `skills` (
@@ -12282,7 +12321,7 @@ CREATE TABLE `skills` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `skills`
+-- Dumping data for table `skills`
 --
 
 INSERT INTO `skills` (`id`, `name`, `created_at`, `updated_at`) VALUES
@@ -12292,7 +12331,7 @@ INSERT INTO `skills` (`id`, `name`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `slack_settings`
+-- Table structure for table `slack_settings`
 --
 
 CREATE TABLE `slack_settings` (
@@ -12305,7 +12344,7 @@ CREATE TABLE `slack_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `slack_settings`
+-- Dumping data for table `slack_settings`
 --
 
 INSERT INTO `slack_settings` (`id`, `slack_webhook`, `slack_logo`, `created_at`, `updated_at`, `status`) VALUES
@@ -12314,7 +12353,7 @@ INSERT INTO `slack_settings` (`id`, `slack_webhook`, `slack_logo`, `created_at`,
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `smtp_settings`
+-- Table structure for table `smtp_settings`
 --
 
 CREATE TABLE `smtp_settings` (
@@ -12334,7 +12373,7 @@ CREATE TABLE `smtp_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `smtp_settings`
+-- Dumping data for table `smtp_settings`
 --
 
 INSERT INTO `smtp_settings` (`id`, `mail_driver`, `mail_host`, `mail_port`, `mail_username`, `mail_password`, `mail_from_name`, `mail_from_email`, `mail_encryption`, `created_at`, `updated_at`, `verified`, `mail_connection`) VALUES
@@ -12343,7 +12382,7 @@ INSERT INTO `smtp_settings` (`id`, `mail_driver`, `mail_host`, `mail_port`, `mai
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `socials`
+-- Table structure for table `socials`
 --
 
 CREATE TABLE `socials` (
@@ -12358,7 +12397,7 @@ CREATE TABLE `socials` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `social_auth_settings`
+-- Table structure for table `social_auth_settings`
 --
 
 CREATE TABLE `social_auth_settings` (
@@ -12380,7 +12419,7 @@ CREATE TABLE `social_auth_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `social_auth_settings`
+-- Dumping data for table `social_auth_settings`
 --
 
 INSERT INTO `social_auth_settings` (`id`, `facebook_client_id`, `facebook_secret_id`, `facebook_status`, `google_client_id`, `google_secret_id`, `google_status`, `twitter_client_id`, `twitter_secret_id`, `twitter_status`, `linkedin_client_id`, `linkedin_secret_id`, `linkedin_status`, `created_at`, `updated_at`) VALUES
@@ -12389,7 +12428,7 @@ INSERT INTO `social_auth_settings` (`id`, `facebook_client_id`, `facebook_secret
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sticky_notes`
+-- Table structure for table `sticky_notes`
 --
 
 CREATE TABLE `sticky_notes` (
@@ -12402,7 +12441,7 @@ CREATE TABLE `sticky_notes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `sticky_notes`
+-- Dumping data for table `sticky_notes`
 --
 
 INSERT INTO `sticky_notes` (`id`, `user_id`, `note_text`, `colour`, `created_at`, `updated_at`) VALUES
@@ -12411,7 +12450,7 @@ INSERT INTO `sticky_notes` (`id`, `user_id`, `note_text`, `colour`, `created_at`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sub_tasks`
+-- Table structure for table `sub_tasks`
 --
 
 CREATE TABLE `sub_tasks` (
@@ -12432,7 +12471,7 @@ CREATE TABLE `sub_tasks` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sub_task_files`
+-- Table structure for table `sub_task_files`
 --
 
 CREATE TABLE `sub_task_files` (
@@ -12454,7 +12493,7 @@ CREATE TABLE `sub_task_files` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `taskboard_columns`
+-- Table structure for table `taskboard_columns`
 --
 
 CREATE TABLE `taskboard_columns` (
@@ -12468,7 +12507,7 @@ CREATE TABLE `taskboard_columns` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `taskboard_columns`
+-- Dumping data for table `taskboard_columns`
 --
 
 INSERT INTO `taskboard_columns` (`id`, `column_name`, `slug`, `label_color`, `priority`, `created_at`, `updated_at`) VALUES
@@ -12478,7 +12517,7 @@ INSERT INTO `taskboard_columns` (`id`, `column_name`, `slug`, `label_color`, `pr
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tasks`
+-- Table structure for table `tasks`
 --
 
 CREATE TABLE `tasks` (
@@ -12516,7 +12555,7 @@ CREATE TABLE `tasks` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tasks`
+-- Dumping data for table `tasks`
 --
 
 INSERT INTO `tasks` (`id`, `heading`, `description`, `due_date`, `start_date`, `project_id`, `task_category_id`, `priority`, `status`, `board_column_id`, `column_priority`, `completed_on`, `created_by`, `recurring_task_id`, `dependent_task_id`, `created_at`, `updated_at`, `milestone_id`, `is_private`, `billable`, `estimate_hours`, `estimate_minutes`, `added_by`, `last_updated_by`, `hash`, `repeat`, `repeat_complete`, `repeat_count`, `repeat_type`, `repeat_cycles`, `event_id`) VALUES
@@ -12526,7 +12565,7 @@ INSERT INTO `tasks` (`id`, `heading`, `description`, `due_date`, `start_date`, `
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `task_category`
+-- Table structure for table `task_category`
 --
 
 CREATE TABLE `task_category` (
@@ -12539,7 +12578,7 @@ CREATE TABLE `task_category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `task_category`
+-- Dumping data for table `task_category`
 --
 
 INSERT INTO `task_category` (`id`, `category_name`, `created_at`, `updated_at`, `added_by`, `last_updated_by`) VALUES
@@ -12548,7 +12587,7 @@ INSERT INTO `task_category` (`id`, `category_name`, `created_at`, `updated_at`, 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `task_comments`
+-- Table structure for table `task_comments`
 --
 
 CREATE TABLE `task_comments` (
@@ -12565,7 +12604,7 @@ CREATE TABLE `task_comments` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `task_files`
+-- Table structure for table `task_files`
 --
 
 CREATE TABLE `task_files` (
@@ -12587,7 +12626,7 @@ CREATE TABLE `task_files` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `task_files`
+-- Dumping data for table `task_files`
 --
 
 INSERT INTO `task_files` (`id`, `user_id`, `task_id`, `filename`, `description`, `google_url`, `hashname`, `size`, `dropbox_link`, `external_link`, `external_link_name`, `created_at`, `updated_at`, `added_by`, `last_updated_by`) VALUES
@@ -12596,7 +12635,7 @@ INSERT INTO `task_files` (`id`, `user_id`, `task_id`, `filename`, `description`,
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `task_history`
+-- Table structure for table `task_history`
 --
 
 CREATE TABLE `task_history` (
@@ -12611,7 +12650,7 @@ CREATE TABLE `task_history` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `task_history`
+-- Dumping data for table `task_history`
 --
 
 INSERT INTO `task_history` (`id`, `task_id`, `sub_task_id`, `user_id`, `details`, `board_column_id`, `created_at`, `updated_at`) VALUES
@@ -12625,7 +12664,7 @@ INSERT INTO `task_history` (`id`, `task_id`, `sub_task_id`, `user_id`, `details`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `task_labels`
+-- Table structure for table `task_labels`
 --
 
 CREATE TABLE `task_labels` (
@@ -12637,7 +12676,7 @@ CREATE TABLE `task_labels` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `task_labels`
+-- Dumping data for table `task_labels`
 --
 
 INSERT INTO `task_labels` (`id`, `label_id`, `task_id`, `created_at`, `updated_at`) VALUES
@@ -12646,7 +12685,7 @@ INSERT INTO `task_labels` (`id`, `label_id`, `task_id`, `created_at`, `updated_a
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `task_label_list`
+-- Table structure for table `task_label_list`
 --
 
 CREATE TABLE `task_label_list` (
@@ -12659,7 +12698,7 @@ CREATE TABLE `task_label_list` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `task_label_list`
+-- Dumping data for table `task_label_list`
 --
 
 INSERT INTO `task_label_list` (`id`, `label_name`, `color`, `description`, `created_at`, `updated_at`) VALUES
@@ -12668,7 +12707,7 @@ INSERT INTO `task_label_list` (`id`, `label_name`, `color`, `description`, `crea
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `task_notes`
+-- Table structure for table `task_notes`
 --
 
 CREATE TABLE `task_notes` (
@@ -12685,7 +12724,7 @@ CREATE TABLE `task_notes` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `task_users`
+-- Table structure for table `task_users`
 --
 
 CREATE TABLE `task_users` (
@@ -12697,7 +12736,7 @@ CREATE TABLE `task_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `task_users`
+-- Dumping data for table `task_users`
 --
 
 INSERT INTO `task_users` (`id`, `task_id`, `user_id`, `created_at`, `updated_at`) VALUES
@@ -12707,7 +12746,7 @@ INSERT INTO `task_users` (`id`, `task_id`, `user_id`, `created_at`, `updated_at`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `taxes`
+-- Table structure for table `taxes`
 --
 
 CREATE TABLE `taxes` (
@@ -12721,7 +12760,7 @@ CREATE TABLE `taxes` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `teams`
+-- Table structure for table `teams`
 --
 
 CREATE TABLE `teams` (
@@ -12734,7 +12773,7 @@ CREATE TABLE `teams` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `teams`
+-- Dumping data for table `teams`
 --
 
 INSERT INTO `teams` (`id`, `team_name`, `created_at`, `updated_at`, `added_by`, `last_updated_by`) VALUES
@@ -12743,7 +12782,7 @@ INSERT INTO `teams` (`id`, `team_name`, `created_at`, `updated_at`, `added_by`, 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `theme_settings`
+-- Table structure for table `theme_settings`
 --
 
 CREATE TABLE `theme_settings` (
@@ -12760,7 +12799,7 @@ CREATE TABLE `theme_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `theme_settings`
+-- Dumping data for table `theme_settings`
 --
 
 INSERT INTO `theme_settings` (`id`, `panel`, `header_color`, `sidebar_color`, `sidebar_text_color`, `link_color`, `user_css`, `sidebar_theme`, `created_at`, `updated_at`) VALUES
@@ -12772,7 +12811,7 @@ INSERT INTO `theme_settings` (`id`, `panel`, `header_color`, `sidebar_color`, `s
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tickets`
+-- Table structure for table `tickets`
 --
 
 CREATE TABLE `tickets` (
@@ -12795,7 +12834,7 @@ CREATE TABLE `tickets` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tickets`
+-- Dumping data for table `tickets`
 --
 
 INSERT INTO `tickets` (`id`, `user_id`, `subject`, `status`, `priority`, `agent_id`, `channel_id`, `type_id`, `close_date`, `created_at`, `updated_at`, `deleted_at`, `mobile`, `country_id`, `added_by`, `last_updated_by`) VALUES
@@ -12804,7 +12843,7 @@ INSERT INTO `tickets` (`id`, `user_id`, `subject`, `status`, `priority`, `agent_
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ticket_agent_groups`
+-- Table structure for table `ticket_agent_groups`
 --
 
 CREATE TABLE `ticket_agent_groups` (
@@ -12819,7 +12858,7 @@ CREATE TABLE `ticket_agent_groups` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ticket_channels`
+-- Table structure for table `ticket_channels`
 --
 
 CREATE TABLE `ticket_channels` (
@@ -12830,7 +12869,7 @@ CREATE TABLE `ticket_channels` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `ticket_channels`
+-- Dumping data for table `ticket_channels`
 --
 
 INSERT INTO `ticket_channels` (`id`, `channel_name`, `created_at`, `updated_at`) VALUES
@@ -12842,7 +12881,7 @@ INSERT INTO `ticket_channels` (`id`, `channel_name`, `created_at`, `updated_at`)
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ticket_custom_forms`
+-- Table structure for table `ticket_custom_forms`
 --
 
 CREATE TABLE `ticket_custom_forms` (
@@ -12858,7 +12897,7 @@ CREATE TABLE `ticket_custom_forms` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `ticket_custom_forms`
+-- Dumping data for table `ticket_custom_forms`
 --
 
 INSERT INTO `ticket_custom_forms` (`id`, `field_display_name`, `field_name`, `field_type`, `field_order`, `status`, `created_at`, `updated_at`, `required`) VALUES
@@ -12872,7 +12911,7 @@ INSERT INTO `ticket_custom_forms` (`id`, `field_display_name`, `field_name`, `fi
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ticket_files`
+-- Table structure for table `ticket_files`
 --
 
 CREATE TABLE `ticket_files` (
@@ -12894,7 +12933,7 @@ CREATE TABLE `ticket_files` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ticket_groups`
+-- Table structure for table `ticket_groups`
 --
 
 CREATE TABLE `ticket_groups` (
@@ -12905,7 +12944,7 @@ CREATE TABLE `ticket_groups` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `ticket_groups`
+-- Dumping data for table `ticket_groups`
 --
 
 INSERT INTO `ticket_groups` (`id`, `group_name`, `created_at`, `updated_at`) VALUES
@@ -12916,7 +12955,7 @@ INSERT INTO `ticket_groups` (`id`, `group_name`, `created_at`, `updated_at`) VAL
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ticket_replies`
+-- Table structure for table `ticket_replies`
 --
 
 CREATE TABLE `ticket_replies` (
@@ -12930,7 +12969,7 @@ CREATE TABLE `ticket_replies` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `ticket_replies`
+-- Dumping data for table `ticket_replies`
 --
 
 INSERT INTO `ticket_replies` (`id`, `ticket_id`, `user_id`, `message`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -12939,7 +12978,7 @@ INSERT INTO `ticket_replies` (`id`, `ticket_id`, `user_id`, `message`, `created_
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ticket_reply_templates`
+-- Table structure for table `ticket_reply_templates`
 --
 
 CREATE TABLE `ticket_reply_templates` (
@@ -12953,7 +12992,7 @@ CREATE TABLE `ticket_reply_templates` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ticket_tags`
+-- Table structure for table `ticket_tags`
 --
 
 CREATE TABLE `ticket_tags` (
@@ -12967,7 +13006,7 @@ CREATE TABLE `ticket_tags` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ticket_tag_list`
+-- Table structure for table `ticket_tag_list`
 --
 
 CREATE TABLE `ticket_tag_list` (
@@ -12980,7 +13019,7 @@ CREATE TABLE `ticket_tag_list` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ticket_types`
+-- Table structure for table `ticket_types`
 --
 
 CREATE TABLE `ticket_types` (
@@ -12991,7 +13030,7 @@ CREATE TABLE `ticket_types` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `ticket_types`
+-- Dumping data for table `ticket_types`
 --
 
 INSERT INTO `ticket_types` (`id`, `type`, `created_at`, `updated_at`) VALUES
@@ -13003,7 +13042,7 @@ INSERT INTO `ticket_types` (`id`, `type`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `translate_settings`
+-- Table structure for table `translate_settings`
 --
 
 CREATE TABLE `translate_settings` (
@@ -13014,7 +13053,7 @@ CREATE TABLE `translate_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `translate_settings`
+-- Dumping data for table `translate_settings`
 --
 
 INSERT INTO `translate_settings` (`id`, `google_key`, `created_at`, `updated_at`) VALUES
@@ -13023,7 +13062,7 @@ INSERT INTO `translate_settings` (`id`, `google_key`, `created_at`, `updated_at`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `universal_search`
+-- Table structure for table `universal_search`
 --
 
 CREATE TABLE `universal_search` (
@@ -13037,7 +13076,7 @@ CREATE TABLE `universal_search` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `universal_search`
+-- Dumping data for table `universal_search`
 --
 
 INSERT INTO `universal_search` (`id`, `searchable_id`, `module_type`, `title`, `route_name`, `created_at`, `updated_at`) VALUES
@@ -13054,7 +13093,7 @@ INSERT INTO `universal_search` (`id`, `searchable_id`, `module_type`, `title`, `
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -13090,18 +13129,18 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed`, `two_factor_email_confirmed`, `remember_token`, `image`, `mobile`, `gender`, `salutation`, `locale`, `status`, `login`, `onesignal_player_id`, `created_at`, `updated_at`, `last_login`, `email_notifications`, `country_id`, `dark_theme`, `rtl`, `two_fa_verify_via`, `two_factor_code`, `two_factor_expires_at`, `admin_approval`, `permission_sync`) VALUES
-(1, 'Phạm Tiến Đức', 'cuongnew37@gmail.com', '$2y$10$B7TOco4bpT8bnFnRn4t0.uCePOrww41oXLLxupe5hFEk/8BupaYzC', NULL, NULL, 0, 0, 'QPm937G0aDb65wCDXIWE1f5ATQIpOS0kqjGMGBPtUqRGzwgggxTkVlP07zcK', NULL, '0976947340', 'male', NULL, 'VI', 'active', 'enable', NULL, '2022-04-21 02:52:51', '2022-04-22 18:00:05', '2022-04-22 18:00:05', 1, 232, 0, 0, NULL, NULL, NULL, 1, 1),
+(1, 'Phạm Tiến Đức', 'cuongnew37@gmail.com', '$2y$10$B7TOco4bpT8bnFnRn4t0.uCePOrww41oXLLxupe5hFEk/8BupaYzC', NULL, NULL, 0, 0, 'QPm937G0aDb65wCDXIWE1f5ATQIpOS0kqjGMGBPtUqRGzwgggxTkVlP07zcK', NULL, '0976947340', 'male', NULL, 'VI', 'active', 'enable', NULL, '2022-04-21 02:52:51', '2022-05-03 01:44:18', '2022-05-03 01:44:18', 1, 232, 0, 0, NULL, NULL, NULL, 1, 1),
 (2, 'Nguyễn Xuân Khiêm', 'ducpham0307@gmail.com', '$2y$10$wokiLOPYY9tvjK9M4ul.T./8FMGMwr.xr6/PuC9YSYT3S/6WQea4.', NULL, NULL, 0, 0, NULL, NULL, '13456789645', 'male', NULL, 'en', 'active', 'enable', NULL, '2022-04-22 02:20:11', '2022-04-22 02:20:11', NULL, 0, 1, 0, 0, NULL, NULL, NULL, 1, 1),
 (3, 'Lê Minh Hiếu', 'cuongnew87@gmail.com', '$2y$10$NHHTZWoiMxC4G6x8rQLXY.qKU26uKVnNCt1P8MQp7A.GWuHc3FaHa', NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 'en', 'active', 'disable', NULL, '2022-04-22 18:16:19', '2022-04-22 18:16:19', NULL, 0, NULL, 0, 0, NULL, NULL, NULL, 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users_chat`
+-- Table structure for table `users_chat`
 --
 
 CREATE TABLE `users_chat` (
@@ -13119,7 +13158,7 @@ CREATE TABLE `users_chat` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users_chat_files`
+-- Table structure for table `users_chat_files`
 --
 
 CREATE TABLE `users_chat_files` (
@@ -13140,7 +13179,7 @@ CREATE TABLE `users_chat_files` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user_activities`
+-- Table structure for table `user_activities`
 --
 
 CREATE TABLE `user_activities` (
@@ -13152,7 +13191,7 @@ CREATE TABLE `user_activities` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `user_activities`
+-- Dumping data for table `user_activities`
 --
 
 INSERT INTO `user_activities` (`id`, `user_id`, `activity`, `created_at`, `updated_at`) VALUES
@@ -13163,7 +13202,7 @@ INSERT INTO `user_activities` (`id`, `user_id`, `activity`, `created_at`, `updat
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user_invitations`
+-- Table structure for table `user_invitations`
 --
 
 CREATE TABLE `user_invitations` (
@@ -13180,7 +13219,7 @@ CREATE TABLE `user_invitations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `user_invitations`
+-- Dumping data for table `user_invitations`
 --
 
 INSERT INTO `user_invitations` (`id`, `user_id`, `invitation_type`, `email`, `invitation_code`, `status`, `email_restriction`, `message`, `created_at`, `updated_at`) VALUES
@@ -13189,7 +13228,7 @@ INSERT INTO `user_invitations` (`id`, `user_id`, `invitation_type`, `email`, `in
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user_leadboard_settings`
+-- Table structure for table `user_leadboard_settings`
 --
 
 CREATE TABLE `user_leadboard_settings` (
@@ -13204,7 +13243,7 @@ CREATE TABLE `user_leadboard_settings` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user_permissions`
+-- Table structure for table `user_permissions`
 --
 
 CREATE TABLE `user_permissions` (
@@ -13217,7 +13256,7 @@ CREATE TABLE `user_permissions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `user_permissions`
+-- Dumping data for table `user_permissions`
 --
 
 INSERT INTO `user_permissions` (`id`, `user_id`, `permission_id`, `permission_type_id`, `created_at`, `updated_at`) VALUES
@@ -14002,7 +14041,7 @@ INSERT INTO `user_permissions` (`id`, `user_id`, `permission_id`, `permission_ty
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user_taskboard_settings`
+-- Table structure for table `user_taskboard_settings`
 --
 
 CREATE TABLE `user_taskboard_settings` (
@@ -14015,18 +14054,18 @@ CREATE TABLE `user_taskboard_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `accept_estimates`
+-- Indexes for table `accept_estimates`
 --
 ALTER TABLE `accept_estimates`
   ADD PRIMARY KEY (`id`),
   ADD KEY `accept_estimates_estimate_id_foreign` (`estimate_id`);
 
 --
--- Chỉ mục cho bảng `attendances`
+-- Indexes for table `attendances`
 --
 ALTER TABLE `attendances`
   ADD PRIMARY KEY (`id`),
@@ -14035,19 +14074,19 @@ ALTER TABLE `attendances`
   ADD KEY `attendances_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `attendance_settings`
+-- Indexes for table `attendance_settings`
 --
 ALTER TABLE `attendance_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `client_categories`
+-- Indexes for table `client_categories`
 --
 ALTER TABLE `client_categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `client_contacts`
+-- Indexes for table `client_contacts`
 --
 ALTER TABLE `client_contacts`
   ADD PRIMARY KEY (`id`),
@@ -14056,7 +14095,7 @@ ALTER TABLE `client_contacts`
   ADD KEY `client_contacts_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `client_details`
+-- Indexes for table `client_details`
 --
 ALTER TABLE `client_details`
   ADD PRIMARY KEY (`id`),
@@ -14067,7 +14106,7 @@ ALTER TABLE `client_details`
   ADD KEY `client_details_sub_category_id_foreign` (`sub_category_id`);
 
 --
--- Chỉ mục cho bảng `client_docs`
+-- Indexes for table `client_docs`
 --
 ALTER TABLE `client_docs`
   ADD PRIMARY KEY (`id`),
@@ -14076,7 +14115,7 @@ ALTER TABLE `client_docs`
   ADD KEY `client_docs_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `client_notes`
+-- Indexes for table `client_notes`
 --
 ALTER TABLE `client_notes`
   ADD PRIMARY KEY (`id`),
@@ -14086,14 +14125,14 @@ ALTER TABLE `client_notes`
   ADD KEY `client_notes_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `client_sub_categories`
+-- Indexes for table `client_sub_categories`
 --
 ALTER TABLE `client_sub_categories`
   ADD PRIMARY KEY (`id`),
   ADD KEY `client_sub_categories_category_id_foreign` (`category_id`);
 
 --
--- Chỉ mục cho bảng `client_user_notes`
+-- Indexes for table `client_user_notes`
 --
 ALTER TABLE `client_user_notes`
   ADD PRIMARY KEY (`id`),
@@ -14101,13 +14140,13 @@ ALTER TABLE `client_user_notes`
   ADD KEY `client_user_notes_client_note_id_foreign` (`client_note_id`);
 
 --
--- Chỉ mục cho bảng `company_addresses`
+-- Indexes for table `company_addresses`
 --
 ALTER TABLE `company_addresses`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `contracts`
+-- Indexes for table `contracts`
 --
 ALTER TABLE `contracts`
   ADD PRIMARY KEY (`id`),
@@ -14118,7 +14157,7 @@ ALTER TABLE `contracts`
   ADD KEY `contracts_currency_id_foreign` (`currency_id`);
 
 --
--- Chỉ mục cho bảng `contract_discussions`
+-- Indexes for table `contract_discussions`
 --
 ALTER TABLE `contract_discussions`
   ADD PRIMARY KEY (`id`),
@@ -14128,7 +14167,7 @@ ALTER TABLE `contract_discussions`
   ADD KEY `contract_discussions_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `contract_files`
+-- Indexes for table `contract_files`
 --
 ALTER TABLE `contract_files`
   ADD PRIMARY KEY (`id`),
@@ -14138,7 +14177,7 @@ ALTER TABLE `contract_files`
   ADD KEY `contract_files_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `contract_renews`
+-- Indexes for table `contract_renews`
 --
 ALTER TABLE `contract_renews`
   ADD PRIMARY KEY (`id`),
@@ -14148,20 +14187,20 @@ ALTER TABLE `contract_renews`
   ADD KEY `contract_renews_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `contract_signs`
+-- Indexes for table `contract_signs`
 --
 ALTER TABLE `contract_signs`
   ADD PRIMARY KEY (`id`),
   ADD KEY `contract_signs_contract_id_foreign` (`contract_id`);
 
 --
--- Chỉ mục cho bảng `contract_types`
+-- Indexes for table `contract_types`
 --
 ALTER TABLE `contract_types`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `conversation`
+-- Indexes for table `conversation`
 --
 ALTER TABLE `conversation`
   ADD PRIMARY KEY (`id`),
@@ -14169,7 +14208,7 @@ ALTER TABLE `conversation`
   ADD KEY `conversation_user_two_foreign` (`user_two`);
 
 --
--- Chỉ mục cho bảng `conversation_reply`
+-- Indexes for table `conversation_reply`
 --
 ALTER TABLE `conversation_reply`
   ADD PRIMARY KEY (`id`),
@@ -14177,13 +14216,13 @@ ALTER TABLE `conversation_reply`
   ADD KEY `conversation_reply_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `countries`
+-- Indexes for table `countries`
 --
 ALTER TABLE `countries`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `credit_notes`
+-- Indexes for table `credit_notes`
 --
 ALTER TABLE `credit_notes`
   ADD PRIMARY KEY (`id`),
@@ -14194,40 +14233,40 @@ ALTER TABLE `credit_notes`
   ADD KEY `credit_notes_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `credit_note_items`
+-- Indexes for table `credit_note_items`
 --
 ALTER TABLE `credit_note_items`
   ADD PRIMARY KEY (`id`),
   ADD KEY `credit_note_items_credit_note_id_foreign` (`credit_note_id`);
 
 --
--- Chỉ mục cho bảng `credit_note_item_images`
+-- Indexes for table `credit_note_item_images`
 --
 ALTER TABLE `credit_note_item_images`
   ADD PRIMARY KEY (`id`),
   ADD KEY `credit_note_item_images_credit_note_item_id_foreign` (`credit_note_item_id`);
 
 --
--- Chỉ mục cho bảng `currencies`
+-- Indexes for table `currencies`
 --
 ALTER TABLE `currencies`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `currency_format_settings`
+-- Indexes for table `currency_format_settings`
 --
 ALTER TABLE `currency_format_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `custom_fields`
+-- Indexes for table `custom_fields`
 --
 ALTER TABLE `custom_fields`
   ADD PRIMARY KEY (`id`),
   ADD KEY `custom_fields_custom_field_group_id_foreign` (`custom_field_group_id`);
 
 --
--- Chỉ mục cho bảng `custom_fields_data`
+-- Indexes for table `custom_fields_data`
 --
 ALTER TABLE `custom_fields_data`
   ADD PRIMARY KEY (`id`),
@@ -14235,32 +14274,32 @@ ALTER TABLE `custom_fields_data`
   ADD KEY `custom_fields_data_model_index` (`model`);
 
 --
--- Chỉ mục cho bảng `custom_field_groups`
+-- Indexes for table `custom_field_groups`
 --
 ALTER TABLE `custom_field_groups`
   ADD PRIMARY KEY (`id`),
   ADD KEY `custom_field_groups_model_index` (`model`);
 
 --
--- Chỉ mục cho bảng `dashboard_widgets`
+-- Indexes for table `dashboard_widgets`
 --
 ALTER TABLE `dashboard_widgets`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `database_backups`
+-- Indexes for table `database_backups`
 --
 ALTER TABLE `database_backups`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `database_backup_cron_settings`
+-- Indexes for table `database_backup_cron_settings`
 --
 ALTER TABLE `database_backup_cron_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `designations`
+-- Indexes for table `designations`
 --
 ALTER TABLE `designations`
   ADD PRIMARY KEY (`id`),
@@ -14268,7 +14307,7 @@ ALTER TABLE `designations`
   ADD KEY `designations_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `discussions`
+-- Indexes for table `discussions`
 --
 ALTER TABLE `discussions`
   ADD PRIMARY KEY (`id`),
@@ -14281,13 +14320,13 @@ ALTER TABLE `discussions`
   ADD KEY `discussions_discussion_category_id_foreign` (`discussion_category_id`);
 
 --
--- Chỉ mục cho bảng `discussion_categories`
+-- Indexes for table `discussion_categories`
 --
 ALTER TABLE `discussion_categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `discussion_files`
+-- Indexes for table `discussion_files`
 --
 ALTER TABLE `discussion_files`
   ADD PRIMARY KEY (`id`),
@@ -14296,7 +14335,7 @@ ALTER TABLE `discussion_files`
   ADD KEY `discussion_files_discussion_reply_id_foreign` (`discussion_reply_id`);
 
 --
--- Chỉ mục cho bảng `discussion_replies`
+-- Indexes for table `discussion_replies`
 --
 ALTER TABLE `discussion_replies`
   ADD PRIMARY KEY (`id`),
@@ -14304,13 +14343,13 @@ ALTER TABLE `discussion_replies`
   ADD KEY `discussion_replies_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `email_notification_settings`
+-- Indexes for table `email_notification_settings`
 --
 ALTER TABLE `email_notification_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `emergency_contacts`
+-- Indexes for table `emergency_contacts`
 --
 ALTER TABLE `emergency_contacts`
   ADD PRIMARY KEY (`id`),
@@ -14319,7 +14358,7 @@ ALTER TABLE `emergency_contacts`
   ADD KEY `emergency_contacts_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `employee_details`
+-- Indexes for table `employee_details`
 --
 ALTER TABLE `employee_details`
   ADD PRIMARY KEY (`id`),
@@ -14332,7 +14371,7 @@ ALTER TABLE `employee_details`
   ADD KEY `employee_details_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `employee_docs`
+-- Indexes for table `employee_docs`
 --
 ALTER TABLE `employee_docs`
   ADD PRIMARY KEY (`id`),
@@ -14341,7 +14380,7 @@ ALTER TABLE `employee_docs`
   ADD KEY `employee_docs_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `employee_leave_quotas`
+-- Indexes for table `employee_leave_quotas`
 --
 ALTER TABLE `employee_leave_quotas`
   ADD PRIMARY KEY (`id`),
@@ -14349,7 +14388,7 @@ ALTER TABLE `employee_leave_quotas`
   ADD KEY `employee_leave_quotas_leave_type_id_foreign` (`leave_type_id`);
 
 --
--- Chỉ mục cho bảng `employee_skills`
+-- Indexes for table `employee_skills`
 --
 ALTER TABLE `employee_skills`
   ADD PRIMARY KEY (`id`),
@@ -14357,7 +14396,7 @@ ALTER TABLE `employee_skills`
   ADD KEY `employee_skills_skill_id_foreign` (`skill_id`);
 
 --
--- Chỉ mục cho bảng `employee_teams`
+-- Indexes for table `employee_teams`
 --
 ALTER TABLE `employee_teams`
   ADD PRIMARY KEY (`id`),
@@ -14365,7 +14404,7 @@ ALTER TABLE `employee_teams`
   ADD KEY `employee_teams_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `estimates`
+-- Indexes for table `estimates`
 --
 ALTER TABLE `estimates`
   ADD PRIMARY KEY (`id`),
@@ -14376,21 +14415,21 @@ ALTER TABLE `estimates`
   ADD KEY `estimates_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `estimate_items`
+-- Indexes for table `estimate_items`
 --
 ALTER TABLE `estimate_items`
   ADD PRIMARY KEY (`id`),
   ADD KEY `estimate_items_estimate_id_foreign` (`estimate_id`);
 
 --
--- Chỉ mục cho bảng `estimate_item_images`
+-- Indexes for table `estimate_item_images`
 --
 ALTER TABLE `estimate_item_images`
   ADD PRIMARY KEY (`id`),
   ADD KEY `estimate_item_images_estimate_item_id_foreign` (`estimate_item_id`);
 
 --
--- Chỉ mục cho bảng `events`
+-- Indexes for table `events`
 --
 ALTER TABLE `events`
   ADD PRIMARY KEY (`id`),
@@ -14398,7 +14437,7 @@ ALTER TABLE `events`
   ADD KEY `events_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `event_attendees`
+-- Indexes for table `event_attendees`
 --
 ALTER TABLE `event_attendees`
   ADD PRIMARY KEY (`id`),
@@ -14406,7 +14445,7 @@ ALTER TABLE `event_attendees`
   ADD KEY `event_attendees_event_id_foreign` (`event_id`);
 
 --
--- Chỉ mục cho bảng `expenses`
+-- Indexes for table `expenses`
 --
 ALTER TABLE `expenses`
   ADD PRIMARY KEY (`id`),
@@ -14420,7 +14459,7 @@ ALTER TABLE `expenses`
   ADD KEY `expenses_approver_id_foreign` (`approver_id`);
 
 --
--- Chỉ mục cho bảng `expenses_category`
+-- Indexes for table `expenses_category`
 --
 ALTER TABLE `expenses_category`
   ADD PRIMARY KEY (`id`),
@@ -14428,7 +14467,7 @@ ALTER TABLE `expenses_category`
   ADD KEY `expenses_category_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `expenses_category_roles`
+-- Indexes for table `expenses_category_roles`
 --
 ALTER TABLE `expenses_category_roles`
   ADD PRIMARY KEY (`id`),
@@ -14436,7 +14475,7 @@ ALTER TABLE `expenses_category_roles`
   ADD KEY `expenses_category_roles_role_id_foreign` (`role_id`);
 
 --
--- Chỉ mục cho bảng `expenses_recurring`
+-- Indexes for table `expenses_recurring`
 --
 ALTER TABLE `expenses_recurring`
   ADD PRIMARY KEY (`id`),
@@ -14449,32 +14488,32 @@ ALTER TABLE `expenses_recurring`
   ADD KEY `expenses_recurring_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `failed_jobs`
+-- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
--- Chỉ mục cho bảng `file_storage_settings`
+-- Indexes for table `file_storage_settings`
 --
 ALTER TABLE `file_storage_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `gdpr_settings`
+-- Indexes for table `gdpr_settings`
 --
 ALTER TABLE `gdpr_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `google_calendar_modules`
+-- Indexes for table `google_calendar_modules`
 --
 ALTER TABLE `google_calendar_modules`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `holidays`
+-- Indexes for table `holidays`
 --
 ALTER TABLE `holidays`
   ADD PRIMARY KEY (`id`),
@@ -14482,7 +14521,7 @@ ALTER TABLE `holidays`
   ADD KEY `holidays_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `invoices`
+-- Indexes for table `invoices`
 --
 ALTER TABLE `invoices`
   ADD PRIMARY KEY (`id`),
@@ -14500,21 +14539,21 @@ ALTER TABLE `invoices`
   ADD KEY `invoices_company_address_id_foreign` (`company_address_id`);
 
 --
--- Chỉ mục cho bảng `invoice_items`
+-- Indexes for table `invoice_items`
 --
 ALTER TABLE `invoice_items`
   ADD PRIMARY KEY (`id`),
   ADD KEY `invoice_items_invoice_id_foreign` (`invoice_id`);
 
 --
--- Chỉ mục cho bảng `invoice_item_images`
+-- Indexes for table `invoice_item_images`
 --
 ALTER TABLE `invoice_item_images`
   ADD PRIMARY KEY (`id`),
   ADD KEY `invoice_item_images_invoice_item_id_foreign` (`invoice_item_id`);
 
 --
--- Chỉ mục cho bảng `invoice_recurring`
+-- Indexes for table `invoice_recurring`
 --
 ALTER TABLE `invoice_recurring`
   ADD PRIMARY KEY (`id`),
@@ -14527,27 +14566,27 @@ ALTER TABLE `invoice_recurring`
   ADD KEY `invoice_recurring_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `invoice_recurring_items`
+-- Indexes for table `invoice_recurring_items`
 --
 ALTER TABLE `invoice_recurring_items`
   ADD PRIMARY KEY (`id`),
   ADD KEY `invoice_recurring_items_invoice_recurring_id_foreign` (`invoice_recurring_id`);
 
 --
--- Chỉ mục cho bảng `invoice_recurring_item_images`
+-- Indexes for table `invoice_recurring_item_images`
 --
 ALTER TABLE `invoice_recurring_item_images`
   ADD PRIMARY KEY (`id`),
   ADD KEY `invoice_recurring_item_images_invoice_recurring_item_id_foreign` (`invoice_recurring_item_id`);
 
 --
--- Chỉ mục cho bảng `invoice_settings`
+-- Indexes for table `invoice_settings`
 --
 ALTER TABLE `invoice_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `issues`
+-- Indexes for table `issues`
 --
 ALTER TABLE `issues`
   ADD PRIMARY KEY (`id`),
@@ -14555,39 +14594,39 @@ ALTER TABLE `issues`
   ADD KEY `issues_project_id_foreign` (`project_id`);
 
 --
--- Chỉ mục cho bảng `jobs`
+-- Indexes for table `jobs`
 --
 ALTER TABLE `jobs`
   ADD PRIMARY KEY (`id`),
   ADD KEY `jobs_queue_index` (`queue`);
 
 --
--- Chỉ mục cho bảng `job_batches`
+-- Indexes for table `job_batches`
 --
 ALTER TABLE `job_batches`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `knowledge_bases`
+-- Indexes for table `knowledge_bases`
 --
 ALTER TABLE `knowledge_bases`
   ADD PRIMARY KEY (`id`),
   ADD KEY `knowledge_bases_category_id_foreign` (`category_id`);
 
 --
--- Chỉ mục cho bảng `knowledge_categories`
+-- Indexes for table `knowledge_categories`
 --
 ALTER TABLE `knowledge_categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `language_settings`
+-- Indexes for table `language_settings`
 --
 ALTER TABLE `language_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `leads`
+-- Indexes for table `leads`
 --
 ALTER TABLE `leads`
   ADD PRIMARY KEY (`id`),
@@ -14598,7 +14637,7 @@ ALTER TABLE `leads`
   ADD KEY `leads_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `lead_agents`
+-- Indexes for table `lead_agents`
 --
 ALTER TABLE `lead_agents`
   ADD PRIMARY KEY (`id`),
@@ -14607,7 +14646,7 @@ ALTER TABLE `lead_agents`
   ADD KEY `lead_agents_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `lead_category`
+-- Indexes for table `lead_category`
 --
 ALTER TABLE `lead_category`
   ADD PRIMARY KEY (`id`),
@@ -14615,7 +14654,7 @@ ALTER TABLE `lead_category`
   ADD KEY `lead_category_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `lead_custom_forms`
+-- Indexes for table `lead_custom_forms`
 --
 ALTER TABLE `lead_custom_forms`
   ADD PRIMARY KEY (`id`),
@@ -14623,7 +14662,7 @@ ALTER TABLE `lead_custom_forms`
   ADD KEY `lead_custom_forms_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `lead_files`
+-- Indexes for table `lead_files`
 --
 ALTER TABLE `lead_files`
   ADD PRIMARY KEY (`id`),
@@ -14633,7 +14672,7 @@ ALTER TABLE `lead_files`
   ADD KEY `lead_files_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `lead_follow_up`
+-- Indexes for table `lead_follow_up`
 --
 ALTER TABLE `lead_follow_up`
   ADD PRIMARY KEY (`id`),
@@ -14642,7 +14681,7 @@ ALTER TABLE `lead_follow_up`
   ADD KEY `lead_follow_up_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `lead_notes`
+-- Indexes for table `lead_notes`
 --
 ALTER TABLE `lead_notes`
   ADD PRIMARY KEY (`id`),
@@ -14652,7 +14691,7 @@ ALTER TABLE `lead_notes`
   ADD KEY `lead_notes_lead_id_foreign` (`lead_id`);
 
 --
--- Chỉ mục cho bảng `lead_sources`
+-- Indexes for table `lead_sources`
 --
 ALTER TABLE `lead_sources`
   ADD PRIMARY KEY (`id`),
@@ -14661,14 +14700,14 @@ ALTER TABLE `lead_sources`
   ADD KEY `lead_sources_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `lead_status`
+-- Indexes for table `lead_status`
 --
 ALTER TABLE `lead_status`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `lead_status_type_unique` (`type`);
 
 --
--- Chỉ mục cho bảng `lead_user_notes`
+-- Indexes for table `lead_user_notes`
 --
 ALTER TABLE `lead_user_notes`
   ADD PRIMARY KEY (`id`),
@@ -14676,7 +14715,7 @@ ALTER TABLE `lead_user_notes`
   ADD KEY `lead_user_notes_lead_note_id_foreign` (`lead_note_id`);
 
 --
--- Chỉ mục cho bảng `leaves`
+-- Indexes for table `leaves`
 --
 ALTER TABLE `leaves`
   ADD PRIMARY KEY (`id`),
@@ -14686,61 +14725,61 @@ ALTER TABLE `leaves`
   ADD KEY `leaves_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `leave_types`
+-- Indexes for table `leave_types`
 --
 ALTER TABLE `leave_types`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `log_time_for`
+-- Indexes for table `log_time_for`
 --
 ALTER TABLE `log_time_for`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `ltm_translations`
+-- Indexes for table `ltm_translations`
 --
 ALTER TABLE `ltm_translations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `menus`
+-- Indexes for table `menus`
 --
 ALTER TABLE `menus`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `menu_settings`
+-- Indexes for table `menu_settings`
 --
 ALTER TABLE `menu_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `message_settings`
+-- Indexes for table `message_settings`
 --
 ALTER TABLE `message_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `migrations`
+-- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `modules`
+-- Indexes for table `modules`
 --
 ALTER TABLE `modules`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `module_settings`
+-- Indexes for table `module_settings`
 --
 ALTER TABLE `module_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `notices`
+-- Indexes for table `notices`
 --
 ALTER TABLE `notices`
   ADD PRIMARY KEY (`id`),
@@ -14749,7 +14788,7 @@ ALTER TABLE `notices`
   ADD KEY `notices_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `notice_views`
+-- Indexes for table `notice_views`
 --
 ALTER TABLE `notice_views`
   ADD PRIMARY KEY (`id`),
@@ -14757,20 +14796,20 @@ ALTER TABLE `notice_views`
   ADD KEY `notice_views_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `notifications`
+-- Indexes for table `notifications`
 --
 ALTER TABLE `notifications`
   ADD PRIMARY KEY (`id`),
   ADD KEY `notifications_notifiable_type_notifiable_id_index` (`notifiable_type`,`notifiable_id`);
 
 --
--- Chỉ mục cho bảng `offline_payment_methods`
+-- Indexes for table `offline_payment_methods`
 --
 ALTER TABLE `offline_payment_methods`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `orders`
+-- Indexes for table `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`),
@@ -14780,7 +14819,7 @@ ALTER TABLE `orders`
   ADD KEY `orders_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `order_items`
+-- Indexes for table `order_items`
 --
 ALTER TABLE `order_items`
   ADD PRIMARY KEY (`id`),
@@ -14788,14 +14827,14 @@ ALTER TABLE `order_items`
   ADD KEY `order_items_product_id_foreign` (`product_id`);
 
 --
--- Chỉ mục cho bảng `order_item_images`
+-- Indexes for table `order_item_images`
 --
 ALTER TABLE `order_item_images`
   ADD PRIMARY KEY (`id`),
   ADD KEY `order_item_images_order_item_id_index` (`order_item_id`);
 
 --
--- Chỉ mục cho bảng `organisation_settings`
+-- Indexes for table `organisation_settings`
 --
 ALTER TABLE `organisation_settings`
   ADD PRIMARY KEY (`id`),
@@ -14804,14 +14843,14 @@ ALTER TABLE `organisation_settings`
   ADD KEY `organisation_settings_default_task_status_foreign` (`default_task_status`);
 
 --
--- Chỉ mục cho bảng `password_resets`
+-- Indexes for table `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`),
   ADD KEY `password_resets_token_index` (`token`);
 
 --
--- Chỉ mục cho bảng `payments`
+-- Indexes for table `payments`
 --
 ALTER TABLE `payments`
   ADD PRIMARY KEY (`id`),
@@ -14828,13 +14867,13 @@ ALTER TABLE `payments`
   ADD KEY `payments_credit_notes_id_foreign` (`credit_notes_id`);
 
 --
--- Chỉ mục cho bảng `payment_gateway_credentials`
+-- Indexes for table `payment_gateway_credentials`
 --
 ALTER TABLE `payment_gateway_credentials`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `permissions`
+-- Indexes for table `permissions`
 --
 ALTER TABLE `permissions`
   ADD PRIMARY KEY (`id`),
@@ -14842,7 +14881,7 @@ ALTER TABLE `permissions`
   ADD KEY `permissions_module_id_foreign` (`module_id`);
 
 --
--- Chỉ mục cho bảng `permission_role`
+-- Indexes for table `permission_role`
 --
 ALTER TABLE `permission_role`
   ADD PRIMARY KEY (`permission_id`,`role_id`),
@@ -14850,13 +14889,13 @@ ALTER TABLE `permission_role`
   ADD KEY `permission_role_permission_type_id_foreign` (`permission_type_id`);
 
 --
--- Chỉ mục cho bảng `permission_types`
+-- Indexes for table `permission_types`
 --
 ALTER TABLE `permission_types`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `pinned`
+-- Indexes for table `pinned`
 --
 ALTER TABLE `pinned`
   ADD PRIMARY KEY (`id`),
@@ -14865,7 +14904,7 @@ ALTER TABLE `pinned`
   ADD KEY `pinned_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `products`
+-- Indexes for table `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
@@ -14875,13 +14914,13 @@ ALTER TABLE `products`
   ADD KEY `products_sub_category_id_foreign` (`sub_category_id`);
 
 --
--- Chỉ mục cho bảng `product_category`
+-- Indexes for table `product_category`
 --
 ALTER TABLE `product_category`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `product_files`
+-- Indexes for table `product_files`
 --
 ALTER TABLE `product_files`
   ADD PRIMARY KEY (`id`),
@@ -14890,14 +14929,14 @@ ALTER TABLE `product_files`
   ADD KEY `product_files_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `product_sub_category`
+-- Indexes for table `product_sub_category`
 --
 ALTER TABLE `product_sub_category`
   ADD PRIMARY KEY (`id`),
   ADD KEY `product_sub_category_category_id_foreign` (`category_id`);
 
 --
--- Chỉ mục cho bảng `projects`
+-- Indexes for table `projects`
 --
 ALTER TABLE `projects`
   ADD PRIMARY KEY (`id`),
@@ -14910,14 +14949,14 @@ ALTER TABLE `projects`
   ADD KEY `projects_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `project_activity`
+-- Indexes for table `project_activity`
 --
 ALTER TABLE `project_activity`
   ADD PRIMARY KEY (`id`),
   ADD KEY `project_activity_project_id_foreign` (`project_id`);
 
 --
--- Chỉ mục cho bảng `project_category`
+-- Indexes for table `project_category`
 --
 ALTER TABLE `project_category`
   ADD PRIMARY KEY (`id`),
@@ -14925,7 +14964,7 @@ ALTER TABLE `project_category`
   ADD KEY `project_category_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `project_files`
+-- Indexes for table `project_files`
 --
 ALTER TABLE `project_files`
   ADD PRIMARY KEY (`id`),
@@ -14935,7 +14974,7 @@ ALTER TABLE `project_files`
   ADD KEY `project_files_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `project_members`
+-- Indexes for table `project_members`
 --
 ALTER TABLE `project_members`
   ADD PRIMARY KEY (`id`),
@@ -14945,7 +14984,7 @@ ALTER TABLE `project_members`
   ADD KEY `project_members_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `project_milestones`
+-- Indexes for table `project_milestones`
 --
 ALTER TABLE `project_milestones`
   ADD PRIMARY KEY (`id`),
@@ -14955,7 +14994,7 @@ ALTER TABLE `project_milestones`
   ADD KEY `project_milestones_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `project_notes`
+-- Indexes for table `project_notes`
 --
 ALTER TABLE `project_notes`
   ADD PRIMARY KEY (`id`),
@@ -14965,7 +15004,7 @@ ALTER TABLE `project_notes`
   ADD KEY `project_notes_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `project_ratings`
+-- Indexes for table `project_ratings`
 --
 ALTER TABLE `project_ratings`
   ADD PRIMARY KEY (`id`),
@@ -14975,13 +15014,13 @@ ALTER TABLE `project_ratings`
   ADD KEY `project_ratings_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `project_settings`
+-- Indexes for table `project_settings`
 --
 ALTER TABLE `project_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `project_templates`
+-- Indexes for table `project_templates`
 --
 ALTER TABLE `project_templates`
   ADD PRIMARY KEY (`id`),
@@ -14989,7 +15028,7 @@ ALTER TABLE `project_templates`
   ADD KEY `project_templates_client_id_foreign` (`client_id`);
 
 --
--- Chỉ mục cho bảng `project_template_members`
+-- Indexes for table `project_template_members`
 --
 ALTER TABLE `project_template_members`
   ADD PRIMARY KEY (`id`),
@@ -14997,14 +15036,14 @@ ALTER TABLE `project_template_members`
   ADD KEY `project_template_members_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `project_template_sub_tasks`
+-- Indexes for table `project_template_sub_tasks`
 --
 ALTER TABLE `project_template_sub_tasks`
   ADD PRIMARY KEY (`id`),
   ADD KEY `project_template_sub_tasks_project_template_task_id_foreign` (`project_template_task_id`);
 
 --
--- Chỉ mục cho bảng `project_template_tasks`
+-- Indexes for table `project_template_tasks`
 --
 ALTER TABLE `project_template_tasks`
   ADD PRIMARY KEY (`id`),
@@ -15012,7 +15051,7 @@ ALTER TABLE `project_template_tasks`
   ADD KEY `project_template_tasks_project_template_task_category_id_foreign` (`project_template_task_category_id`);
 
 --
--- Chỉ mục cho bảng `project_template_task_users`
+-- Indexes for table `project_template_task_users`
 --
 ALTER TABLE `project_template_task_users`
   ADD PRIMARY KEY (`id`),
@@ -15020,7 +15059,7 @@ ALTER TABLE `project_template_task_users`
   ADD KEY `project_template_task_users_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `project_time_logs`
+-- Indexes for table `project_time_logs`
 --
 ALTER TABLE `project_time_logs`
   ADD PRIMARY KEY (`id`),
@@ -15034,7 +15073,7 @@ ALTER TABLE `project_time_logs`
   ADD KEY `project_time_logs_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `project_time_log_breaks`
+-- Indexes for table `project_time_log_breaks`
 --
 ALTER TABLE `project_time_log_breaks`
   ADD PRIMARY KEY (`id`),
@@ -15043,7 +15082,7 @@ ALTER TABLE `project_time_log_breaks`
   ADD KEY `project_time_log_breaks_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `project_user_notes`
+-- Indexes for table `project_user_notes`
 --
 ALTER TABLE `project_user_notes`
   ADD PRIMARY KEY (`id`),
@@ -15051,7 +15090,7 @@ ALTER TABLE `project_user_notes`
   ADD KEY `project_user_notes_project_note_id_foreign` (`project_note_id`);
 
 --
--- Chỉ mục cho bảng `proposals`
+-- Indexes for table `proposals`
 --
 ALTER TABLE `proposals`
   ADD PRIMARY KEY (`id`),
@@ -15061,34 +15100,34 @@ ALTER TABLE `proposals`
   ADD KEY `proposals_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `proposal_items`
+-- Indexes for table `proposal_items`
 --
 ALTER TABLE `proposal_items`
   ADD PRIMARY KEY (`id`),
   ADD KEY `proposal_items_proposal_id_foreign` (`proposal_id`);
 
 --
--- Chỉ mục cho bảng `proposal_item_images`
+-- Indexes for table `proposal_item_images`
 --
 ALTER TABLE `proposal_item_images`
   ADD PRIMARY KEY (`id`),
   ADD KEY `proposal_item_images_proposal_item_id_foreign` (`proposal_item_id`);
 
 --
--- Chỉ mục cho bảng `proposal_signs`
+-- Indexes for table `proposal_signs`
 --
 ALTER TABLE `proposal_signs`
   ADD PRIMARY KEY (`id`),
   ADD KEY `proposal_signs_proposal_id_foreign` (`proposal_id`);
 
 --
--- Chỉ mục cho bảng `purpose_consent`
+-- Indexes for table `purpose_consent`
 --
 ALTER TABLE `purpose_consent`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `purpose_consent_leads`
+-- Indexes for table `purpose_consent_leads`
 --
 ALTER TABLE `purpose_consent_leads`
   ADD PRIMARY KEY (`id`),
@@ -15097,7 +15136,7 @@ ALTER TABLE `purpose_consent_leads`
   ADD KEY `purpose_consent_leads_updated_by_id_foreign` (`updated_by_id`);
 
 --
--- Chỉ mục cho bảng `purpose_consent_users`
+-- Indexes for table `purpose_consent_users`
 --
 ALTER TABLE `purpose_consent_users`
   ADD PRIMARY KEY (`id`),
@@ -15106,19 +15145,19 @@ ALTER TABLE `purpose_consent_users`
   ADD KEY `purpose_consent_users_updated_by_id_foreign` (`updated_by_id`);
 
 --
--- Chỉ mục cho bảng `pusher_settings`
+-- Indexes for table `pusher_settings`
 --
 ALTER TABLE `pusher_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `push_notification_settings`
+-- Indexes for table `push_notification_settings`
 --
 ALTER TABLE `push_notification_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `push_subscriptions`
+-- Indexes for table `push_subscriptions`
 --
 ALTER TABLE `push_subscriptions`
   ADD PRIMARY KEY (`id`),
@@ -15126,48 +15165,48 @@ ALTER TABLE `push_subscriptions`
   ADD KEY `push_subscriptions_user_id_index` (`user_id`);
 
 --
--- Chỉ mục cho bảng `quotations`
+-- Indexes for table `quotations`
 --
 ALTER TABLE `quotations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `quotation_items`
+-- Indexes for table `quotation_items`
 --
 ALTER TABLE `quotation_items`
   ADD PRIMARY KEY (`id`),
   ADD KEY `quotation_items_quotation_id_foreign` (`quotation_id`);
 
 --
--- Chỉ mục cho bảng `removal_requests`
+-- Indexes for table `removal_requests`
 --
 ALTER TABLE `removal_requests`
   ADD PRIMARY KEY (`id`),
   ADD KEY `removal_requests_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `removal_requests_lead`
+-- Indexes for table `removal_requests_lead`
 --
 ALTER TABLE `removal_requests_lead`
   ADD PRIMARY KEY (`id`),
   ADD KEY `removal_requests_lead_lead_id_foreign` (`lead_id`);
 
 --
--- Chỉ mục cho bảng `roles`
+-- Indexes for table `roles`
 --
 ALTER TABLE `roles`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `roles_name_unique` (`name`);
 
 --
--- Chỉ mục cho bảng `role_user`
+-- Indexes for table `role_user`
 --
 ALTER TABLE `role_user`
   ADD PRIMARY KEY (`user_id`,`role_id`),
   ADD KEY `role_user_role_id_foreign` (`role_id`);
 
 --
--- Chỉ mục cho bảng `sessions`
+-- Indexes for table `sessions`
 --
 ALTER TABLE `sessions`
   ADD PRIMARY KEY (`id`),
@@ -15175,44 +15214,44 @@ ALTER TABLE `sessions`
   ADD KEY `sessions_last_activity_index` (`last_activity`);
 
 --
--- Chỉ mục cho bảng `skills`
+-- Indexes for table `skills`
 --
 ALTER TABLE `skills`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `slack_settings`
+-- Indexes for table `slack_settings`
 --
 ALTER TABLE `slack_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `smtp_settings`
+-- Indexes for table `smtp_settings`
 --
 ALTER TABLE `smtp_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `socials`
+-- Indexes for table `socials`
 --
 ALTER TABLE `socials`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `social_auth_settings`
+-- Indexes for table `social_auth_settings`
 --
 ALTER TABLE `social_auth_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `sticky_notes`
+-- Indexes for table `sticky_notes`
 --
 ALTER TABLE `sticky_notes`
   ADD PRIMARY KEY (`id`),
   ADD KEY `sticky_notes_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `sub_tasks`
+-- Indexes for table `sub_tasks`
 --
 ALTER TABLE `sub_tasks`
   ADD PRIMARY KEY (`id`),
@@ -15222,7 +15261,7 @@ ALTER TABLE `sub_tasks`
   ADD KEY `sub_tasks_assigned_to_foreign` (`assigned_to`);
 
 --
--- Chỉ mục cho bảng `sub_task_files`
+-- Indexes for table `sub_task_files`
 --
 ALTER TABLE `sub_task_files`
   ADD PRIMARY KEY (`id`),
@@ -15230,14 +15269,14 @@ ALTER TABLE `sub_task_files`
   ADD KEY `sub_task_files_sub_task_id_foreign` (`sub_task_id`);
 
 --
--- Chỉ mục cho bảng `taskboard_columns`
+-- Indexes for table `taskboard_columns`
 --
 ALTER TABLE `taskboard_columns`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `taskboard_columns_column_name_unique` (`column_name`);
 
 --
--- Chỉ mục cho bảng `tasks`
+-- Indexes for table `tasks`
 --
 ALTER TABLE `tasks`
   ADD PRIMARY KEY (`id`),
@@ -15252,7 +15291,7 @@ ALTER TABLE `tasks`
   ADD KEY `tasks_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `task_category`
+-- Indexes for table `task_category`
 --
 ALTER TABLE `task_category`
   ADD PRIMARY KEY (`id`),
@@ -15260,7 +15299,7 @@ ALTER TABLE `task_category`
   ADD KEY `task_category_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `task_comments`
+-- Indexes for table `task_comments`
 --
 ALTER TABLE `task_comments`
   ADD PRIMARY KEY (`id`),
@@ -15270,7 +15309,7 @@ ALTER TABLE `task_comments`
   ADD KEY `task_comments_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `task_files`
+-- Indexes for table `task_files`
 --
 ALTER TABLE `task_files`
   ADD PRIMARY KEY (`id`),
@@ -15280,7 +15319,7 @@ ALTER TABLE `task_files`
   ADD KEY `task_files_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `task_history`
+-- Indexes for table `task_history`
 --
 ALTER TABLE `task_history`
   ADD PRIMARY KEY (`id`),
@@ -15290,7 +15329,7 @@ ALTER TABLE `task_history`
   ADD KEY `task_history_board_column_id_foreign` (`board_column_id`);
 
 --
--- Chỉ mục cho bảng `task_labels`
+-- Indexes for table `task_labels`
 --
 ALTER TABLE `task_labels`
   ADD PRIMARY KEY (`id`),
@@ -15298,13 +15337,13 @@ ALTER TABLE `task_labels`
   ADD KEY `task_labels_label_id_foreign` (`label_id`);
 
 --
--- Chỉ mục cho bảng `task_label_list`
+-- Indexes for table `task_label_list`
 --
 ALTER TABLE `task_label_list`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `task_notes`
+-- Indexes for table `task_notes`
 --
 ALTER TABLE `task_notes`
   ADD PRIMARY KEY (`id`),
@@ -15313,7 +15352,7 @@ ALTER TABLE `task_notes`
   ADD KEY `task_notes_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `task_users`
+-- Indexes for table `task_users`
 --
 ALTER TABLE `task_users`
   ADD PRIMARY KEY (`id`),
@@ -15321,13 +15360,13 @@ ALTER TABLE `task_users`
   ADD KEY `task_users_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `taxes`
+-- Indexes for table `taxes`
 --
 ALTER TABLE `taxes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `teams`
+-- Indexes for table `teams`
 --
 ALTER TABLE `teams`
   ADD PRIMARY KEY (`id`),
@@ -15335,13 +15374,13 @@ ALTER TABLE `teams`
   ADD KEY `teams_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `theme_settings`
+-- Indexes for table `theme_settings`
 --
 ALTER TABLE `theme_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `tickets`
+-- Indexes for table `tickets`
 --
 ALTER TABLE `tickets`
   ADD PRIMARY KEY (`id`),
@@ -15354,7 +15393,7 @@ ALTER TABLE `tickets`
   ADD KEY `tickets_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `ticket_agent_groups`
+-- Indexes for table `ticket_agent_groups`
 --
 ALTER TABLE `ticket_agent_groups`
   ADD PRIMARY KEY (`id`),
@@ -15362,20 +15401,20 @@ ALTER TABLE `ticket_agent_groups`
   ADD KEY `ticket_agent_groups_group_id_foreign` (`group_id`);
 
 --
--- Chỉ mục cho bảng `ticket_channels`
+-- Indexes for table `ticket_channels`
 --
 ALTER TABLE `ticket_channels`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `ticket_channels_channel_name_unique` (`channel_name`);
 
 --
--- Chỉ mục cho bảng `ticket_custom_forms`
+-- Indexes for table `ticket_custom_forms`
 --
 ALTER TABLE `ticket_custom_forms`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `ticket_files`
+-- Indexes for table `ticket_files`
 --
 ALTER TABLE `ticket_files`
   ADD PRIMARY KEY (`id`),
@@ -15383,13 +15422,13 @@ ALTER TABLE `ticket_files`
   ADD KEY `ticket_files_ticket_reply_id_foreign` (`ticket_reply_id`);
 
 --
--- Chỉ mục cho bảng `ticket_groups`
+-- Indexes for table `ticket_groups`
 --
 ALTER TABLE `ticket_groups`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `ticket_replies`
+-- Indexes for table `ticket_replies`
 --
 ALTER TABLE `ticket_replies`
   ADD PRIMARY KEY (`id`),
@@ -15397,13 +15436,13 @@ ALTER TABLE `ticket_replies`
   ADD KEY `ticket_replies_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `ticket_reply_templates`
+-- Indexes for table `ticket_reply_templates`
 --
 ALTER TABLE `ticket_reply_templates`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `ticket_tags`
+-- Indexes for table `ticket_tags`
 --
 ALTER TABLE `ticket_tags`
   ADD PRIMARY KEY (`id`),
@@ -15411,32 +15450,32 @@ ALTER TABLE `ticket_tags`
   ADD KEY `ticket_tags_ticket_id_foreign` (`ticket_id`);
 
 --
--- Chỉ mục cho bảng `ticket_tag_list`
+-- Indexes for table `ticket_tag_list`
 --
 ALTER TABLE `ticket_tag_list`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `ticket_types`
+-- Indexes for table `ticket_types`
 --
 ALTER TABLE `ticket_types`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `ticket_types_type_unique` (`type`);
 
 --
--- Chỉ mục cho bảng `translate_settings`
+-- Indexes for table `translate_settings`
 --
 ALTER TABLE `translate_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `universal_search`
+-- Indexes for table `universal_search`
 --
 ALTER TABLE `universal_search`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
@@ -15444,7 +15483,7 @@ ALTER TABLE `users`
   ADD KEY `users_country_id_foreign` (`country_id`);
 
 --
--- Chỉ mục cho bảng `users_chat`
+-- Indexes for table `users_chat`
 --
 ALTER TABLE `users_chat`
   ADD PRIMARY KEY (`id`),
@@ -15454,7 +15493,7 @@ ALTER TABLE `users_chat`
   ADD KEY `users_chat_to_foreign` (`to`);
 
 --
--- Chỉ mục cho bảng `users_chat_files`
+-- Indexes for table `users_chat_files`
 --
 ALTER TABLE `users_chat_files`
   ADD PRIMARY KEY (`id`),
@@ -15462,21 +15501,21 @@ ALTER TABLE `users_chat_files`
   ADD KEY `users_chat_files_users_chat_id_foreign` (`users_chat_id`);
 
 --
--- Chỉ mục cho bảng `user_activities`
+-- Indexes for table `user_activities`
 --
 ALTER TABLE `user_activities`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_activities_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `user_invitations`
+-- Indexes for table `user_invitations`
 --
 ALTER TABLE `user_invitations`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_invitations_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `user_leadboard_settings`
+-- Indexes for table `user_leadboard_settings`
 --
 ALTER TABLE `user_leadboard_settings`
   ADD PRIMARY KEY (`id`),
@@ -15484,7 +15523,7 @@ ALTER TABLE `user_leadboard_settings`
   ADD KEY `user_leadboard_settings_board_column_id_foreign` (`board_column_id`);
 
 --
--- Chỉ mục cho bảng `user_permissions`
+-- Indexes for table `user_permissions`
 --
 ALTER TABLE `user_permissions`
   ADD PRIMARY KEY (`id`),
@@ -15493,7 +15532,7 @@ ALTER TABLE `user_permissions`
   ADD KEY `user_permissions_permission_type_id_foreign` (`permission_type_id`);
 
 --
--- Chỉ mục cho bảng `user_taskboard_settings`
+-- Indexes for table `user_taskboard_settings`
 --
 ALTER TABLE `user_taskboard_settings`
   ADD PRIMARY KEY (`id`),
@@ -15501,1095 +15540,1095 @@ ALTER TABLE `user_taskboard_settings`
   ADD KEY `user_taskboard_settings_board_column_id_foreign` (`board_column_id`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `accept_estimates`
+-- AUTO_INCREMENT for table `accept_estimates`
 --
 ALTER TABLE `accept_estimates`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `attendances`
+-- AUTO_INCREMENT for table `attendances`
 --
 ALTER TABLE `attendances`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `attendance_settings`
+-- AUTO_INCREMENT for table `attendance_settings`
 --
 ALTER TABLE `attendance_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `client_categories`
+-- AUTO_INCREMENT for table `client_categories`
 --
 ALTER TABLE `client_categories`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `client_contacts`
+-- AUTO_INCREMENT for table `client_contacts`
 --
 ALTER TABLE `client_contacts`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `client_details`
+-- AUTO_INCREMENT for table `client_details`
 --
 ALTER TABLE `client_details`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `client_docs`
+-- AUTO_INCREMENT for table `client_docs`
 --
 ALTER TABLE `client_docs`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `client_notes`
+-- AUTO_INCREMENT for table `client_notes`
 --
 ALTER TABLE `client_notes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `client_sub_categories`
+-- AUTO_INCREMENT for table `client_sub_categories`
 --
 ALTER TABLE `client_sub_categories`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `client_user_notes`
+-- AUTO_INCREMENT for table `client_user_notes`
 --
 ALTER TABLE `client_user_notes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `company_addresses`
+-- AUTO_INCREMENT for table `company_addresses`
 --
 ALTER TABLE `company_addresses`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `contracts`
+-- AUTO_INCREMENT for table `contracts`
 --
 ALTER TABLE `contracts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `contract_discussions`
+-- AUTO_INCREMENT for table `contract_discussions`
 --
 ALTER TABLE `contract_discussions`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `contract_files`
+-- AUTO_INCREMENT for table `contract_files`
 --
 ALTER TABLE `contract_files`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `contract_renews`
+-- AUTO_INCREMENT for table `contract_renews`
 --
 ALTER TABLE `contract_renews`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `contract_signs`
+-- AUTO_INCREMENT for table `contract_signs`
 --
 ALTER TABLE `contract_signs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `contract_types`
+-- AUTO_INCREMENT for table `contract_types`
 --
 ALTER TABLE `contract_types`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `conversation`
+-- AUTO_INCREMENT for table `conversation`
 --
 ALTER TABLE `conversation`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `conversation_reply`
+-- AUTO_INCREMENT for table `conversation_reply`
 --
 ALTER TABLE `conversation_reply`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `countries`
+-- AUTO_INCREMENT for table `countries`
 --
 ALTER TABLE `countries`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=254;
 
 --
--- AUTO_INCREMENT cho bảng `credit_notes`
+-- AUTO_INCREMENT for table `credit_notes`
 --
 ALTER TABLE `credit_notes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `credit_note_items`
+-- AUTO_INCREMENT for table `credit_note_items`
 --
 ALTER TABLE `credit_note_items`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `credit_note_item_images`
+-- AUTO_INCREMENT for table `credit_note_item_images`
 --
 ALTER TABLE `credit_note_item_images`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `currencies`
+-- AUTO_INCREMENT for table `currencies`
 --
 ALTER TABLE `currencies`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `currency_format_settings`
+-- AUTO_INCREMENT for table `currency_format_settings`
 --
 ALTER TABLE `currency_format_settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `custom_fields`
+-- AUTO_INCREMENT for table `custom_fields`
 --
 ALTER TABLE `custom_fields`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `custom_fields_data`
+-- AUTO_INCREMENT for table `custom_fields_data`
 --
 ALTER TABLE `custom_fields_data`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `custom_field_groups`
+-- AUTO_INCREMENT for table `custom_field_groups`
 --
 ALTER TABLE `custom_field_groups`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT cho bảng `dashboard_widgets`
+-- AUTO_INCREMENT for table `dashboard_widgets`
 --
 ALTER TABLE `dashboard_widgets`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
--- AUTO_INCREMENT cho bảng `database_backups`
+-- AUTO_INCREMENT for table `database_backups`
 --
 ALTER TABLE `database_backups`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `database_backup_cron_settings`
+-- AUTO_INCREMENT for table `database_backup_cron_settings`
 --
 ALTER TABLE `database_backup_cron_settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `designations`
+-- AUTO_INCREMENT for table `designations`
 --
 ALTER TABLE `designations`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `discussions`
+-- AUTO_INCREMENT for table `discussions`
 --
 ALTER TABLE `discussions`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `discussion_categories`
+-- AUTO_INCREMENT for table `discussion_categories`
 --
 ALTER TABLE `discussion_categories`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `discussion_files`
+-- AUTO_INCREMENT for table `discussion_files`
 --
 ALTER TABLE `discussion_files`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `discussion_replies`
+-- AUTO_INCREMENT for table `discussion_replies`
 --
 ALTER TABLE `discussion_replies`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `email_notification_settings`
+-- AUTO_INCREMENT for table `email_notification_settings`
 --
 ALTER TABLE `email_notification_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT cho bảng `emergency_contacts`
+-- AUTO_INCREMENT for table `emergency_contacts`
 --
 ALTER TABLE `emergency_contacts`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `employee_details`
+-- AUTO_INCREMENT for table `employee_details`
 --
 ALTER TABLE `employee_details`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `employee_docs`
+-- AUTO_INCREMENT for table `employee_docs`
 --
 ALTER TABLE `employee_docs`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `employee_leave_quotas`
+-- AUTO_INCREMENT for table `employee_leave_quotas`
 --
 ALTER TABLE `employee_leave_quotas`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT cho bảng `employee_skills`
+-- AUTO_INCREMENT for table `employee_skills`
 --
 ALTER TABLE `employee_skills`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `employee_teams`
+-- AUTO_INCREMENT for table `employee_teams`
 --
 ALTER TABLE `employee_teams`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `estimates`
+-- AUTO_INCREMENT for table `estimates`
 --
 ALTER TABLE `estimates`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `estimate_items`
+-- AUTO_INCREMENT for table `estimate_items`
 --
 ALTER TABLE `estimate_items`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `estimate_item_images`
+-- AUTO_INCREMENT for table `estimate_item_images`
 --
 ALTER TABLE `estimate_item_images`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `events`
+-- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `event_attendees`
+-- AUTO_INCREMENT for table `event_attendees`
 --
 ALTER TABLE `event_attendees`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT cho bảng `expenses`
+-- AUTO_INCREMENT for table `expenses`
 --
 ALTER TABLE `expenses`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `expenses_category`
+-- AUTO_INCREMENT for table `expenses_category`
 --
 ALTER TABLE `expenses_category`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `expenses_category_roles`
+-- AUTO_INCREMENT for table `expenses_category_roles`
 --
 ALTER TABLE `expenses_category_roles`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `expenses_recurring`
+-- AUTO_INCREMENT for table `expenses_recurring`
 --
 ALTER TABLE `expenses_recurring`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `failed_jobs`
+-- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `file_storage_settings`
+-- AUTO_INCREMENT for table `file_storage_settings`
 --
 ALTER TABLE `file_storage_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `gdpr_settings`
+-- AUTO_INCREMENT for table `gdpr_settings`
 --
 ALTER TABLE `gdpr_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `google_calendar_modules`
+-- AUTO_INCREMENT for table `google_calendar_modules`
 --
 ALTER TABLE `google_calendar_modules`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `holidays`
+-- AUTO_INCREMENT for table `holidays`
 --
 ALTER TABLE `holidays`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
--- AUTO_INCREMENT cho bảng `invoices`
+-- AUTO_INCREMENT for table `invoices`
 --
 ALTER TABLE `invoices`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `invoice_items`
+-- AUTO_INCREMENT for table `invoice_items`
 --
 ALTER TABLE `invoice_items`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `invoice_item_images`
+-- AUTO_INCREMENT for table `invoice_item_images`
 --
 ALTER TABLE `invoice_item_images`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `invoice_recurring`
+-- AUTO_INCREMENT for table `invoice_recurring`
 --
 ALTER TABLE `invoice_recurring`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `invoice_recurring_items`
+-- AUTO_INCREMENT for table `invoice_recurring_items`
 --
 ALTER TABLE `invoice_recurring_items`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `invoice_recurring_item_images`
+-- AUTO_INCREMENT for table `invoice_recurring_item_images`
 --
 ALTER TABLE `invoice_recurring_item_images`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `invoice_settings`
+-- AUTO_INCREMENT for table `invoice_settings`
 --
 ALTER TABLE `invoice_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `issues`
+-- AUTO_INCREMENT for table `issues`
 --
 ALTER TABLE `issues`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `jobs`
+-- AUTO_INCREMENT for table `jobs`
 --
 ALTER TABLE `jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `knowledge_bases`
+-- AUTO_INCREMENT for table `knowledge_bases`
 --
 ALTER TABLE `knowledge_bases`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `knowledge_categories`
+-- AUTO_INCREMENT for table `knowledge_categories`
 --
 ALTER TABLE `knowledge_categories`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `language_settings`
+-- AUTO_INCREMENT for table `language_settings`
 --
 ALTER TABLE `language_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT cho bảng `leads`
+-- AUTO_INCREMENT for table `leads`
 --
 ALTER TABLE `leads`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `lead_agents`
+-- AUTO_INCREMENT for table `lead_agents`
 --
 ALTER TABLE `lead_agents`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `lead_category`
+-- AUTO_INCREMENT for table `lead_category`
 --
 ALTER TABLE `lead_category`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `lead_custom_forms`
+-- AUTO_INCREMENT for table `lead_custom_forms`
 --
 ALTER TABLE `lead_custom_forms`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT cho bảng `lead_files`
+-- AUTO_INCREMENT for table `lead_files`
 --
 ALTER TABLE `lead_files`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `lead_follow_up`
+-- AUTO_INCREMENT for table `lead_follow_up`
 --
 ALTER TABLE `lead_follow_up`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `lead_notes`
+-- AUTO_INCREMENT for table `lead_notes`
 --
 ALTER TABLE `lead_notes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `lead_sources`
+-- AUTO_INCREMENT for table `lead_sources`
 --
 ALTER TABLE `lead_sources`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT cho bảng `lead_status`
+-- AUTO_INCREMENT for table `lead_status`
 --
 ALTER TABLE `lead_status`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `lead_user_notes`
+-- AUTO_INCREMENT for table `lead_user_notes`
 --
 ALTER TABLE `lead_user_notes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `leaves`
+-- AUTO_INCREMENT for table `leaves`
 --
 ALTER TABLE `leaves`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT cho bảng `leave_types`
+-- AUTO_INCREMENT for table `leave_types`
 --
 ALTER TABLE `leave_types`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `log_time_for`
+-- AUTO_INCREMENT for table `log_time_for`
 --
 ALTER TABLE `log_time_for`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `ltm_translations`
+-- AUTO_INCREMENT for table `ltm_translations`
 --
 ALTER TABLE `ltm_translations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6829;
 
 --
--- AUTO_INCREMENT cho bảng `menus`
+-- AUTO_INCREMENT for table `menus`
 --
 ALTER TABLE `menus`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
--- AUTO_INCREMENT cho bảng `menu_settings`
+-- AUTO_INCREMENT for table `menu_settings`
 --
 ALTER TABLE `menu_settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `message_settings`
+-- AUTO_INCREMENT for table `message_settings`
 --
 ALTER TABLE `message_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `migrations`
+-- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=567;
 
 --
--- AUTO_INCREMENT cho bảng `modules`
+-- AUTO_INCREMENT for table `modules`
 --
 ALTER TABLE `modules`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- AUTO_INCREMENT cho bảng `module_settings`
+-- AUTO_INCREMENT for table `module_settings`
 --
 ALTER TABLE `module_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 
 --
--- AUTO_INCREMENT cho bảng `notices`
+-- AUTO_INCREMENT for table `notices`
 --
 ALTER TABLE `notices`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `notice_views`
+-- AUTO_INCREMENT for table `notice_views`
 --
 ALTER TABLE `notice_views`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `offline_payment_methods`
+-- AUTO_INCREMENT for table `offline_payment_methods`
 --
 ALTER TABLE `offline_payment_methods`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `orders`
+-- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `order_items`
+-- AUTO_INCREMENT for table `order_items`
 --
 ALTER TABLE `order_items`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `order_item_images`
+-- AUTO_INCREMENT for table `order_item_images`
 --
 ALTER TABLE `order_item_images`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `organisation_settings`
+-- AUTO_INCREMENT for table `organisation_settings`
 --
 ALTER TABLE `organisation_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `payments`
+-- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `payment_gateway_credentials`
+-- AUTO_INCREMENT for table `payment_gateway_credentials`
 --
 ALTER TABLE `payment_gateway_credentials`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `permissions`
+-- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=268;
 
 --
--- AUTO_INCREMENT cho bảng `permission_types`
+-- AUTO_INCREMENT for table `permission_types`
 --
 ALTER TABLE `permission_types`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT cho bảng `pinned`
+-- AUTO_INCREMENT for table `pinned`
 --
 ALTER TABLE `pinned`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `products`
+-- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `product_category`
+-- AUTO_INCREMENT for table `product_category`
 --
 ALTER TABLE `product_category`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `product_files`
+-- AUTO_INCREMENT for table `product_files`
 --
 ALTER TABLE `product_files`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `product_sub_category`
+-- AUTO_INCREMENT for table `product_sub_category`
 --
 ALTER TABLE `product_sub_category`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `projects`
+-- AUTO_INCREMENT for table `projects`
 --
 ALTER TABLE `projects`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `project_activity`
+-- AUTO_INCREMENT for table `project_activity`
 --
 ALTER TABLE `project_activity`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT cho bảng `project_category`
+-- AUTO_INCREMENT for table `project_category`
 --
 ALTER TABLE `project_category`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `project_files`
+-- AUTO_INCREMENT for table `project_files`
 --
 ALTER TABLE `project_files`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `project_members`
+-- AUTO_INCREMENT for table `project_members`
 --
 ALTER TABLE `project_members`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `project_milestones`
+-- AUTO_INCREMENT for table `project_milestones`
 --
 ALTER TABLE `project_milestones`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `project_notes`
+-- AUTO_INCREMENT for table `project_notes`
 --
 ALTER TABLE `project_notes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `project_ratings`
+-- AUTO_INCREMENT for table `project_ratings`
 --
 ALTER TABLE `project_ratings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `project_settings`
+-- AUTO_INCREMENT for table `project_settings`
 --
 ALTER TABLE `project_settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `project_templates`
+-- AUTO_INCREMENT for table `project_templates`
 --
 ALTER TABLE `project_templates`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `project_template_members`
+-- AUTO_INCREMENT for table `project_template_members`
 --
 ALTER TABLE `project_template_members`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `project_template_sub_tasks`
+-- AUTO_INCREMENT for table `project_template_sub_tasks`
 --
 ALTER TABLE `project_template_sub_tasks`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `project_template_tasks`
+-- AUTO_INCREMENT for table `project_template_tasks`
 --
 ALTER TABLE `project_template_tasks`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `project_template_task_users`
+-- AUTO_INCREMENT for table `project_template_task_users`
 --
 ALTER TABLE `project_template_task_users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `project_time_logs`
+-- AUTO_INCREMENT for table `project_time_logs`
 --
 ALTER TABLE `project_time_logs`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `project_time_log_breaks`
+-- AUTO_INCREMENT for table `project_time_log_breaks`
 --
 ALTER TABLE `project_time_log_breaks`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `project_user_notes`
+-- AUTO_INCREMENT for table `project_user_notes`
 --
 ALTER TABLE `project_user_notes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `proposals`
+-- AUTO_INCREMENT for table `proposals`
 --
 ALTER TABLE `proposals`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `proposal_items`
+-- AUTO_INCREMENT for table `proposal_items`
 --
 ALTER TABLE `proposal_items`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `proposal_item_images`
+-- AUTO_INCREMENT for table `proposal_item_images`
 --
 ALTER TABLE `proposal_item_images`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `proposal_signs`
+-- AUTO_INCREMENT for table `proposal_signs`
 --
 ALTER TABLE `proposal_signs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `purpose_consent`
+-- AUTO_INCREMENT for table `purpose_consent`
 --
 ALTER TABLE `purpose_consent`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `purpose_consent_leads`
+-- AUTO_INCREMENT for table `purpose_consent_leads`
 --
 ALTER TABLE `purpose_consent_leads`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `purpose_consent_users`
+-- AUTO_INCREMENT for table `purpose_consent_users`
 --
 ALTER TABLE `purpose_consent_users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `pusher_settings`
+-- AUTO_INCREMENT for table `pusher_settings`
 --
 ALTER TABLE `pusher_settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `push_notification_settings`
+-- AUTO_INCREMENT for table `push_notification_settings`
 --
 ALTER TABLE `push_notification_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `push_subscriptions`
+-- AUTO_INCREMENT for table `push_subscriptions`
 --
 ALTER TABLE `push_subscriptions`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `quotations`
+-- AUTO_INCREMENT for table `quotations`
 --
 ALTER TABLE `quotations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `quotation_items`
+-- AUTO_INCREMENT for table `quotation_items`
 --
 ALTER TABLE `quotation_items`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `removal_requests`
+-- AUTO_INCREMENT for table `removal_requests`
 --
 ALTER TABLE `removal_requests`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `removal_requests_lead`
+-- AUTO_INCREMENT for table `removal_requests_lead`
 --
 ALTER TABLE `removal_requests_lead`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `roles`
+-- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `skills`
+-- AUTO_INCREMENT for table `skills`
 --
 ALTER TABLE `skills`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `slack_settings`
+-- AUTO_INCREMENT for table `slack_settings`
 --
 ALTER TABLE `slack_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `smtp_settings`
+-- AUTO_INCREMENT for table `smtp_settings`
 --
 ALTER TABLE `smtp_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `socials`
+-- AUTO_INCREMENT for table `socials`
 --
 ALTER TABLE `socials`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `social_auth_settings`
+-- AUTO_INCREMENT for table `social_auth_settings`
 --
 ALTER TABLE `social_auth_settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `sticky_notes`
+-- AUTO_INCREMENT for table `sticky_notes`
 --
 ALTER TABLE `sticky_notes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `sub_tasks`
+-- AUTO_INCREMENT for table `sub_tasks`
 --
 ALTER TABLE `sub_tasks`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `sub_task_files`
+-- AUTO_INCREMENT for table `sub_task_files`
 --
 ALTER TABLE `sub_task_files`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `taskboard_columns`
+-- AUTO_INCREMENT for table `taskboard_columns`
 --
 ALTER TABLE `taskboard_columns`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `tasks`
+-- AUTO_INCREMENT for table `tasks`
 --
 ALTER TABLE `tasks`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `task_category`
+-- AUTO_INCREMENT for table `task_category`
 --
 ALTER TABLE `task_category`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `task_comments`
+-- AUTO_INCREMENT for table `task_comments`
 --
 ALTER TABLE `task_comments`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `task_files`
+-- AUTO_INCREMENT for table `task_files`
 --
 ALTER TABLE `task_files`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `task_history`
+-- AUTO_INCREMENT for table `task_history`
 --
 ALTER TABLE `task_history`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT cho bảng `task_labels`
+-- AUTO_INCREMENT for table `task_labels`
 --
 ALTER TABLE `task_labels`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `task_label_list`
+-- AUTO_INCREMENT for table `task_label_list`
 --
 ALTER TABLE `task_label_list`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `task_notes`
+-- AUTO_INCREMENT for table `task_notes`
 --
 ALTER TABLE `task_notes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `task_users`
+-- AUTO_INCREMENT for table `task_users`
 --
 ALTER TABLE `task_users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `taxes`
+-- AUTO_INCREMENT for table `taxes`
 --
 ALTER TABLE `taxes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `teams`
+-- AUTO_INCREMENT for table `teams`
 --
 ALTER TABLE `teams`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `theme_settings`
+-- AUTO_INCREMENT for table `theme_settings`
 --
 ALTER TABLE `theme_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `tickets`
+-- AUTO_INCREMENT for table `tickets`
 --
 ALTER TABLE `tickets`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `ticket_agent_groups`
+-- AUTO_INCREMENT for table `ticket_agent_groups`
 --
 ALTER TABLE `ticket_agent_groups`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `ticket_channels`
+-- AUTO_INCREMENT for table `ticket_channels`
 --
 ALTER TABLE `ticket_channels`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `ticket_custom_forms`
+-- AUTO_INCREMENT for table `ticket_custom_forms`
 --
 ALTER TABLE `ticket_custom_forms`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT cho bảng `ticket_files`
+-- AUTO_INCREMENT for table `ticket_files`
 --
 ALTER TABLE `ticket_files`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `ticket_groups`
+-- AUTO_INCREMENT for table `ticket_groups`
 --
 ALTER TABLE `ticket_groups`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `ticket_replies`
+-- AUTO_INCREMENT for table `ticket_replies`
 --
 ALTER TABLE `ticket_replies`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `ticket_reply_templates`
+-- AUTO_INCREMENT for table `ticket_reply_templates`
 --
 ALTER TABLE `ticket_reply_templates`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `ticket_tags`
+-- AUTO_INCREMENT for table `ticket_tags`
 --
 ALTER TABLE `ticket_tags`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `ticket_tag_list`
+-- AUTO_INCREMENT for table `ticket_tag_list`
 --
 ALTER TABLE `ticket_tag_list`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `ticket_types`
+-- AUTO_INCREMENT for table `ticket_types`
 --
 ALTER TABLE `ticket_types`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `translate_settings`
+-- AUTO_INCREMENT for table `translate_settings`
 --
 ALTER TABLE `translate_settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `universal_search`
+-- AUTO_INCREMENT for table `universal_search`
 --
 ALTER TABLE `universal_search`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT cho bảng `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `users_chat`
+-- AUTO_INCREMENT for table `users_chat`
 --
 ALTER TABLE `users_chat`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `users_chat_files`
+-- AUTO_INCREMENT for table `users_chat_files`
 --
 ALTER TABLE `users_chat_files`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `user_activities`
+-- AUTO_INCREMENT for table `user_activities`
 --
 ALTER TABLE `user_activities`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `user_invitations`
+-- AUTO_INCREMENT for table `user_invitations`
 --
 ALTER TABLE `user_invitations`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `user_leadboard_settings`
+-- AUTO_INCREMENT for table `user_leadboard_settings`
 --
 ALTER TABLE `user_leadboard_settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `user_permissions`
+-- AUTO_INCREMENT for table `user_permissions`
 --
 ALTER TABLE `user_permissions`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=778;
 
 --
--- AUTO_INCREMENT cho bảng `user_taskboard_settings`
+-- AUTO_INCREMENT for table `user_taskboard_settings`
 --
 ALTER TABLE `user_taskboard_settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `accept_estimates`
+-- Constraints for table `accept_estimates`
 --
 ALTER TABLE `accept_estimates`
   ADD CONSTRAINT `accept_estimates_estimate_id_foreign` FOREIGN KEY (`estimate_id`) REFERENCES `estimates` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `attendances`
+-- Constraints for table `attendances`
 --
 ALTER TABLE `attendances`
   ADD CONSTRAINT `attendances_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16597,7 +16636,7 @@ ALTER TABLE `attendances`
   ADD CONSTRAINT `attendances_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `client_contacts`
+-- Constraints for table `client_contacts`
 --
 ALTER TABLE `client_contacts`
   ADD CONSTRAINT `client_contacts_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16605,7 +16644,7 @@ ALTER TABLE `client_contacts`
   ADD CONSTRAINT `client_contacts_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `client_details`
+-- Constraints for table `client_details`
 --
 ALTER TABLE `client_details`
   ADD CONSTRAINT `client_details_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16615,7 +16654,7 @@ ALTER TABLE `client_details`
   ADD CONSTRAINT `client_details_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `client_docs`
+-- Constraints for table `client_docs`
 --
 ALTER TABLE `client_docs`
   ADD CONSTRAINT `client_docs_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16623,7 +16662,7 @@ ALTER TABLE `client_docs`
   ADD CONSTRAINT `client_docs_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `client_notes`
+-- Constraints for table `client_notes`
 --
 ALTER TABLE `client_notes`
   ADD CONSTRAINT `client_notes_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16632,20 +16671,20 @@ ALTER TABLE `client_notes`
   ADD CONSTRAINT `client_notes_member_id_foreign` FOREIGN KEY (`member_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `client_sub_categories`
+-- Constraints for table `client_sub_categories`
 --
 ALTER TABLE `client_sub_categories`
   ADD CONSTRAINT `client_sub_categories_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `client_categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `client_user_notes`
+-- Constraints for table `client_user_notes`
 --
 ALTER TABLE `client_user_notes`
   ADD CONSTRAINT `client_user_notes_client_note_id_foreign` FOREIGN KEY (`client_note_id`) REFERENCES `client_notes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `client_user_notes_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `contracts`
+-- Constraints for table `contracts`
 --
 ALTER TABLE `contracts`
   ADD CONSTRAINT `contracts_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16655,7 +16694,7 @@ ALTER TABLE `contracts`
   ADD CONSTRAINT `contracts_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `contract_discussions`
+-- Constraints for table `contract_discussions`
 --
 ALTER TABLE `contract_discussions`
   ADD CONSTRAINT `contract_discussions_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16664,7 +16703,7 @@ ALTER TABLE `contract_discussions`
   ADD CONSTRAINT `contract_discussions_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `contract_files`
+-- Constraints for table `contract_files`
 --
 ALTER TABLE `contract_files`
   ADD CONSTRAINT `contract_files_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16673,7 +16712,7 @@ ALTER TABLE `contract_files`
   ADD CONSTRAINT `contract_files_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `contract_renews`
+-- Constraints for table `contract_renews`
 --
 ALTER TABLE `contract_renews`
   ADD CONSTRAINT `contract_renews_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16682,27 +16721,27 @@ ALTER TABLE `contract_renews`
   ADD CONSTRAINT `contract_renews_renewed_by_foreign` FOREIGN KEY (`renewed_by`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `contract_signs`
+-- Constraints for table `contract_signs`
 --
 ALTER TABLE `contract_signs`
   ADD CONSTRAINT `contract_signs_contract_id_foreign` FOREIGN KEY (`contract_id`) REFERENCES `contracts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `conversation`
+-- Constraints for table `conversation`
 --
 ALTER TABLE `conversation`
   ADD CONSTRAINT `conversation_user_one_foreign` FOREIGN KEY (`user_one`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `conversation_user_two_foreign` FOREIGN KEY (`user_two`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `conversation_reply`
+-- Constraints for table `conversation_reply`
 --
 ALTER TABLE `conversation_reply`
   ADD CONSTRAINT `conversation_reply_conversation_id_foreign` FOREIGN KEY (`conversation_id`) REFERENCES `conversation` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `conversation_reply_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `credit_notes`
+-- Constraints for table `credit_notes`
 --
 ALTER TABLE `credit_notes`
   ADD CONSTRAINT `credit_notes_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16712,38 +16751,38 @@ ALTER TABLE `credit_notes`
   ADD CONSTRAINT `credit_notes_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `credit_note_items`
+-- Constraints for table `credit_note_items`
 --
 ALTER TABLE `credit_note_items`
   ADD CONSTRAINT `credit_note_items_credit_note_id_foreign` FOREIGN KEY (`credit_note_id`) REFERENCES `credit_notes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `credit_note_item_images`
+-- Constraints for table `credit_note_item_images`
 --
 ALTER TABLE `credit_note_item_images`
   ADD CONSTRAINT `credit_note_item_images_credit_note_item_id_foreign` FOREIGN KEY (`credit_note_item_id`) REFERENCES `credit_note_items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `custom_fields`
+-- Constraints for table `custom_fields`
 --
 ALTER TABLE `custom_fields`
   ADD CONSTRAINT `custom_fields_custom_field_group_id_foreign` FOREIGN KEY (`custom_field_group_id`) REFERENCES `custom_field_groups` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `custom_fields_data`
+-- Constraints for table `custom_fields_data`
 --
 ALTER TABLE `custom_fields_data`
   ADD CONSTRAINT `custom_fields_data_custom_field_id_foreign` FOREIGN KEY (`custom_field_id`) REFERENCES `custom_fields` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `designations`
+-- Constraints for table `designations`
 --
 ALTER TABLE `designations`
   ADD CONSTRAINT `designations_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `designations_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `discussions`
+-- Constraints for table `discussions`
 --
 ALTER TABLE `discussions`
   ADD CONSTRAINT `discussions_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16755,7 +16794,7 @@ ALTER TABLE `discussions`
   ADD CONSTRAINT `discussions_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `discussion_files`
+-- Constraints for table `discussion_files`
 --
 ALTER TABLE `discussion_files`
   ADD CONSTRAINT `discussion_files_discussion_id_foreign` FOREIGN KEY (`discussion_id`) REFERENCES `discussions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -16763,14 +16802,14 @@ ALTER TABLE `discussion_files`
   ADD CONSTRAINT `discussion_files_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `discussion_replies`
+-- Constraints for table `discussion_replies`
 --
 ALTER TABLE `discussion_replies`
   ADD CONSTRAINT `discussion_replies_discussion_id_foreign` FOREIGN KEY (`discussion_id`) REFERENCES `discussions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `discussion_replies_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `emergency_contacts`
+-- Constraints for table `emergency_contacts`
 --
 ALTER TABLE `emergency_contacts`
   ADD CONSTRAINT `emergency_contacts_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16778,7 +16817,7 @@ ALTER TABLE `emergency_contacts`
   ADD CONSTRAINT `emergency_contacts_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `employee_details`
+-- Constraints for table `employee_details`
 --
 ALTER TABLE `employee_details`
   ADD CONSTRAINT `employee_details_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16788,7 +16827,7 @@ ALTER TABLE `employee_details`
   ADD CONSTRAINT `employee_details_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `employee_docs`
+-- Constraints for table `employee_docs`
 --
 ALTER TABLE `employee_docs`
   ADD CONSTRAINT `employee_docs_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16796,28 +16835,28 @@ ALTER TABLE `employee_docs`
   ADD CONSTRAINT `employee_docs_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `employee_leave_quotas`
+-- Constraints for table `employee_leave_quotas`
 --
 ALTER TABLE `employee_leave_quotas`
   ADD CONSTRAINT `employee_leave_quotas_leave_type_id_foreign` FOREIGN KEY (`leave_type_id`) REFERENCES `leave_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `employee_leave_quotas_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `employee_skills`
+-- Constraints for table `employee_skills`
 --
 ALTER TABLE `employee_skills`
   ADD CONSTRAINT `employee_skills_skill_id_foreign` FOREIGN KEY (`skill_id`) REFERENCES `skills` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `employee_skills_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `employee_teams`
+-- Constraints for table `employee_teams`
 --
 ALTER TABLE `employee_teams`
   ADD CONSTRAINT `employee_teams_team_id_foreign` FOREIGN KEY (`team_id`) REFERENCES `teams` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `employee_teams_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `estimates`
+-- Constraints for table `estimates`
 --
 ALTER TABLE `estimates`
   ADD CONSTRAINT `estimates_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16826,33 +16865,33 @@ ALTER TABLE `estimates`
   ADD CONSTRAINT `estimates_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `estimate_items`
+-- Constraints for table `estimate_items`
 --
 ALTER TABLE `estimate_items`
   ADD CONSTRAINT `estimate_items_estimate_id_foreign` FOREIGN KEY (`estimate_id`) REFERENCES `estimates` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `estimate_item_images`
+-- Constraints for table `estimate_item_images`
 --
 ALTER TABLE `estimate_item_images`
   ADD CONSTRAINT `estimate_item_images_estimate_item_id_foreign` FOREIGN KEY (`estimate_item_id`) REFERENCES `estimate_items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `events`
+-- Constraints for table `events`
 --
 ALTER TABLE `events`
   ADD CONSTRAINT `events_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `events_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `event_attendees`
+-- Constraints for table `event_attendees`
 --
 ALTER TABLE `event_attendees`
   ADD CONSTRAINT `event_attendees_event_id_foreign` FOREIGN KEY (`event_id`) REFERENCES `events` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `event_attendees_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `expenses`
+-- Constraints for table `expenses`
 --
 ALTER TABLE `expenses`
   ADD CONSTRAINT `expenses_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16865,21 +16904,21 @@ ALTER TABLE `expenses`
   ADD CONSTRAINT `expenses_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `expenses_category`
+-- Constraints for table `expenses_category`
 --
 ALTER TABLE `expenses_category`
   ADD CONSTRAINT `expenses_category_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `expenses_category_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `expenses_category_roles`
+-- Constraints for table `expenses_category_roles`
 --
 ALTER TABLE `expenses_category_roles`
   ADD CONSTRAINT `expenses_category_roles_expenses_category_id_foreign` FOREIGN KEY (`expenses_category_id`) REFERENCES `expenses_category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `expenses_category_roles_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `expenses_recurring`
+-- Constraints for table `expenses_recurring`
 --
 ALTER TABLE `expenses_recurring`
   ADD CONSTRAINT `expenses_recurring_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16891,14 +16930,14 @@ ALTER TABLE `expenses_recurring`
   ADD CONSTRAINT `expenses_recurring_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `holidays`
+-- Constraints for table `holidays`
 --
 ALTER TABLE `holidays`
   ADD CONSTRAINT `holidays_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `holidays_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `invoices`
+-- Constraints for table `invoices`
 --
 ALTER TABLE `invoices`
   ADD CONSTRAINT `invoices_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16914,19 +16953,19 @@ ALTER TABLE `invoices`
   ADD CONSTRAINT `invoices_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `invoice_items`
+-- Constraints for table `invoice_items`
 --
 ALTER TABLE `invoice_items`
   ADD CONSTRAINT `invoice_items_invoice_id_foreign` FOREIGN KEY (`invoice_id`) REFERENCES `invoices` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `invoice_item_images`
+-- Constraints for table `invoice_item_images`
 --
 ALTER TABLE `invoice_item_images`
   ADD CONSTRAINT `invoice_item_images_invoice_item_id_foreign` FOREIGN KEY (`invoice_item_id`) REFERENCES `invoice_items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `invoice_recurring`
+-- Constraints for table `invoice_recurring`
 --
 ALTER TABLE `invoice_recurring`
   ADD CONSTRAINT `invoice_recurring_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16938,32 +16977,32 @@ ALTER TABLE `invoice_recurring`
   ADD CONSTRAINT `invoice_recurring_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `invoice_recurring_items`
+-- Constraints for table `invoice_recurring_items`
 --
 ALTER TABLE `invoice_recurring_items`
   ADD CONSTRAINT `invoice_recurring_items_invoice_recurring_id_foreign` FOREIGN KEY (`invoice_recurring_id`) REFERENCES `invoice_recurring` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `invoice_recurring_item_images`
+-- Constraints for table `invoice_recurring_item_images`
 --
 ALTER TABLE `invoice_recurring_item_images`
   ADD CONSTRAINT `invoice_recurring_item_images_invoice_recurring_item_id_foreign` FOREIGN KEY (`invoice_recurring_item_id`) REFERENCES `invoice_recurring_items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `issues`
+-- Constraints for table `issues`
 --
 ALTER TABLE `issues`
   ADD CONSTRAINT `issues_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `issues_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `knowledge_bases`
+-- Constraints for table `knowledge_bases`
 --
 ALTER TABLE `knowledge_bases`
   ADD CONSTRAINT `knowledge_bases_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `knowledge_categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `leads`
+-- Constraints for table `leads`
 --
 ALTER TABLE `leads`
   ADD CONSTRAINT `leads_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16973,7 +17012,7 @@ ALTER TABLE `leads`
   ADD CONSTRAINT `leads_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `lead_agents`
+-- Constraints for table `lead_agents`
 --
 ALTER TABLE `lead_agents`
   ADD CONSTRAINT `lead_agents_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16981,21 +17020,21 @@ ALTER TABLE `lead_agents`
   ADD CONSTRAINT `lead_agents_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `lead_category`
+-- Constraints for table `lead_category`
 --
 ALTER TABLE `lead_category`
   ADD CONSTRAINT `lead_category_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `lead_category_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `lead_custom_forms`
+-- Constraints for table `lead_custom_forms`
 --
 ALTER TABLE `lead_custom_forms`
   ADD CONSTRAINT `lead_custom_forms_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `lead_custom_forms_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `lead_files`
+-- Constraints for table `lead_files`
 --
 ALTER TABLE `lead_files`
   ADD CONSTRAINT `lead_files_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17004,7 +17043,7 @@ ALTER TABLE `lead_files`
   ADD CONSTRAINT `lead_files_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `lead_follow_up`
+-- Constraints for table `lead_follow_up`
 --
 ALTER TABLE `lead_follow_up`
   ADD CONSTRAINT `lead_follow_up_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17012,7 +17051,7 @@ ALTER TABLE `lead_follow_up`
   ADD CONSTRAINT `lead_follow_up_lead_id_foreign` FOREIGN KEY (`lead_id`) REFERENCES `leads` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `lead_notes`
+-- Constraints for table `lead_notes`
 --
 ALTER TABLE `lead_notes`
   ADD CONSTRAINT `lead_notes_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17021,21 +17060,21 @@ ALTER TABLE `lead_notes`
   ADD CONSTRAINT `lead_notes_member_id_foreign` FOREIGN KEY (`member_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `lead_sources`
+-- Constraints for table `lead_sources`
 --
 ALTER TABLE `lead_sources`
   ADD CONSTRAINT `lead_sources_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `lead_sources_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `lead_user_notes`
+-- Constraints for table `lead_user_notes`
 --
 ALTER TABLE `lead_user_notes`
   ADD CONSTRAINT `lead_user_notes_lead_note_id_foreign` FOREIGN KEY (`lead_note_id`) REFERENCES `lead_notes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `lead_user_notes_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `leaves`
+-- Constraints for table `leaves`
 --
 ALTER TABLE `leaves`
   ADD CONSTRAINT `leaves_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17044,7 +17083,7 @@ ALTER TABLE `leaves`
   ADD CONSTRAINT `leaves_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `notices`
+-- Constraints for table `notices`
 --
 ALTER TABLE `notices`
   ADD CONSTRAINT `notices_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17052,14 +17091,14 @@ ALTER TABLE `notices`
   ADD CONSTRAINT `notices_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `notice_views`
+-- Constraints for table `notice_views`
 --
 ALTER TABLE `notice_views`
   ADD CONSTRAINT `notice_views_notice_id_foreign` FOREIGN KEY (`notice_id`) REFERENCES `notices` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `notice_views_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `orders`
+-- Constraints for table `orders`
 --
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17068,20 +17107,20 @@ ALTER TABLE `orders`
   ADD CONSTRAINT `orders_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `order_items`
+-- Constraints for table `order_items`
 --
 ALTER TABLE `order_items`
   ADD CONSTRAINT `order_items_order_id_foreign` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `order_items_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `order_item_images`
+-- Constraints for table `order_item_images`
 --
 ALTER TABLE `order_item_images`
   ADD CONSTRAINT `order_item_images_order_item_id_foreign` FOREIGN KEY (`order_item_id`) REFERENCES `order_items` (`id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `organisation_settings`
+-- Constraints for table `organisation_settings`
 --
 ALTER TABLE `organisation_settings`
   ADD CONSTRAINT `organisation_settings_currency_id_foreign` FOREIGN KEY (`currency_id`) REFERENCES `currencies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -17089,7 +17128,7 @@ ALTER TABLE `organisation_settings`
   ADD CONSTRAINT `organisation_settings_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `payments`
+-- Constraints for table `payments`
 --
 ALTER TABLE `payments`
   ADD CONSTRAINT `payments_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17102,13 +17141,13 @@ ALTER TABLE `payments`
   ADD CONSTRAINT `payments_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `permissions`
+-- Constraints for table `permissions`
 --
 ALTER TABLE `permissions`
   ADD CONSTRAINT `permissions_module_id_foreign` FOREIGN KEY (`module_id`) REFERENCES `modules` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `permission_role`
+-- Constraints for table `permission_role`
 --
 ALTER TABLE `permission_role`
   ADD CONSTRAINT `permission_role_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -17116,7 +17155,7 @@ ALTER TABLE `permission_role`
   ADD CONSTRAINT `permission_role_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `pinned`
+-- Constraints for table `pinned`
 --
 ALTER TABLE `pinned`
   ADD CONSTRAINT `pinned_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -17124,7 +17163,7 @@ ALTER TABLE `pinned`
   ADD CONSTRAINT `pinned_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `products`
+-- Constraints for table `products`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `products_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17133,7 +17172,7 @@ ALTER TABLE `products`
   ADD CONSTRAINT `products_sub_category_id_foreign` FOREIGN KEY (`sub_category_id`) REFERENCES `product_sub_category` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `product_files`
+-- Constraints for table `product_files`
 --
 ALTER TABLE `product_files`
   ADD CONSTRAINT `product_files_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17141,13 +17180,13 @@ ALTER TABLE `product_files`
   ADD CONSTRAINT `product_files_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `product_sub_category`
+-- Constraints for table `product_sub_category`
 --
 ALTER TABLE `product_sub_category`
   ADD CONSTRAINT `product_sub_category_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `product_category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `projects`
+-- Constraints for table `projects`
 --
 ALTER TABLE `projects`
   ADD CONSTRAINT `projects_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17159,20 +17198,20 @@ ALTER TABLE `projects`
   ADD CONSTRAINT `projects_team_id_foreign` FOREIGN KEY (`team_id`) REFERENCES `teams` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_activity`
+-- Constraints for table `project_activity`
 --
 ALTER TABLE `project_activity`
   ADD CONSTRAINT `project_activity_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_category`
+-- Constraints for table `project_category`
 --
 ALTER TABLE `project_category`
   ADD CONSTRAINT `project_category_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `project_category_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_files`
+-- Constraints for table `project_files`
 --
 ALTER TABLE `project_files`
   ADD CONSTRAINT `project_files_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17181,7 +17220,7 @@ ALTER TABLE `project_files`
   ADD CONSTRAINT `project_files_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_members`
+-- Constraints for table `project_members`
 --
 ALTER TABLE `project_members`
   ADD CONSTRAINT `project_members_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17190,7 +17229,7 @@ ALTER TABLE `project_members`
   ADD CONSTRAINT `project_members_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_milestones`
+-- Constraints for table `project_milestones`
 --
 ALTER TABLE `project_milestones`
   ADD CONSTRAINT `project_milestones_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17199,7 +17238,7 @@ ALTER TABLE `project_milestones`
   ADD CONSTRAINT `project_milestones_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_notes`
+-- Constraints for table `project_notes`
 --
 ALTER TABLE `project_notes`
   ADD CONSTRAINT `project_notes_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17208,7 +17247,7 @@ ALTER TABLE `project_notes`
   ADD CONSTRAINT `project_notes_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_ratings`
+-- Constraints for table `project_ratings`
 --
 ALTER TABLE `project_ratings`
   ADD CONSTRAINT `project_ratings_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17217,41 +17256,41 @@ ALTER TABLE `project_ratings`
   ADD CONSTRAINT `project_ratings_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_templates`
+-- Constraints for table `project_templates`
 --
 ALTER TABLE `project_templates`
   ADD CONSTRAINT `project_templates_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `project_category` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `project_templates_client_id_foreign` FOREIGN KEY (`client_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_template_members`
+-- Constraints for table `project_template_members`
 --
 ALTER TABLE `project_template_members`
   ADD CONSTRAINT `project_template_members_project_template_id_foreign` FOREIGN KEY (`project_template_id`) REFERENCES `project_templates` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `project_template_members_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_template_sub_tasks`
+-- Constraints for table `project_template_sub_tasks`
 --
 ALTER TABLE `project_template_sub_tasks`
   ADD CONSTRAINT `project_template_sub_tasks_project_template_task_id_foreign` FOREIGN KEY (`project_template_task_id`) REFERENCES `project_template_tasks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_template_tasks`
+-- Constraints for table `project_template_tasks`
 --
 ALTER TABLE `project_template_tasks`
   ADD CONSTRAINT `project_template_tasks_project_template_id_foreign` FOREIGN KEY (`project_template_id`) REFERENCES `project_templates` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `project_template_tasks_project_template_task_category_id_foreign` FOREIGN KEY (`project_template_task_category_id`) REFERENCES `task_category` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_template_task_users`
+-- Constraints for table `project_template_task_users`
 --
 ALTER TABLE `project_template_task_users`
   ADD CONSTRAINT `project_template_task_users_project_template_task_id_foreign` FOREIGN KEY (`project_template_task_id`) REFERENCES `project_template_tasks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `project_template_task_users_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_time_logs`
+-- Constraints for table `project_time_logs`
 --
 ALTER TABLE `project_time_logs`
   ADD CONSTRAINT `project_time_logs_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17264,7 +17303,7 @@ ALTER TABLE `project_time_logs`
   ADD CONSTRAINT `project_time_logs_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_time_log_breaks`
+-- Constraints for table `project_time_log_breaks`
 --
 ALTER TABLE `project_time_log_breaks`
   ADD CONSTRAINT `project_time_log_breaks_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17272,14 +17311,14 @@ ALTER TABLE `project_time_log_breaks`
   ADD CONSTRAINT `project_time_log_breaks_project_time_log_id_foreign` FOREIGN KEY (`project_time_log_id`) REFERENCES `project_time_logs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_user_notes`
+-- Constraints for table `project_user_notes`
 --
 ALTER TABLE `project_user_notes`
   ADD CONSTRAINT `project_user_notes_project_note_id_foreign` FOREIGN KEY (`project_note_id`) REFERENCES `project_notes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `project_user_notes_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `proposals`
+-- Constraints for table `proposals`
 --
 ALTER TABLE `proposals`
   ADD CONSTRAINT `proposals_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17288,25 +17327,25 @@ ALTER TABLE `proposals`
   ADD CONSTRAINT `proposals_lead_id_foreign` FOREIGN KEY (`lead_id`) REFERENCES `leads` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `proposal_items`
+-- Constraints for table `proposal_items`
 --
 ALTER TABLE `proposal_items`
   ADD CONSTRAINT `proposal_items_proposal_id_foreign` FOREIGN KEY (`proposal_id`) REFERENCES `proposals` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `proposal_item_images`
+-- Constraints for table `proposal_item_images`
 --
 ALTER TABLE `proposal_item_images`
   ADD CONSTRAINT `proposal_item_images_proposal_item_id_foreign` FOREIGN KEY (`proposal_item_id`) REFERENCES `proposal_items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `proposal_signs`
+-- Constraints for table `proposal_signs`
 --
 ALTER TABLE `proposal_signs`
   ADD CONSTRAINT `proposal_signs_proposal_id_foreign` FOREIGN KEY (`proposal_id`) REFERENCES `proposals` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `purpose_consent_leads`
+-- Constraints for table `purpose_consent_leads`
 --
 ALTER TABLE `purpose_consent_leads`
   ADD CONSTRAINT `purpose_consent_leads_lead_id_foreign` FOREIGN KEY (`lead_id`) REFERENCES `leads` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -17314,7 +17353,7 @@ ALTER TABLE `purpose_consent_leads`
   ADD CONSTRAINT `purpose_consent_leads_updated_by_id_foreign` FOREIGN KEY (`updated_by_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `purpose_consent_users`
+-- Constraints for table `purpose_consent_users`
 --
 ALTER TABLE `purpose_consent_users`
   ADD CONSTRAINT `purpose_consent_users_client_id_foreign` FOREIGN KEY (`client_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -17322,44 +17361,44 @@ ALTER TABLE `purpose_consent_users`
   ADD CONSTRAINT `purpose_consent_users_updated_by_id_foreign` FOREIGN KEY (`updated_by_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `push_subscriptions`
+-- Constraints for table `push_subscriptions`
 --
 ALTER TABLE `push_subscriptions`
   ADD CONSTRAINT `push_subscriptions_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `quotation_items`
+-- Constraints for table `quotation_items`
 --
 ALTER TABLE `quotation_items`
   ADD CONSTRAINT `quotation_items_quotation_id_foreign` FOREIGN KEY (`quotation_id`) REFERENCES `quotations` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `removal_requests`
+-- Constraints for table `removal_requests`
 --
 ALTER TABLE `removal_requests`
   ADD CONSTRAINT `removal_requests_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `removal_requests_lead`
+-- Constraints for table `removal_requests_lead`
 --
 ALTER TABLE `removal_requests_lead`
   ADD CONSTRAINT `removal_requests_lead_lead_id_foreign` FOREIGN KEY (`lead_id`) REFERENCES `leads` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `role_user`
+-- Constraints for table `role_user`
 --
 ALTER TABLE `role_user`
   ADD CONSTRAINT `role_user_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `role_user_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `sticky_notes`
+-- Constraints for table `sticky_notes`
 --
 ALTER TABLE `sticky_notes`
   ADD CONSTRAINT `sticky_notes_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `sub_tasks`
+-- Constraints for table `sub_tasks`
 --
 ALTER TABLE `sub_tasks`
   ADD CONSTRAINT `sub_tasks_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17368,14 +17407,14 @@ ALTER TABLE `sub_tasks`
   ADD CONSTRAINT `sub_tasks_task_id_foreign` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `sub_task_files`
+-- Constraints for table `sub_task_files`
 --
 ALTER TABLE `sub_task_files`
   ADD CONSTRAINT `sub_task_files_sub_task_id_foreign` FOREIGN KEY (`sub_task_id`) REFERENCES `sub_tasks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `sub_task_files_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `tasks`
+-- Constraints for table `tasks`
 --
 ALTER TABLE `tasks`
   ADD CONSTRAINT `tasks_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17389,14 +17428,14 @@ ALTER TABLE `tasks`
   ADD CONSTRAINT `tasks_task_category_id_foreign` FOREIGN KEY (`task_category_id`) REFERENCES `task_category` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `task_category`
+-- Constraints for table `task_category`
 --
 ALTER TABLE `task_category`
   ADD CONSTRAINT `task_category_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `task_category_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `task_comments`
+-- Constraints for table `task_comments`
 --
 ALTER TABLE `task_comments`
   ADD CONSTRAINT `task_comments_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17405,7 +17444,7 @@ ALTER TABLE `task_comments`
   ADD CONSTRAINT `task_comments_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `task_files`
+-- Constraints for table `task_files`
 --
 ALTER TABLE `task_files`
   ADD CONSTRAINT `task_files_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17414,7 +17453,7 @@ ALTER TABLE `task_files`
   ADD CONSTRAINT `task_files_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `task_history`
+-- Constraints for table `task_history`
 --
 ALTER TABLE `task_history`
   ADD CONSTRAINT `task_history_board_column_id_foreign` FOREIGN KEY (`board_column_id`) REFERENCES `taskboard_columns` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17423,14 +17462,14 @@ ALTER TABLE `task_history`
   ADD CONSTRAINT `task_history_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `task_labels`
+-- Constraints for table `task_labels`
 --
 ALTER TABLE `task_labels`
   ADD CONSTRAINT `task_labels_label_id_foreign` FOREIGN KEY (`label_id`) REFERENCES `task_label_list` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `task_tags_task_id_foreign` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `task_notes`
+-- Constraints for table `task_notes`
 --
 ALTER TABLE `task_notes`
   ADD CONSTRAINT `task_notes_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17438,21 +17477,21 @@ ALTER TABLE `task_notes`
   ADD CONSTRAINT `task_notes_task_id_foreign` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `task_users`
+-- Constraints for table `task_users`
 --
 ALTER TABLE `task_users`
   ADD CONSTRAINT `task_users_task_id_foreign` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `task_users_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `teams`
+-- Constraints for table `teams`
 --
 ALTER TABLE `teams`
   ADD CONSTRAINT `teams_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `teams_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `tickets`
+-- Constraints for table `tickets`
 --
 ALTER TABLE `tickets`
   ADD CONSTRAINT `tickets_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17464,41 +17503,41 @@ ALTER TABLE `tickets`
   ADD CONSTRAINT `tickets_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `ticket_agent_groups`
+-- Constraints for table `ticket_agent_groups`
 --
 ALTER TABLE `ticket_agent_groups`
   ADD CONSTRAINT `ticket_agent_groups_agent_id_foreign` FOREIGN KEY (`agent_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `ticket_agent_groups_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `ticket_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `ticket_files`
+-- Constraints for table `ticket_files`
 --
 ALTER TABLE `ticket_files`
   ADD CONSTRAINT `ticket_files_ticket_reply_id_foreign` FOREIGN KEY (`ticket_reply_id`) REFERENCES `ticket_replies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `ticket_files_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `ticket_replies`
+-- Constraints for table `ticket_replies`
 --
 ALTER TABLE `ticket_replies`
   ADD CONSTRAINT `ticket_replies_ticket_id_foreign` FOREIGN KEY (`ticket_id`) REFERENCES `tickets` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `ticket_replies_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `ticket_tags`
+-- Constraints for table `ticket_tags`
 --
 ALTER TABLE `ticket_tags`
   ADD CONSTRAINT `ticket_tags_tag_id_foreign` FOREIGN KEY (`tag_id`) REFERENCES `ticket_tag_list` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `ticket_tags_ticket_id_foreign` FOREIGN KEY (`ticket_id`) REFERENCES `tickets` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `users`
+-- Constraints for table `users`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `users_country_id_foreign` FOREIGN KEY (`country_id`) REFERENCES `countries` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `users_chat`
+-- Constraints for table `users_chat`
 --
 ALTER TABLE `users_chat`
   ADD CONSTRAINT `users_chat_from_foreign` FOREIGN KEY (`from`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -17507,33 +17546,33 @@ ALTER TABLE `users_chat`
   ADD CONSTRAINT `users_chat_user_one_foreign` FOREIGN KEY (`user_one`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `users_chat_files`
+-- Constraints for table `users_chat_files`
 --
 ALTER TABLE `users_chat_files`
   ADD CONSTRAINT `users_chat_files_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `users_chat_files_users_chat_id_foreign` FOREIGN KEY (`users_chat_id`) REFERENCES `users_chat` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `user_activities`
+-- Constraints for table `user_activities`
 --
 ALTER TABLE `user_activities`
   ADD CONSTRAINT `user_activities_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `user_invitations`
+-- Constraints for table `user_invitations`
 --
 ALTER TABLE `user_invitations`
   ADD CONSTRAINT `user_invitations_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `user_leadboard_settings`
+-- Constraints for table `user_leadboard_settings`
 --
 ALTER TABLE `user_leadboard_settings`
   ADD CONSTRAINT `user_leadboard_settings_board_column_id_foreign` FOREIGN KEY (`board_column_id`) REFERENCES `lead_status` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `user_leadboard_settings_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `user_permissions`
+-- Constraints for table `user_permissions`
 --
 ALTER TABLE `user_permissions`
   ADD CONSTRAINT `user_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -17541,7 +17580,7 @@ ALTER TABLE `user_permissions`
   ADD CONSTRAINT `user_permissions_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `user_taskboard_settings`
+-- Constraints for table `user_taskboard_settings`
 --
 ALTER TABLE `user_taskboard_settings`
   ADD CONSTRAINT `user_taskboard_settings_board_column_id_foreign` FOREIGN KEY (`board_column_id`) REFERENCES `taskboard_columns` (`id`) ON UPDATE CASCADE,

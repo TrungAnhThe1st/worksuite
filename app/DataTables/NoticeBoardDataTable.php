@@ -87,7 +87,7 @@ class NoticeBoardDataTable extends BaseDataTable
             ->editColumn(
                 'to',
                 function ($row) {
-                    return ucfirst($row->to);
+                    return __('app.' . $row->to);
                 }
             )
             ->addIndexColumn()

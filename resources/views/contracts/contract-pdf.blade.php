@@ -3,7 +3,7 @@
 
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Template CSS -->
@@ -252,8 +252,7 @@
                         @endif
                         <tr>
                             <td class="heading-table-left">@lang('modules.contracts.contractType')</td>
-                            <td class="heading-table-right">{{ $contract->contractType->name }}
-                            </td>
+                            <td class="heading-table-right">{{ $contract->contractType->name }}</td>
                         </tr>
                     </table>
                 </td>
