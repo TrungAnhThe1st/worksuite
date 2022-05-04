@@ -16,7 +16,8 @@ class DatabaseBackupSettingController extends AccountBaseController
     public function __construct()
     {
         parent::__construct();
-        $this->pageTitle = __('app.menu.databaseBackupSetting');
+        // $this->pageTitle = __('app.menu.databaseBackupSetting');
+        $this->pageTitle = 'Cài đặt sao lưu dữ liệu';
         $this->activeSettingMenu = 'database_backup_settings';
         $this->middleware(function ($request, $next) {
             return $next($request);

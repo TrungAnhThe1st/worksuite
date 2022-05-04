@@ -14,7 +14,8 @@ class GoogleCalendarSettingController extends AccountBaseController
     public function __construct()
     {
         parent::__construct();
-        $this->pageTitle = __('app.menu.googleCalendarSetting');
+        // $this->pageTitle = __('app.menu.googleCalendarSetting');
+        $this->pageTitle = 'Cài đặt lịch google';
         $this->activeSettingMenu = 'google_calendar_settings';
         $this->middleware(function ($request, $next) {
             abort_403(!(user()->permission('manage_google_calendar_setting') == 'all'));

@@ -16,7 +16,8 @@ class SecuritySettingController extends AccountBaseController
     public function __construct()
     {
         parent::__construct();
-        $this->pageTitle = __('app.menu.securitySettings');
+        // $this->pageTitle = __('app.menu.securitySettings');
+        $this->pageTitle = 'Cài đặt bảo mật';
         $this->activeSettingMenu = 'security_settings';
         $this->middleware(function ($request, $next) {
             return $next($request);
