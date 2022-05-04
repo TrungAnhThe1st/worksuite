@@ -61,7 +61,7 @@ $addLeadCategoryPermission = user()->permission('add_lead_category');
                                     </x-slot>
                                 @endif
                             </x-forms.input-group>
-                        </div>                        
+                        </div>
                     @endif
 
                     @if ($viewLeadSourcesPermission != 'none')
@@ -84,7 +84,7 @@ $addLeadCategoryPermission = user()->permission('add_lead_category');
                                     </x-slot>
                                 @endif
                             </x-forms.input-group>
-                        </div>                        
+                        </div>
                     @endif
 
                     @if ($viewLeadCategoryPermission != 'none')
@@ -108,11 +108,11 @@ $addLeadCategoryPermission = user()->permission('add_lead_category');
                                     </x-slot>
                                 @endif
                             </x-forms.input-group>
-                        </div>                        
+                        </div>
                     @endif
 
                     <div class="col-lg-4 mt-2">
-                        <x-forms.number class="mr-0 mr-lg-2 mr-md-2" :fieldLabel="__('app.lead') .' '. __('app.value')"
+                        <x-forms.number class="mr-0 mr-lg-2 mr-md-2" :fieldLabel="__('app.leadvalue') "
                             fieldName="value" fieldId="value" />
                     </div>
 

@@ -250,6 +250,7 @@ return array (
     'lead notes' => 'Ghi chú khách hàng tiềm năng',
     'proposals' => 'Đề xuất',
     'custommodules' => 'Mô-đun tùy chỉnh',
+    'creditnotes' => 'Ghi chú tín dụng',
   ),
   'language' => 'Ngôn ngữ',
   'delete' => 'Xóa',
@@ -816,8 +817,10 @@ return array (
     'sick' => 'Ốm',
     'earned' => 'Được phép',
   ),
+  'leadvalue' => 'Giá trị khách hàng tiềm năng',
 //   'required' =>
 //   array (
 //     'Description' => 'Mô tả',
 //   ),
 );
+?>
