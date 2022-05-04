@@ -312,36 +312,36 @@ return array (
   'noCategoryAdded' => 'No category added',
   'incorrectPassword' => 'Incorrect Password',
   'passwordMatched' => 'Password Matched',
-  'welcome' =>
+  'welcome' => 
   array (
     'message' => 'Welcome to the setup wizard',
     'title' => 'Welcome to the installer',
   ),
   'title' => 'Laravel installer',
-  'requirements' =>
+  'requirements' => 
   array (
     'title' => 'formalities',
   ),
-  'permissions' =>
+  'permissions' => 
   array (
     'title' => 'Permissions',
   ),
   'next' => 'Following',
   'finish' => 'Install',
-  'final' =>
+  'final' => 
   array (
     'title' => 'Finalized.',
     'finished' => 'The application has been installed successfully!',
     'exit' => 'Click here to exit.',
   ),
-  'environment' =>
+  'environment' => 
   array (
     'errors' => 'It is not possible to create the .env file, please try manually.',
     'save' => 'Save .env file',
     'success' => 'Changes to your .env file have been saved.',
     'title' => 'Settings of the environment',
   ),
-  'currency' =>
+  'currency' => 
   array (
     'currencyPosition' => 'This controls the position of the currency symbol. like $1 or 1$ or $ 1 or 1 $',
     'thousandSeparator' => 'This sets the thousand separotor of displayed prices. like $10,000 or $1000,0000',
@@ -445,7 +445,7 @@ return array (
   'leaveTypeValueError' => 'No of leaves should be grater than or equal to Zero',
   'maxColckIn' => 'Maximum check-ins reached.',
   'recoverRenewal' => 'You will not be able to recover the deleted renewal!',
-  'taskLabel' =>
+  'taskLabel' => 
   array (
     'deletedSuccess' => 'Label deleted successfully.',
     'addedSuccess' => 'Label added successfully.',
@@ -485,7 +485,7 @@ return array (
   'serverSideErrorOccurred' => 'A server-side error occurred. Please try again or contact support.',
   'fixTheErrorsBelow' => 'Please fix the errors below:',
   'deleteCreditNotes' => 'You will not be able to recover the deleted credit notes!',
-  'confirmation' =>
+  'confirmation' => 
   array (
     'projectDelete' => 'Are you sure you want to delete this project ?',
     'clientDelete' => 'Are you sure you want to delete this client ?',
@@ -504,7 +504,7 @@ return array (
     'createCreditNotes' => 'Are you sure that you want to create the credit note?',
     'orderStatusChange' => 'Are you sure you want to change the order status?',
   ),
-  'mobile' =>
+  'mobile' => 
   array (
     'unableToAccessCamera' => 'Unable to access camera. Please ensure you have granted CRM access to the camera.',
     'maximumFileSize' => 'Maximum file size allowed for upload is 8MB. For uploading larger files, please contact support.',
@@ -593,7 +593,7 @@ return array (
   'invalidEmailFormat' => 'Invalid email format.',
   'calculateTaxBeforeDiscount' => 'Note : Tax is calculating before discount.',
   'calculateTaxAfterDiscount' => 'Note : Tax is calculating after discount.',
-  'fileFormat' =>
+  'fileFormat' => 
   array (
     'ImageFile' => 'only .jpg, .jpeg, .png formats are allowed.',
     'multipleImageFile' => 'only .txt, .pdf, .doc, .xls, .xlsx, .docx, .rtf, .png, .jpg, .jpeg formats are allowed.',
@@ -607,7 +607,7 @@ return array (
   'importProcessStart' => 'Import process started. Please wait.',
   'confirmResetPermission' => 'This will reset permissions for all users with this role. Do you want to reset?',
   'invoiceDueOn' => 'Invoice Due On',
-  'googleCalendar' =>
+  'googleCalendar' => 
   array (
     'confirmRemove' => 'Are you really want to disable Google Calendar ?',
     'yesRemove' => 'Yes, Remove it!',
@@ -617,7 +617,7 @@ return array (
     'addGoogleCalendarUrl' => 'Add this redirect URI to your Google Console',
     'notificationTitle' => 'Notification Settings',
   ),
-  'databasebackup' =>
+  'databasebackup' => 
   array (
     'note' => 'Note: Due to the limited execution time and memory available to PHP, backing up very large databases may not be possible. If your database is very large you might need to backup directly from your SQL server via the command line, or have your server admin do it for you if you do not have root privileges.',
     'backupNotExist' => 'Backup file doesn\'t exist.',
@@ -635,7 +635,7 @@ return array (
   'dragDropScreenInfo' => 'Drag and drop will work on desktop devices only.',
   'timerPausedSuccessfully' => 'Timer paused successfully.',
   'orderStatusChanged' => 'Order status changed successfully.',
-  'orderStatus' =>
+  'orderStatus' => 
   array (
     'pending' => 'Pending order is ready to collect payment.',
     'onHold' => 'On hold order is waiting for payment or payment is pending.',
@@ -650,10 +650,4 @@ return array (
   'sameCurrencyInvoiceNote' => 'Only same currency Invoices will show here.',
   'alreadySigned' => 'Already signed',
   'invoiceAlreadyPaid' => 'Invoice already paid',
-  'choose an assignee' => 'Choose an assignee',
-  'Choose at-least 1' => 'Choose atleast 1',
-  'Choose at-least 1 member' => 'Choose at least 1 member',
-  'The amount field is required.' => 'The amount field is required.',
-  'The start date field is required.' => 'The start date field is required.',
-  'The end date field is required.' => 'The end date field is required.',
 );
