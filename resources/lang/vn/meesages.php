@@ -1,11 +1,6 @@
 <?php
 
 return array (
-  'employeeDocsAllowedFormat' => 'Tài liệu của nhân viên được cho phép định dạng',
-);
-<?php
-
-return array (
   'fetchChat' => 'Tìm nạp chi tiết cuộc trò chuyện.',
   'confirm' => 'Xác nhận',
   'A two digit day could not be found Data missing' => 'Không thể tìm thấy ngày có hai chữ số Thiếu dữ liệu',
