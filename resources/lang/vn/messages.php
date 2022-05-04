@@ -653,4 +653,10 @@ return array (
   'sameCurrencyInvoiceNote' => 'Chỉ những Hóa đơn có cùng đơn vị tiền tệ mới hiển thị ở đây.',
   'alreadySigned' => 'Đã được ký',
   'invoiceAlreadyPaid' => 'Hóa đơn đã được thanh toán',
+  'choose an assignee' => 'Chọn một người được phân công',
+  'Choose at-least 1' => 'Chọn ít nhất một',
+  'Choose at-least 1 member' => 'Chọn ít nhất 1 thành viên',
+  'The amount field is required.' => 'Trường giá trị là bắt buộc',
+  'The start date field is required.' => 'Trường ngày bắt đầu là bắt buộc',
+  'The end date field is required.' => 'Trường ngày cuối là bắt buộc',
 );
