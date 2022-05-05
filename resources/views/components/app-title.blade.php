@@ -14,8 +14,12 @@
                         @php $link .= '/' . Request::segment($i); @endphp
 
                         @if (Request::segment($i) != 'account')
+<<<<<<< HEAD
                             {{-- <a href="<?= $link ?>" class="text-lightest">{{ ucwords(str_replace('-', ' ', Request::segment($i))) }}</a> &bull; --}}
                             <a href="<?= $_ENV["APP_URL"] . $_ENV["ROOT_FOLDER_NAME"] . '/public' . $link ?>" class="text-lightest">@lang('app.menu.' . str_replace('-', '', Request::segment($i)))</a> &bull;
+=======
+                        <a href="<?= $_ENV["APP_URL"] . '/' . $_ENV["ROOT_FOLDER_NAME"] . '/public' . $link ?>" class="text-lightest">@lang('app.menu.' . str_replace('-', '', Request::segment($i)))</a> &bull;
+>>>>>>> c439595b51d2acc18fb9a342a51a76cb11f743a2
                         @endif
                     @else
                         {{-- <!-- @lang('app.menu.' . $pageTitle) --> --}}

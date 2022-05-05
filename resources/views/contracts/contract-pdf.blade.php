@@ -3,7 +3,7 @@
 
 <head>
     <!-- Required meta tags -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Template CSS -->
@@ -304,7 +304,7 @@
         </tbody>
     </table>
 
-    
+
     <div>
         <h5 class="text-grey text-capitalize">@lang('app.subject')</h5>
         <p class="f-15">{{ $contract->subject }}</p>
@@ -319,7 +319,7 @@
             </div>
         @endif
     </div>
-    
+
     @if ($contract->signature)
         <div style="text-align: right; margin-top: 10px;">
             <h2 class="name" style="margin-bottom: 20px;">@lang('app.signature')</h2>

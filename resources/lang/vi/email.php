@@ -64,7 +64,7 @@ return array (
   'newTicket' =>
   array (
     'subject' => 'Đã yêu vé cầu hỗ trợ',
-    'text' => 'Yêu cầu vé hõ trợ mới. Đăng nhập để xem vé hỗ trợ.',
+    'text' => 'Yêu cầu vé hõ trợ mới. Đăng nhập để xem vé.',
     'action' => 'Xem vé hỗ trợ',
   ),
   'newUser' =>
@@ -83,17 +83,17 @@ return array (
   array (
     'subject' => 'Đã nhận được yêu cầu nghỉ việc mới',
     'statusSubject' => 'Cập nhật trạng thái ứng dụng',
-    'action' => 'View Leave ',
+    'action' => 'Xem nghỉ phép',
   ),
   'taskComplete' =>
   array (
-    'subject' => 'Nhiệm vụ được đánh dấu là hoàn thành',
-    'action' => 'Xem nhiệm vụ',
+    'subject' => 'Công việc được đánh dấu là hoàn thành',
+    'action' => 'Xem công việc',
   ),
   'taskUpdate' =>
   array (
-    'subject' => '',
-    'action' => 'Xem tác vụ',
+    'subject' => 'Công việc đã được cập nhật',
+    'action' => 'Xem công việc',
   ),
   'leave' =>
   array (
@@ -104,11 +104,11 @@ return array (
   ),
   'newClientTask' =>
   array (
-    'subject' => 'New Task Generated',
+    'subject' => 'Công việc đã được tạo mới',
   ),
   'reminder' =>
   array (
-    'subject' => 'Lời nhắc cho nhiệm vụ được giao',
+    'subject' => 'Lời nhắc cho Công việc được giao',
   ),
   'invoices' =>
   array (
@@ -134,7 +134,7 @@ return array (
   'estimate' =>
   array (
     'subject' => 'Đã tạo ước tính mới',
-    'text' => 'Một ước tính mới đã được tạo. Vui lòng nhấn vào liên kết để bên dưới để xem ước tính.',
+    'text' => 'Một ước tính mới đã được tạo. Vui lòng nhấn vào liên kết dưới đây để xem ước tính',
     'loginDashboard' => 'Phê duyệt / Từ chối',
   ),
   'invoice' =>
@@ -165,8 +165,8 @@ return array (
   ),
   'taskComment' =>
   array (
-    'subject' => 'Nhận xét mới về nhiệm vụ',
-    'action' => 'Xem nhận xét về nhiệm vụ',
+    'subject' => 'Nhận xét mới về Công việc',
+    'action' => 'Xem nhận xét về Công việc',
   ),
   'taskNote' =>
   array (
@@ -222,21 +222,21 @@ return array (
   ),
   'subTaskComplete' =>
   array (
-    'subject' => 'Nhiệm vụ phụ được đánh dấu là hoàn thành',
-    'action' => 'Xem nhiệm vụ phụ',
+    'subject' => 'Công việc phụ được đánh dấu là hoàn thành',
+    'action' => 'Xem công việc phụ',
   ),
   'subTaskAssigneeAdded' =>
   array (
-    'subject' => 'Nhiệm vụ phụ được giao cho bạn.',
-    'text' => 'Bạn đã được thêm làm người được giao nhiệm vụ',
-    'action' => 'Xem nhiệm vụ phụ',
+    'subject' => 'Công việc phụ được giao cho bạn.',
+    'text' => 'Bạn đã được thêm làm người được giao Công việc',
+    'action' => 'Xem công việc phụ',
   ),
   'leadAgent' =>
   array (
     'subject' => 'Đã nhận được khách hàng tiềm năng mới.',
     'action' => 'Xem khách hàng tiềm năng',
   ),
-  'subTaskCreated' => 'Đã tạo nhiệm vụ phụ.',
+  'subTaskCreated' => 'Đã tạo Công việc phụ.',
   'discussionReply' =>
   array (
     'subject' => ' Trả lời ',
@@ -250,9 +250,9 @@ return array (
   ),
   'ticketReply' =>
   array (
-    'subject' => 'Đã nhận được thư trả lời vé hỗ trợ mới',
-    'text' => 'Bạn đã nhận được câu trả lời trên vé hỗ trợ',
-    'action' => 'Xem vé hỗ trợ',
+    'subject' => 'Đã nhận được thư trả lời vé mời',
+    'text' => 'Bạn đã nhận được câu trả lời trên vé #',
+    'action' => 'Xem vé',
   ),
   'contractSign' =>
   array (
