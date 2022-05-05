@@ -31,7 +31,7 @@ return array (
   'digits_between' => ':attribute phải ở giữa :min và :max chữ số.',
   'dimensions' => ':attribute có kích thước hình ảnh không hợp lệ.',
   'distinct' => ':attribute trường có giá trị trùng lặp.',
-  'email' => ':attribute Phải là một địa chỉ email hợp lệ.',
+  'email' => ':attribute phải là một địa chỉ email hợp lệ.',
   'invalidEmail' => 'Vui lòng nhập một địa chỉ email hợp lệ.',
   'invalidEmailPassword' => 'Email và mật khẩu trên không đúng.',
   'exists' => 'đã chọn :attribute không có hiệu lực.',

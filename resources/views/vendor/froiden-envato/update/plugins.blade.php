@@ -10,7 +10,7 @@
 count($plugins))
 
     <div class="col-sm-12 mt-5">
-        <h4>{{ ucwords(config('froiden_envato.envato_product_name')) }} Official Modules</h4>
+        <h4>{{ ucwords(config('froiden_envato.envato_product_name')) }} Các mô-đun chính thức</h4>
         <div class="row">
 
             @foreach ($plugins as $item)

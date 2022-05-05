@@ -123,7 +123,7 @@
             @if ($global->hide_cron_message == 0 || \Carbon\Carbon::now()->diffInHours($global->last_cron_run) > 48)
                 <x-slot name="buttons">
                     <div class="alert alert-primary">
-                        <h6>Set following cron command on your server (Ignore if already done)</h6>
+                        <h6>Đặt lệnh cron sau trên máy chủ của bạn (Bỏ qua nếu đã thực hiện xong)</h6>
                         @php
                             try {
                                 echo '<code>* * * * * ' . PHP_BINDIR . '/php  ' . base_path() . '/artisan schedule:run >> /dev/null 2>&1</code>';
@@ -244,7 +244,7 @@
                         <h4 class="f-16 font-weight-500 text-capitalize">
                             @lang('modules.accountSettings.fileUploadSetting')</h4>
                     </div>
-                    
+
                     <div class="col-lg-3">
 
                         <label for="allowed_file_size" class="mt-3">

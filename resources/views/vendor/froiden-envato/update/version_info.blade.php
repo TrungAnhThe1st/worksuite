@@ -8,7 +8,7 @@
         </thead>
         <tbody>
         <tr>
-            <td>App Version</td>
+            <td>Phiên bản ứng dụng</td>
             <td>{{ $updateVersionInfo['appVersion'] }}
                 @if(!isset($updateVersionInfo['lastVersion']))
                 <i class="fa fa fa-check-circle text-success"></i>
@@ -16,10 +16,10 @@
             </td>
         </tr>
         <tr>
-            <td>Laravel Version</td>
+            <td>Phiên bản Laravel</td>
             <td>{{ $updateVersionInfo['laravelVersion'] }}</td>
         </tr>
-        <td>PHP Version
+        <td>Phiên bản PHP
 
         <td>
             @if (version_compare(PHP_VERSION, '7.4.0') >= 0)

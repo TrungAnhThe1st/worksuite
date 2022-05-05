@@ -58,7 +58,7 @@ $viewClientContact = user()->permission('view_client_contacts');
             @endif
 
             @if ($viewClientNote == 'all' || $viewClientNote == 'added')
-                <x-tab :href="route('clients.show', $client->id).'?tab=notes'" ajax="false" text="Notes"
+                <x-tab :href="route('clients.show', $client->id).'?tab=notes'" ajax="false" :text="__('app.menu.notes')"
                     class="notes" />
             @endif
 

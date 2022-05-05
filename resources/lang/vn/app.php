@@ -235,8 +235,8 @@ return array (
     'securitySettings' => 'Cài đặt Bảo mật',
     'projectRating' => 'Xếp hạng dự án',
     'gdprSettings' => 'Cài đặt GDPR',
-    'removalRequest' => 'Yêu cầu Xóa (Customer)',
-    'removalRequestLead' => 'Yêu cầu xóa (Lead)',
+    'removalRequest' => 'Yêu cầu Xóa (Khách hàng)',
+    'removalRequestLead' => 'Yêu cầu xóa (Khách hàng tiềm năng)',
     'businessAddresses' => 'Địa chỉ Doanh nghiệp',
     'googleCalendarSetting' => 'Cài đặt Lịch Google',
     'databaseBackupSetting' => 'Cài đặt sao lưu cơ sở dữ liệu',
@@ -734,7 +734,7 @@ return array (
   'storageSetting' =>
   array (
     'selectStorage' => 'Chọn bộ nhớ',
-    'local' => 'Local (Default)',
+    'local' => 'Cục bộ (Mặc định)',
     'aws' => 'Bộ nhớ AWS S3 (Amazon Web Services S3)',
     'awsKey' => 'AWS Key',
     'awsSecret' => 'AWS Secret',

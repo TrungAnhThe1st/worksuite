@@ -108,9 +108,8 @@
                             <i class="fa fa-gift f-20"></i> @lang('modules.update.newUpdate') <span
                                 class="badge badge-success">{{ $updateVersionInfo['lastVersion'] }}</span>
                         </h6>
-                        <div class="mt-3"><span class="font-weight-bold text-red">Note:</span> You will get
-                            logged
-                            out after update. Login again to use the application.
+                        <div class="mt-3"><span class="font-weight-bold text-red">Lưu ý:</span>
+                        Bạn sẽ đăng xuất sau khi cập nhật. Đăng nhập lại để sử dụng ứng dụng.Bạn sẽ đăng xuất sau khi cập nhật. Đăng nhập lại để sử dụng ứng dụng.
                         </div>
                         <div class="font-12 mt-3">@lang('modules.update.updateAlternate')</div>
                     </div>
@@ -121,14 +120,14 @@
                 </div>
 
                 <div class="col-md-12 mt-5">
-                    <h6 class="update-summary-title"><i class="fa fa-history f-20"></i> Update Summary</h6>
+                    <h6 class="update-summary-title"><i class="fa fa-history f-20"></i> Tổng quan bản cập nhật</h6>
                     <div>{!! $updateVersionInfo['updateInfo'] !!}</div>
                 </div>
             </div>
 
         @else
             <x-alert type="info" icon="info-circle">
-                You have the latest version of this app.
+            Bạn đang có phiên bản mới nhất của ứng dụng này.
             </x-alert>
         @endif
     </div>

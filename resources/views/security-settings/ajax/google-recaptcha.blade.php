@@ -11,7 +11,7 @@
                     <div class="col-lg-12">
                         <div class="form-group my-3">
                             <label class="f-14 text-dark-grey mb-12 w-100"
-                                for="usr">Recaptcha Version</label>
+                                for="usr">Phiên bản của Recaptcha</label>
                             <div class="d-flex">
                                 <x-forms.radio fieldId="send_reminder_admin" fieldLabel="V2"
                                     fieldName="version" fieldValue="v2" :checked="$global->google_recaptcha_v2_status == 'active'">

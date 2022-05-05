@@ -133,25 +133,25 @@ return array (
   ),
   'estimate' =>
   array (
-    'subject' => 'Đã tạo công việc mới',
-    'text' => 'Một công việc mới đã được tạo. Vui lòng nháp vào liên kết để bên dưới để xem công việc.',
+    'subject' => 'Đã tạo ước tính mới',
+    'text' => 'Một ước tính mới đã được tạo. Vui lòng nhấn vào liên kết để bên dưới để xem ước tính.',
     'loginDashboard' => 'Phê duyệt / Từ chối',
   ),
   'invoice' =>
   array (
     'subject' => 'Hóa đơn mới đã nhận',
-    'text' => 'Một hóa đơn mới đã được nhận. Vui lòng nhấp vào liên kết bên dưới để xem hóa đơn.',
+    'text' => 'Một hóa đơn mới đã được nhận. Vui lòng nhấn vào liên kết bên dưới để xem hóa đơn.',
     'action' => 'Xem hóa đơn',
     'updateSubject' => 'Đã cập nhật hóa đơn ',
-    'updateText' => 'Hóa đơn đã được cập nhật. Vui lòng nhấp vào liên kết bên dưới để xem hóa đơn.',
+    'updateText' => 'Hóa đơn đã được cập nhật. Vui lòng nhấn vào liên kết bên dưới để xem hóa đơn.',
   ),
   'order' =>
   array (
     'subject' => 'Đơn hàng mới đã được nhận',
-    'text' => 'Một đơn hàng mới đã được đặt. Vui lòng nhấp vào liên kết bên dưới bên dưới để xem đơn đặt hàng.',
+    'text' => 'Một đơn hàng mới đã được đặt. Vui lòng nhấn vào liên kết bên dưới bên dưới để xem đơn đặt hàng.',
     'action' => 'Xem đơn hàng đã đặt',
     'updateSubject' => 'Đã cập nhật đơn hàng',
-    'updateText' => 'Đơn hàng đã được cập nhật. Vui lòng nhấp vào liên kết bên dưới để xem đơn đặt hàng.',
+    'updateText' => 'Đơn hàng đã được cập nhật. Vui lòng nhấn vào liên kết bên dưới để xem đơn đặt hàng.',
   ),
   'projectReminder' =>
   array (
@@ -281,7 +281,7 @@ return array (
   'estimateDeclined' =>
   array (
     'subject' => 'Công việc bị từ chối',
-    'text' => 'Một công việc bị từ chối. Vui lòng nhấp vào liên kết bên dưới để kiểm tra công việc.',
+    'text' => 'Một công việc bị từ chối. Vui lòng nhấn vào liên kết bên dưới để kiểm tra công việc.',
     'action' => 'Xem công việc',
   ),
   'newMeeting' =>
@@ -308,7 +308,7 @@ return array (
   'newInvoiceRecurring' =>
   array (
     'subject' => 'Hóa đơn định kỳ mới đã được gửi',
-    'text' => 'Một hóa đơn định kỳ mới đã được gửi. Vui lòng nhấp vào liên kết bên dưới để xem hóa đơn.',
+    'text' => 'Một hóa đơn định kỳ mới đã được gửi. Vui lòng nhấn vào liên kết bên dưới để xem hóa đơn.',
     'action' => 'Xem hóa đơn định kỳ',
   ),
   'invoiceRecurringStatus' =>
@@ -379,7 +379,7 @@ return array (
     'subject' => 'Đăng ký khách hàng mới',
     'text' => 'Khách hàng mới đã đăng ký.',
   ),
-  'footer' => 'Nếu bạn gặp sự cố khi nhấp vào nút ":actionText" , hãy sao chép và dán URL bên dưới vào trình duyệt web của bạn:',
+  'footer' => 'Nếu bạn gặp sự cố khi nhấn vào nút ":actionText" , hãy sao chép và dán URL bên dưới vào trình duyệt web của bạn:',
   'productPurchase' =>
   array (
     'subject' => 'Mua sản phẩm mới',
