@@ -244,7 +244,7 @@
                         <h4 class="f-16 font-weight-500 text-capitalize">
                             @lang('modules.accountSettings.fileUploadSetting')</h4>
                     </div>
-                    
+
                     <div class="col-lg-3">
 
                         <label for="allowed_file_size" class="mt-3">
