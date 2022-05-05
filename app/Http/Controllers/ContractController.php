@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Notification;
+use Illuminate\Support\Facades\Log;
 
 class ContractController extends AccountBaseController
 {
@@ -290,7 +291,7 @@ class ContractController extends AccountBaseController
         Carbon::setLocale($this->invoiceSetting->locale);
         $pdf->loadView('contracts.contract-pdf', $this->data);
 
-        // echo json_encode($this->data);
+        // Log::debug(gettype($this->contract->toArray()));
 
         $dom_pdf = $pdf->getDomPDF();
         $canvas = $dom_pdf->get_canvas();
@@ -298,7 +299,6 @@ class ContractController extends AccountBaseController
         $filename = 'contract-' . $this->contract->id;
 
         return $pdf->download($filename . '.pdf');
-
     }
 
     public function downloadView($id)

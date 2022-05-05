@@ -3,8 +3,10 @@
 
 <head>
     <!-- Required meta tags -->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
     <!-- Template CSS -->
     <!-- <link type="text/css" rel="stylesheet" media="all" href="css/main.css"> -->
@@ -17,7 +19,7 @@
     <style>
         body {
             margin: 0;
-            font-family: Verdana, Arial, Helvetica, sans-serif;
+            /* font-family: Verdana, Arial, Helvetica, sans-serif; */
         }
 
         .bg-grey {

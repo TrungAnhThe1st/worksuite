@@ -107,7 +107,7 @@
             font: inherit;
             font-size: 12px;
             vertical-align: baseline;
-            font-family: Verdana, Arial, Helvetica, sans-serif;
+            /* font-family: Verdana, Arial, Helvetica, sans-serif; */
         }
 
         html {

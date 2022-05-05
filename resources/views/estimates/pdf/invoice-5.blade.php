@@ -22,7 +22,7 @@
         <style>
             body {
                 margin: 0;
-                font-family: Verdana, Arial, Helvetica, sans-serif;
+                /* font-family: Verdana, Arial, Helvetica, sans-serif; */
                 font-size: 13px;
             }
         </style>
