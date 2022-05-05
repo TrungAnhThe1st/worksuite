@@ -64,8 +64,8 @@ return array (
   'newTicket' =>
   array (
     'subject' => 'Đã yêu vé cầu hỗ trợ',
-    'text' => 'Yêu cầu vé hõ trợ mới. Đăng nhập để xem vé.',
-    'action' => 'Xem vé',
+    'text' => 'Yêu cầu vé hõ trợ mới. Đăng nhập để xem vé hỗ trợ.',
+    'action' => 'Xem vé hỗ trợ',
   ),
   'newUser' =>
   array (
@@ -216,9 +216,9 @@ return array (
   ),
   'ticketAgent' =>
   array (
-    'subject' => 'Bạn đã được chỉ định một vé',
-    'text' => 'Bạn đã được chỉ định một vé mới.',
-    'action' => 'Xem vé',
+    'subject' => 'Bạn đã được chỉ định một vé hỗ trợ',
+    'text' => 'Bạn đã được chỉ định một vé hỗ trợ mới.',
+    'action' => 'Xem vé hỗ trợ',
   ),
   'subTaskComplete' =>
   array (
@@ -250,9 +250,9 @@ return array (
   ),
   'ticketReply' =>
   array (
-    'subject' => 'Đã nhận được thư trả lời vé mời',
-    'text' => 'Bạn đã nhận được câu trả lời trên vé #',
-    'action' => 'Xem vé',
+    'subject' => 'Đã nhận được thư trả lời vé hỗ trợ mới',
+    'text' => 'Bạn đã nhận được câu trả lời trên vé hỗ trợ',
+    'action' => 'Xem vé hỗ trợ',
   ),
   'contractSign' =>
   array (
@@ -301,9 +301,9 @@ return array (
   ),
   'newTicketRequester' =>
   array (
-    'subject' => 'Đã tạo vé mới cho bạn.',
-    'text' => 'Phiếu hỗ trợ mói đã được tạo cho bạn. Đăng nhập để xem vé.',
-    'action' => 'Xem vé',
+    'subject' => 'Đã tạo vé hỗ trợ mới cho bạn.',
+    'text' => 'Phiếu hỗ trợ mói đã được tạo cho bạn. Đăng nhập để xem vé hỗ trợ.',
+    'action' => 'Xem vé hỗ trợ',
   ),
   'newInvoiceRecurring' =>
   array (
