@@ -1687,7 +1687,7 @@ return array (
     'client' => 'Khách hàng',
     'subject' => 'Tiêu đề',
     'contract type' => 'Loại hợp đồng',
-    'amount' => 'Giá trị',
+    'amount' => 'Số tiền',
     'comment' => 'Nhận xét',
     'title' => 'Tiêu đề',
     'note' => 'Ghi chú',
@@ -1736,5 +1736,6 @@ return array (
     'valid till' => 'Có giá trị cho đến khi',
     'file' => 'Tập tin',
     'contact name' => 'Tên liên hệ',
+    'shipping address' => 'Địa chỉ giao hàng',
   ),
 );
