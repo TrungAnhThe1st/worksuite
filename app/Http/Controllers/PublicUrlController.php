@@ -94,7 +94,7 @@ class PublicUrlController extends Controller
 
         $dom_pdf = $pdf->getDomPDF();
         $canvas = $dom_pdf->get_canvas();
-        $canvas->page_text(530, 820, 'Page {PAGE_NUM} of {PAGE_COUNT}', null, 10, array(0, 0, 0));
+        $canvas->page_text(500, 820, 'Trang {PAGE_NUM} trên {PAGE_COUNT}', null, 10, array(0, 0, 0));
 
         $filename = 'contract-' . $contract->id;
 
@@ -113,7 +113,7 @@ class PublicUrlController extends Controller
 
         $dom_pdf = $pdf->getDomPDF();
         $canvas = $dom_pdf->get_canvas();
-        $canvas->page_text(530, 820, 'Page {PAGE_NUM} of {PAGE_COUNT}', null, 10, array(0, 0, 0));
+        $canvas->page_text(500, 820, 'Trang {PAGE_NUM} trên {PAGE_COUNT}', null, 10, array(0, 0, 0));
 
         $filename = 'contract-' . $contract->id;
 
@@ -371,7 +371,7 @@ class PublicUrlController extends Controller
 
         $dom_pdf = $pdf->getDomPDF();
         $canvas = $dom_pdf->get_canvas();
-        $canvas->page_text(530, 820, 'Page {PAGE_NUM} of {PAGE_COUNT}', null, 10, array(0, 0, 0));
+        $canvas->page_text(500, 820, 'Trang {PAGE_NUM} trên {PAGE_COUNT}', null, 10, array(0, 0, 0));
         $filename = $this->estimate->estimate_number;
 
         return [
