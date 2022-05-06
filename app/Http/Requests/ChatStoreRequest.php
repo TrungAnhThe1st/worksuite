@@ -35,8 +35,8 @@ class ChatStoreRequest extends CoreRequest
     public function messages()
     {
         return [
-            'user_id.required_if' => 'Select a user to send the message',
-            'client_id.required_if' => 'Select a client to send the message',
+            'user_id.required_if' => 'Chọn một người dùng để gửi tin nhắn',
+            'client_id.required_if' => 'Chọn một khách hàng để gửi tin nhắn',
         ];
     }
 
