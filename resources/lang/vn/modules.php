@@ -475,8 +475,10 @@ return array (
     'calculateTax' => 'Tính thuế',
     'afterDiscount' => 'Sau khi giảm giá',
     'beforeDiscount' => 'Trước khi giảm giá',
+    'modules' => 'Loại mô-đun',
+    'inputs' => 'Loại nhập dữ liệu',
 
-    'objectType' => array (
+    'moduleType' => array (
       'Employee' => 'Nhân viên',
       'Client' => 'Khách hàng',
       'Project' => 'Dự án',
