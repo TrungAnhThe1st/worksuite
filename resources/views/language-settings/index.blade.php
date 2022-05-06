@@ -38,8 +38,8 @@
 
                     <x-table class="table table-sm-responsive">
                         <x-slot name="thead">
-                            <th>@lang('app.language') @lang('app.name')</th>
-                            <th>@lang('app.language') @lang('app.code')</th>
+                            <th>@lang('app.name')</th>
+                            <th>@lang('app.code')</th>
                             <th>@lang('app.status')</th>
                             <th class="text-right">@lang('app.action')</th>
                         </x-slot>
