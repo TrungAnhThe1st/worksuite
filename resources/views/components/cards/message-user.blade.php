@@ -13,7 +13,7 @@
                 <div class="d-flex justify-content-between">
                     <h4 class="card-title f-14 f-w-500 text-dark-grey">{{ $user->name }}</h4>
                     <p class="card-date f-11 text-dark-grey mb-0">
-                        <?php \Carbon\Carbon::setLocale('vi'); ?>
+                        {{-- <?php \Carbon\Carbon::setLocale('vn'); ?> --}}
                         {{ \Carbon\Carbon::parse($message->created_at)->diffForHumans() }}</p>
                 </div>
                 <p class="card-text f-13 text-lightest">{{ $message->message }}</p>

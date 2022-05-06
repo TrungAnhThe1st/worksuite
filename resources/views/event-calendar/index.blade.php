@@ -38,7 +38,7 @@
             <div class="select-status">
                 <select class="form-control select-picker" name="client" id="client" data-live-search="true" data-size="8">
                     @if (count($clients) > 1)
-                        <option value="all">@lang('app.all')</option>                        
+                        <option value="all">@lang('app.all')</option>
                     @endif
                     @foreach ($clients as $client)
                         <option
@@ -132,7 +132,7 @@ $addEventsPermission = user()->permission('add_events');
         });
 
         var initialLocaleCode = '{{ user()->locale }}';
-        if(initialLocaleCode == "vn") initialLocaleCode = "vi";
+        if(initialLocaleCode == "vn") initialLocaleCode = "vn";
         var calendarEl = document.getElementById('calendar');
 
         var calendar = new FullCalendar.Calendar(calendarEl, {

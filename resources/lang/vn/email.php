@@ -93,7 +93,7 @@ return array (
   'taskUpdate' =>
   array (
     'subject' => '',
-    'action' => 'Xem tác vụ',
+    'action' => 'Xem công việc',
   ),
   'leave' =>
   array (
