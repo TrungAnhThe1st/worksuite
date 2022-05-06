@@ -127,11 +127,7 @@
 
         @else
             <x-alert type="info" icon="info-circle">
-<<<<<<< HEAD
             Bạn đang có phiên bản mới nhất của ứng dụng này.
-=======
-                Bạn đang có phiên bản mới nhất của ứng dụng này.
->>>>>>> b6fd2dcd5b35d82ac81200b7b770287c355dee53
             </x-alert>
         @endif
     </div>

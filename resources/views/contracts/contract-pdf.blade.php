@@ -3,11 +3,8 @@
 
 <head>
     <!-- Required meta tags -->
-<<<<<<< HEAD
+
     <meta http-equiv="Content-Type" content="text/html; charset="utf-8">
-=======
-    <meta charset="UTF-8">
->>>>>>> b6fd2dcd5b35d82ac81200b7b770287c355dee53
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
