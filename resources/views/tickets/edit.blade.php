@@ -115,7 +115,7 @@ $manageChannelPermission = user()->permission('manage_ticket_channel');
                             @endphp
                         @endif
                         <p class="mb-0 text-capitalize ticket-status">
-                            <x-status :color="$statusColor" :value="__('app.'. $ticket->status)" />
+                            <x-status :color="$statusColor" :value="__('app.' . $ticket->status)" />
                         </p>
                     </span>
                 </div>
@@ -443,13 +443,13 @@ $manageChannelPermission = user()->permission('manage_ticket_channel');
                                         @php
                                             $statusColor = 'dark-green';
                                         @endphp
-                                    @elseif($item->status == 'closed')
+                                    @elseif($item->status ==  'closed')
                                         @php
                                             $statusColor = 'blue';
                                         @endphp
                                     @endif
                                     <span class="f-13 text-darkest-grey text-capitalize">
-                                        <x-status :color="$statusColor" :value="$item->status" />
+                                        <x-status :color="$statusColor" :value="__('app.' . $item->status)" />
                                     </span>
 
                                 </span>
