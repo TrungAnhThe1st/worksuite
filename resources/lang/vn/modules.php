@@ -1722,7 +1722,6 @@ return array (
     'currency symbol' => '',
     'currency code' => '',
     'exchange rate' => '',
-<<<<<<< HEAD
     'label name' => 'tên nhãn',
     'name' => 'tên',
     'email' => 'email',
@@ -1739,23 +1738,9 @@ return array (
     'label' => 'nhãn',
     'alert after' => 'nhắc nhở sau phút',
     'late mark duration' => 'đánh dấu muộn sau',
-    'clockin in day' => 'được phép đăng ký tối đa trong một ngày'
-=======
-    'label name' => 'Tên nhãn',
-    'name' => 'Tên',
-    'email' => 'Email',
-    'password' => 'Mật khẩu',
-    'designation' => 'Chức vụ',
-    'department' => 'Phòng',
-    'joining date' => 'Ngày tham gia',
-    'employee id' => 'Id nhân viên',
-    'billing cycle' => 'Chu kỳ thanh toán',
-    'client name' => 'Tên khách hàng',
-    'next follow up date' => 'Theo dõi tiếp theo',
-    'valid till' => 'Có giá trị cho đến khi',
+    'clockin in day' => 'được phép đăng ký tối đa trong một ngày',
     'file' => 'Tập tin',
     'contact name' => 'Tên liên hệ',
     'shipping address' => 'Địa chỉ giao hàng',
->>>>>>> c439595b51d2acc18fb9a342a51a76cb11f743a2
   ),
 );
