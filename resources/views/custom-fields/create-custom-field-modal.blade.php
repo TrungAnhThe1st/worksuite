@@ -10,7 +10,7 @@
                 <div class="col-lg-6">
                     <x-forms.select fieldId="module" :fieldLabel="__('modules.invoices.type')" fieldName="module" search="true">
                         @foreach ($customFieldGroups as $item)
-                            <option value="{{ $item->id }}">{{ $item->name }}</option>
+                            <option value="{{ $item->id }}">@lang('modules.invoices.objectType.' . $item->name) ({{ $item->name }})</option>
                         @endforeach
                     </x-forms.select>
                 </div>
@@ -39,7 +39,7 @@
                 <div class="col-lg-6">
                     <x-forms.select fieldId="type" :fieldLabel="__('modules.invoices.type')" fieldName="type" search="true">
                         @foreach ($types as $type)
-                            <option value="{{ $type }}">{{ $type }}</option>
+                            <option value="{{ $type }}">@lang('modules.invoices.inputType.' . $type) ({{ $type }})</option>
                         @endforeach
                     </x-forms.select>
                 </div>

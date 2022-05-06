@@ -475,6 +475,28 @@ return array (
     'calculateTax' => 'Tính thuế',
     'afterDiscount' => 'Sau khi giảm giá',
     'beforeDiscount' => 'Trước khi giảm giá',
+
+    'objectType' => array (
+      'Employee' => 'Nhân viên',
+      'Client' => 'Khách hàng',
+      'Project' => 'Dự án',
+      'Invoice' => 'Hóa đơn',
+      'Estimate' => 'Đánh giá',
+      'Task' => 'Công việc',
+      'Expense' => 'Chi phí',
+      'Lead' => 'Khách hàng tiềm năng',
+      'Product' => 'Sản phẩm',
+    ),
+    'inputType' => array (
+      'text' => 'Ô nhập ký tự',
+      'number' => 'Ô nhập số',
+      'password' => 'Ô nhập mật khẩu',
+      'textarea' => 'Ô nhập văn bản',
+      'select' => 'Hiển thị danh sách',
+      'radio' => 'Chọn một trong nhiều lựa chọn',
+      'date' => 'Ô chọn thời gian',
+      'checkbox' => 'Chọn một hoặc nhiều trong các lựa chọn',
+    ),
   ),
   'issues' =>
   array (

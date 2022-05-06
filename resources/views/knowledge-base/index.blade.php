@@ -71,7 +71,7 @@ $addknowledgebasePermission = user()->permission('add_knowledgebase');
                             </div>
                         </div>
 
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <!-- RESET START -->
                             <x-forms.button-secondary class="btn-xs d-none height-35" id="reset-filters" icon="times-circle">
                                 @lang('app.clearFilters')
