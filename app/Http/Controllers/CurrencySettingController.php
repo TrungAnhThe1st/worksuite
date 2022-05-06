@@ -182,7 +182,7 @@ class CurrencySettingController extends AccountBaseController
 
         session()->forget('currency_format_setting');
 
-        return Reply::success('Setting Updated');
+        return Reply::success('Cập nhật cài đặt');
     }
 
     /**
