@@ -49,7 +49,7 @@ class EstimatesDataTable extends BaseDataTable
                     id="dropdownMenuLink-' . $row->id . '" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="icon-options-vertical icons"></i>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink-' . $row->id . '" tabindex="0">';
+                <div class="dropdown-menu dropdown-menu-right" style="overflow-x: hidden; max-height: 250px;" aria-labelledby="dropdownMenuLink-' . $row->id . '" tabindex="0">';
 
                 $action .= '<a href="' . route('estimates.show', [$row->id]) . '" class="dropdown-item"><i class="fa fa-eye mr-2"></i>' . __('app.view') . '</a>';
 

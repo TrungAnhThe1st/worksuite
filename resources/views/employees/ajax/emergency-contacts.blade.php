@@ -29,7 +29,7 @@ $managePermission = user()->permission('manage_emergency_contact');
                 </x-slot>
 
                @forelse ($employee->emergencyContacts as $count => $contact)
-                    <tr class="tableRow{{$contact->id}}">
+                    <tr class="tableRow{{$contact->id}}" style="height:100px">
                         <td>{{ $contact->name }}</td>
                         <td>{{ $contact->email }}</td>
                         <td>{{ $contact->mobile }}</td>
@@ -43,7 +43,7 @@ $managePermission = user()->permission('manage_emergency_contact');
                                         id="dropdownMenuLink-{{$count}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <i class="icon-options-vertical icons"></i>
                                     </a>
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink-{{$count}}" tabindex="0">
+                                    <div class="dropdown-menu dropdown-menu-right" style="" aria-labelledby="dropdownMenuLink-{{$count}}" tabindex="0">
 
                                         @if ($managePermission == 'all')
                                             <a href="javascript:;" class="dropdown-item show-contact" data-contact-id="{{ $contact->id }}"><i class="fa fa-eye mr-2"></i>@lang('app.view')</a>
