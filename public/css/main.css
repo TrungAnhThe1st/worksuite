@@ -1620,7 +1620,6 @@ pre code {
 }
 
 .col-1 {
-<<<<<<< HEAD
     flex: 0 0 8.33333333%;
     max-width: 8.33333333%;
 }
@@ -1628,15 +1627,6 @@ pre code {
 .col-2 {
     flex: 0 0 16.66666667%;
     max-width: 16.66666667%;
-=======
-  flex: 0 0 8.33333333%;
-  max-width: 8.33333333%;
-}
-
-.col-2 {
-  flex: 0 0 16.66666667%;
-  max-width: 16.66666667%;
->>>>>>> 078544638f828d84a047f480cd4a0796c9a2b33e
 }
 
 .col-3 {
@@ -1645,7 +1635,6 @@ pre code {
 }
 
 .col-4 {
-<<<<<<< HEAD
     flex: 0 0 33.33333333%;
     max-width: 33.33333333%;
 }
@@ -1653,15 +1642,6 @@ pre code {
 .col-5 {
     flex: 0 0 41.66666667%;
     max-width: 41.66666667%;
-=======
-  flex: 0 0 33.33333333%;
-  max-width: 33.33333333%;
-}
-
-.col-5 {
-  flex: 0 0 41.66666667%;
-  max-width: 41.66666667%;
->>>>>>> 078544638f828d84a047f480cd4a0796c9a2b33e
 }
 
 .col-6 {
@@ -1670,7 +1650,6 @@ pre code {
 }
 
 .col-7 {
-<<<<<<< HEAD
     flex: 0 0 58.33333333%;
     max-width: 58.33333333%;
 }
@@ -1678,15 +1657,6 @@ pre code {
 .col-8 {
     flex: 0 0 66.66666667%;
     max-width: 66.66666667%;
-=======
-  flex: 0 0 58.33333333%;
-  max-width: 58.33333333%;
-}
-
-.col-8 {
-  flex: 0 0 66.66666667%;
-  max-width: 66.66666667%;
->>>>>>> 078544638f828d84a047f480cd4a0796c9a2b33e
 }
 
 .col-9 {
@@ -1695,7 +1665,6 @@ pre code {
 }
 
 .col-10 {
-<<<<<<< HEAD
     flex: 0 0 83.33333333%;
     max-width: 83.33333333%;
 }
@@ -1703,15 +1672,6 @@ pre code {
 .col-11 {
     flex: 0 0 91.66666667%;
     max-width: 91.66666667%;
-=======
-  flex: 0 0 83.33333333%;
-  max-width: 83.33333333%;
-}
-
-.col-11 {
-  flex: 0 0 91.66666667%;
-  max-width: 91.66666667%;
->>>>>>> 078544638f828d84a047f480cd4a0796c9a2b33e
 }
 
 .col-12 {
@@ -1780,19 +1740,11 @@ pre code {
 }
 
 .offset-1 {
-<<<<<<< HEAD
     margin-left: 8.33333333%;
 }
 
 .offset-2 {
     margin-left: 16.66666667%;
-=======
-  margin-left: 8.33333333%;
-}
-
-.offset-2 {
-  margin-left: 16.66666667%;
->>>>>>> 078544638f828d84a047f480cd4a0796c9a2b33e
 }
 
 .offset-3 {
@@ -1800,19 +1752,11 @@ pre code {
 }
 
 .offset-4 {
-<<<<<<< HEAD
     margin-left: 33.33333333%;
 }
 
 .offset-5 {
     margin-left: 41.66666667%;
-=======
-  margin-left: 33.33333333%;
-}
-
-.offset-5 {
-  margin-left: 41.66666667%;
->>>>>>> 078544638f828d84a047f480cd4a0796c9a2b33e
 }
 
 .offset-6 {
@@ -1820,38 +1764,22 @@ pre code {
 }
 
 .offset-7 {
-<<<<<<< HEAD
     margin-left: 58.33333333%;
 }
 
 .offset-8 {
     margin-left: 66.66666667%;
-=======
-  margin-left: 58.33333333%;
-}
-
-.offset-8 {
-  margin-left: 66.66666667%;
->>>>>>> 078544638f828d84a047f480cd4a0796c9a2b33e
 }
 .offset-9 {
   margin-left: 75%;
 }
 
 .offset-10 {
-<<<<<<< HEAD
     margin-left: 83.33333333%;
 }
 
 .offset-11 {
     margin-left: 91.66666667%;
-=======
-  margin-left: 83.33333333%;
-}
-
-.offset-11 {
-  margin-left: 91.66666667%;
->>>>>>> 078544638f828d84a047f480cd4a0796c9a2b33e
 }
 
 @media (min-width: 576px) {
