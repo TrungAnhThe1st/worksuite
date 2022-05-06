@@ -15,7 +15,7 @@
         @forelse($roles as $key=>$role)
             <tr id="cat-{{ $role->id }}">
                 <td>{{ $key + 1 }}</td>
-                <td data-row-id="{{ $role->id }}" @if (!in_array($role->name, ['admin', 'employee', 'client'])) contenteditable="true" @endif>{{ ucwords($role->name) }}
+                <td data-row-id="{{ $role->id }}" @if (!in_array($role->name, ['admin', 'employee', 'client'])) contenteditable="true" @endif>{{ ucwords($role->display_name) }}
                 </td>
                 <td><span class="text-lightest"><span class="badge badge-primary">{{ $role->unsynced_users_count }}</span> @lang('app.unsyncedUsers')</span></td>
                 <td class="text-right">
@@ -52,7 +52,7 @@
                 <x-forms.select fieldId="import_from_role" :fieldLabel="__('modules.permission.importFromRole')" fieldName="import_from_role">
                     <option value="">--</option>
                     @foreach ($roles as $item)
-                        <option value="{{ $item->id }}">{{ ucwords($item->name) }}</option>
+                        <option value="{{ $item->id }}">{{ ucwords($item->display_name) }}</option>
                     @endforeach
                 </x-forms.select>
             </div>

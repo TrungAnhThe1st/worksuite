@@ -32,7 +32,7 @@ class UpdateAppController extends AccountBaseController
             $this->databaseType = 'MySQL Version';
 
             if (strpos($this->mysql_version, 'Maria') !== false) {
-                $this->databaseType = 'Maria Version';
+                $this->databaseType = 'Phiên bản Maria DB';
             }
         }catch (\Exception $e) {
             $this->mysql_version = null;

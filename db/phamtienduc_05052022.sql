@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 23, 2022 lúc 05:03 AM
--- Phiên bản máy phục vụ: 10.4.22-MariaDB
--- Phiên bản PHP: 8.0.14
+-- Host: 127.0.0.1
+-- Generation Time: May 05, 2022 at 12:03 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.0.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `worksuite`
+-- Database: `worksuite`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `accept_estimates`
+-- Table structure for table `accept_estimates`
 --
 
 CREATE TABLE `accept_estimates` (
@@ -40,7 +40,7 @@ CREATE TABLE `accept_estimates` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `attendances`
+-- Table structure for table `attendances`
 --
 
 CREATE TABLE `attendances` (
@@ -62,7 +62,7 @@ CREATE TABLE `attendances` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `attendances`
+-- Dumping data for table `attendances`
 --
 
 INSERT INTO `attendances` (`id`, `user_id`, `clock_in_time`, `clock_out_time`, `clock_in_ip`, `clock_out_ip`, `working_from`, `late`, `half_day`, `created_at`, `updated_at`, `added_by`, `last_updated_by`, `latitude`, `longitude`) VALUES
@@ -72,7 +72,7 @@ INSERT INTO `attendances` (`id`, `user_id`, `clock_in_time`, `clock_out_time`, `
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `attendance_settings`
+-- Table structure for table `attendance_settings`
 --
 
 CREATE TABLE `attendance_settings` (
@@ -96,16 +96,16 @@ CREATE TABLE `attendance_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `attendance_settings`
+-- Dumping data for table `attendance_settings`
 --
 
 INSERT INTO `attendance_settings` (`id`, `office_start_time`, `office_end_time`, `halfday_mark_time`, `late_mark_duration`, `clockin_in_day`, `employee_clock_in_out`, `office_open_days`, `ip_address`, `radius`, `radius_check`, `ip_check`, `alert_after`, `alert_after_status`, `created_at`, `updated_at`, `save_current_location`) VALUES
-(1, '09:00:00', '18:00:00', NULL, 20, 2, 'yes', '[1,2,3,4,5]', NULL, NULL, 'no', 'no', NULL, 1, '2022-04-21 02:22:47', '2022-04-21 02:22:47', 0);
+(1, '09:00:00', '18:00:00', '11:00:00', 20, 2, 'yes', '[\"1\",\"2\",\"3\",\"4\",\"5\",\"6\"]', '[null]', NULL, 'no', 'no', 5, 1, '2022-04-21 02:22:47', '2022-05-04 00:52:34', 0);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `client_categories`
+-- Table structure for table `client_categories`
 --
 
 CREATE TABLE `client_categories` (
@@ -118,7 +118,7 @@ CREATE TABLE `client_categories` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `client_contacts`
+-- Table structure for table `client_contacts`
 --
 
 CREATE TABLE `client_contacts` (
@@ -137,7 +137,7 @@ CREATE TABLE `client_contacts` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `client_details`
+-- Table structure for table `client_details`
 --
 
 CREATE TABLE `client_details` (
@@ -166,7 +166,7 @@ CREATE TABLE `client_details` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `client_details`
+-- Dumping data for table `client_details`
 --
 
 INSERT INTO `client_details` (`id`, `user_id`, `company_name`, `address`, `shipping_address`, `postal_code`, `state`, `city`, `office`, `website`, `note`, `linkedin`, `facebook`, `twitter`, `skype`, `gst_number`, `created_at`, `updated_at`, `category_id`, `sub_category_id`, `added_by`, `last_updated_by`) VALUES
@@ -175,7 +175,7 @@ INSERT INTO `client_details` (`id`, `user_id`, `company_name`, `address`, `shipp
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `client_docs`
+-- Table structure for table `client_docs`
 --
 
 CREATE TABLE `client_docs` (
@@ -194,7 +194,7 @@ CREATE TABLE `client_docs` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `client_notes`
+-- Table structure for table `client_notes`
 --
 
 CREATE TABLE `client_notes` (
@@ -215,7 +215,7 @@ CREATE TABLE `client_notes` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `client_sub_categories`
+-- Table structure for table `client_sub_categories`
 --
 
 CREATE TABLE `client_sub_categories` (
@@ -229,7 +229,7 @@ CREATE TABLE `client_sub_categories` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `client_user_notes`
+-- Table structure for table `client_user_notes`
 --
 
 CREATE TABLE `client_user_notes` (
@@ -243,7 +243,7 @@ CREATE TABLE `client_user_notes` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `company_addresses`
+-- Table structure for table `company_addresses`
 --
 
 CREATE TABLE `company_addresses` (
@@ -258,16 +258,17 @@ CREATE TABLE `company_addresses` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `company_addresses`
+-- Dumping data for table `company_addresses`
 --
 
 INSERT INTO `company_addresses` (`id`, `address`, `is_default`, `created_at`, `updated_at`, `tax_number`, `tax_name`, `location`) VALUES
-(1, 'Company address', 1, '2022-04-21 02:50:43', '2022-04-21 02:50:43', NULL, NULL, 'Worksuite');
+(1, 'Company address', 1, '2022-04-21 02:50:43', '2022-04-21 02:50:43', NULL, NULL, 'Worksuite'),
+(2, 'Cầu Giấy', 0, '2022-05-04 20:14:16', '2022-05-04 20:14:16', '10', '10000', 'Gầm cầu');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `contracts`
+-- Table structure for table `contracts`
 --
 
 CREATE TABLE `contracts` (
@@ -301,10 +302,17 @@ CREATE TABLE `contracts` (
   `event_id` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `contracts`
+--
+
+INSERT INTO `contracts` (`id`, `client_id`, `subject`, `amount`, `original_amount`, `contract_type_id`, `start_date`, `original_start_date`, `end_date`, `original_end_date`, `description`, `contract_name`, `company_logo`, `alternate_address`, `cell`, `office`, `city`, `state`, `country`, `postal_code`, `contract_detail`, `created_at`, `updated_at`, `added_by`, `last_updated_by`, `hash`, `currency_id`, `event_id`) VALUES
+(1, 3, 'HD đẻ thuê', '10000', '10000.00', 1, '2022-05-03', '2022-05-03', '2022-05-03', '2022-05-03', '', NULL, NULL, 'TDH', '123456789', '455625663', 'Quận Cầu Giấy', 'Hà Nội', 'Vietnam', '100000', '<p>Không</p>', '2022-05-03 05:11:10', '2022-05-03 05:11:10', 1, 1, 'hTIuTeTcUWeo2dDqCJzY4P2FVhnLaIgC', 2, NULL);
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `contract_discussions`
+-- Table structure for table `contract_discussions`
 --
 
 CREATE TABLE `contract_discussions` (
@@ -321,7 +329,7 @@ CREATE TABLE `contract_discussions` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `contract_files`
+-- Table structure for table `contract_files`
 --
 
 CREATE TABLE `contract_files` (
@@ -345,7 +353,7 @@ CREATE TABLE `contract_files` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `contract_renews`
+-- Table structure for table `contract_renews`
 --
 
 CREATE TABLE `contract_renews` (
@@ -364,7 +372,7 @@ CREATE TABLE `contract_renews` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `contract_signs`
+-- Table structure for table `contract_signs`
 --
 
 CREATE TABLE `contract_signs` (
@@ -380,7 +388,7 @@ CREATE TABLE `contract_signs` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `contract_types`
+-- Table structure for table `contract_types`
 --
 
 CREATE TABLE `contract_types` (
@@ -390,10 +398,17 @@ CREATE TABLE `contract_types` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `contract_types`
+--
+
+INSERT INTO `contract_types` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'Thử việc', '2022-05-03 05:08:37', '2022-05-03 05:08:37');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `conversation`
+-- Table structure for table `conversation`
 --
 
 CREATE TABLE `conversation` (
@@ -407,7 +422,7 @@ CREATE TABLE `conversation` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `conversation_reply`
+-- Table structure for table `conversation_reply`
 --
 
 CREATE TABLE `conversation_reply` (
@@ -422,7 +437,7 @@ CREATE TABLE `conversation_reply` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `countries`
+-- Table structure for table `countries`
 --
 
 CREATE TABLE `countries` (
@@ -436,7 +451,7 @@ CREATE TABLE `countries` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `countries`
+-- Dumping data for table `countries`
 --
 
 INSERT INTO `countries` (`id`, `iso`, `name`, `nicename`, `iso3`, `numcode`, `phonecode`) VALUES
@@ -697,7 +712,7 @@ INSERT INTO `countries` (`id`, `iso`, `name`, `nicename`, `iso3`, `numcode`, `ph
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `credit_notes`
+-- Table structure for table `credit_notes`
 --
 
 CREATE TABLE `credit_notes` (
@@ -733,7 +748,7 @@ CREATE TABLE `credit_notes` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `credit_note_items`
+-- Table structure for table `credit_note_items`
 --
 
 CREATE TABLE `credit_note_items` (
@@ -754,7 +769,7 @@ CREATE TABLE `credit_note_items` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `credit_note_item_images`
+-- Table structure for table `credit_note_item_images`
 --
 
 CREATE TABLE `credit_note_item_images` (
@@ -771,7 +786,7 @@ CREATE TABLE `credit_note_item_images` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `currencies`
+-- Table structure for table `currencies`
 --
 
 CREATE TABLE `currencies` (
@@ -787,7 +802,7 @@ CREATE TABLE `currencies` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `currencies`
+-- Dumping data for table `currencies`
 --
 
 INSERT INTO `currencies` (`id`, `currency_name`, `currency_symbol`, `currency_code`, `exchange_rate`, `is_cryptocurrency`, `usd_price`, `created_at`, `updated_at`) VALUES
@@ -799,7 +814,7 @@ INSERT INTO `currencies` (`id`, `currency_name`, `currency_symbol`, `currency_co
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `currency_format_settings`
+-- Table structure for table `currency_format_settings`
 --
 
 CREATE TABLE `currency_format_settings` (
@@ -811,7 +826,7 @@ CREATE TABLE `currency_format_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `currency_format_settings`
+-- Dumping data for table `currency_format_settings`
 --
 
 INSERT INTO `currency_format_settings` (`id`, `currency_position`, `no_of_decimal`, `thousand_separator`, `decimal_separator`) VALUES
@@ -820,7 +835,7 @@ INSERT INTO `currency_format_settings` (`id`, `currency_position`, `no_of_decima
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `custom_fields`
+-- Table structure for table `custom_fields`
 --
 
 CREATE TABLE `custom_fields` (
@@ -836,7 +851,7 @@ CREATE TABLE `custom_fields` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `custom_fields_data`
+-- Table structure for table `custom_fields_data`
 --
 
 CREATE TABLE `custom_fields_data` (
@@ -850,7 +865,7 @@ CREATE TABLE `custom_fields_data` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `custom_field_groups`
+-- Table structure for table `custom_field_groups`
 --
 
 CREATE TABLE `custom_field_groups` (
@@ -860,7 +875,7 @@ CREATE TABLE `custom_field_groups` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `custom_field_groups`
+-- Dumping data for table `custom_field_groups`
 --
 
 INSERT INTO `custom_field_groups` (`id`, `name`, `model`) VALUES
@@ -877,7 +892,7 @@ INSERT INTO `custom_field_groups` (`id`, `name`, `model`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `dashboard_widgets`
+-- Table structure for table `dashboard_widgets`
 --
 
 CREATE TABLE `dashboard_widgets` (
@@ -890,7 +905,7 @@ CREATE TABLE `dashboard_widgets` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `dashboard_widgets`
+-- Dumping data for table `dashboard_widgets`
 --
 
 INSERT INTO `dashboard_widgets` (`id`, `widget_name`, `status`, `created_at`, `updated_at`, `dashboard_type`) VALUES
@@ -957,7 +972,7 @@ INSERT INTO `dashboard_widgets` (`id`, `widget_name`, `status`, `created_at`, `u
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `database_backups`
+-- Table structure for table `database_backups`
 --
 
 CREATE TABLE `database_backups` (
@@ -970,7 +985,7 @@ CREATE TABLE `database_backups` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `database_backup_cron_settings`
+-- Table structure for table `database_backup_cron_settings`
 --
 
 CREATE TABLE `database_backup_cron_settings` (
@@ -982,7 +997,7 @@ CREATE TABLE `database_backup_cron_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `database_backup_cron_settings`
+-- Dumping data for table `database_backup_cron_settings`
 --
 
 INSERT INTO `database_backup_cron_settings` (`id`, `status`, `hour_of_day`, `backup_after_days`, `delete_backup_after_days`) VALUES
@@ -991,7 +1006,7 @@ INSERT INTO `database_backup_cron_settings` (`id`, `status`, `hour_of_day`, `bac
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `designations`
+-- Table structure for table `designations`
 --
 
 CREATE TABLE `designations` (
@@ -1004,7 +1019,7 @@ CREATE TABLE `designations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `designations`
+-- Dumping data for table `designations`
 --
 
 INSERT INTO `designations` (`id`, `name`, `created_at`, `updated_at`, `added_by`, `last_updated_by`) VALUES
@@ -1013,7 +1028,7 @@ INSERT INTO `designations` (`id`, `name`, `created_at`, `updated_at`, `added_by`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `discussions`
+-- Table structure for table `discussions`
 --
 
 CREATE TABLE `discussions` (
@@ -1038,7 +1053,7 @@ CREATE TABLE `discussions` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `discussion_categories`
+-- Table structure for table `discussion_categories`
 --
 
 CREATE TABLE `discussion_categories` (
@@ -1051,7 +1066,7 @@ CREATE TABLE `discussion_categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `discussion_categories`
+-- Dumping data for table `discussion_categories`
 --
 
 INSERT INTO `discussion_categories` (`id`, `order`, `name`, `color`, `created_at`, `updated_at`) VALUES
@@ -1060,7 +1075,7 @@ INSERT INTO `discussion_categories` (`id`, `order`, `name`, `color`, `created_at
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `discussion_files`
+-- Table structure for table `discussion_files`
 --
 
 CREATE TABLE `discussion_files` (
@@ -1082,7 +1097,7 @@ CREATE TABLE `discussion_files` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `discussion_replies`
+-- Table structure for table `discussion_replies`
 --
 
 CREATE TABLE `discussion_replies` (
@@ -1098,7 +1113,7 @@ CREATE TABLE `discussion_replies` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `email_notification_settings`
+-- Table structure for table `email_notification_settings`
 --
 
 CREATE TABLE `email_notification_settings` (
@@ -1113,7 +1128,7 @@ CREATE TABLE `email_notification_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `email_notification_settings`
+-- Dumping data for table `email_notification_settings`
 --
 
 INSERT INTO `email_notification_settings` (`id`, `setting_name`, `send_email`, `send_slack`, `send_push`, `created_at`, `updated_at`, `slug`) VALUES
@@ -1137,7 +1152,7 @@ INSERT INTO `email_notification_settings` (`id`, `setting_name`, `send_email`, `
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `emergency_contacts`
+-- Table structure for table `emergency_contacts`
 --
 
 CREATE TABLE `emergency_contacts` (
@@ -1155,7 +1170,7 @@ CREATE TABLE `emergency_contacts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `emergency_contacts`
+-- Dumping data for table `emergency_contacts`
 --
 
 INSERT INTO `emergency_contacts` (`id`, `user_id`, `name`, `email`, `mobile`, `relation`, `address`, `added_by`, `last_updated_by`, `created_at`, `updated_at`) VALUES
@@ -1164,7 +1179,7 @@ INSERT INTO `emergency_contacts` (`id`, `user_id`, `name`, `email`, `mobile`, `r
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `employee_details`
+-- Table structure for table `employee_details`
 --
 
 CREATE TABLE `employee_details` (
@@ -1187,17 +1202,17 @@ CREATE TABLE `employee_details` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `employee_details`
+-- Dumping data for table `employee_details`
 --
 
 INSERT INTO `employee_details` (`id`, `user_id`, `employee_id`, `address`, `hourly_rate`, `slack_username`, `department_id`, `designation_id`, `created_at`, `updated_at`, `joining_date`, `last_date`, `added_by`, `last_updated_by`, `attendance_reminder`, `date_of_birth`) VALUES
 (1, 1, 'emp-1', 'Số nhà 16A ngõ 3 Nguyễn Văn Huyên, Quan Hoa, Cầu Giấy, Hà Nội', NULL, NULL, 1, 1, '2022-04-21 02:52:52', '2022-04-21 21:33:50', '2022-04-20 17:00:00', NULL, NULL, 1, NULL, '2022-04-22'),
-(2, 2, '2', 'Cầu Giấy', NULL, NULL, 1, 1, '2022-04-22 02:20:11', '2022-04-22 02:20:11', '2022-04-21 17:00:00', NULL, 1, 1, NULL, '2022-04-21');
+(2, 2, '2', 'Cầu Giấy', NULL, 'ducpham0307@gmail.com', 1, 1, '2022-04-22 02:20:11', '2022-05-04 02:59:08', '2022-04-21 17:00:00', NULL, 1, 1, NULL, '2022-04-21');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `employee_docs`
+-- Table structure for table `employee_docs`
 --
 
 CREATE TABLE `employee_docs` (
@@ -1214,7 +1229,7 @@ CREATE TABLE `employee_docs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `employee_docs`
+-- Dumping data for table `employee_docs`
 --
 
 INSERT INTO `employee_docs` (`id`, `user_id`, `name`, `filename`, `hashname`, `size`, `created_at`, `updated_at`, `added_by`, `last_updated_by`) VALUES
@@ -1223,7 +1238,7 @@ INSERT INTO `employee_docs` (`id`, `user_id`, `name`, `filename`, `hashname`, `s
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `employee_leave_quotas`
+-- Table structure for table `employee_leave_quotas`
 --
 
 CREATE TABLE `employee_leave_quotas` (
@@ -1236,7 +1251,7 @@ CREATE TABLE `employee_leave_quotas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `employee_leave_quotas`
+-- Dumping data for table `employee_leave_quotas`
 --
 
 INSERT INTO `employee_leave_quotas` (`id`, `user_id`, `leave_type_id`, `no_of_leaves`, `created_at`, `updated_at`) VALUES
@@ -1250,7 +1265,7 @@ INSERT INTO `employee_leave_quotas` (`id`, `user_id`, `leave_type_id`, `no_of_le
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `employee_skills`
+-- Table structure for table `employee_skills`
 --
 
 CREATE TABLE `employee_skills` (
@@ -1262,17 +1277,17 @@ CREATE TABLE `employee_skills` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `employee_skills`
+-- Dumping data for table `employee_skills`
 --
 
 INSERT INTO `employee_skills` (`id`, `user_id`, `skill_id`, `created_at`, `updated_at`) VALUES
 (1, 1, 1, '2022-04-21 21:33:50', '2022-04-21 21:33:50'),
-(2, 2, 2, '2022-04-22 02:20:11', '2022-04-22 02:20:11');
+(3, 2, 2, '2022-05-04 02:59:08', '2022-05-04 02:59:08');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `employee_teams`
+-- Table structure for table `employee_teams`
 --
 
 CREATE TABLE `employee_teams` (
@@ -1286,7 +1301,7 @@ CREATE TABLE `employee_teams` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `estimates`
+-- Table structure for table `estimates`
 --
 
 CREATE TABLE `estimates` (
@@ -1314,7 +1329,7 @@ CREATE TABLE `estimates` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `estimate_items`
+-- Table structure for table `estimate_items`
 --
 
 CREATE TABLE `estimate_items` (
@@ -1335,7 +1350,7 @@ CREATE TABLE `estimate_items` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `estimate_item_images`
+-- Table structure for table `estimate_item_images`
 --
 
 CREATE TABLE `estimate_item_images` (
@@ -1352,7 +1367,7 @@ CREATE TABLE `estimate_item_images` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `events`
+-- Table structure for table `events`
 --
 
 CREATE TABLE `events` (
@@ -1377,10 +1392,18 @@ CREATE TABLE `events` (
   `event_id` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `events`
+--
+
+INSERT INTO `events` (`id`, `event_name`, `label_color`, `where`, `description`, `start_date_time`, `end_date_time`, `repeat`, `repeat_every`, `repeat_cycles`, `repeat_type`, `send_reminder`, `remind_time`, `remind_type`, `created_at`, `updated_at`, `added_by`, `last_updated_by`, `event_id`) VALUES
+(1, 'Test 1', '#751D1D', 'HN', '<p>Mô tả</p>', '2022-05-03 16:45:00', '2022-05-18 16:45:00', 'no', NULL, NULL, 'day', 'yes', 1, 'day', '2022-05-03 02:51:33', '2022-05-03 02:51:33', 1, 1, NULL),
+(2, 'Sự kiện 2', '#FF0000', 'HN', '<p>e</p>', '2022-05-03 17:00:00', '2022-05-03 18:00:00', 'no', NULL, NULL, 'day', 'no', NULL, 'day', '2022-05-03 03:03:35', '2022-05-03 03:03:35', 1, 1, NULL);
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `event_attendees`
+-- Table structure for table `event_attendees`
 --
 
 CREATE TABLE `event_attendees` (
@@ -1391,10 +1414,21 @@ CREATE TABLE `event_attendees` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `event_attendees`
+--
+
+INSERT INTO `event_attendees` (`id`, `user_id`, `event_id`, `created_at`, `updated_at`) VALUES
+(1, 2, 1, '2022-05-03 02:51:33', '2022-05-03 02:51:33'),
+(2, 1, 1, '2022-05-03 02:51:33', '2022-05-03 02:51:33'),
+(3, 3, 1, '2022-05-03 02:51:34', '2022-05-03 02:51:34'),
+(4, 1, 2, '2022-05-03 03:03:35', '2022-05-03 03:03:35'),
+(5, 3, 2, '2022-05-03 03:03:36', '2022-05-03 03:03:36');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `expenses`
+-- Table structure for table `expenses`
 --
 
 CREATE TABLE `expenses` (
@@ -1423,7 +1457,7 @@ CREATE TABLE `expenses` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `expenses_category`
+-- Table structure for table `expenses_category`
 --
 
 CREATE TABLE `expenses_category` (
@@ -1438,7 +1472,7 @@ CREATE TABLE `expenses_category` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `expenses_category_roles`
+-- Table structure for table `expenses_category_roles`
 --
 
 CREATE TABLE `expenses_category_roles` (
@@ -1452,7 +1486,7 @@ CREATE TABLE `expenses_category_roles` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `expenses_recurring`
+-- Table structure for table `expenses_recurring`
 --
 
 CREATE TABLE `expenses_recurring` (
@@ -1483,7 +1517,7 @@ CREATE TABLE `expenses_recurring` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `failed_jobs`
+-- Table structure for table `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -1499,7 +1533,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `file_storage_settings`
+-- Table structure for table `file_storage_settings`
 --
 
 CREATE TABLE `file_storage_settings` (
@@ -1512,7 +1546,7 @@ CREATE TABLE `file_storage_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `file_storage_settings`
+-- Dumping data for table `file_storage_settings`
 --
 
 INSERT INTO `file_storage_settings` (`id`, `filesystem`, `auth_keys`, `status`, `created_at`, `updated_at`) VALUES
@@ -1521,7 +1555,7 @@ INSERT INTO `file_storage_settings` (`id`, `filesystem`, `auth_keys`, `status`, 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `gdpr_settings`
+-- Table structure for table `gdpr_settings`
 --
 
 CREATE TABLE `gdpr_settings` (
@@ -1545,7 +1579,7 @@ CREATE TABLE `gdpr_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `gdpr_settings`
+-- Dumping data for table `gdpr_settings`
 --
 
 INSERT INTO `gdpr_settings` (`id`, `enable_gdpr`, `show_customer_area`, `show_customer_footer`, `top_information_block`, `enable_export`, `data_removal`, `lead_removal_public_form`, `terms_customer_footer`, `terms`, `policy`, `public_lead_edit`, `consent_customer`, `consent_leads`, `consent_block`, `created_at`, `updated_at`) VALUES
@@ -1554,7 +1588,7 @@ INSERT INTO `gdpr_settings` (`id`, `enable_gdpr`, `show_customer_area`, `show_cu
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `google_calendar_modules`
+-- Table structure for table `google_calendar_modules`
 --
 
 CREATE TABLE `google_calendar_modules` (
@@ -1571,7 +1605,7 @@ CREATE TABLE `google_calendar_modules` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `google_calendar_modules`
+-- Dumping data for table `google_calendar_modules`
 --
 
 INSERT INTO `google_calendar_modules` (`id`, `lead_status`, `leave_status`, `invoice_status`, `contract_status`, `task_status`, `event_status`, `holiday_status`, `created_at`, `updated_at`) VALUES
@@ -1580,7 +1614,7 @@ INSERT INTO `google_calendar_modules` (`id`, `lead_status`, `leave_status`, `inv
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `holidays`
+-- Table structure for table `holidays`
 --
 
 CREATE TABLE `holidays` (
@@ -1595,7 +1629,7 @@ CREATE TABLE `holidays` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `holidays`
+-- Dumping data for table `holidays`
 --
 
 INSERT INTO `holidays` (`id`, `date`, `occassion`, `created_at`, `updated_at`, `added_by`, `last_updated_by`, `event_id`) VALUES
@@ -1656,7 +1690,7 @@ INSERT INTO `holidays` (`id`, `date`, `occassion`, `created_at`, `updated_at`, `
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `invoices`
+-- Table structure for table `invoices`
 --
 
 CREATE TABLE `invoices` (
@@ -1698,10 +1732,17 @@ CREATE TABLE `invoices` (
   `event_id` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `invoices`
+--
+
+INSERT INTO `invoices` (`id`, `project_id`, `client_id`, `order_id`, `invoice_number`, `issue_date`, `due_date`, `sub_total`, `discount`, `discount_type`, `total`, `currency_id`, `status`, `recurring`, `billing_cycle`, `billing_interval`, `billing_frequency`, `file`, `file_original_name`, `note`, `credit_note`, `show_shipping_address`, `created_at`, `updated_at`, `estimate_id`, `send_status`, `due_amount`, `parent_id`, `invoice_recurring_id`, `created_by`, `added_by`, `last_updated_by`, `hash`, `calculate_tax`, `company_address_id`, `event_id`) VALUES
+(1, NULL, 3, NULL, '1', '2022-05-05', '2022-05-20', 10000.00, 0, 'percent', 10000.00, 1, 'unpaid', 'no', NULL, NULL, NULL, NULL, NULL, 'ji', 0, 'no', '2022-05-05 01:42:38', '2022-05-05 01:45:51', NULL, 1, 8000.00, NULL, NULL, NULL, 1, 1, '1cNa4iXNEILGdPC3WdT815eUprm3AyVH', 'after_discount', 1, NULL);
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `invoice_items`
+-- Table structure for table `invoice_items`
 --
 
 CREATE TABLE `invoice_items` (
@@ -1719,10 +1760,17 @@ CREATE TABLE `invoice_items` (
   `hsn_sac_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `invoice_items`
+--
+
+INSERT INTO `invoice_items` (`id`, `invoice_id`, `item_name`, `item_summary`, `type`, `quantity`, `unit_price`, `amount`, `taxes`, `created_at`, `updated_at`, `hsn_sac_code`) VALUES
+(1, 1, 'Laptop', '', 'item', 1.00, 10000.00, 10000.00, NULL, '2022-05-05 01:42:39', '2022-05-05 01:42:39', NULL);
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `invoice_item_images`
+-- Table structure for table `invoice_item_images`
 --
 
 CREATE TABLE `invoice_item_images` (
@@ -1739,7 +1787,7 @@ CREATE TABLE `invoice_item_images` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `invoice_recurring`
+-- Table structure for table `invoice_recurring`
 --
 
 CREATE TABLE `invoice_recurring` (
@@ -1779,7 +1827,7 @@ CREATE TABLE `invoice_recurring` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `invoice_recurring_items`
+-- Table structure for table `invoice_recurring_items`
 --
 
 CREATE TABLE `invoice_recurring_items` (
@@ -1800,7 +1848,7 @@ CREATE TABLE `invoice_recurring_items` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `invoice_recurring_item_images`
+-- Table structure for table `invoice_recurring_item_images`
 --
 
 CREATE TABLE `invoice_recurring_item_images` (
@@ -1817,7 +1865,7 @@ CREATE TABLE `invoice_recurring_item_images` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `invoice_settings`
+-- Table structure for table `invoice_settings`
 --
 
 CREATE TABLE `invoice_settings` (
@@ -1844,16 +1892,16 @@ CREATE TABLE `invoice_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `invoice_settings`
+-- Dumping data for table `invoice_settings`
 --
 
 INSERT INTO `invoice_settings` (`id`, `invoice_prefix`, `invoice_digit`, `estimate_prefix`, `estimate_digit`, `credit_note_prefix`, `credit_note_digit`, `template`, `due_after`, `invoice_terms`, `estimate_terms`, `gst_number`, `show_gst`, `created_at`, `updated_at`, `logo`, `hsn_sac_code_show`, `locale`, `send_reminder`, `tax_calculation_msg`) VALUES
-(1, 'INV', 3, 'EST', 3, 'CN', 3, 'invoice-5', 15, 'Thank you for your business.', NULL, NULL, 'no', '2022-04-21 02:22:02', '2022-04-21 02:22:02', NULL, 0, 'en', 0, 0);
+(1, 'INV', 3, 'EST', 3, 'CN', 3, 'invoice-5', 15, 'Thank you for your business.', NULL, NULL, 'no', '2022-04-21 02:22:02', '2022-05-04 00:49:06', NULL, 0, 'vn', 0, 0);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `issues`
+-- Table structure for table `issues`
 --
 
 CREATE TABLE `issues` (
@@ -1869,7 +1917,7 @@ CREATE TABLE `issues` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `jobs`
+-- Table structure for table `jobs`
 --
 
 CREATE TABLE `jobs` (
@@ -1885,7 +1933,7 @@ CREATE TABLE `jobs` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `job_batches`
+-- Table structure for table `job_batches`
 --
 
 CREATE TABLE `job_batches` (
@@ -1904,7 +1952,7 @@ CREATE TABLE `job_batches` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `knowledge_bases`
+-- Table structure for table `knowledge_bases`
 --
 
 CREATE TABLE `knowledge_bases` (
@@ -1918,10 +1966,18 @@ CREATE TABLE `knowledge_bases` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `knowledge_bases`
+--
+
+INSERT INTO `knowledge_bases` (`id`, `to`, `heading`, `category_id`, `description`, `added_by`, `created_at`, `updated_at`) VALUES
+(1, 'employee', 'Nhap mon c#', 1, '<p>Khong</p>', 1, '2022-05-03 21:20:37', '2022-05-03 21:20:37'),
+(2, 'client', 'sass', 2, '<p>ddds</p>', 1, '2022-05-05 01:17:42', '2022-05-05 01:17:42');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `knowledge_categories`
+-- Table structure for table `knowledge_categories`
 --
 
 CREATE TABLE `knowledge_categories` (
@@ -1931,10 +1987,18 @@ CREATE TABLE `knowledge_categories` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `knowledge_categories`
+--
+
+INSERT INTO `knowledge_categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'Code', '2022-05-03 21:20:30', '2022-05-03 21:20:30'),
+(2, 'demoo', '2022-05-05 01:17:32', '2022-05-05 01:17:32');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `language_settings`
+-- Table structure for table `language_settings`
 --
 
 CREATE TABLE `language_settings` (
@@ -1947,7 +2011,7 @@ CREATE TABLE `language_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `language_settings`
+-- Dumping data for table `language_settings`
 --
 
 INSERT INTO `language_settings` (`id`, `language_code`, `language_name`, `status`, `created_at`, `updated_at`) VALUES
@@ -1969,12 +2033,12 @@ INSERT INTO `language_settings` (`id`, `language_code`, `language_name`, `status
 (16, 'zh-CN', 'Chinese (S)', 'disabled', NULL, NULL),
 (17, 'zh-TW', 'Chinese (T)', 'disabled', NULL, NULL),
 (18, 'en', 'English', 'enabled', '2022-04-21 02:48:58', '2022-04-21 02:48:58'),
-(19, 'VI', 'Vietnam', 'enabled', '2022-04-21 04:02:54', '2022-04-21 04:06:36');
+(19, 'vn', 'Vietnam', 'enabled', '2022-04-21 04:02:54', '2022-05-03 07:56:54');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `leads`
+-- Table structure for table `leads`
 --
 
 CREATE TABLE `leads` (
@@ -2009,10 +2073,19 @@ CREATE TABLE `leads` (
   `hash` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `leads`
+--
+
+INSERT INTO `leads` (`id`, `client_id`, `source_id`, `status_id`, `column_priority`, `agent_id`, `company_name`, `website`, `address`, `salutation`, `client_name`, `client_email`, `mobile`, `cell`, `office`, `city`, `state`, `country`, `postal_code`, `note`, `next_follow_up`, `created_at`, `updated_at`, `value`, `currency_id`, `category_id`, `added_by`, `last_updated_by`, `hash`) VALUES
+(1, NULL, 2, 2, 0, 1, NULL, NULL, NULL, 'mr', 'Jack', 'horsjutsu@gmail.com', NULL, NULL, NULL, NULL, NULL, 'Viet Nam', NULL, '', 'yes', '2022-05-04 02:47:30', '2022-05-04 02:47:30', 0, 1, 1, 1, 1, 'cmgNrA3PDL2mKcI0pQ8QMlOdWvnR4AUM'),
+(2, NULL, NULL, 2, 0, NULL, NULL, NULL, NULL, NULL, 'Hiếu', 'huple12345698@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', 'yes', '2022-05-04 19:55:59', '2022-05-04 23:33:41', 0, 1, NULL, 1, 1, 'M9NpmRceqmFoQFhTppxZciOQsGgwQLsA'),
+(3, NULL, NULL, 2, 0, NULL, NULL, NULL, NULL, 'mr', 'Trung Anh', 'geedme728@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', 'yes', '2022-05-05 00:46:25', '2022-05-05 00:50:44', 0, 1, NULL, 1, 1, 'b8XqGH4FOaLXkb6zLwCiGeWTH2NkU6X0');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lead_agents`
+-- Table structure for table `lead_agents`
 --
 
 CREATE TABLE `lead_agents` (
@@ -2025,10 +2098,17 @@ CREATE TABLE `lead_agents` (
   `last_updated_by` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `lead_agents`
+--
+
+INSERT INTO `lead_agents` (`id`, `user_id`, `status`, `created_at`, `updated_at`, `added_by`, `last_updated_by`) VALUES
+(1, 1, 'enabled', '2022-05-04 01:13:55', '2022-05-04 01:13:55', 1, 1);
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lead_category`
+-- Table structure for table `lead_category`
 --
 
 CREATE TABLE `lead_category` (
@@ -2040,10 +2120,17 @@ CREATE TABLE `lead_category` (
   `last_updated_by` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `lead_category`
+--
+
+INSERT INTO `lead_category` (`id`, `category_name`, `created_at`, `updated_at`, `added_by`, `last_updated_by`) VALUES
+(1, 'Danh muc 1', '2022-05-04 01:14:14', '2022-05-04 01:14:14', 1, 1);
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lead_custom_forms`
+-- Table structure for table `lead_custom_forms`
 --
 
 CREATE TABLE `lead_custom_forms` (
@@ -2060,7 +2147,7 @@ CREATE TABLE `lead_custom_forms` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `lead_custom_forms`
+-- Dumping data for table `lead_custom_forms`
 --
 
 INSERT INTO `lead_custom_forms` (`id`, `field_display_name`, `field_name`, `field_order`, `status`, `created_at`, `updated_at`, `required`, `added_by`, `last_updated_by`) VALUES
@@ -2075,7 +2162,7 @@ INSERT INTO `lead_custom_forms` (`id`, `field_display_name`, `field_name`, `fiel
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lead_files`
+-- Table structure for table `lead_files`
 --
 
 CREATE TABLE `lead_files` (
@@ -2097,7 +2184,7 @@ CREATE TABLE `lead_files` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lead_follow_up`
+-- Table structure for table `lead_follow_up`
 --
 
 CREATE TABLE `lead_follow_up` (
@@ -2115,7 +2202,7 @@ CREATE TABLE `lead_follow_up` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lead_notes`
+-- Table structure for table `lead_notes`
 --
 
 CREATE TABLE `lead_notes` (
@@ -2136,7 +2223,7 @@ CREATE TABLE `lead_notes` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lead_sources`
+-- Table structure for table `lead_sources`
 --
 
 CREATE TABLE `lead_sources` (
@@ -2149,7 +2236,7 @@ CREATE TABLE `lead_sources` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `lead_sources`
+-- Dumping data for table `lead_sources`
 --
 
 INSERT INTO `lead_sources` (`id`, `type`, `created_at`, `updated_at`, `added_by`, `last_updated_by`) VALUES
@@ -2163,7 +2250,7 @@ INSERT INTO `lead_sources` (`id`, `type`, `created_at`, `updated_at`, `added_by`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lead_status`
+-- Table structure for table `lead_status`
 --
 
 CREATE TABLE `lead_status` (
@@ -2177,18 +2264,18 @@ CREATE TABLE `lead_status` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `lead_status`
+-- Dumping data for table `lead_status`
 --
 
 INSERT INTO `lead_status` (`id`, `type`, `created_at`, `updated_at`, `priority`, `default`, `label_color`) VALUES
-(1, 'pending', NULL, '2022-04-21 02:31:41', 1, 1, '#ff0000'),
-(2, 'inprocess', NULL, '2022-04-21 02:31:42', 2, 0, '#ff0000'),
-(3, 'converted', NULL, '2022-04-21 02:31:42', 3, 0, '#ff0000');
+(1, 'chưa giải quyết', NULL, '2022-05-04 01:12:56', 1, 1, '#FF0000'),
+(2, 'Đang tiến hành', NULL, '2022-05-04 01:13:20', 2, 0, '#FF0000'),
+(3, 'Chuyển đổi', NULL, '2022-05-04 01:13:36', 3, 0, '#FF0000');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `lead_user_notes`
+-- Table structure for table `lead_user_notes`
 --
 
 CREATE TABLE `lead_user_notes` (
@@ -2202,7 +2289,7 @@ CREATE TABLE `lead_user_notes` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `leaves`
+-- Table structure for table `leaves`
 --
 
 CREATE TABLE `leaves` (
@@ -2223,16 +2310,17 @@ CREATE TABLE `leaves` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `leaves`
+-- Dumping data for table `leaves`
 --
 
 INSERT INTO `leaves` (`id`, `user_id`, `leave_type_id`, `duration`, `leave_date`, `reason`, `status`, `reject_reason`, `created_at`, `updated_at`, `paid`, `added_by`, `last_updated_by`, `event_id`) VALUES
-(8, 1, 1, 'single', '2022-04-22', 'f', 'approved', NULL, '2022-04-22 02:12:19', '2022-04-22 20:03:06', 0, 1, 1, NULL);
+(8, 1, 1, 'single', '2022-04-22', 'f', 'approved', NULL, '2022-04-22 02:12:19', '2022-04-22 20:03:06', 0, 1, 1, NULL),
+(9, 1, 2, 'single', '2022-04-23', 'om', 'approved', NULL, '2022-04-22 20:18:05', '2022-04-22 20:18:05', 0, 1, 1, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `leave_types`
+-- Table structure for table `leave_types`
 --
 
 CREATE TABLE `leave_types` (
@@ -2246,18 +2334,18 @@ CREATE TABLE `leave_types` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `leave_types`
+-- Dumping data for table `leave_types`
 --
 
 INSERT INTO `leave_types` (`id`, `type_name`, `color`, `no_of_leaves`, `created_at`, `updated_at`, `paid`) VALUES
-(1, 'Casual', '#16813D', 5, '2022-04-21 02:23:31', '2022-04-21 02:23:31', 1),
-(2, 'Sick', '#DB1313', 5, '2022-04-21 02:23:32', '2022-04-21 02:23:32', 1),
-(3, 'Earned', '#B078C6', 5, '2022-04-21 02:23:32', '2022-04-21 02:23:32', 1);
+(1, 'Thông thường', '#16813D', 5, '2022-04-21 02:23:31', '2022-05-04 00:55:55', 1),
+(2, 'Ốm', '#DB1313', 5, '2022-04-21 02:23:32', '2022-05-04 00:56:15', 1),
+(3, 'Được phép', '#B078C6', 5, '2022-04-21 02:23:32', '2022-05-04 00:58:07', 1);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `log_time_for`
+-- Table structure for table `log_time_for`
 --
 
 CREATE TABLE `log_time_for` (
@@ -2270,7 +2358,7 @@ CREATE TABLE `log_time_for` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `log_time_for`
+-- Dumping data for table `log_time_for`
 --
 
 INSERT INTO `log_time_for` (`id`, `log_time_for`, `auto_timer_stop`, `created_at`, `updated_at`, `approval_required`) VALUES
@@ -2279,7 +2367,7 @@ INSERT INTO `log_time_for` (`id`, `log_time_for`, `auto_timer_stop`, `created_at
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ltm_translations`
+-- Table structure for table `ltm_translations`
 --
 
 CREATE TABLE `ltm_translations` (
@@ -2294,7 +2382,7 @@ CREATE TABLE `ltm_translations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `ltm_translations`
+-- Dumping data for table `ltm_translations`
 --
 
 INSERT INTO `ltm_translations` (`id`, `status`, `locale`, `group`, `key`, `value`, `created_at`, `updated_at`) VALUES
@@ -9147,7 +9235,7 @@ INSERT INTO `ltm_translations` (`id`, `status`, `locale`, `group`, `key`, `value
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `menus`
+-- Table structure for table `menus`
 --
 
 CREATE TABLE `menus` (
@@ -9163,7 +9251,7 @@ CREATE TABLE `menus` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `menus`
+-- Dumping data for table `menus`
 --
 
 INSERT INTO `menus` (`id`, `menu_name`, `translate_name`, `route`, `module`, `icon`, `setting_menu`, `created_at`, `updated_at`) VALUES
@@ -9261,7 +9349,7 @@ INSERT INTO `menus` (`id`, `menu_name`, `translate_name`, `route`, `module`, `ic
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `menu_settings`
+-- Table structure for table `menu_settings`
 --
 
 CREATE TABLE `menu_settings` (
@@ -9275,7 +9363,7 @@ CREATE TABLE `menu_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `menu_settings`
+-- Dumping data for table `menu_settings`
 --
 
 INSERT INTO `menu_settings` (`id`, `main_menu`, `default_main_menu`, `setting_menu`, `default_setting_menu`, `created_at`, `updated_at`) VALUES
@@ -9284,7 +9372,7 @@ INSERT INTO `menu_settings` (`id`, `main_menu`, `default_main_menu`, `setting_me
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `message_settings`
+-- Table structure for table `message_settings`
 --
 
 CREATE TABLE `message_settings` (
@@ -9296,7 +9384,7 @@ CREATE TABLE `message_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `message_settings`
+-- Dumping data for table `message_settings`
 --
 
 INSERT INTO `message_settings` (`id`, `allow_client_admin`, `allow_client_employee`, `created_at`, `updated_at`) VALUES
@@ -9305,7 +9393,7 @@ INSERT INTO `message_settings` (`id`, `allow_client_admin`, `allow_client_employ
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `migrations`
+-- Table structure for table `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -9315,7 +9403,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `migrations`
+-- Dumping data for table `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -9889,7 +9977,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `modules`
+-- Table structure for table `modules`
 --
 
 CREATE TABLE `modules` (
@@ -9901,7 +9989,7 @@ CREATE TABLE `modules` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `modules`
+-- Dumping data for table `modules`
 --
 
 INSERT INTO `modules` (`id`, `module_name`, `description`, `created_at`, `updated_at`) VALUES
@@ -9932,7 +10020,7 @@ INSERT INTO `modules` (`id`, `module_name`, `description`, `created_at`, `update
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `module_settings`
+-- Table structure for table `module_settings`
 --
 
 CREATE TABLE `module_settings` (
@@ -9945,7 +10033,7 @@ CREATE TABLE `module_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `module_settings`
+-- Dumping data for table `module_settings`
 --
 
 INSERT INTO `module_settings` (`id`, `module_name`, `status`, `type`, `created_at`, `updated_at`) VALUES
@@ -10013,7 +10101,7 @@ INSERT INTO `module_settings` (`id`, `module_name`, `status`, `type`, `created_a
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `notices`
+-- Table structure for table `notices`
 --
 
 CREATE TABLE `notices` (
@@ -10028,10 +10116,18 @@ CREATE TABLE `notices` (
   `last_updated_by` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `notices`
+--
+
+INSERT INTO `notices` (`id`, `to`, `heading`, `description`, `created_at`, `updated_at`, `department_id`, `added_by`, `last_updated_by`) VALUES
+(1, 'employee', 'Sinh nhat', '<p>Thong bao</p>', '2022-05-03 20:42:52', '2022-05-03 20:42:52', 1, 1, 1),
+(2, 'client', 'dss', '<p>sss<img src=\"http://localhost:8087/worksuite/public/quill-image/SlkrT3hUR0c2ZWlLNHI0eTBKWGNkOEg0WVM5NlNZd2VOekJRa0N1amF4Y1l4NW1UWHFhQkdQSDc4dGpvTldCag==\"></p>', '2022-05-03 20:55:35', '2022-05-03 21:19:26', NULL, 1, 1);
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `notice_views`
+-- Table structure for table `notice_views`
 --
 
 CREATE TABLE `notice_views` (
@@ -10043,10 +10139,19 @@ CREATE TABLE `notice_views` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `notice_views`
+--
+
+INSERT INTO `notice_views` (`id`, `notice_id`, `user_id`, `read`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, 1, '2022-05-03 20:42:52', '2022-05-03 20:43:08'),
+(2, 1, 2, 0, '2022-05-03 20:42:52', '2022-05-03 20:42:52'),
+(3, 2, 3, 0, '2022-05-03 20:55:35', '2022-05-03 20:55:35');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `notifications`
+-- Table structure for table `notifications`
 --
 
 CREATE TABLE `notifications` (
@@ -10061,35 +10166,73 @@ CREATE TABLE `notifications` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `notifications`
+-- Dumping data for table `notifications`
 --
 
 INSERT INTO `notifications` (`id`, `type`, `notifiable_type`, `notifiable_id`, `data`, `read_at`, `created_at`, `updated_at`) VALUES
 ('004bc070-73fa-4641-a481-8d209802be42', 'App\\Notifications\\NewTask', 'App\\Models\\User', 2, '{\"id\":2,\"created_at\":\"2022-04-23 01:41:16\",\"heading\":\"Shuper\"}', NULL, '2022-04-22 18:41:17', '2022-04-22 18:41:17'),
 ('00b11179-9c1b-4015-afc2-96ccb179d5fd', 'App\\Notifications\\NewProject', 'App\\Models\\User', 3, '{\"id\":1,\"project_name\":\"Qu\\u1ea3n l\\u00fd d\\u00e2n c\\u01b0\",\"project_summary\":\"<p>Pending<\\/p>\",\"project_admin\":null,\"start_date\":\"2022-04-30T00:00:00+00:00\",\"deadline\":null,\"notes\":\"<p>NOthings<\\/p>\",\"category_id\":1,\"client_id\":3,\"team_id\":1,\"feedback\":null,\"manual_timelog\":\"disable\",\"client_view_task\":\"disable\",\"allow_client_notification\":\"disable\",\"completion_percent\":0,\"calculate_task_progress\":\"true\",\"deleted_at\":null,\"project_budget\":100000,\"currency_id\":1,\"hours_allocated\":200,\"status\":\"not started\",\"added_by\":1,\"last_updated_by\":1,\"hash\":\"mSQP9IHueuoCWTYxOUTWNG7xv81fdKLv\",\"public\":0,\"isProjectAdmin\":false}', NULL, '2022-04-22 18:20:44', '2022-04-22 18:20:44'),
+('016b5420-665a-4084-afda-aa4935acf7d2', 'App\\Notifications\\EventInvite', 'App\\Models\\User', 3, '{\"id\":2,\"start_date_time\":\"2022-05-03 17:00:00\",\"event_name\":\"S\\u1ef1 ki\\u1ec7n 2\"}', NULL, '2022-05-03 03:03:39', '2022-05-03 03:03:39'),
+('02343f67-ee48-4a77-a020-f5859adcd9ad', 'App\\Notifications\\NewProposal', 'App\\Models\\Lead', 2, '{\"id\":2,\"lead_id\":2,\"valid_till\":\"2022-06-04T00:00:00+00:00\",\"sub_total\":10000,\"total\":5050,\"currency_id\":3,\"discount_type\":\"percent\",\"discount\":50,\"invoice_convert\":0,\"status\":\"waiting\",\"note\":\"noice\",\"description\":\"<p>test<\\/p>\",\"client_comment\":null,\"signature_approval\":0,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"Q13kQuWj7rETOkHcuDASj2bmXHAE5sMN\",\"calculate_tax\":\"after_discount\",\"lead\":{\"id\":2,\"client_id\":null,\"source_id\":null,\"status_id\":2,\"column_priority\":0,\"agent_id\":null,\"company_name\":null,\"website\":null,\"address\":null,\"salutation\":null,\"client_name\":\"Hi\\u1ebfu\",\"client_email\":\"huple12345698@gmail.com\",\"mobile\":null,\"cell\":null,\"office\":null,\"city\":null,\"state\":null,\"country\":null,\"postal_code\":null,\"note\":\"\",\"next_follow_up\":\"yes\",\"value\":0,\"currency_id\":1,\"category_id\":null,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"M9NpmRceqmFoQFhTppxZciOQsGgwQLsA\",\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/fb8b5f337b1a911bef2d55a06d52265d.png?s=200&d=mp\"}}', NULL, '2022-05-05 00:33:54', '2022-05-05 00:33:54'),
+('02844465-f341-4058-a223-acc8c2ad8aa2', 'App\\Notifications\\NewProposal', 'App\\Models\\Lead', 3, '{\"id\":3,\"lead_id\":3,\"valid_till\":\"2022-06-04T00:00:00+00:00\",\"sub_total\":10000,\"total\":4000,\"currency_id\":1,\"discount_type\":\"percent\",\"discount\":60,\"invoice_convert\":0,\"status\":\"waiting\",\"note\":\"noiceee\",\"description\":\"<p>thue<\\/p>\",\"client_comment\":null,\"signature_approval\":0,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"wXx8PqNxXVyWtJ6TGyFvcM1Z2Za3va2q\",\"calculate_tax\":\"after_discount\",\"lead\":{\"id\":3,\"client_id\":null,\"source_id\":null,\"status_id\":1,\"column_priority\":0,\"agent_id\":null,\"company_name\":null,\"website\":null,\"address\":null,\"salutation\":\"mr\",\"client_name\":\"Trung Anh\",\"client_email\":\"geedme728@gmail.com\",\"mobile\":null,\"cell\":null,\"office\":null,\"city\":null,\"state\":null,\"country\":null,\"postal_code\":null,\"note\":\"\",\"next_follow_up\":\"yes\",\"value\":0,\"currency_id\":1,\"category_id\":null,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"b8XqGH4FOaLXkb6zLwCiGeWTH2NkU6X0\",\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/255a1c0e0e980c60587aea5f0d5c8464.png?s=200&d=mp\"}}', NULL, '2022-05-05 00:50:11', '2022-05-05 00:50:11'),
+('0890bd22-1d85-4c9d-a3ed-9c1ec0cf8096', 'App\\Notifications\\NewChat', 'App\\Models\\User', 2, '{\"id\":3,\"user_one\":1,\"from_name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\"}', NULL, '2022-05-03 20:06:46', '2022-05-03 20:06:46'),
+('0cc41fc4-059b-45a7-ba0c-6d44d83b1202', 'App\\Notifications\\NewProposal', 'App\\Models\\Lead', 2, '{\"id\":2,\"lead_id\":2,\"valid_till\":\"2022-06-04T00:00:00+00:00\",\"sub_total\":10000,\"total\":5050,\"currency_id\":3,\"discount_type\":\"percent\",\"discount\":50,\"invoice_convert\":0,\"status\":\"waiting\",\"note\":\"noice\",\"description\":\"<p>test<\\/p>\",\"client_comment\":null,\"signature_approval\":0,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"Q13kQuWj7rETOkHcuDASj2bmXHAE5sMN\",\"calculate_tax\":\"after_discount\",\"lead\":{\"id\":2,\"client_id\":null,\"source_id\":null,\"status_id\":1,\"column_priority\":0,\"agent_id\":null,\"company_name\":null,\"website\":null,\"address\":null,\"salutation\":null,\"client_name\":\"Hi\\u1ebfu\",\"client_email\":\"hieule12345698@gmail.com\",\"mobile\":null,\"cell\":null,\"office\":null,\"city\":null,\"state\":null,\"country\":null,\"postal_code\":null,\"note\":\"\",\"next_follow_up\":\"yes\",\"value\":0,\"currency_id\":1,\"category_id\":null,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"M9NpmRceqmFoQFhTppxZciOQsGgwQLsA\",\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/244d890cd7872b6c6440b25e5d07379e.png?s=200&d=mp\"}}', NULL, '2022-05-04 23:24:37', '2022-05-04 23:24:37'),
 ('0eda9d91-dacd-4635-b885-4f33ae77ce29', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":7,\"user_id\":1,\"leave_type_id\":3,\"duration\":\"single\",\"leave_date\":\"2022-05-28T00:00:00+00:00\",\"reason\":\"v\",\"status\":\"pending\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-05-28\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 02:11:23', '2022-04-22 02:11:23'),
 ('1144a572-a2ae-4222-98ff-ee97689383c1', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":8,\"user_id\":1,\"leave_type_id\":1,\"duration\":\"single\",\"leave_date\":\"2022-04-22T00:00:00+00:00\",\"reason\":\"f\",\"status\":\"pending\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-04-22\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 02:12:19', '2022-04-22 02:12:19'),
+('11c5e983-b02a-4987-9a65-9ca0268cd0e7', 'App\\Notifications\\NewLeaveRequest', 'App\\Models\\User', 1, '{\"id\":9,\"user_id\":1,\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-23T01:00:05+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 20:18:08', '2022-04-22 20:18:08'),
 ('12335bc9-9107-4e7a-854c-7ab3b417de44', 'App\\Notifications\\NewProjectMember', 'App\\Models\\User', 2, '{\"project_id\":1,\"project\":\"Qu\\u1ea3n l\\u00fd d\\u00e2n c\\u01b0\"}', NULL, '2022-04-22 18:20:42', '2022-04-22 18:20:42'),
 ('14af870c-1f4a-4f72-a4fd-c4c2ab068258', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":3,\"user_id\":1,\"leave_type_id\":2,\"duration\":\"single\",\"leave_date\":\"2022-04-29T00:00:00+00:00\",\"reason\":\"om\",\"status\":\"approved\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-04-29\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 00:37:52', '2022-04-22 00:37:52'),
 ('216d6ca4-5116-4b28-a7eb-b70ed9493b4f', 'App\\Notifications\\NewTicket', 'App\\Models\\User', 1, '{\"id\":1,\"created_at\":\"2022-04-23 02:10:19\",\"subject\":\"concert\",\"user_id\":3,\"status\":\"open\",\"agent_id\":null}', NULL, '2022-04-22 19:10:19', '2022-04-22 19:10:19'),
 ('21c4d1ca-434c-413f-bd68-e26a4113d8a0', 'App\\Notifications\\NewLeaveRequest', 'App\\Models\\User', 1, '{\"id\":6,\"user_id\":1,\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 02:01:05', '2022-04-22 02:01:05'),
 ('22b49c64-7107-4a5c-a87b-8f1e64816370', 'App\\Notifications\\MultipleLeaveApplication', 'App\\Models\\User', 1, '{\"id\":2,\"user_id\":1,\"leave_type_id\":1,\"duration\":\"multiple\",\"leave_date\":\"2022-10-04T00:00:00+00:00\",\"reason\":\"th\\u01b0\\u1edfng\",\"status\":\"pending\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-10-04\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 00:26:10', '2022-04-22 00:26:10'),
+('237d9ac6-aa2d-4155-97a9-0a6c436bee61', 'App\\Notifications\\NewPayment', 'App\\Models\\User', 3, '{\"id\":2,\"project_id\":null,\"invoice_id\":1,\"order_id\":null,\"credit_notes_id\":null,\"amount\":2000,\"gateway\":null,\"transaction_id\":null,\"currency_id\":1,\"plan_id\":null,\"customer_id\":null,\"event_id\":null,\"status\":\"complete\",\"paid_on\":\"2022-05-05T00:00:00+00:00\",\"remarks\":null,\"offline_method_id\":null,\"bill\":null,\"added_by\":1,\"last_updated_by\":1,\"payment_gateway_response\":null,\"payload_id\":null,\"total_amount\":2000,\"paid_date\":\"05 May, 2022 00:00 AM\",\"file_url\":\"http:\\/\\/localhost:8087\\/worksuite\\/public\\/user-uploads\\/payment-receipt\",\"currency\":{\"id\":1,\"currency_name\":\"Dollars\",\"currency_symbol\":\"$\",\"currency_code\":\"USD\",\"exchange_rate\":null,\"is_cryptocurrency\":\"no\",\"usd_price\":null},\"order\":null,\"invoice\":{\"id\":1,\"project_id\":null,\"client_id\":3,\"order_id\":null,\"invoice_number\":\"INV#001\",\"issue_date\":\"2022-05-05T00:00:00+00:00\",\"due_date\":\"2022-05-20T00:00:00+00:00\",\"sub_total\":10000,\"discount\":0,\"discount_type\":\"percent\",\"total\":10000,\"currency_id\":1,\"status\":\"unpaid\",\"recurring\":\"no\",\"billing_cycle\":null,\"billing_interval\":null,\"billing_frequency\":null,\"file\":null,\"file_original_name\":null,\"note\":\"ji\",\"credit_note\":0,\"show_shipping_address\":\"no\",\"estimate_id\":null,\"send_status\":0,\"due_amount\":8000,\"parent_id\":null,\"invoice_recurring_id\":null,\"created_by\":null,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"1cNa4iXNEILGdPC3WdT815eUprm3AyVH\",\"calculate_tax\":\"after_discount\",\"company_address_id\":1,\"event_id\":null,\"total_amount\":\"$10000\",\"issue_on\":\"05 May, 2022\",\"original_invoice_number\":\"001\",\"currency\":{\"id\":1,\"currency_name\":\"Dollars\",\"currency_symbol\":\"$\",\"currency_code\":\"USD\",\"exchange_rate\":null,\"is_cryptocurrency\":\"no\",\"usd_price\":null},\"address\":{\"id\":1,\"address\":\"Company address\",\"is_default\":1,\"created_at\":\"2022-04-21T09:50:43.000000Z\",\"updated_at\":\"2022-04-21T09:50:43.000000Z\",\"tax_number\":null,\"tax_name\":null,\"location\":\"Worksuite\"}}}', NULL, '2022-05-05 01:44:50', '2022-05-05 01:44:50'),
 ('2e4905f8-3e82-4b43-a0ad-bbe94721b57c', 'App\\Notifications\\NewLeaveRequest', 'App\\Models\\User', 1, '{\"id\":5,\"user_id\":1,\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 01:53:29', '2022-04-22 01:53:29'),
+('2e8b5c7a-893d-48ef-8917-4ff2918c66db', 'App\\Notifications\\LeadAgentAssigned', 'App\\Models\\User', 1, '{\"id\":3,\"name\":\"Trung Anh\",\"agent_id\":1}', NULL, '2022-05-05 00:46:25', '2022-05-05 00:46:25'),
+('2f366418-1f40-4962-830e-6b0d46e5d942', 'App\\Notifications\\NewProposal', 'App\\Models\\Lead', 2, '{\"id\":2,\"lead_id\":2,\"valid_till\":\"2022-06-04T00:00:00+00:00\",\"sub_total\":10000,\"total\":5050,\"currency_id\":3,\"discount_type\":\"percent\",\"discount\":50,\"invoice_convert\":0,\"status\":\"waiting\",\"note\":\"noice\",\"description\":\"<p>test<\\/p>\",\"client_comment\":null,\"signature_approval\":0,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"Q13kQuWj7rETOkHcuDASj2bmXHAE5sMN\",\"calculate_tax\":\"after_discount\",\"lead\":{\"id\":2,\"client_id\":null,\"source_id\":null,\"status_id\":2,\"column_priority\":0,\"agent_id\":null,\"company_name\":null,\"website\":null,\"address\":null,\"salutation\":null,\"client_name\":\"Hi\\u1ebfu\",\"client_email\":\"huple12345698@gmail.com\",\"mobile\":null,\"cell\":null,\"office\":null,\"city\":null,\"state\":null,\"country\":null,\"postal_code\":null,\"note\":\"\",\"next_follow_up\":\"yes\",\"value\":0,\"currency_id\":1,\"category_id\":null,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"M9NpmRceqmFoQFhTppxZciOQsGgwQLsA\",\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/fb8b5f337b1a911bef2d55a06d52265d.png?s=200&d=mp\"}}', NULL, '2022-05-05 00:53:29', '2022-05-05 00:53:29'),
 ('41f76935-0037-4bb1-9e80-55a86b069bfd', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":4,\"user_id\":1,\"leave_type_id\":3,\"duration\":\"single\",\"leave_date\":\"2022-04-27T00:00:00+00:00\",\"reason\":\"gg\",\"status\":\"pending\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-04-27\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 00:40:12', '2022-04-22 00:40:12'),
 ('4941d2c8-4d49-4201-adba-a0217c8678da', 'App\\Notifications\\NewLeaveRequest', 'App\\Models\\User', 1, '{\"id\":7,\"user_id\":1,\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 02:11:26', '2022-04-22 02:11:26'),
+('4f3b89c7-476b-41b4-a8de-cd8e63bb76a0', 'App\\Notifications\\NewChat', 'App\\Models\\User', 2, '{\"id\":1,\"user_one\":1,\"from_name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\"}', NULL, '2022-05-03 18:54:41', '2022-05-03 18:54:41'),
+('4f92fc20-b489-43d7-b79d-ea83c7817e58', 'App\\Notifications\\NewChat', 'App\\Models\\User', 2, '{\"id\":2,\"user_one\":1,\"from_name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\"}', NULL, '2022-05-03 18:54:48', '2022-05-03 18:54:48'),
 ('521d800b-52a3-49f5-b4d8-6565a41e9840', 'App\\Notifications\\NewTicketRequester', 'App\\Models\\User', 3, '{\"id\":1,\"created_at\":\"2022-04-23 02:10:19\",\"subject\":\"concert\",\"user_id\":3,\"status\":\"open\",\"agent_id\":null}', NULL, '2022-04-22 19:10:22', '2022-04-22 19:10:22'),
+('53b31f82-785c-483f-89ff-7d4fe64b4d53', 'App\\Notifications\\NewChat', 'App\\Models\\User', 2, '{\"id\":4,\"user_one\":1,\"from_name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\"}', NULL, '2022-05-05 02:10:23', '2022-05-05 02:10:23'),
+('5b8dedd6-3cc3-4876-943b-2361020d7c98', 'App\\Notifications\\NewInvoice', 'App\\Models\\User', 3, '{\"id\":1,\"invoice_number\":\"INV#001\"}', NULL, '2022-05-05 01:45:51', '2022-05-05 01:45:51'),
 ('5dbf11cb-5df4-4509-9822-b9155e8f3183', 'App\\Notifications\\LeaveStatusApprove', 'App\\Models\\User', 1, '{\"id\":8,\"user_id\":1,\"leave_type_id\":1,\"duration\":\"single\",\"leave_date\":\"2022-04-22T00:00:00+00:00\",\"reason\":\"f\",\"status\":\"approved\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-04-22\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-23T01:00:05+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 20:03:06', '2022-04-22 20:03:06'),
+('64412719-f658-44b3-a22c-987ca89aa60d', 'App\\Notifications\\NewProposal', 'App\\Models\\Lead', 2, '{\"id\":2,\"lead_id\":2,\"valid_till\":\"2022-06-04T00:00:00+00:00\",\"sub_total\":10000,\"total\":5050,\"currency_id\":3,\"discount_type\":\"percent\",\"discount\":50,\"invoice_convert\":0,\"status\":\"waiting\",\"note\":\"noice\",\"description\":\"<p>test<\\/p>\",\"client_comment\":null,\"signature_approval\":0,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"Q13kQuWj7rETOkHcuDASj2bmXHAE5sMN\",\"calculate_tax\":\"after_discount\",\"lead\":{\"id\":2,\"client_id\":null,\"source_id\":null,\"status_id\":2,\"column_priority\":0,\"agent_id\":null,\"company_name\":null,\"website\":null,\"address\":null,\"salutation\":null,\"client_name\":\"Hi\\u1ebfu\",\"client_email\":\"huple12345698@gmail.com\",\"mobile\":null,\"cell\":null,\"office\":null,\"city\":null,\"state\":null,\"country\":null,\"postal_code\":null,\"note\":\"\",\"next_follow_up\":\"yes\",\"value\":0,\"currency_id\":1,\"category_id\":null,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"M9NpmRceqmFoQFhTppxZciOQsGgwQLsA\",\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/fb8b5f337b1a911bef2d55a06d52265d.png?s=200&d=mp\"}}', NULL, '2022-05-04 23:33:55', '2022-05-04 23:33:55'),
 ('6be2b602-9371-4ae3-bd65-50d8f49fa29f', 'App\\Notifications\\LeaveStatusUpdate', 'App\\Models\\User', 1, '{\"id\":2,\"user_id\":1,\"leave_type_id\":3,\"duration\":\"multiple\",\"leave_date\":\"2022-10-04T00:00:00+00:00\",\"reason\":\"th\\u01b0\\u1edfng\",\"status\":\"pending\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-10-04\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 00:27:42', '2022-04-22 00:27:42'),
+('719ddf14-8ddb-4fa6-ab03-27c7d93839a0', 'App\\Notifications\\LeadAgentAssigned', 'App\\Models\\User', 1, '{\"id\":2,\"name\":\"Hi\\u1ebfu\",\"agent_id\":1}', NULL, '2022-05-04 19:55:59', '2022-05-04 19:55:59'),
 ('7545338b-dc0d-4aad-8b27-f2b202061841', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":1,\"user_id\":1,\"leave_type_id\":1,\"duration\":\"single\",\"leave_date\":\"2022-04-22T00:00:00+00:00\",\"reason\":\"jjj\",\"status\":\"approved\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-04-22\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":null,\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":null,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":null,\"hourly_rate\":null,\"slack_username\":null,\"department_id\":null,\"designation_id\":null,\"joining_date\":\"2022-04-21T16:52:52+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":null,\"designation\":null}}}', NULL, '2022-04-21 20:25:58', '2022-04-21 20:25:58'),
+('75809f89-3db0-4ce7-99fd-973222c80a9f', 'App\\Notifications\\NewProposal', 'App\\Models\\Lead', 2, '{\"id\":2,\"lead_id\":2,\"valid_till\":\"2022-06-04T00:00:00+00:00\",\"sub_total\":10000,\"total\":5050,\"currency_id\":3,\"discount_type\":\"percent\",\"discount\":50,\"invoice_convert\":0,\"status\":\"waiting\",\"note\":\"noice\",\"description\":\"<p>test<\\/p>\",\"client_comment\":null,\"signature_approval\":0,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"Q13kQuWj7rETOkHcuDASj2bmXHAE5sMN\",\"calculate_tax\":\"after_discount\",\"lead\":{\"id\":2,\"client_id\":null,\"source_id\":null,\"status_id\":2,\"column_priority\":0,\"agent_id\":null,\"company_name\":null,\"website\":null,\"address\":null,\"salutation\":null,\"client_name\":\"Hi\\u1ebfu\",\"client_email\":\"huple12345698@gmail.com\",\"mobile\":null,\"cell\":null,\"office\":null,\"city\":null,\"state\":null,\"country\":null,\"postal_code\":null,\"note\":\"\",\"next_follow_up\":\"yes\",\"value\":0,\"currency_id\":1,\"category_id\":null,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"M9NpmRceqmFoQFhTppxZciOQsGgwQLsA\",\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/fb8b5f337b1a911bef2d55a06d52265d.png?s=200&d=mp\"}}', NULL, '2022-05-05 00:31:33', '2022-05-05 00:31:33'),
+('7d726593-3610-4aad-9816-845f5712f2c3', 'App\\Notifications\\NewProposal', 'App\\Models\\Lead', 2, '{\"id\":2,\"lead_id\":2,\"valid_till\":\"2022-06-04T00:00:00+00:00\",\"sub_total\":10000,\"total\":5050,\"currency_id\":3,\"discount_type\":\"percent\",\"discount\":50,\"invoice_convert\":0,\"status\":\"waiting\",\"note\":\"noice\",\"description\":\"<p>test<\\/p>\",\"client_comment\":null,\"signature_approval\":0,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"Q13kQuWj7rETOkHcuDASj2bmXHAE5sMN\",\"calculate_tax\":\"after_discount\",\"lead\":{\"id\":2,\"client_id\":null,\"source_id\":null,\"status_id\":2,\"column_priority\":0,\"agent_id\":null,\"company_name\":null,\"website\":null,\"address\":null,\"salutation\":null,\"client_name\":\"Hi\\u1ebfu\",\"client_email\":\"huple12345698@gmail.com\",\"mobile\":null,\"cell\":null,\"office\":null,\"city\":null,\"state\":null,\"country\":null,\"postal_code\":null,\"note\":\"\",\"next_follow_up\":\"yes\",\"value\":0,\"currency_id\":1,\"category_id\":null,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"M9NpmRceqmFoQFhTppxZciOQsGgwQLsA\",\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/fb8b5f337b1a911bef2d55a06d52265d.png?s=200&d=mp\"}}', NULL, '2022-05-05 00:41:46', '2022-05-05 00:41:46'),
+('8b290882-4f86-4982-bee1-cf26d62bcf76', 'App\\Notifications\\NewNotice', 'App\\Models\\User', 1, '{\"id\":1,\"to\":\"employee\",\"heading\":\"Sinh nhat\",\"description\":\"<p>Thong bao<\\/p>\",\"department_id\":1,\"added_by\":1,\"last_updated_by\":1,\"notice_date\":\"04 May, 2022\"}', NULL, '2022-05-03 20:42:53', '2022-05-03 20:42:53'),
+('8e5a7a06-96f7-44de-bfa6-a1ac815b62f3', 'App\\Notifications\\NewProposal', 'App\\Models\\Lead', 3, '{\"id\":3,\"lead_id\":3,\"valid_till\":\"2022-06-04T00:00:00+00:00\",\"sub_total\":10000,\"total\":4000,\"currency_id\":1,\"discount_type\":\"percent\",\"discount\":60,\"invoice_convert\":0,\"status\":\"waiting\",\"note\":\"noiceee\",\"description\":\"<p>thue<\\/p>\",\"client_comment\":null,\"signature_approval\":0,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"wXx8PqNxXVyWtJ6TGyFvcM1Z2Za3va2q\",\"calculate_tax\":\"after_discount\",\"lead\":{\"id\":3,\"client_id\":null,\"source_id\":null,\"status_id\":1,\"column_priority\":0,\"agent_id\":null,\"company_name\":null,\"website\":null,\"address\":null,\"salutation\":\"mr\",\"client_name\":\"Trung Anh\",\"client_email\":\"geedme728@gmail.com\",\"mobile\":null,\"cell\":null,\"office\":null,\"city\":null,\"state\":null,\"country\":null,\"postal_code\":null,\"note\":\"\",\"next_follow_up\":\"yes\",\"value\":0,\"currency_id\":1,\"category_id\":null,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"b8XqGH4FOaLXkb6zLwCiGeWTH2NkU6X0\",\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/255a1c0e0e980c60587aea5f0d5c8464.png?s=200&d=mp\"}}', NULL, '2022-05-05 00:47:27', '2022-05-05 00:47:27'),
+('907795be-bb2a-47da-bb90-0f81232001ae', 'App\\Notifications\\NewProposal', 'App\\Models\\Lead', 3, '{\"id\":3,\"lead_id\":3,\"valid_till\":\"2022-06-04T00:00:00+00:00\",\"sub_total\":10000,\"total\":4000,\"currency_id\":1,\"discount_type\":\"percent\",\"discount\":60,\"invoice_convert\":0,\"status\":\"waiting\",\"note\":\"noiceee\",\"description\":\"<p>thue<\\/p>\",\"client_comment\":null,\"signature_approval\":0,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"wXx8PqNxXVyWtJ6TGyFvcM1Z2Za3va2q\",\"calculate_tax\":\"after_discount\",\"lead\":{\"id\":3,\"client_id\":null,\"source_id\":null,\"status_id\":2,\"column_priority\":0,\"agent_id\":null,\"company_name\":null,\"website\":null,\"address\":null,\"salutation\":\"mr\",\"client_name\":\"Trung Anh\",\"client_email\":\"geedme728@gmail.com\",\"mobile\":null,\"cell\":null,\"office\":null,\"city\":null,\"state\":null,\"country\":null,\"postal_code\":null,\"note\":\"\",\"next_follow_up\":\"yes\",\"value\":0,\"currency_id\":1,\"category_id\":null,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"b8XqGH4FOaLXkb6zLwCiGeWTH2NkU6X0\",\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/255a1c0e0e980c60587aea5f0d5c8464.png?s=200&d=mp\"}}', NULL, '2022-05-05 00:53:12', '2022-05-05 00:53:12'),
 ('98e92cc9-9ed6-42a7-aa3a-cd01f0235efc', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":5,\"user_id\":1,\"leave_type_id\":2,\"duration\":\"single\",\"leave_date\":\"2022-05-20T00:00:00+00:00\",\"reason\":\"om\",\"status\":\"approved\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-05-20\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 01:53:26', '2022-04-22 01:53:26'),
+('a1a098e6-dd26-4e0d-b808-966ef721dc80', 'App\\Notifications\\NewContract', 'App\\Models\\User', 3, '{\"id\":1,\"client_id\":3,\"subject\":\"HD \\u0111\\u1ebb thu\\u00ea\",\"amount\":\"10000\",\"original_amount\":\"10000.00\",\"contract_type_id\":1,\"start_date\":\"2022-05-03T00:00:00+00:00\",\"original_start_date\":\"2022-05-03\",\"end_date\":\"2022-05-03T00:00:00+00:00\",\"original_end_date\":\"2022-05-03\",\"description\":\"\",\"contract_name\":null,\"company_logo\":null,\"alternate_address\":\"TDH\",\"cell\":\"123456789\",\"office\":\"455625663\",\"city\":\"Qu\\u1eadn C\\u1ea7u Gi\\u1ea5y\",\"state\":\"H\\u00e0 N\\u1ed9i\",\"country\":\"Vietnam\",\"postal_code\":\"100000\",\"contract_detail\":\"<p>Kh\\u00f4ng<\\/p>\",\"added_by\":1,\"last_updated_by\":1,\"hash\":\"hTIuTeTcUWeo2dDqCJzY4P2FVhnLaIgC\",\"currency_id\":2,\"event_id\":null,\"image_url\":\"http:\\/\\/localhost:8087\\/script\\/public\\/img\\/worksuite-logo.png\",\"currency\":{\"id\":2,\"currency_name\":\"Pounds\",\"currency_symbol\":\"\\u00a3\",\"currency_code\":\"GBP\",\"exchange_rate\":null,\"is_cryptocurrency\":\"no\",\"usd_price\":null},\"client\":{\"id\":3,\"name\":\"L\\u00ea Minh Hi\\u1ebfu\",\"email\":\"cuongnew87@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":null,\"gender\":null,\"salutation\":null,\"locale\":\"en\",\"status\":\"active\",\"login\":\"disable\",\"onesignal_player_id\":null,\"last_login\":null,\"email_notifications\":0,\"country_id\":null,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/8ef6f986b5d7f6cb30ea2dfced28d803.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":3,\"role_id\":3}],\"client_details\":{\"id\":1,\"user_id\":3,\"company_name\":\"C\\u1ea7u Gi\\u1ea5y\",\"address\":null,\"shipping_address\":null,\"postal_code\":null,\"state\":null,\"city\":null,\"office\":null,\"website\":null,\"note\":null,\"linkedin\":null,\"facebook\":null,\"twitter\":null,\"skype\":null,\"gst_number\":null,\"category_id\":null,\"sub_category_id\":null,\"added_by\":1,\"last_updated_by\":1},\"session\":null,\"employee_detail\":null}}', NULL, '2022-05-03 05:11:10', '2022-05-03 05:11:10'),
+('a1bc86ce-7c1c-4517-b188-c741452e4704', 'App\\Notifications\\NewProposal', 'App\\Models\\Lead', 2, '{\"id\":2,\"lead_id\":2,\"valid_till\":\"2022-06-04T00:00:00+00:00\",\"sub_total\":10000,\"total\":5050,\"currency_id\":3,\"discount_type\":\"percent\",\"discount\":50,\"invoice_convert\":0,\"status\":\"waiting\",\"note\":\"noice\",\"description\":\"<p>test<\\/p>\",\"client_comment\":null,\"signature_approval\":0,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"Q13kQuWj7rETOkHcuDASj2bmXHAE5sMN\",\"calculate_tax\":\"after_discount\",\"lead\":{\"id\":2,\"client_id\":null,\"source_id\":null,\"status_id\":2,\"column_priority\":0,\"agent_id\":null,\"company_name\":null,\"website\":null,\"address\":null,\"salutation\":null,\"client_name\":\"Hi\\u1ebfu\",\"client_email\":\"huple12345698@gmail.com\",\"mobile\":null,\"cell\":null,\"office\":null,\"city\":null,\"state\":null,\"country\":null,\"postal_code\":null,\"note\":\"\",\"next_follow_up\":\"yes\",\"value\":0,\"currency_id\":1,\"category_id\":null,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"M9NpmRceqmFoQFhTppxZciOQsGgwQLsA\",\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/fb8b5f337b1a911bef2d55a06d52265d.png?s=200&d=mp\"}}', NULL, '2022-05-05 00:23:20', '2022-05-05 00:23:20'),
+('a52f2513-cb63-4db7-9ecc-2f22852a9d91', 'App\\Notifications\\NewNotice', 'App\\Models\\User', 2, '{\"id\":1,\"to\":\"employee\",\"heading\":\"Sinh nhat\",\"description\":\"<p>Thong bao<\\/p>\",\"department_id\":1,\"added_by\":1,\"last_updated_by\":1,\"notice_date\":\"04 May, 2022\"}', NULL, '2022-05-03 20:42:53', '2022-05-03 20:42:53');
+INSERT INTO `notifications` (`id`, `type`, `notifiable_type`, `notifiable_id`, `data`, `read_at`, `created_at`, `updated_at`) VALUES
+('ac835f71-a82d-48d0-93eb-f74e492b4554', 'App\\Notifications\\NewPayment', 'App\\Models\\User', 3, '{\"id\":2,\"project_id\":null,\"invoice_id\":1,\"order_id\":null,\"credit_notes_id\":null,\"amount\":2000,\"gateway\":null,\"transaction_id\":null,\"currency_id\":1,\"plan_id\":null,\"customer_id\":null,\"event_id\":null,\"status\":\"pending\",\"paid_on\":\"2022-05-05T00:00:00+00:00\",\"remarks\":null,\"offline_method_id\":null,\"bill\":null,\"added_by\":1,\"last_updated_by\":1,\"payment_gateway_response\":null,\"payload_id\":null,\"total_amount\":2000,\"paid_date\":\"05 May, 2022 00:00 AM\",\"file_url\":\"http:\\/\\/localhost:8087\\/worksuite\\/public\\/user-uploads\\/payment-receipt\",\"currency\":{\"id\":1,\"currency_name\":\"Dollars\",\"currency_symbol\":\"$\",\"currency_code\":\"USD\",\"exchange_rate\":null,\"is_cryptocurrency\":\"no\",\"usd_price\":null},\"order\":null,\"invoice\":{\"id\":1,\"project_id\":null,\"client_id\":3,\"order_id\":null,\"invoice_number\":\"INV#001\",\"issue_date\":\"2022-05-05T00:00:00+00:00\",\"due_date\":\"2022-05-20T00:00:00+00:00\",\"sub_total\":10000,\"discount\":0,\"discount_type\":\"percent\",\"total\":10000,\"currency_id\":1,\"status\":\"partial\",\"recurring\":\"no\",\"billing_cycle\":null,\"billing_interval\":null,\"billing_frequency\":null,\"file\":null,\"file_original_name\":null,\"note\":\"ji\",\"credit_note\":0,\"show_shipping_address\":\"no\",\"estimate_id\":null,\"send_status\":0,\"due_amount\":8000,\"parent_id\":null,\"invoice_recurring_id\":null,\"created_by\":null,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"1cNa4iXNEILGdPC3WdT815eUprm3AyVH\",\"calculate_tax\":\"after_discount\",\"company_address_id\":1,\"event_id\":null,\"total_amount\":\"$10000\",\"issue_on\":\"05 May, 2022\",\"original_invoice_number\":\"001\",\"currency\":{\"id\":1,\"currency_name\":\"Dollars\",\"currency_symbol\":\"$\",\"currency_code\":\"USD\",\"exchange_rate\":null,\"is_cryptocurrency\":\"no\",\"usd_price\":null},\"address\":{\"id\":1,\"address\":\"Company address\",\"is_default\":1,\"created_at\":\"2022-04-21T09:50:43.000000Z\",\"updated_at\":\"2022-04-21T09:50:43.000000Z\",\"tax_number\":null,\"tax_name\":null,\"location\":\"Worksuite\"}}}', NULL, '2022-05-05 01:45:08', '2022-05-05 01:45:08'),
 ('ad47722a-68cc-4979-931f-d32757e39fa7', 'App\\Notifications\\NewLeaveRequest', 'App\\Models\\User', 1, '{\"id\":8,\"user_id\":1,\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 02:12:22', '2022-04-22 02:12:22'),
+('b091dee4-bee8-4338-b015-a4f9cd268f6e', 'App\\Notifications\\LeadAgentAssigned', 'App\\Models\\User', 1, '{\"id\":1,\"name\":\"Jack\",\"agent_id\":1}', NULL, '2022-05-04 02:47:32', '2022-05-04 02:47:32'),
 ('b3a52e44-ca48-4872-8b97-06bb4741245a', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":6,\"user_id\":1,\"leave_type_id\":1,\"duration\":\"single\",\"leave_date\":\"2022-04-26T00:00:00+00:00\",\"reason\":\"app.leaveTypes.sd\",\"status\":\"pending\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-04-26\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-22T02:31:38+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 02:01:02', '2022-04-22 02:01:02'),
-('da853078-2b6a-436f-b942-909e84c8c9a6', 'App\\Notifications\\TaskCompleted', 'App\\Models\\User', 1, '{\"id\":1,\"created_at\":\"2022-04-22 13:57:49\",\"heading\":\"ba vuexy\",\"completed_on\":\"2022-04-23 00:00:00\"}', NULL, '2022-04-22 19:51:40', '2022-04-22 19:51:40');
+('b52f1d92-e3c6-494d-9a54-022a6e78d58d', 'App\\Notifications\\NoticeUpdate', 'App\\Models\\User', 3, '{\"id\":2,\"to\":\"client\",\"heading\":\"dss\",\"description\":\"<p>sss<img src=\\\"http:\\/\\/localhost:8087\\/worksuite\\/public\\/quill-image\\/SlkrT3hUR0c2ZWlLNHI0eTBKWGNkOEg0WVM5NlNZd2VOekJRa0N1amF4Y1l4NW1UWHFhQkdQSDc4dGpvTldCag==\\\"><\\/p>\",\"department_id\":null,\"added_by\":1,\"last_updated_by\":1,\"notice_date\":\"04 May, 2022\"}', NULL, '2022-05-03 21:19:27', '2022-05-03 21:19:27'),
+('b54fe83f-54ab-4929-b1bd-d3f549ab8952', 'App\\Notifications\\EventInvite', 'App\\Models\\User', 1, '{\"id\":1,\"start_date_time\":\"2022-05-03 16:45:00\",\"event_name\":\"Test 1\"}', NULL, '2022-05-03 02:51:34', '2022-05-03 02:51:34'),
+('b5c6b113-8b92-4986-99a9-e1e2648e1f91', 'App\\Notifications\\NewNotice', 'App\\Models\\User', 3, '{\"id\":2,\"to\":\"client\",\"heading\":\"dss\",\"description\":\"<p>sss<\\/p>\",\"department_id\":null,\"added_by\":1,\"last_updated_by\":1,\"notice_date\":\"04 May, 2022\"}', NULL, '2022-05-03 20:55:35', '2022-05-03 20:55:35'),
+('c8c0a458-a3bd-4a6c-aa37-a55a0f318617', 'App\\Notifications\\EventInvite', 'App\\Models\\User', 2, '{\"id\":1,\"start_date_time\":\"2022-05-03 16:45:00\",\"event_name\":\"Test 1\"}', NULL, '2022-05-03 02:51:41', '2022-05-03 02:51:41'),
+('cd7d60f1-9fdb-41c3-beb4-b6d36003d5a6', 'App\\Notifications\\EventInvite', 'App\\Models\\User', 3, '{\"id\":1,\"start_date_time\":\"2022-05-03 16:45:00\",\"event_name\":\"Test 1\"}', NULL, '2022-05-03 02:51:42', '2022-05-03 02:51:42'),
+('d4d7b0ef-3738-4a0e-a210-ae64c6ca41b1', 'App\\Notifications\\NewProposal', 'App\\Models\\Lead', 1, '{\"id\":1,\"lead_id\":1,\"valid_till\":\"2022-06-03T00:00:00+00:00\",\"sub_total\":10000,\"total\":10100,\"currency_id\":1,\"discount_type\":\"percent\",\"discount\":0,\"invoice_convert\":0,\"status\":\"waiting\",\"note\":\"Thanks\",\"description\":\"<p>d<\\/p>\",\"client_comment\":null,\"signature_approval\":1,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"0qDxVp1qiCnrI3FzMkzQef2SmfTvoyaz\",\"calculate_tax\":\"after_discount\",\"lead\":{\"id\":1,\"client_id\":null,\"source_id\":2,\"status_id\":2,\"column_priority\":0,\"agent_id\":1,\"company_name\":null,\"website\":null,\"address\":null,\"salutation\":\"mr\",\"client_name\":\"Jack\",\"client_email\":\"horsjutsu@gmail.com\",\"mobile\":null,\"cell\":null,\"office\":null,\"city\":null,\"state\":null,\"country\":\"Viet Nam\",\"postal_code\":null,\"note\":\"\",\"next_follow_up\":\"yes\",\"value\":0,\"currency_id\":1,\"category_id\":1,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"cmgNrA3PDL2mKcI0pQ8QMlOdWvnR4AUM\",\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/5d452489040629d65903a3f7ba3f7330.png?s=200&d=mp\"}}', NULL, '2022-05-04 02:51:35', '2022-05-04 02:51:35'),
+('d4d905e7-357b-475e-8987-8712ffce589c', 'App\\Notifications\\EventInvite', 'App\\Models\\User', 1, '{\"id\":2,\"start_date_time\":\"2022-05-03 17:00:00\",\"event_name\":\"S\\u1ef1 ki\\u1ec7n 2\"}', NULL, '2022-05-03 03:03:36', '2022-05-03 03:03:36'),
+('da853078-2b6a-436f-b942-909e84c8c9a6', 'App\\Notifications\\TaskCompleted', 'App\\Models\\User', 1, '{\"id\":1,\"created_at\":\"2022-04-22 13:57:49\",\"heading\":\"ba vuexy\",\"completed_on\":\"2022-04-23 00:00:00\"}', NULL, '2022-04-22 19:51:40', '2022-04-22 19:51:40'),
+('e11c5447-64e9-491e-a6ce-e684e36e093f', 'App\\Notifications\\NewProposal', 'App\\Models\\Lead', 2, '{\"id\":2,\"lead_id\":2,\"valid_till\":\"2022-06-04T00:00:00+00:00\",\"sub_total\":10000,\"total\":5050,\"currency_id\":3,\"discount_type\":\"percent\",\"discount\":50,\"invoice_convert\":0,\"status\":\"waiting\",\"note\":\"noice\",\"description\":\"<p>test<\\/p>\",\"client_comment\":null,\"signature_approval\":0,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"Q13kQuWj7rETOkHcuDASj2bmXHAE5sMN\",\"calculate_tax\":\"after_discount\",\"lead\":{\"id\":2,\"client_id\":null,\"source_id\":null,\"status_id\":2,\"column_priority\":0,\"agent_id\":null,\"company_name\":null,\"website\":null,\"address\":null,\"salutation\":null,\"client_name\":\"Hi\\u1ebfu\",\"client_email\":\"huple12345698@gmail.com\",\"mobile\":null,\"cell\":null,\"office\":null,\"city\":null,\"state\":null,\"country\":null,\"postal_code\":null,\"note\":\"\",\"next_follow_up\":\"yes\",\"value\":0,\"currency_id\":1,\"category_id\":null,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"M9NpmRceqmFoQFhTppxZciOQsGgwQLsA\",\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/fb8b5f337b1a911bef2d55a06d52265d.png?s=200&d=mp\"}}', NULL, '2022-05-05 00:29:58', '2022-05-05 00:29:58'),
+('eb162714-6302-404f-abc3-7abd0c725c14', 'App\\Notifications\\LeaveApplication', 'App\\Models\\User', 1, '{\"id\":9,\"user_id\":1,\"leave_type_id\":2,\"duration\":\"single\",\"leave_date\":\"2022-04-23T00:00:00+00:00\",\"reason\":\"om\",\"status\":\"approved\",\"reject_reason\":null,\"paid\":0,\"added_by\":1,\"last_updated_by\":1,\"event_id\":null,\"date\":\"2022-04-23\",\"user\":{\"id\":1,\"name\":\"Ph\\u1ea1m Ti\\u1ebfn \\u0110\\u1ee9c\",\"email\":\"cuongnew37@gmail.com\",\"two_factor_secret\":null,\"two_factor_recovery_codes\":null,\"two_factor_confirmed\":0,\"two_factor_email_confirmed\":0,\"image\":null,\"mobile\":\"0976947340\",\"gender\":\"male\",\"salutation\":null,\"locale\":\"VI\",\"status\":\"active\",\"login\":\"enable\",\"onesignal_player_id\":null,\"last_login\":\"2022-04-23T01:00:05+00:00\",\"email_notifications\":1,\"country_id\":232,\"dark_theme\":0,\"rtl\":0,\"two_fa_verify_via\":null,\"two_factor_code\":null,\"two_factor_expires_at\":null,\"admin_approval\":1,\"permission_sync\":1,\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/86ae7f2745f3a34eb13fd60cb883b898.png?s=200&d=mp\",\"modules\":[\"clients\",\"employees\",\"attendance\",\"projects\",\"tasks\",\"estimates\",\"invoices\",\"payments\",\"expenses\",\"timelogs\",\"tickets\",\"messages\",\"events\",\"leaves\",\"notices\",\"leads\",\"holidays\",\"products\",\"contracts\",\"reports\",\"settings\",\"orders\",\"knowledgebase\"],\"user_other_role\":true,\"role\":[{\"user_id\":1,\"role_id\":1},{\"user_id\":1,\"role_id\":2}],\"client_details\":null,\"session\":null,\"employee_detail\":{\"id\":1,\"user_id\":1,\"employee_id\":\"emp-1\",\"address\":\"S\\u1ed1 nh\\u00e0 16A ng\\u00f5 3 Nguy\\u1ec5n V\\u0103n Huy\\u00ean, Quan Hoa, C\\u1ea7u Gi\\u1ea5y, H\\u00e0 N\\u1ed9i\",\"hourly_rate\":null,\"slack_username\":null,\"department_id\":1,\"designation_id\":1,\"joining_date\":\"2022-04-21T00:00:00+00:00\",\"last_date\":null,\"added_by\":null,\"last_updated_by\":1,\"attendance_reminder\":null,\"date_of_birth\":\"2022-04-22T00:00:00+00:00\",\"designation\":{\"id\":1,\"name\":\"Nh\\u00e2n vi\\u00ean\",\"added_by\":null,\"last_updated_by\":null}}}}', NULL, '2022-04-22 20:18:05', '2022-04-22 20:18:05'),
+('f07c7713-a87f-441a-9d58-94f75e3bef5a', 'App\\Notifications\\InvoicePaymentReceived', 'App\\Models\\User', 1, '{\"id\":1,\"invoice_number\":\"INV#001\"}', NULL, '2022-05-05 01:44:46', '2022-05-05 01:44:46'),
+('f7b00d25-78d1-4f84-96df-60a0b3285401', 'App\\Notifications\\NewProposal', 'App\\Models\\Lead', 1, '{\"id\":1,\"lead_id\":1,\"valid_till\":\"2022-06-03T00:00:00+00:00\",\"sub_total\":10000,\"total\":10100,\"currency_id\":1,\"discount_type\":\"percent\",\"discount\":0,\"invoice_convert\":0,\"status\":\"waiting\",\"note\":\"Thanks\",\"description\":\"<p>d<\\/p>\",\"client_comment\":null,\"signature_approval\":1,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"0qDxVp1qiCnrI3FzMkzQef2SmfTvoyaz\",\"calculate_tax\":\"after_discount\",\"lead\":{\"id\":1,\"client_id\":null,\"source_id\":2,\"status_id\":2,\"column_priority\":0,\"agent_id\":1,\"company_name\":null,\"website\":null,\"address\":null,\"salutation\":\"mr\",\"client_name\":\"Jack\",\"client_email\":\"horsjutsu@gmail.com\",\"mobile\":null,\"cell\":null,\"office\":null,\"city\":null,\"state\":null,\"country\":\"Viet Nam\",\"postal_code\":null,\"note\":\"\",\"next_follow_up\":\"yes\",\"value\":0,\"currency_id\":1,\"category_id\":1,\"added_by\":1,\"last_updated_by\":1,\"hash\":\"cmgNrA3PDL2mKcI0pQ8QMlOdWvnR4AUM\",\"image_url\":\"https:\\/\\/www.gravatar.com\\/avatar\\/5d452489040629d65903a3f7ba3f7330.png?s=200&d=mp\"}}', NULL, '2022-05-04 19:45:34', '2022-05-04 19:45:34'),
+('fbe926bb-fdec-4029-b821-9c5ba3272c01', 'App\\Notifications\\NewPayment', 'App\\Models\\User', 3, '{\"id\":1,\"project_id\":1,\"invoice_id\":null,\"order_id\":null,\"credit_notes_id\":null,\"amount\":10000,\"gateway\":null,\"transaction_id\":null,\"currency_id\":1,\"plan_id\":null,\"customer_id\":null,\"event_id\":null,\"status\":\"complete\",\"paid_on\":\"2022-05-05T00:00:00+00:00\",\"remarks\":\"ko\",\"offline_method_id\":null,\"bill\":null,\"added_by\":1,\"last_updated_by\":1,\"payment_gateway_response\":null,\"payload_id\":null,\"total_amount\":10000,\"paid_date\":\"05 May, 2022 00:00 AM\",\"file_url\":\"http:\\/\\/localhost:8087\\/worksuite\\/public\\/user-uploads\\/payment-receipt\",\"currency\":{\"id\":1,\"currency_name\":\"Dollars\",\"currency_symbol\":\"$\",\"currency_code\":\"USD\",\"exchange_rate\":null,\"is_cryptocurrency\":\"no\",\"usd_price\":null},\"order\":null,\"project\":{\"id\":1,\"project_name\":\"Qu\\u1ea3n l\\u00fd d\\u00e2n c\\u01b0\",\"project_summary\":\"<p>Pending<\\/p>\",\"project_admin\":null,\"start_date\":\"2022-04-30T00:00:00+00:00\",\"deadline\":null,\"notes\":\"<p>NOthings<\\/p>\",\"category_id\":1,\"client_id\":3,\"team_id\":1,\"feedback\":null,\"manual_timelog\":\"enable\",\"client_view_task\":\"disable\",\"allow_client_notification\":\"disable\",\"completion_percent\":78,\"calculate_task_progress\":\"false\",\"deleted_at\":null,\"project_budget\":100000,\"currency_id\":1,\"hours_allocated\":200,\"status\":\"in progress\",\"added_by\":1,\"last_updated_by\":1,\"hash\":\"mSQP9IHueuoCWTYxOUTWNG7xv81fdKLv\",\"public\":0,\"isProjectAdmin\":false}}', NULL, '2022-05-05 01:02:31', '2022-05-05 01:02:31');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `offline_payment_methods`
+-- Table structure for table `offline_payment_methods`
 --
 
 CREATE TABLE `offline_payment_methods` (
@@ -10104,7 +10247,7 @@ CREATE TABLE `offline_payment_methods` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `orders`
+-- Table structure for table `orders`
 --
 
 CREATE TABLE `orders` (
@@ -10128,7 +10271,7 @@ CREATE TABLE `orders` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `order_items`
+-- Table structure for table `order_items`
 --
 
 CREATE TABLE `order_items` (
@@ -10150,7 +10293,7 @@ CREATE TABLE `order_items` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `order_item_images`
+-- Table structure for table `order_item_images`
 --
 
 CREATE TABLE `order_item_images` (
@@ -10164,7 +10307,7 @@ CREATE TABLE `order_item_images` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `organisation_settings`
+-- Table structure for table `organisation_settings`
 --
 
 CREATE TABLE `organisation_settings` (
@@ -10237,16 +10380,16 @@ CREATE TABLE `organisation_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `organisation_settings`
+-- Dumping data for table `organisation_settings`
 --
 
 INSERT INTO `organisation_settings` (`id`, `company_name`, `company_email`, `company_phone`, `logo`, `login_background`, `address`, `website`, `currency_id`, `timezone`, `date_format`, `date_picker_format`, `moment_format`, `time_format`, `locale`, `latitude`, `longitude`, `leaves_start_from`, `active_theme`, `last_updated_by`, `currency_converter_key`, `google_map_key`, `task_self`, `created_at`, `updated_at`, `weather_key`, `purchase_code`, `supported_until`, `google_recaptcha_status`, `google_recaptcha_v2_status`, `google_recaptcha_v2_site_key`, `google_recaptcha_v2_secret_key`, `google_recaptcha_v3_status`, `google_recaptcha_v3_site_key`, `google_recaptcha_v3_secret_key`, `app_debug`, `rounded_theme`, `hide_cron_message`, `system_update`, `logo_background_color`, `before_days`, `after_days`, `on_deadline`, `default_task_status`, `show_review_modal`, `dashboard_clock`, `ticket_form_google_captcha`, `lead_form_google_captcha`, `taskboard_length`, `last_cron_run`, `favicon`, `auth_theme`, `light_logo`, `sidebar_logo_style`, `session_driver`, `allow_client_signup`, `admin_client_signup_approval`, `allowed_file_types`, `google_calendar_status`, `google_client_id`, `google_client_secret`, `google_calendar_verification_status`, `google_id`, `name`, `token`, `allowed_file_size`) VALUES
-(1, 'Ong', 'company@email.com', '1234567891', NULL, NULL, 'Company address', 'https://worksuite.biz', 1, 'Asia/Kolkata', 'd-m-Y', 'dd-mm-yyyy', 'DD-MM-YYYY', 'h:i a', 'en', '26.91243360', '75.78727090', 'joining_date', 'default', 1, NULL, NULL, 'yes', '2022-04-21 02:50:42', '2022-04-21 04:11:14', '', NULL, NULL, 'deactive', 'deactive', NULL, NULL, 'deactive', NULL, NULL, 0, 1, 0, 1, '#ffffff', 0, 0, 'yes', 1, 1, 0, 0, 0, 10, NULL, NULL, 'light', NULL, 'square', 'file', 0, 0, 'image/*,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/docx,application/pdf,text/plain,application/msword,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/zip,application/x-zip-compressed,application/x-compressed,multipart/x-zip,.xlsx,video/x-flv,video/mp4,application/x-mpegURL,video/MP2T,video/3gpp,video/quicktime,video/x-msvideo,video/x-ms-wmv,application/sla,.stl', 'inactive', NULL, NULL, 'non_verified', NULL, NULL, NULL, 10);
+(1, 'Ong', 'company@email.com', '1234567891', NULL, NULL, 'Quan Hoa, Cầu Giấy, Hà Nội', 'https://worksuite.biz', 1, 'Asia/Kolkata', 'd-m-Y', 'dd-mm-yyyy', 'DD-MM-YYYY', 'h:i a', 'en', '26.91243360', '75.78727090', 'joining_date', 'default', 1, NULL, NULL, 'yes', '2022-04-21 02:50:42', '2022-05-04 00:15:30', '', NULL, NULL, 'deactive', 'deactive', NULL, NULL, 'deactive', NULL, NULL, 0, 1, 0, 1, '#ffffff', 0, 0, 'yes', 1, 1, 0, 0, 0, 10, NULL, NULL, 'light', NULL, 'square', 'file', 0, 0, 'image/*,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/docx,application/pdf,text/plain,application/msword,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/zip,application/x-zip-compressed,application/x-compressed,multipart/x-zip,.xlsx,video/x-flv,video/mp4,application/x-mpegURL,video/MP2T,video/3gpp,video/quicktime,video/x-msvideo,video/x-ms-wmv,application/sla,.stl', 'inactive', NULL, NULL, 'non_verified', NULL, NULL, NULL, 10);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `password_resets`
+-- Table structure for table `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -10258,7 +10401,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `payments`
+-- Table structure for table `payments`
 --
 
 CREATE TABLE `payments` (
@@ -10287,10 +10430,18 @@ CREATE TABLE `payments` (
   `payload_id` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `payments`
+--
+
+INSERT INTO `payments` (`id`, `project_id`, `invoice_id`, `order_id`, `credit_notes_id`, `amount`, `gateway`, `transaction_id`, `currency_id`, `plan_id`, `customer_id`, `event_id`, `status`, `paid_on`, `remarks`, `created_at`, `updated_at`, `offline_method_id`, `bill`, `added_by`, `last_updated_by`, `payment_gateway_response`, `payload_id`) VALUES
+(1, 1, NULL, NULL, NULL, 10000, NULL, NULL, 1, NULL, NULL, NULL, 'complete', '2022-05-05 00:00:00', 'ko', '2022-05-05 01:02:31', '2022-05-05 01:02:31', NULL, NULL, 1, 1, NULL, NULL),
+(2, NULL, 1, NULL, NULL, 2000, NULL, NULL, 1, NULL, NULL, NULL, 'pending', '2022-05-05 00:00:00', NULL, '2022-05-05 01:44:46', '2022-05-05 01:45:08', NULL, NULL, 1, 1, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `payment_gateway_credentials`
+-- Table structure for table `payment_gateway_credentials`
 --
 
 CREATE TABLE `payment_gateway_credentials` (
@@ -10353,7 +10504,7 @@ CREATE TABLE `payment_gateway_credentials` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `payment_gateway_credentials`
+-- Dumping data for table `payment_gateway_credentials`
 --
 
 INSERT INTO `payment_gateway_credentials` (`id`, `paypal_client_id`, `paypal_secret`, `paypal_status`, `live_stripe_client_id`, `live_stripe_secret`, `live_stripe_webhook_secret`, `stripe_status`, `created_at`, `updated_at`, `live_razorpay_key`, `live_razorpay_secret`, `razorpay_status`, `paypal_mode`, `sandbox_paypal_client_id`, `sandbox_paypal_secret`, `test_stripe_client_id`, `test_stripe_secret`, `test_razorpay_key`, `test_razorpay_secret`, `test_stripe_webhook_secret`, `stripe_mode`, `razorpay_mode`, `paystack_key`, `paystack_secret`, `paystack_merchant_email`, `paystack_status`, `paystack_mode`, `test_paystack_key`, `test_paystack_secret`, `test_paystack_merchant_email`, `paystack_payment_url`, `mollie_api_key`, `mollie_status`, `payfast_merchant_id`, `payfast_merchant_key`, `payfast_passphrase`, `payfast_mode`, `payfast_status`, `authorize_api_login_id`, `authorize_transaction_key`, `authorize_environment`, `authorize_status`, `square_application_id`, `square_access_token`, `square_location_id`, `square_environment`, `square_status`, `flutterwave_status`, `flutterwave_mode`, `test_flutterwave_key`, `test_flutterwave_secret`, `test_flutterwave_hash`, `live_flutterwave_key`, `live_flutterwave_secret`, `live_flutterwave_hash`) VALUES
@@ -10362,7 +10513,7 @@ INSERT INTO `payment_gateway_credentials` (`id`, `paypal_client_id`, `paypal_sec
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `permissions`
+-- Table structure for table `permissions`
 --
 
 CREATE TABLE `permissions` (
@@ -10378,274 +10529,274 @@ CREATE TABLE `permissions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `permissions`
+-- Dumping data for table `permissions`
 --
 
 INSERT INTO `permissions` (`id`, `name`, `display_name`, `description`, `module_id`, `created_at`, `updated_at`, `is_custom`, `allowed_permissions`) VALUES
-(1, 'add_clients', 'Add Clients', NULL, 1, NULL, '2022-04-21 02:42:20', 0, '{\"all\":4, \"none\":5}'),
-(2, 'view_clients', 'View Clients', NULL, 1, NULL, '2022-04-21 02:42:20', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
-(3, 'edit_clients', 'Edit Clients', NULL, 1, NULL, '2022-04-21 02:42:20', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
-(4, 'delete_clients', 'Delete Clients', NULL, 1, NULL, '2022-04-21 02:42:20', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
-(5, 'add_employees', 'Add Employees', NULL, 2, NULL, '2022-04-21 02:42:20', 0, '{\"all\":4, \"none\":5}'),
-(6, 'view_employees', 'View Employees', NULL, 2, NULL, '2022-04-21 02:45:16', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(7, 'edit_employees', 'Edit Employees', NULL, 2, NULL, '2022-04-21 02:48:20', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(8, 'delete_employees', 'Delete Employees', NULL, 2, NULL, '2022-04-21 02:42:22', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
-(9, 'add_projects', 'Add Project', NULL, 3, NULL, '2022-04-21 02:42:22', 0, '{\"all\":4, \"none\":5}'),
-(10, 'view_projects', 'View Project', NULL, 3, NULL, '2022-04-21 02:42:22', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(11, 'edit_projects', 'Edit Project', NULL, 3, NULL, '2022-04-21 02:42:23', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(12, 'delete_projects', 'Delete Project', NULL, 3, NULL, '2022-04-21 02:42:23', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(13, 'add_attendance', 'Add Attendance', NULL, 4, NULL, '2022-04-21 02:42:23', 0, '{\"all\":4, \"none\":5}'),
-(14, 'view_attendance', 'View Attendance', NULL, 4, NULL, '2022-04-21 02:42:23', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(15, 'add_tasks', 'Add Tasks', NULL, 5, NULL, '2022-04-21 02:42:24', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
-(16, 'view_tasks', 'View Tasks', NULL, 5, NULL, '2022-04-21 02:42:24', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(17, 'edit_tasks', 'Edit Tasks', NULL, 5, NULL, '2022-04-21 02:42:24', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(18, 'delete_tasks', 'Delete Tasks', NULL, 5, NULL, '2022-04-21 02:42:24', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(19, 'add_estimates', 'Add Estimates', NULL, 6, NULL, '2022-04-21 02:42:24', 0, '{\"all\":4, \"none\":5}'),
-(20, 'view_estimates', 'View Estimates', NULL, 6, NULL, '2022-04-21 02:42:24', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(21, 'edit_estimates', 'Edit Estimates', NULL, 6, NULL, '2022-04-21 02:42:24', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(22, 'delete_estimates', 'Delete Estimates', NULL, 6, NULL, '2022-04-21 02:42:24', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(23, 'add_invoices', 'Add Invoices', NULL, 7, NULL, '2022-04-21 02:42:24', 0, '{\"all\":4, \"none\":5}'),
-(24, 'view_invoices', 'View Invoices', NULL, 7, NULL, '2022-04-21 02:42:25', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(25, 'edit_invoices', 'Edit Invoices', NULL, 7, NULL, '2022-04-21 02:42:25', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(26, 'delete_invoices', 'Delete Invoices', NULL, 7, NULL, '2022-04-21 02:42:25', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(27, 'add_payments', 'Add Payments', NULL, 8, NULL, '2022-04-21 02:42:25', 0, '{\"all\":4, \"none\":5}'),
-(28, 'view_payments', 'View Payments', NULL, 8, NULL, '2022-04-21 02:42:26', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(29, 'edit_payments', 'Edit Payments', NULL, 8, NULL, '2022-04-21 02:42:26', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(30, 'delete_payments', 'Delete Payments', NULL, 8, NULL, '2022-04-21 02:42:26', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(31, 'add_timelogs', 'Add Timelogs', NULL, 9, NULL, '2022-04-21 02:45:16', 0, '{\"all\":4,\"added\":1, \"none\":5}'),
-(32, 'view_timelogs', 'View Timelogs', NULL, 9, NULL, '2022-04-21 02:42:26', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(33, 'edit_timelogs', 'Edit Timelogs', NULL, 9, NULL, '2022-04-21 02:42:27', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(34, 'delete_timelogs', 'Delete Timelogs', NULL, 9, NULL, '2022-04-21 02:42:27', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(35, 'add_tickets', 'Add Tickets', NULL, 10, NULL, '2022-04-21 02:45:16', 0, '{\"all\":4,\"added\":1, \"none\":5}'),
-(36, 'view_tickets', 'View Tickets', NULL, 10, NULL, '2022-04-21 02:42:28', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(37, 'edit_tickets', 'Edit Tickets', NULL, 10, NULL, '2022-04-21 02:42:28', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(38, 'delete_tickets', 'Delete Tickets', NULL, 10, NULL, '2022-04-21 02:42:28', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(39, 'add_events', 'Add Events', NULL, 11, NULL, '2022-04-21 02:42:28', 0, '{\"all\":4, \"none\":5}'),
-(40, 'view_events', 'View Events', NULL, 11, NULL, '2022-04-21 02:42:28', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(41, 'edit_events', 'Edit Events', NULL, 11, NULL, '2022-04-21 02:42:28', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(42, 'delete_events', 'Delete Events', NULL, 11, NULL, '2022-04-21 02:42:28', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(43, 'add_notice', 'Add Notice', NULL, 12, NULL, '2022-04-21 02:42:28', 0, '{\"all\":4, \"none\":5}'),
-(44, 'view_notice', 'View Notice', NULL, 12, NULL, '2022-04-21 02:48:57', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(45, 'edit_notice', 'Edit Notice', NULL, 12, NULL, '2022-04-21 02:48:57', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(46, 'delete_notice', 'Delete Notice', NULL, 12, NULL, '2022-04-21 02:48:57', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(47, 'add_leave', 'Add Leave', NULL, 13, NULL, '2022-04-21 02:44:47', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
-(48, 'view_leave', 'View Leave', NULL, 13, NULL, '2022-04-21 02:42:29', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(49, 'edit_leave', 'Edit Leave', NULL, 13, NULL, '2022-04-21 02:42:29', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(50, 'delete_leave', 'Delete Leave', NULL, 13, NULL, '2022-04-21 02:42:29', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(51, 'add_lead', 'Add Lead', NULL, 14, NULL, '2022-04-21 02:42:29', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
-(52, 'view_lead', 'View Lead', NULL, 14, NULL, '2022-04-21 02:42:29', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(53, 'edit_lead', 'Edit Lead', NULL, 14, NULL, '2022-04-21 02:42:29', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(54, 'delete_lead', 'Delete Lead', NULL, 14, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(55, 'add_holiday', 'Add Holiday', NULL, 15, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"none\":5}'),
-(56, 'view_holiday', 'View Holiday', NULL, 15, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
-(57, 'edit_holiday', 'Edit Holiday', NULL, 15, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
-(58, 'delete_holiday', 'Delete Holiday', NULL, 15, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
-(59, 'add_product', 'Add Product', NULL, 16, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"none\":5}'),
-(60, 'view_product', 'View Product', NULL, 16, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
-(61, 'edit_product', 'Edit Product', NULL, 16, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
-(62, 'delete_product', 'Delete Product', NULL, 16, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
-(63, 'add_expenses', 'Add Expenses', NULL, 17, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
-(64, 'view_expenses', 'View Expenses', NULL, 17, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(65, 'edit_expenses', 'Edit Expenses', NULL, 17, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(66, 'delete_expenses', 'Delete Expenses', NULL, 17, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(67, 'add_contract', 'Add Contract', NULL, 18, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"none\":5}'),
-(68, 'view_contract', 'View Contract', NULL, 18, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(69, 'edit_contract', 'Edit Contract', NULL, 18, NULL, '2022-04-21 02:42:31', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(70, 'delete_contract', 'Delete Contract', NULL, 18, NULL, '2022-04-21 02:42:31', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(71, 'manage_client_category', 'Manage Client Category', NULL, 1, '2022-04-21 02:35:58', '2022-04-21 02:48:19', 1, '{\"all\":4, \"none\":5}'),
-(72, 'manage_client_subcategory', 'Manage Client Subcategory', NULL, 1, '2022-04-21 02:35:58', '2022-04-21 02:48:19', 1, '{\"all\":4, \"none\":5}'),
-(73, 'add_client_contacts', 'Add Client Contacts', NULL, 1, '2022-04-21 02:35:58', '2022-04-21 02:42:32', 1, '{\"all\":4, \"none\":5}'),
-(74, 'view_client_contacts', 'View Client Contacts', NULL, 1, '2022-04-21 02:35:58', '2022-04-21 02:48:19', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(75, 'edit_client_contacts', 'Edit Client Contacts', NULL, 1, '2022-04-21 02:35:58', '2022-04-21 02:42:32', 1, '{\"all\":4, \"none\":5}'),
-(76, 'delete_client_contacts', 'Delete Client Contacts', NULL, 1, '2022-04-21 02:35:58', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
-(77, 'add_designation', 'Add Designation', NULL, 2, '2022-04-21 02:35:58', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
-(78, 'view_designation', 'View Designation', NULL, 2, '2022-04-21 02:35:58', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
-(79, 'edit_designation', 'Edit Designation', NULL, 2, '2022-04-21 02:35:59', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
-(80, 'delete_designation', 'Delete Designation', NULL, 2, '2022-04-21 02:35:59', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
-(81, 'add_department', 'Add Department', NULL, 2, '2022-04-21 02:35:59', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
-(82, 'view_department', 'View Department', NULL, 2, '2022-04-21 02:35:59', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
-(83, 'edit_department', 'Edit Department', NULL, 2, '2022-04-21 02:35:59', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
-(84, 'delete_department', 'Delete Department', NULL, 2, '2022-04-21 02:35:59', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
-(85, 'add_documents', 'Add Documents', NULL, 2, '2022-04-21 02:36:00', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
-(86, 'view_documents', 'View Documents', NULL, 2, '2022-04-21 02:36:00', '2022-04-21 02:42:33', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(87, 'edit_documents', 'Edit Documents', NULL, 2, '2022-04-21 02:36:00', '2022-04-21 02:42:33', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(88, 'delete_documents', 'Delete Documents', NULL, 2, '2022-04-21 02:36:00', '2022-04-21 02:42:33', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(89, 'view_leaves_taken', 'View Leaves Taken', NULL, 2, '2022-04-21 02:36:00', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
-(90, 'update_leaves_quota', 'Update Leaves Quota', NULL, 2, '2022-04-21 02:36:00', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
-(91, 'view_employee_tasks', 'View Employee Tasks', NULL, 2, '2022-04-21 02:36:00', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
-(92, 'view_employee_projects', 'View Employee Projects', NULL, 2, '2022-04-21 02:36:00', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
-(93, 'view_employee_timelogs', 'View Employee Timelogs', NULL, 2, '2022-04-21 02:36:00', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
-(94, 'manage_project_category', 'Manage Project Category', NULL, 3, '2022-04-21 02:36:35', '2022-04-21 02:42:34', 1, '{\"all\":4, \"none\":5}'),
-(95, 'view_project_files', 'View Project Files', NULL, 3, '2022-04-21 02:36:35', '2022-04-21 02:42:34', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(96, 'add_project_files', 'Add Project Files', NULL, 3, '2022-04-21 02:36:35', '2022-04-21 02:48:20', 1, '{\"all\":4, \"none\":5}'),
-(98, 'delete_project_files', 'Delete Project Files', NULL, 3, '2022-04-21 02:36:36', '2022-04-21 02:42:34', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(99, 'view_project_discussions', 'View Project Discussions', NULL, 3, '2022-04-21 02:36:36', '2022-04-21 02:42:34', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(100, 'add_project_discussions', 'Add Project Discussions', NULL, 3, '2022-04-21 02:36:36', '2022-04-21 02:42:34', 1, '{\"all\":4, \"none\":5}'),
-(101, 'edit_project_discussions', 'Edit Project Discussions', NULL, 3, '2022-04-21 02:36:36', '2022-04-21 02:42:35', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(102, 'delete_project_discussions', 'Delete Project Discussions', NULL, 3, '2022-04-21 02:36:36', '2022-04-21 02:42:35', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(103, 'manage_discussion_category', 'Manage Discussion Category', NULL, 3, '2022-04-21 02:36:36', '2022-04-21 02:48:55', 1, '{\"all\":4, \"none\":5}'),
-(104, 'view_project_milestones', 'View Project Milestones', NULL, 3, '2022-04-21 02:36:36', '2022-04-21 02:48:55', 1, '{\"all\":4, \"added\":1, \"owned\":2, \"none\":5}'),
-(105, 'add_project_milestones', 'Add Project Milestones', NULL, 3, '2022-04-21 02:36:36', '2022-04-21 02:42:36', 1, '{\"all\":4, \"none\":5}'),
-(106, 'edit_project_milestones', 'Edit Project Milestones', NULL, 3, '2022-04-21 02:36:37', '2022-04-21 02:48:55', 1, '{\"all\":4, \"added\":1, \"owned\":2, \"none\":5}'),
-(107, 'delete_project_milestones', 'Delete Project Milestones', NULL, 3, '2022-04-21 02:36:37', '2022-04-21 02:48:55', 1, '{\"all\":4, \"added\":1, \"owned\":2, \"none\":5}'),
-(108, 'view_project_members', 'View Project Members', NULL, 3, '2022-04-21 02:36:37', '2022-04-21 02:48:55', 1, '{\"all\":4, \"none\":5}'),
-(109, 'add_project_members', 'Add Project Members', NULL, 3, '2022-04-21 02:36:37', '2022-04-21 02:42:37', 1, '{\"all\":4, \"none\":5}'),
-(110, 'edit_project_members', 'Edit Project Members', NULL, 3, '2022-04-21 02:36:37', '2022-04-21 02:48:55', 1, '{\"all\":4, \"none\":5}'),
-(111, 'delete_project_members', 'Delete Project Members', NULL, 3, '2022-04-21 02:36:37', '2022-04-21 02:48:55', 1, '{\"all\":4, \"none\":5}'),
-(112, 'view_project_rating', 'View Project Rating', NULL, 3, '2022-04-21 02:36:37', '2022-04-21 02:42:38', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(113, 'add_project_rating', 'Add Project Rating', NULL, 3, '2022-04-21 02:36:37', '2022-04-21 02:42:38', 1, '{\"all\":4, \"none\":5}'),
-(114, 'edit_project_rating', 'Edit Project Rating', NULL, 3, '2022-04-21 02:36:37', '2022-04-21 02:42:38', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(115, 'delete_project_rating', 'Delete Project Rating', NULL, 3, '2022-04-21 02:36:38', '2022-04-21 02:42:39', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(116, 'view_project_budget', 'View Project Budget', NULL, 3, '2022-04-21 02:36:38', '2022-04-21 02:42:39', 1, '{\"all\":4, \"none\":5}'),
-(117, 'view_project_timelogs', 'View Project Timelogs', NULL, 3, '2022-04-21 02:36:38', '2022-04-21 02:42:39', 1, '{\"all\":4, \"none\":5}'),
-(118, 'view_project_expenses', 'View Project Expenses', NULL, 3, '2022-04-21 02:36:38', '2022-04-21 02:42:39', 1, '{\"all\":4, \"none\":5}'),
-(119, 'view_project_tasks', 'View Project Tasks', NULL, 3, '2022-04-21 02:36:38', '2022-04-21 02:42:39', 1, '{\"all\":4, \"none\":5}'),
-(120, 'view_project_invoices', 'View Project Invoices', NULL, 3, '2022-04-21 02:36:38', '2022-04-21 02:42:39', 1, '{\"all\":4, \"none\":5}'),
-(121, 'view_project_burndown_chart', 'View Project Burndown Chart', NULL, 3, '2022-04-21 02:36:38', '2022-04-21 02:42:40', 1, '{\"all\":4, \"none\":5}'),
-(122, 'view_project_payments', 'View Project Payments', NULL, 3, '2022-04-21 02:36:38', '2022-04-21 02:42:40', 1, '{\"all\":4, \"none\":5}'),
-(123, 'view_project_gantt_chart', 'View Project Gantt Chart', NULL, 3, '2022-04-21 02:36:38', '2022-04-21 02:42:40', 1, '{\"all\":4, \"none\":5}'),
-(124, 'view_task_category', 'View Task Category', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:40', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(125, 'add_task_category', 'Add Task Category', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:40', 1, '{\"all\":4, \"none\":5}'),
-(126, 'edit_task_category', 'Edit Task Category', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(127, 'delete_task_category', 'Delete Task Category', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(128, 'view_task_files', 'View Task Files', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(129, 'add_task_files', 'Add Task Files', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"none\":5}'),
-(131, 'delete_task_files', 'Delete Task Files', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(132, 'view_sub_tasks', 'View Sub Tasks', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(133, 'add_sub_tasks', 'Add Sub Tasks', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"none\":5}'),
-(134, 'edit_sub_tasks', 'Edit Sub Tasks', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(135, 'delete_sub_tasks', 'Delete Sub Tasks', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(136, 'view_task_comments', 'View Task Comments', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(137, 'add_task_comments', 'Add Task Comments', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"none\":5}'),
-(138, 'edit_task_comments', 'Edit Task Comments', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(139, 'delete_task_comments', 'Delete Task Comments', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(140, 'view_task_notes', 'View Task Notes', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(141, 'add_task_notes', 'Add Task Notes', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"none\":5}'),
-(142, 'edit_task_notes', 'Edit Task Notes', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:42', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(143, 'delete_task_notes', 'Delete Task Notes', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:42', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(144, 'task_labels', 'Task Labels', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:42', 1, '{\"all\":4, \"none\":5}'),
-(145, 'change_status', 'Change Status', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:42', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(146, 'send_reminder', 'Send Reminder', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:42', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(147, 'add_status', 'Add Status', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:42', 1, '{\"all\":4, \"none\":5}'),
-(148, 'manage_product_category', 'Manage Product Category', NULL, 16, '2022-04-21 02:37:44', '2022-04-21 02:42:42', 1, '{\"all\":4, \"none\":5}'),
-(149, 'manage_product_sub_category', 'Manage Product Sub Category', NULL, 16, '2022-04-21 02:37:44', '2022-04-21 02:42:42', 1, '{\"all\":4, \"none\":5}'),
-(150, 'manage_tax', 'Manage Tax', NULL, 7, '2022-04-21 02:37:44', '2022-04-21 02:42:42', 1, '{\"all\":4, \"none\":5}'),
-(151, 'view_lead_agents', 'View Lead Agents', NULL, 14, '2022-04-21 02:39:00', '2022-04-21 02:42:42', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(152, 'add_lead_agent', 'Add Lead Agent', NULL, 14, '2022-04-21 02:39:00', '2022-04-21 02:42:43', 1, '{\"all\":4, \"none\":5}'),
-(153, 'edit_lead_agent', 'Edit Lead Agent', NULL, 14, '2022-04-21 02:39:00', '2022-04-21 02:42:43', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(154, 'delete_lead_agent', 'Delete Lead Agent', NULL, 14, '2022-04-21 02:39:00', '2022-04-21 02:42:43', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(155, 'view_lead_category', 'View Lead Category', NULL, 14, '2022-04-21 02:39:01', '2022-04-21 02:42:44', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(156, 'add_lead_category', 'Add Lead Category', NULL, 14, '2022-04-21 02:39:01', '2022-04-21 02:42:44', 1, '{\"all\":4, \"none\":5}'),
-(157, 'edit_lead_category', 'Edit Lead Category', NULL, 14, '2022-04-21 02:39:02', '2022-04-21 02:42:44', 1, '{\"all\":4, \"none\":5}'),
-(158, 'delete_lead_category', 'Delete Lead Category', NULL, 14, '2022-04-21 02:39:02', '2022-04-21 02:42:44', 1, '{\"all\":4, \"none\":5}'),
-(159, 'manage_lead_custom_forms', 'Manage Lead Custom Forms', NULL, 14, '2022-04-21 02:39:02', '2022-04-21 02:42:44', 1, '{\"all\":4, \"none\":5}'),
-(160, 'view_lead_files', 'View Lead Files', NULL, 14, '2022-04-21 02:39:02', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(161, 'add_lead_files', 'Add Lead Files', NULL, 14, '2022-04-21 02:39:02', '2022-04-21 02:42:45', 1, '{\"all\":4, \"none\":5}'),
-(163, 'delete_lead_files', 'Delete Lead Files', NULL, 14, '2022-04-21 02:39:02', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(164, 'view_lead_follow_up', 'View Lead Follow Up', NULL, 14, '2022-04-21 02:39:02', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(165, 'add_lead_follow_up', 'Add Lead Follow Up', NULL, 14, '2022-04-21 02:39:03', '2022-04-21 02:42:45', 1, '{\"all\":4, \"none\":5}'),
-(166, 'edit_lead_follow_up', 'Edit Lead Follow Up', NULL, 14, '2022-04-21 02:39:03', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(167, 'delete_lead_follow_up', 'Delete Lead Follow Up', NULL, 14, '2022-04-21 02:39:03', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(168, 'view_lead_sources', 'View Lead Sources', NULL, 14, '2022-04-21 02:39:04', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(169, 'add_lead_sources', 'Add Lead Sources', NULL, 14, '2022-04-21 02:39:04', '2022-04-21 02:42:45', 1, '{\"all\":4, \"none\":5}'),
-(170, 'edit_lead_sources', 'Edit Lead Sources', NULL, 14, '2022-04-21 02:39:04', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(171, 'delete_lead_sources', 'Delete Lead Sources', NULL, 14, '2022-04-21 02:39:04', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(172, 'view_lead_proposals', 'View Lead Proposals', NULL, 14, '2022-04-21 02:39:04', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(173, 'add_lead_proposals', 'Add Lead Proposals', NULL, 14, '2022-04-21 02:39:04', '2022-04-21 02:42:45', 1, '{\"all\":4, \"none\":5}'),
-(174, 'edit_lead_proposals', 'Edit Lead Proposals', NULL, 14, '2022-04-21 02:39:04', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(175, 'delete_lead_proposals', 'Delete Lead Proposals', NULL, 14, '2022-04-21 02:39:04', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(176, 'manage_expense_category', 'Manage Expense Category', NULL, 17, '2022-04-21 02:39:32', '2022-04-21 02:42:45', 1, '{\"all\":4, \"none\":5}'),
-(177, 'approve_timelogs', 'Approve Timelogs', NULL, 9, '2022-04-21 02:39:47', '2022-04-21 02:42:46', 1, '{\"all\":4, \"none\":5}'),
-(178, 'manage_active_timelogs', 'Manage Active Timelogs', NULL, 9, '2022-04-21 02:39:47', '2022-04-21 02:42:46', 1, '{\"all\":4, \"none\":5}'),
-(179, 'manage_contract_type', 'Manage Contract Type', NULL, 18, '2022-04-21 02:40:22', '2022-04-21 02:42:46', 1, '{\"all\":4, \"none\":5}'),
-(180, 'renew_contract', 'Renew Contract', NULL, 18, '2022-04-21 02:40:22', '2022-04-21 02:42:47', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(181, 'add_contract_discussion', 'Add Contract Discussion', NULL, 18, '2022-04-21 02:40:22', '2022-04-21 02:42:47', 1, '{\"all\":4, \"none\":5}'),
-(182, 'edit_contract_discussion', 'Edit Contract Discussion', NULL, 18, '2022-04-21 02:40:22', '2022-04-21 02:42:47', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(183, 'view_contract_discussion', 'View Contract Discussion', NULL, 18, '2022-04-21 02:40:22', '2022-04-21 02:42:47', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(184, 'delete_contract_discussion', 'Delete Contract Discussion', NULL, 18, '2022-04-21 02:40:22', '2022-04-21 02:42:47', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(185, 'add_contract_files', 'Add Contract Files', NULL, 18, '2022-04-21 02:40:23', '2022-04-21 02:42:47', 1, '{\"all\":4, \"none\":5}'),
-(186, 'view_contract_files', 'View Contract Files', NULL, 18, '2022-04-21 02:40:23', '2022-04-21 02:42:47', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(187, 'delete_contract_files', 'Delete Contract Files', NULL, 18, '2022-04-21 02:40:23', '2022-04-21 02:42:47', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(188, 'edit_attendance', 'Edit Attendance', NULL, 4, '2022-04-21 02:40:37', '2022-04-21 02:42:47', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(189, 'delete_attendance', 'Delete Attendance', NULL, 4, '2022-04-21 02:40:37', '2022-04-21 02:42:47', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(191, 'manage_ticket_type', 'Manage Ticket Type', NULL, 10, '2022-04-21 02:40:46', '2022-04-21 02:42:47', 1, '{\"all\":4, \"none\":5}'),
-(192, 'manage_ticket_agent', 'Manage Ticket Agent', NULL, 10, '2022-04-21 02:40:47', '2022-04-21 02:42:47', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(193, 'manage_ticket_channel', 'Manage Ticket Channel', NULL, 10, '2022-04-21 02:40:47', '2022-04-21 02:42:47', 1, '{\"all\":4, \"none\":5}'),
-(194, 'manage_ticket_tags', 'Manage Ticket Tags', NULL, 10, '2022-04-21 02:40:47', '2022-04-21 02:42:47', 1, '{\"all\":4, \"none\":5}'),
-(195, 'add_client_note', 'Add Client Note', NULL, 1, '2022-04-21 02:41:24', '2022-04-21 02:42:47', 1, '{\"all\":4, \"none\":5}'),
-(196, 'view_client_note', 'View Client Note', NULL, 1, '2022-04-21 02:41:24', '2022-04-21 02:48:20', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(197, 'edit_client_note', 'Edit Client Note', NULL, 1, '2022-04-21 02:41:24', '2022-04-21 02:42:48', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(198, 'delete_client_note', 'Delete Client Note', NULL, 1, '2022-04-21 02:41:25', '2022-04-21 02:42:49', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(199, 'add_project_note', 'Add Project Note', NULL, 3, '2022-04-21 02:41:51', '2022-04-21 02:42:49', 1, '{\"all\":4, \"none\":5}'),
-(200, 'view_project_note', 'View Project Note', NULL, 3, '2022-04-21 02:41:51', '2022-04-21 02:42:50', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(201, 'edit_project_note', 'Edit Project Note', NULL, 3, '2022-04-21 02:41:51', '2022-04-21 02:42:50', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(202, 'delete_project_note', 'Delete Project Note', NULL, 3, '2022-04-21 02:41:51', '2022-04-21 02:42:50', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(203, 'manage_project_template', 'Manage Project Template', NULL, 3, '2022-04-21 02:42:04', '2022-04-21 02:42:50', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(204, 'view_task_report', 'View Task Report', NULL, 19, NULL, '2022-04-21 02:42:50', 1, '{\"all\":4, \"none\":5}'),
-(205, 'view_time_log_report', 'View Time Log Report', NULL, 19, NULL, '2022-04-21 02:42:50', 1, '{\"all\":4, \"none\":5}'),
-(206, 'view_finance_report', 'View Finance Report', NULL, 19, NULL, '2022-04-21 02:42:20', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(207, 'view_income_expense_report', 'View Income Vs Expense Report', NULL, 19, NULL, '2022-04-21 02:42:50', 1, '{\"all\":4, \"none\":5}'),
-(208, 'view_leave_report', 'View Leave Report', NULL, 19, NULL, '2022-04-21 02:42:50', 1, '{\"all\":4, \"none\":5}'),
-(209, 'view_attendance_report', 'View Attendance Report', NULL, 19, NULL, '2022-04-21 02:42:51', 1, '{\"all\":4, \"none\":5}'),
-(210, 'manage_company_setting', 'Manage Company Settings', NULL, 20, NULL, '2022-04-21 02:42:51', 1, '{\"all\":4, \"none\":5}'),
-(211, 'manage_app_setting', 'Manage App Settings', NULL, 20, NULL, '2022-04-21 02:42:51', 1, '{\"all\":4, \"none\":5}'),
-(212, 'manage_notification_setting', 'Manage Notification Settings', NULL, 20, NULL, '2022-04-21 02:42:51', 1, '{\"all\":4, \"none\":5}'),
-(213, 'manage_currency_setting', 'Manage Currency Settings', NULL, 20, NULL, '2022-04-21 02:42:51', 1, '{\"all\":4, \"none\":5}'),
-(214, 'manage_payment_setting', 'Manage Payment Settings', NULL, 20, NULL, '2022-04-21 02:42:51', 1, '{\"all\":4, \"none\":5}'),
-(215, 'manage_finance_setting', 'Manage Finance Settings', NULL, 20, NULL, '2022-04-21 02:42:51', 1, '{\"all\":4, \"none\":5}'),
-(216, 'manage_ticket_setting', 'Manage Ticket Settings', NULL, 20, NULL, '2022-04-21 02:42:51', 1, '{\"all\":4, \"none\":5}'),
-(217, 'manage_project_setting', 'Manage Project Settings', NULL, 20, NULL, '2022-04-21 02:42:52', 1, '{\"all\":4, \"none\":5}'),
-(218, 'manage_attendance_setting', 'Manage Attendance Settings', NULL, 20, NULL, '2022-04-21 02:42:52', 1, '{\"all\":4, \"none\":5}'),
-(219, 'manage_leave_setting', 'Manage Leave Settings', NULL, 20, NULL, '2022-04-21 02:42:52', 1, '{\"all\":4, \"none\":5}'),
-(220, 'manage_custom_field_setting', 'Manage Custom Field Settings', NULL, 20, NULL, '2022-04-21 02:42:52', 1, '{\"all\":4, \"none\":5}'),
-(221, 'manage_message_setting', 'Manage Message Settings', NULL, 20, NULL, '2022-04-21 02:42:53', 1, '{\"all\":4, \"none\":5}'),
-(222, 'manage_storage_setting', 'Manage Storage Settings', NULL, 20, NULL, '2022-04-21 02:42:53', 1, '{\"all\":4, \"none\":5}'),
-(223, 'manage_language_setting', 'Manage Language Settings', NULL, 20, NULL, '2022-04-21 02:42:53', 1, '{\"all\":4, \"none\":5}'),
-(224, 'manage_lead_setting', 'Manage Lead Settings', NULL, 20, NULL, '2022-04-21 02:42:53', 1, '{\"all\":4, \"none\":5}'),
-(225, 'manage_time_log_setting', 'Manage Time Log Settings', NULL, 20, NULL, '2022-04-21 02:42:53', 1, '{\"all\":4, \"none\":5}'),
-(226, 'manage_task_setting', 'Manage Task Settings', NULL, 20, NULL, '2022-04-21 02:42:53', 1, '{\"all\":4, \"none\":5}'),
-(227, 'manage_social_login_setting', 'Manage Social Login Settings', NULL, 20, NULL, '2022-04-21 02:42:53', 1, '{\"all\":4, \"none\":5}'),
-(228, 'manage_security_setting', 'Manage Security Settings', NULL, 20, NULL, '2022-04-21 02:42:53', 1, '{\"all\":4, \"none\":5}'),
-(229, 'manage_gdpr_setting', 'Manage GDPR Settings', NULL, 20, NULL, '2022-04-21 02:42:53', 1, '{\"all\":4, \"none\":5}'),
-(230, 'manage_theme_setting', 'Manage Theme Settings', NULL, 20, NULL, '2022-04-21 02:42:53', 1, '{\"all\":4, \"none\":5}'),
-(231, 'view_overview_dashboard', 'View Overview Dashboard', NULL, 21, '2022-04-21 02:43:19', '2022-04-21 02:43:19', 1, '{\"all\":4, \"none\":5}'),
-(232, 'view_project_dashboard', 'View Project Dashboard', NULL, 21, '2022-04-21 02:43:19', '2022-04-21 02:43:19', 1, '{\"all\":4, \"none\":5}'),
-(233, 'view_client_dashboard', 'View Client Dashboard', NULL, 21, '2022-04-21 02:43:19', '2022-04-21 02:43:19', 1, '{\"all\":4, \"none\":5}'),
-(234, 'view_hr_dashboard', 'View Hr Dashboard', NULL, 21, '2022-04-21 02:43:21', '2022-04-21 02:43:21', 1, '{\"all\":4, \"none\":5}'),
-(235, 'view_ticket_dashboard', 'View Ticket Dashboard', NULL, 21, '2022-04-21 02:43:21', '2022-04-21 02:43:21', 1, '{\"all\":4, \"none\":5}'),
-(236, 'view_finance_dashboard', 'View Finance Dashboard', NULL, 21, '2022-04-21 02:43:21', '2022-04-21 02:43:21', 1, '{\"all\":4, \"none\":5}'),
-(237, 'add_order', 'Add Order', NULL, 22, NULL, '2022-04-21 02:49:05', 0, '{\"all\":4, \"none\":5}'),
-(238, 'view_order', 'View Order', NULL, 22, NULL, '2022-04-21 02:49:06', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(239, 'edit_order', 'Edit Order', NULL, 22, NULL, '2022-04-21 02:49:06', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(240, 'delete_order', 'Delete Order', NULL, 22, NULL, '2022-04-21 02:49:06', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(241, 'view_project_hourly_rates', 'View Project Hourly Rates', NULL, 3, '2022-04-21 02:44:43', '2022-04-21 02:44:43', 1, '{\"all\":4, \"none\":5}'),
-(242, 'change_lead_status', 'Change Lead Status', NULL, 14, '2022-04-21 02:44:44', '2022-04-21 02:48:58', 1, '{\"all\":4, \"none\":5}'),
-(243, 'approve_or_reject_leaves', 'Approve Or Reject Leaves', NULL, 13, '2022-04-21 02:45:14', '2022-04-21 02:45:14', 1, '{\"all\":4, \"none\":5}'),
-(244, 'create_public_project', 'Create Public Project', NULL, 3, '2022-04-21 02:45:27', '2022-04-21 02:45:27', 1, '{\"all\":4, \"none\":5}'),
-(245, 'manage_recurring_expense', 'Manage Recurring Expense', NULL, 17, '2022-04-21 02:46:12', '2022-04-21 02:46:12', 1, '{\"all\":4, \"none\":5}'),
-(246, 'add_knowledgebase', 'Add Knowledgebase', NULL, 23, NULL, NULL, 0, '{\"all\":4, \"none\":5}'),
-(247, 'view_knowledgebase', 'View Knowledgebase', NULL, 23, NULL, '2022-04-21 02:48:58', 0, '{\"all\":4,\"added\":1,\"none\":5}'),
-(248, 'edit_knowledgebase', 'Edit Knowledgebase', NULL, 23, NULL, '2022-04-21 02:48:58', 0, '{\"all\":4,\"added\":1,\"none\":5}'),
-(249, 'delete_knowledgebase', 'Delete Knowledgebase', NULL, 23, NULL, '2022-04-21 02:48:58', 0, '{\"all\":4,\"added\":1,\"none\":5}'),
-(250, 'add_lead_note', 'Add Lead Note', NULL, 14, '2022-04-21 02:47:25', '2022-04-21 02:48:58', 1, '{\"all\":4, \"none\":5}'),
-(251, 'view_lead_note', 'View Lead Note', NULL, 14, '2022-04-21 02:47:25', '2022-04-21 02:47:25', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(252, 'edit_lead_note', 'Edit Lead Note', NULL, 14, '2022-04-21 02:47:25', '2022-04-21 02:47:25', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(253, 'delete_lead_note', 'Delete Lead Note', NULL, 14, '2022-04-21 02:47:26', '2022-04-21 02:47:26', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
-(254, 'change_employee_role', 'Change Employee Role', NULL, 2, '2022-04-21 02:47:44', '2022-04-21 02:47:44', 1, '{\"all\":4, \"none\":5}'),
-(259, 'add_client_document', 'Add Client Document', NULL, 1, '2022-04-21 02:48:05', '2022-04-21 02:48:05', 1, '{\"all\":4, \"none\":5}'),
-(260, 'view_client_document', 'View Client Document', NULL, 1, '2022-04-21 02:48:06', '2022-04-21 02:48:06', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(261, 'edit_client_document', 'Edit Client Document', NULL, 1, '2022-04-21 02:48:06', '2022-04-21 02:48:06', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(262, 'delete_client_document', 'Delete Client Document', NULL, 1, '2022-04-21 02:48:06', '2022-04-21 02:48:06', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
-(263, 'manage_role_permission_setting', 'Manage Role Permission Setting', NULL, 20, '2022-04-21 02:48:19', '2022-04-21 02:48:19', 1, '{\"all\":4, \"none\":5}'),
-(264, 'manage_module_setting', 'Manage Module Setting', NULL, 20, '2022-04-21 02:48:19', '2022-04-21 02:48:19', 1, '{\"all\":4, \"none\":5}'),
-(265, 'manage_google_calendar_setting', 'Manage Google Calendar Setting', NULL, 20, '2022-04-21 02:48:19', '2022-04-21 02:48:19', 1, '{\"all\":4, \"none\":5}'),
-(266, 'manage_emergency_contact', 'Manage Emergency Contact', NULL, 2, '2022-04-21 02:49:10', '2022-04-21 02:49:10', 1, '{\"all\":4, \"none\":5}'),
-(267, 'approve_expenses', 'Approve Expenses', NULL, 17, '2022-04-21 02:49:11', '2022-04-21 02:49:11', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}');
+(1, 'add_clients', 'Thêm khách hàng', NULL, 1, NULL, '2022-04-21 02:42:20', 0, '{\"all\":4, \"none\":5}'),
+(2, 'view_clients', 'Xem khách hàng', NULL, 1, NULL, '2022-04-21 02:42:20', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
+(3, 'edit_clients', 'Chỉnh sửa khách hàng', NULL, 1, NULL, '2022-04-21 02:42:20', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
+(4, 'delete_clients', 'Xóa khách hàng', NULL, 1, NULL, '2022-04-21 02:42:20', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
+(5, 'add_employees', 'Thêm nhân viên', NULL, 2, NULL, '2022-04-21 02:42:20', 0, '{\"all\":4, \"none\":5}'),
+(6, 'view_employees', 'Xem nhân viên', NULL, 2, NULL, '2022-04-21 02:45:16', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(7, 'edit_employees', 'Chỉnh sửa nhân viên', NULL, 2, NULL, '2022-04-21 02:48:20', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(8, 'delete_employees', 'Xóa nhân viên', NULL, 2, NULL, '2022-04-21 02:42:22', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
+(9, 'add_projects', 'Thêm dự án', NULL, 3, NULL, '2022-04-21 02:42:22', 0, '{\"all\":4, \"none\":5}'),
+(10, 'view_projects', 'Xem dự án', NULL, 3, NULL, '2022-04-21 02:42:22', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(11, 'edit_projects', 'Chỉnh sửa dự án', NULL, 3, NULL, '2022-04-21 02:42:23', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(12, 'delete_projects', 'Xóa dự án', NULL, 3, NULL, '2022-04-21 02:42:23', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(13, 'add_attendance', 'Thêm điểm danh', NULL, 4, NULL, '2022-04-21 02:42:23', 0, '{\"all\":4, \"none\":5}'),
+(14, 'view_attendance', 'Xem điểm danh', NULL, 4, NULL, '2022-04-21 02:42:23', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(15, 'add_tasks', 'Thêm yêu cầu', NULL, 5, NULL, '2022-04-21 02:42:24', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
+(16, 'view_tasks', 'Xem yêu cầu', NULL, 5, NULL, '2022-04-21 02:42:24', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(17, 'edit_tasks', 'Chỉnh sửa yêu cầu', NULL, 5, NULL, '2022-04-21 02:42:24', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(18, 'delete_tasks', 'Xóa yêu cầu', NULL, 5, NULL, '2022-04-21 02:42:24', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(19, 'add_estimates', 'Thêm ước tính', NULL, 6, NULL, '2022-04-21 02:42:24', 0, '{\"all\":4, \"none\":5}'),
+(20, 'view_estimates', 'Xem ước tính', NULL, 6, NULL, '2022-04-21 02:42:24', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(21, 'edit_estimates', 'Chỉnh sửa ước tính', NULL, 6, NULL, '2022-04-21 02:42:24', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(22, 'delete_estimates', 'Xóa ước tính', NULL, 6, NULL, '2022-04-21 02:42:24', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(23, 'add_invoices', 'Thêm hóa đơn', NULL, 7, NULL, '2022-04-21 02:42:24', 0, '{\"all\":4, \"none\":5}'),
+(24, 'view_invoices', 'Xem hóa đơn', NULL, 7, NULL, '2022-04-21 02:42:25', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(25, 'edit_invoices', 'Chỉnh sửa hóa đơn', NULL, 7, NULL, '2022-04-21 02:42:25', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(26, 'delete_invoices', 'Xóa hóa đơn', NULL, 7, NULL, '2022-04-21 02:42:25', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(27, 'add_payments', 'Thêm thanh toán', NULL, 8, NULL, '2022-04-21 02:42:25', 0, '{\"all\":4, \"none\":5}'),
+(28, 'view_payments', 'Xem thanh toán', NULL, 8, NULL, '2022-04-21 02:42:26', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(29, 'edit_payments', 'Chỉnh sửa thanh toán', NULL, 8, NULL, '2022-04-21 02:42:26', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(30, 'delete_payments', 'Xóa thanh toán', NULL, 8, NULL, '2022-04-21 02:42:26', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(31, 'add_timelogs', 'Thêm nhật ký thời gian', NULL, 9, NULL, '2022-04-21 02:45:16', 0, '{\"all\":4,\"added\":1, \"none\":5}'),
+(32, 'view_timelogs', 'Xem nhật ký thời gian', NULL, 9, NULL, '2022-04-21 02:42:26', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(33, 'edit_timelogs', 'Chỉnh sửa nhật ký thời gian', NULL, 9, NULL, '2022-04-21 02:42:27', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(34, 'delete_timelogs', 'Xóa nhật ký thời gian', NULL, 9, NULL, '2022-04-21 02:42:27', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(35, 'add_tickets', 'Thêm vé', NULL, 10, NULL, '2022-04-21 02:45:16', 0, '{\"all\":4,\"added\":1, \"none\":5}'),
+(36, 'view_tickets', 'Xem vé', NULL, 10, NULL, '2022-04-21 02:42:28', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(37, 'edit_tickets', 'Chỉnh sửa vé', NULL, 10, NULL, '2022-04-21 02:42:28', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(38, 'delete_tickets', 'Xóa vé', NULL, 10, NULL, '2022-04-21 02:42:28', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(39, 'add_events', 'Thêm sự kiện', NULL, 11, NULL, '2022-04-21 02:42:28', 0, '{\"all\":4, \"none\":5}'),
+(40, 'view_events', 'Xem sự kiện', NULL, 11, NULL, '2022-04-21 02:42:28', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(41, 'edit_events', 'Chỉnh sửa sự kiện', NULL, 11, NULL, '2022-04-21 02:42:28', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(42, 'delete_events', 'Xóa sự kiện', NULL, 11, NULL, '2022-04-21 02:42:28', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(43, 'add_notice', 'Thêm ghi chú', NULL, 12, NULL, '2022-04-21 02:42:28', 0, '{\"all\":4, \"none\":5}'),
+(44, 'view_notice', 'Xem ghi chú', NULL, 12, NULL, '2022-04-21 02:48:57', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(45, 'edit_notice', 'Chỉnh sửa ghi chú', NULL, 12, NULL, '2022-04-21 02:48:57', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(46, 'delete_notice', 'Xóa ghi chú', NULL, 12, NULL, '2022-04-21 02:48:57', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(47, 'add_leave', 'Thêm nghỉ phép', NULL, 13, NULL, '2022-04-21 02:44:47', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
+(48, 'view_leave', 'Xem nghỉ phép', NULL, 13, NULL, '2022-04-21 02:42:29', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(49, 'edit_leave', 'Chỉnh sửa nghỉ phép', NULL, 13, NULL, '2022-04-21 02:42:29', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(50, 'delete_leave', 'Xóa nghỉ phép', NULL, 13, NULL, '2022-04-21 02:42:29', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(51, 'add_lead', 'Thêm khách hàng tiềm năng', NULL, 14, NULL, '2022-04-21 02:42:29', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
+(52, 'view_lead', 'Xem khách hàng tiềm năng', NULL, 14, NULL, '2022-04-21 02:42:29', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(53, 'edit_lead', 'Chỉnh sửa khách hàng tiềm năng', NULL, 14, NULL, '2022-04-21 02:42:29', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(54, 'delete_lead', 'Xóa khách hàng tiềm năng', NULL, 14, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(55, 'add_holiday', 'Thêm ngày lễ', NULL, 15, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"none\":5}'),
+(56, 'view_holiday', 'Xem ngày lễ', NULL, 15, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
+(57, 'edit_holiday', 'Chỉnh sửa ngày lễ', NULL, 15, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
+(58, 'delete_holiday', 'Xóa ngày lễ', NULL, 15, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
+(59, 'add_product', 'Thêm sản phẩm', NULL, 16, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"none\":5}'),
+(60, 'view_product', 'Xem sản phẩm', NULL, 16, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
+(61, 'edit_product', 'Chỉnh sửa sản phẩm', NULL, 16, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
+(62, 'delete_product', 'Xóa sản phẩm', NULL, 16, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
+(63, 'add_expenses', 'Thêm chi phí', NULL, 17, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"none\":5}'),
+(64, 'view_expenses', 'Xem chi phí', NULL, 17, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(65, 'edit_expenses', 'Chỉnh sửa chi phí', NULL, 17, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(66, 'delete_expenses', 'Xóa chi phí', NULL, 17, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(67, 'add_contract', 'Thêm hợp đồng', NULL, 18, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"none\":5}'),
+(68, 'view_contract', 'Xem hợp đồng', NULL, 18, NULL, '2022-04-21 02:42:30', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(69, 'edit_contract', 'Chỉnh sửa hợp đồng', NULL, 18, NULL, '2022-04-21 02:42:31', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(70, 'delete_contract', 'Xóa hợp đồng', NULL, 18, NULL, '2022-04-21 02:42:31', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(71, 'manage_client_category', 'Quản lý danh mục khách hàng', NULL, 1, '2022-04-21 02:35:58', '2022-04-21 02:48:19', 1, '{\"all\":4, \"none\":5}'),
+(72, 'manage_client_subcategory', 'Quản lý danh mục phụ của khách hàng', NULL, 1, '2022-04-21 02:35:58', '2022-04-21 02:48:19', 1, '{\"all\":4, \"none\":5}'),
+(73, 'add_client_contacts', 'Thêm liên hệ khách hàng', NULL, 1, '2022-04-21 02:35:58', '2022-04-21 02:42:32', 1, '{\"all\":4, \"none\":5}'),
+(74, 'view_client_contacts', 'Xem liên hệ khách hàng', NULL, 1, '2022-04-21 02:35:58', '2022-04-21 02:48:19', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(75, 'edit_client_contacts', 'Chỉnh sửa liên hệ khách hàng', NULL, 1, '2022-04-21 02:35:58', '2022-04-21 02:42:32', 1, '{\"all\":4, \"none\":5}'),
+(76, 'delete_client_contacts', 'Xóa liên hệ khách hàng', NULL, 1, '2022-04-21 02:35:58', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
+(77, 'add_designation', 'Thêm chỉ định', NULL, 2, '2022-04-21 02:35:58', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
+(78, 'view_designation', 'Xem chỉ định', NULL, 2, '2022-04-21 02:35:58', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
+(79, 'edit_designation', 'Chỉnh sửa chỉ định', NULL, 2, '2022-04-21 02:35:59', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
+(80, 'delete_designation', 'Xóa chỉ định', NULL, 2, '2022-04-21 02:35:59', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
+(81, 'add_department', 'Thêm bộ phận', NULL, 2, '2022-04-21 02:35:59', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
+(82, 'view_department', 'Xem bộ phận', NULL, 2, '2022-04-21 02:35:59', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
+(83, 'edit_department', 'Chỉnh sửa bộ phận', NULL, 2, '2022-04-21 02:35:59', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
+(84, 'delete_department', 'Xóa bộ phận', NULL, 2, '2022-04-21 02:35:59', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
+(85, 'add_documents', 'Thêm tài liệu', NULL, 2, '2022-04-21 02:36:00', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
+(86, 'view_documents', 'Xem tài liệu', NULL, 2, '2022-04-21 02:36:00', '2022-04-21 02:42:33', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(87, 'edit_documents', 'Chỉnh sửa tài liệu', NULL, 2, '2022-04-21 02:36:00', '2022-04-21 02:42:33', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(88, 'delete_documents', 'Xóa tài liệu', NULL, 2, '2022-04-21 02:36:00', '2022-04-21 02:42:33', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(89, 'view_leaves_taken', 'Xem số ngày đã nghỉ', NULL, 2, '2022-04-21 02:36:00', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
+(90, 'update_leaves_quota', 'Cập nhật loại nghỉ phép', NULL, 2, '2022-04-21 02:36:00', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
+(91, 'view_employee_tasks', 'Xem nhiệm vụ của nhân viên', NULL, 2, '2022-04-21 02:36:00', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
+(92, 'view_employee_projects', 'Xem dự án của nhân viên', NULL, 2, '2022-04-21 02:36:00', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
+(93, 'view_employee_timelogs', 'Xem nhật ký thời gian của nhân viên', NULL, 2, '2022-04-21 02:36:00', '2022-04-21 02:42:33', 1, '{\"all\":4, \"none\":5}'),
+(94, 'manage_project_category', 'Quản lý loại dự án', NULL, 3, '2022-04-21 02:36:35', '2022-04-21 02:42:34', 1, '{\"all\":4, \"none\":5}'),
+(95, 'view_project_files', 'Xem tệp dự án', NULL, 3, '2022-04-21 02:36:35', '2022-04-21 02:42:34', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(96, 'add_project_files', 'Thêm tệp dự án', NULL, 3, '2022-04-21 02:36:35', '2022-04-21 02:48:20', 1, '{\"all\":4, \"none\":5}'),
+(98, 'delete_project_files', 'Xóa tệp dự án', NULL, 3, '2022-04-21 02:36:36', '2022-04-21 02:42:34', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(99, 'view_project_discussions', 'Xem thảo luận về dự án', NULL, 3, '2022-04-21 02:36:36', '2022-04-21 02:42:34', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(100, 'add_project_discussions', 'Thêm thảo luận về dự án', NULL, 3, '2022-04-21 02:36:36', '2022-04-21 02:42:34', 1, '{\"all\":4, \"none\":5}'),
+(101, 'edit_project_discussions', 'Chỉnh sửa thảo luận về dự án', NULL, 3, '2022-04-21 02:36:36', '2022-04-21 02:42:35', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(102, 'delete_project_discussions', 'Xóa thảo luận về dự án', NULL, 3, '2022-04-21 02:36:36', '2022-04-21 02:42:35', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(103, 'manage_discussion_category', 'Quản lý danh mục thảo luận', NULL, 3, '2022-04-21 02:36:36', '2022-04-21 02:48:55', 1, '{\"all\":4, \"none\":5}'),
+(104, 'view_project_milestones', 'Xem các mốc quan trọng của dự án', NULL, 3, '2022-04-21 02:36:36', '2022-04-21 02:48:55', 1, '{\"all\":4, \"added\":1, \"owned\":2, \"none\":5}'),
+(105, 'add_project_milestones', 'Thêm các mốc quan trọng của dự án', NULL, 3, '2022-04-21 02:36:36', '2022-04-21 02:42:36', 1, '{\"all\":4, \"none\":5}'),
+(106, 'edit_project_milestones', 'Chỉnh sửa các mốc quan trọng của dự án', NULL, 3, '2022-04-21 02:36:37', '2022-04-21 02:48:55', 1, '{\"all\":4, \"added\":1, \"owned\":2, \"none\":5}'),
+(107, 'delete_project_milestones', 'Xóa các mốc quan trọng của dự án', NULL, 3, '2022-04-21 02:36:37', '2022-04-21 02:48:55', 1, '{\"all\":4, \"added\":1, \"owned\":2, \"none\":5}'),
+(108, 'view_project_members', 'Xem thành viên dự án', NULL, 3, '2022-04-21 02:36:37', '2022-04-21 02:48:55', 1, '{\"all\":4, \"none\":5}'),
+(109, 'add_project_members', 'Thêm thành viên dự án', NULL, 3, '2022-04-21 02:36:37', '2022-04-21 02:42:37', 1, '{\"all\":4, \"none\":5}'),
+(110, 'edit_project_members', 'Chỉnh sửa thành viên dự án', NULL, 3, '2022-04-21 02:36:37', '2022-04-21 02:48:55', 1, '{\"all\":4, \"none\":5}'),
+(111, 'delete_project_members', 'Xóa thành viên dự án', NULL, 3, '2022-04-21 02:36:37', '2022-04-21 02:48:55', 1, '{\"all\":4, \"none\":5}'),
+(112, 'view_project_rating', 'Xem đánh giá dự án', NULL, 3, '2022-04-21 02:36:37', '2022-04-21 02:42:38', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(113, 'add_project_rating', 'Thêm đánh giá dự án', NULL, 3, '2022-04-21 02:36:37', '2022-04-21 02:42:38', 1, '{\"all\":4, \"none\":5}'),
+(114, 'edit_project_rating', 'Chỉnh sửa đánh giá dự án', NULL, 3, '2022-04-21 02:36:37', '2022-04-21 02:42:38', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(115, 'delete_project_rating', 'Xóa đánh giá dự án', NULL, 3, '2022-04-21 02:36:38', '2022-04-21 02:42:39', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(116, 'view_project_budget', 'Xem ngân sách dự án', NULL, 3, '2022-04-21 02:36:38', '2022-04-21 02:42:39', 1, '{\"all\":4, \"none\":5}'),
+(117, 'view_project_timelogs', 'Xem nhật ký thời gian của dự án', NULL, 3, '2022-04-21 02:36:38', '2022-04-21 02:42:39', 1, '{\"all\":4, \"none\":5}'),
+(118, 'view_project_expenses', 'Xem chi phí dự án', NULL, 3, '2022-04-21 02:36:38', '2022-04-21 02:42:39', 1, '{\"all\":4, \"none\":5}'),
+(119, 'view_project_tasks', 'Xem các yêu cầu dự án', NULL, 3, '2022-04-21 02:36:38', '2022-04-21 02:42:39', 1, '{\"all\":4, \"none\":5}'),
+(120, 'view_project_invoices', 'Xem hóa đơn dự án', NULL, 3, '2022-04-21 02:36:38', '2022-04-21 02:42:39', 1, '{\"all\":4, \"none\":5}'),
+(121, 'view_project_burndown_chart', 'Xem Biểu đồ Burndown của Dự án', NULL, 3, '2022-04-21 02:36:38', '2022-04-21 02:42:40', 1, '{\"all\":4, \"none\":5}'),
+(122, 'view_project_payments', 'Xem các khoản thanh toán của dự án', NULL, 3, '2022-04-21 02:36:38', '2022-04-21 02:42:40', 1, '{\"all\":4, \"none\":5}'),
+(123, 'view_project_gantt_chart', 'Xem Biểu đồ Gantt của Dự án', NULL, 3, '2022-04-21 02:36:38', '2022-04-21 02:42:40', 1, '{\"all\":4, \"none\":5}'),
+(124, 'view_task_category', 'Xem danh mục yêu cầu', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:40', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(125, 'add_task_category', 'Thêm danh mục yêu cầu', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:40', 1, '{\"all\":4, \"none\":5}'),
+(126, 'edit_task_category', 'Chỉnh sửa danh mục yêu cầu', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(127, 'delete_task_category', 'Xóa danh mục yêu cầu', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(128, 'view_task_files', 'Xem tệp yêu cầu', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(129, 'add_task_files', 'Thêm tệp yêu cầu', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"none\":5}'),
+(131, 'delete_task_files', 'Xóa tệp yêu cầu', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(132, 'view_sub_tasks', 'Xem yêu cầu phụ', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(133, 'add_sub_tasks', 'Thêm yêu cầu phụ', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"none\":5}'),
+(134, 'edit_sub_tasks', 'Chỉnh sửa yêu cầu phụ', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(135, 'delete_sub_tasks', 'Xóa yêu cầu phụ', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(136, 'view_task_comments', 'Xem nhận xét về yêu cầu', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(137, 'add_task_comments', 'Thêm nhận xét về yêu cầu', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"none\":5}'),
+(138, 'edit_task_comments', 'Chỉnh sửa nhận xét về yêu cầu', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(139, 'delete_task_comments', 'Xóa nhận xét về yêu cầu', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(140, 'view_task_notes', 'Xem ghi chú yêu cầu', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(141, 'add_task_notes', 'Thêm ghi chú yêu cầu', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:41', 1, '{\"all\":4, \"none\":5}'),
+(142, 'edit_task_notes', 'Chỉnh sửa ghi chú yêu cầu', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:42', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(143, 'delete_task_notes', 'Xóa ghi chú yêu cầu', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:42', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(144, 'task_labels', 'Nhãn yêu cầu', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:42', 1, '{\"all\":4, \"none\":5}'),
+(145, 'change_status', 'Thay đổi trạng thái', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:42', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(146, 'send_reminder', 'Gửi lời nhắc', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:42', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(147, 'add_status', 'Thêm trạng thái', NULL, 5, '2022-04-21 02:37:14', '2022-04-21 02:42:42', 1, '{\"all\":4, \"none\":5}'),
+(148, 'manage_product_category', 'Quản lý danh mục sản phẩm', NULL, 16, '2022-04-21 02:37:44', '2022-04-21 02:42:42', 1, '{\"all\":4, \"none\":5}'),
+(149, 'manage_product_sub_category', 'Quản lý danh mục phụ sản phẩm', NULL, 16, '2022-04-21 02:37:44', '2022-04-21 02:42:42', 1, '{\"all\":4, \"none\":5}'),
+(150, 'manage_tax', 'Quản lý thuế', NULL, 7, '2022-04-21 02:37:44', '2022-04-21 02:42:42', 1, '{\"all\":4, \"none\":5}'),
+(151, 'view_lead_agents', 'Xem đại lý khách hàng tiềm năng', NULL, 14, '2022-04-21 02:39:00', '2022-04-21 02:42:42', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(152, 'add_lead_agent', 'Thêm đại lý khách hàng tiềm năng', NULL, 14, '2022-04-21 02:39:00', '2022-04-21 02:42:43', 1, '{\"all\":4, \"none\":5}'),
+(153, 'edit_lead_agent', 'Chỉnh sửa đại lý khách hàng tiềm năng', NULL, 14, '2022-04-21 02:39:00', '2022-04-21 02:42:43', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(154, 'delete_lead_agent', 'Xóa đại lý khách hàng tiềm năng', NULL, 14, '2022-04-21 02:39:00', '2022-04-21 02:42:43', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(155, 'view_lead_category', 'Xem danh mục khách hàng tiềm năng', NULL, 14, '2022-04-21 02:39:01', '2022-04-21 02:42:44', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(156, 'add_lead_category', 'Thêm danh mục khách hàng tiềm năng', NULL, 14, '2022-04-21 02:39:01', '2022-04-21 02:42:44', 1, '{\"all\":4, \"none\":5}'),
+(157, 'edit_lead_category', 'Chỉnh sửa danh mục khách hàng tiềm năng', NULL, 14, '2022-04-21 02:39:02', '2022-04-21 02:42:44', 1, '{\"all\":4, \"none\":5}'),
+(158, 'delete_lead_category', 'Xóa danh mục khách hàng tiềm năng', NULL, 14, '2022-04-21 02:39:02', '2022-04-21 02:42:44', 1, '{\"all\":4, \"none\":5}'),
+(159, 'manage_lead_custom_forms', 'Quản lý các biểu mẫu tùy chỉnh khách hàng tiềm năng', NULL, 14, '2022-04-21 02:39:02', '2022-04-21 02:42:44', 1, '{\"all\":4, \"none\":5}'),
+(160, 'view_lead_files', 'Xem tệp khách hàng tiềm năng', NULL, 14, '2022-04-21 02:39:02', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(161, 'add_lead_files', 'Thêm tệp khách hàng tiềm năng', NULL, 14, '2022-04-21 02:39:02', '2022-04-21 02:42:45', 1, '{\"all\":4, \"none\":5}'),
+(163, 'delete_lead_files', 'Xóa tệp khách hàng tiềm năng', NULL, 14, '2022-04-21 02:39:02', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(164, 'view_lead_follow_up', 'Xem khách hàng tiềm năng theo dõi', NULL, 14, '2022-04-21 02:39:02', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(165, 'add_lead_follow_up', 'Thêm khách hàng tiềm năng theo dõi', NULL, 14, '2022-04-21 02:39:03', '2022-04-21 02:42:45', 1, '{\"all\":4, \"none\":5}'),
+(166, 'edit_lead_follow_up', 'Chỉnh sửa khách hàng tiềm năng theo dõi', NULL, 14, '2022-04-21 02:39:03', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(167, 'delete_lead_follow_up', 'Xóa khách hàng tiềm năng theo dõi', NULL, 14, '2022-04-21 02:39:03', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(168, 'view_lead_sources', 'Xem các nguồn khách hàng tiềm năng', NULL, 14, '2022-04-21 02:39:04', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(169, 'add_lead_sources', 'Thêm các nguồn khách hàng tiềm năng', NULL, 14, '2022-04-21 02:39:04', '2022-04-21 02:42:45', 1, '{\"all\":4, \"none\":5}'),
+(170, 'edit_lead_sources', 'Chỉnh sửa các nguồn khách hàng tiềm năng', NULL, 14, '2022-04-21 02:39:04', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(171, 'delete_lead_sources', 'Xóa các nguồn khách hàng tiềm năng', NULL, 14, '2022-04-21 02:39:04', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(172, 'view_lead_proposals', 'Xem đề xuất khách hàng tiềm năng', NULL, 14, '2022-04-21 02:39:04', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(173, 'add_lead_proposals', 'Thêm đề xuất khách hàng tiềm năng', NULL, 14, '2022-04-21 02:39:04', '2022-04-21 02:42:45', 1, '{\"all\":4, \"none\":5}'),
+(174, 'edit_lead_proposals', 'Chỉnh sửa đề xuất khách hàng tiềm năng', NULL, 14, '2022-04-21 02:39:04', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(175, 'delete_lead_proposals', 'Xóa đề xuất khách hàng tiềm năng', NULL, 14, '2022-04-21 02:39:04', '2022-04-21 02:42:45', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(176, 'manage_expense_category', 'Quản lý danh mục chi phí', NULL, 17, '2022-04-21 02:39:32', '2022-04-21 02:42:45', 1, '{\"all\":4, \"none\":5}'),
+(177, 'approve_timelogs', 'Phê duyệt nhật ký thời gian', NULL, 9, '2022-04-21 02:39:47', '2022-04-21 02:42:46', 1, '{\"all\":4, \"none\":5}'),
+(178, 'manage_active_timelogs', 'Quản lý nhật ký thời gian đang hoạt động', NULL, 9, '2022-04-21 02:39:47', '2022-04-21 02:42:46', 1, '{\"all\":4, \"none\":5}'),
+(179, 'manage_contract_type', 'Quản lý loại hợp đồng', NULL, 18, '2022-04-21 02:40:22', '2022-04-21 02:42:46', 1, '{\"all\":4, \"none\":5}'),
+(180, 'renew_contract', 'Làm mới hợp đồng', NULL, 18, '2022-04-21 02:40:22', '2022-04-21 02:42:47', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(181, 'add_contract_discussion', 'Thêm thảo luận về hợp đồng', NULL, 18, '2022-04-21 02:40:22', '2022-04-21 02:42:47', 1, '{\"all\":4, \"none\":5}'),
+(182, 'edit_contract_discussion', 'Chỉnh sửa thảo luận về hợp đồng', NULL, 18, '2022-04-21 02:40:22', '2022-04-21 02:42:47', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(183, 'view_contract_discussion', 'Xem thảo luận về hợp đồng', NULL, 18, '2022-04-21 02:40:22', '2022-04-21 02:42:47', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(184, 'delete_contract_discussion', 'Xóa thảo luận về hợp đồng', NULL, 18, '2022-04-21 02:40:22', '2022-04-21 02:42:47', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(185, 'add_contract_files', 'Thêm tệp hợp đồng', NULL, 18, '2022-04-21 02:40:23', '2022-04-21 02:42:47', 1, '{\"all\":4, \"none\":5}'),
+(186, 'view_contract_files', 'Xem tệp hợp đồng', NULL, 18, '2022-04-21 02:40:23', '2022-04-21 02:42:47', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(187, 'delete_contract_files', 'Xóa  tệp hợp đồng', NULL, 18, '2022-04-21 02:40:23', '2022-04-21 02:42:47', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(188, 'edit_attendance', 'Chỉnh sửa điểm danh', NULL, 4, '2022-04-21 02:40:37', '2022-04-21 02:42:47', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(189, 'delete_attendance', 'Xóa điểm danh', NULL, 4, '2022-04-21 02:40:37', '2022-04-21 02:42:47', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(191, 'manage_ticket_type', 'Quản lý loại vé', NULL, 10, '2022-04-21 02:40:46', '2022-04-21 02:42:47', 1, '{\"all\":4, \"none\":5}'),
+(192, 'manage_ticket_agent', 'Quản lý đại lý vé', NULL, 10, '2022-04-21 02:40:47', '2022-04-21 02:42:47', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(193, 'manage_ticket_channel', 'Quản lý kênh vé', NULL, 10, '2022-04-21 02:40:47', '2022-04-21 02:42:47', 1, '{\"all\":4, \"none\":5}'),
+(194, 'manage_ticket_tags', 'Quản lý thẻ vé', NULL, 10, '2022-04-21 02:40:47', '2022-04-21 02:42:47', 1, '{\"all\":4, \"none\":5}'),
+(195, 'add_client_note', 'Thêm ghi chú khách hàng', NULL, 1, '2022-04-21 02:41:24', '2022-04-21 02:42:47', 1, '{\"all\":4, \"none\":5}'),
+(196, 'view_client_note', 'Xem ghi chú khách hàng', NULL, 1, '2022-04-21 02:41:24', '2022-04-21 02:48:20', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(197, 'edit_client_note', 'Chỉnh sửa ghi chú khách hàng', NULL, 1, '2022-04-21 02:41:24', '2022-04-21 02:42:48', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(198, 'delete_client_note', 'Xóa ghi chú khách hàng', NULL, 1, '2022-04-21 02:41:25', '2022-04-21 02:42:49', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(199, 'add_project_note', 'Thêm ghi chú dự án', NULL, 3, '2022-04-21 02:41:51', '2022-04-21 02:42:49', 1, '{\"all\":4, \"none\":5}'),
+(200, 'view_project_note', 'Xem ghi chú dự án', NULL, 3, '2022-04-21 02:41:51', '2022-04-21 02:42:50', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(201, 'edit_project_note', 'Chỉnh sửa ghi chú dự án', NULL, 3, '2022-04-21 02:41:51', '2022-04-21 02:42:50', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(202, 'delete_project_note', 'Xóa ghi chú dự án', NULL, 3, '2022-04-21 02:41:51', '2022-04-21 02:42:50', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(203, 'manage_project_template', 'Quản lý mẫu dự án', NULL, 3, '2022-04-21 02:42:04', '2022-04-21 02:42:50', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(204, 'view_task_report', 'Xem báo cáo yêu cầu', NULL, 19, NULL, '2022-04-21 02:42:50', 1, '{\"all\":4, \"none\":5}'),
+(205, 'view_time_log_report', 'Xem báo cáo nhật ký thời gian', NULL, 19, NULL, '2022-04-21 02:42:50', 1, '{\"all\":4, \"none\":5}'),
+(206, 'view_finance_report', 'Xem báo cáo tài chính', NULL, 19, NULL, '2022-04-21 02:42:20', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(207, 'view_income_expense_report', 'Xem báo cáo thu nhập và chi phí', NULL, 19, NULL, '2022-04-21 02:42:50', 1, '{\"all\":4, \"none\":5}'),
+(208, 'view_leave_report', 'Xem báo cáo nghỉ phép', NULL, 19, NULL, '2022-04-21 02:42:50', 1, '{\"all\":4, \"none\":5}'),
+(209, 'view_attendance_report', 'Xem báo cáo chấm công', NULL, 19, NULL, '2022-04-21 02:42:51', 1, '{\"all\":4, \"none\":5}'),
+(210, 'manage_company_setting', 'Quản lý cài đặt công ty', NULL, 20, NULL, '2022-04-21 02:42:51', 1, '{\"all\":4, \"none\":5}'),
+(211, 'manage_app_setting', 'Quản lý cài đặt App', NULL, 20, NULL, '2022-04-21 02:42:51', 1, '{\"all\":4, \"none\":5}'),
+(212, 'manage_notification_setting', 'Quản lý cài đặt thông báo', NULL, 20, NULL, '2022-04-21 02:42:51', 1, '{\"all\":4, \"none\":5}'),
+(213, 'manage_currency_setting', 'Quản lý cài đặt đơn vị tiền tệ', NULL, 20, NULL, '2022-04-21 02:42:51', 1, '{\"all\":4, \"none\":5}'),
+(214, 'manage_payment_setting', 'Quản lý cài đặt thanh toán', NULL, 20, NULL, '2022-04-21 02:42:51', 1, '{\"all\":4, \"none\":5}'),
+(215, 'manage_finance_setting', 'Quản lý cài đặt tài chính', NULL, 20, NULL, '2022-04-21 02:42:51', 1, '{\"all\":4, \"none\":5}'),
+(216, 'manage_ticket_setting', 'Quản lý cài đặt vé', NULL, 20, NULL, '2022-04-21 02:42:51', 1, '{\"all\":4, \"none\":5}'),
+(217, 'manage_project_setting', 'Quản lý cài đặt dự án', NULL, 20, NULL, '2022-04-21 02:42:52', 1, '{\"all\":4, \"none\":5}'),
+(218, 'manage_attendance_setting', 'Quản lý cài đặt chấm công', NULL, 20, NULL, '2022-04-21 02:42:52', 1, '{\"all\":4, \"none\":5}'),
+(219, 'manage_leave_setting', 'Quản lý cài đặt nghỉ phép', NULL, 20, NULL, '2022-04-21 02:42:52', 1, '{\"all\":4, \"none\":5}'),
+(220, 'manage_custom_field_setting', 'Quản lý cài đặt vùng tùy chỉnh', NULL, 20, NULL, '2022-04-21 02:42:52', 1, '{\"all\":4, \"none\":5}'),
+(221, 'manage_message_setting', 'Quản lý cài đặt tin nhắn', NULL, 20, NULL, '2022-04-21 02:42:53', 1, '{\"all\":4, \"none\":5}'),
+(222, 'manage_storage_setting', 'Quản lý cài đặt bộ nhớ', NULL, 20, NULL, '2022-04-21 02:42:53', 1, '{\"all\":4, \"none\":5}'),
+(223, 'manage_language_setting', 'Quản lý cài đặt ngôn ngữ', NULL, 20, NULL, '2022-04-21 02:42:53', 1, '{\"all\":4, \"none\":5}'),
+(224, 'manage_lead_setting', 'Quản lý cài đặt khách hàng tiềm năng', NULL, 20, NULL, '2022-04-21 02:42:53', 1, '{\"all\":4, \"none\":5}'),
+(225, 'manage_time_log_setting', 'Quản lý cài đặt nhật ký thời gian', NULL, 20, NULL, '2022-04-21 02:42:53', 1, '{\"all\":4, \"none\":5}'),
+(226, 'manage_task_setting', 'Quản lý cài đặt tác vụ', NULL, 20, NULL, '2022-04-21 02:42:53', 1, '{\"all\":4, \"none\":5}'),
+(227, 'manage_social_login_setting', 'Quản lý cài đặt đăng nhập bằng mạng xã hội', NULL, 20, NULL, '2022-04-21 02:42:53', 1, '{\"all\":4, \"none\":5}'),
+(228, 'manage_security_setting', 'Quản lý cài đặt bảo mật', NULL, 20, NULL, '2022-04-21 02:42:53', 1, '{\"all\":4, \"none\":5}'),
+(229, 'manage_gdpr_setting', 'Quản lý cài đặt GDPR', NULL, 20, NULL, '2022-04-21 02:42:53', 1, '{\"all\":4, \"none\":5}'),
+(230, 'manage_theme_setting', 'Quản lý cài đặt chủ đề', NULL, 20, NULL, '2022-04-21 02:42:53', 1, '{\"all\":4, \"none\":5}'),
+(231, 'view_overview_dashboard', 'Xem trang tổng quan', NULL, 21, '2022-04-21 02:43:19', '2022-04-21 02:43:19', 1, '{\"all\":4, \"none\":5}'),
+(232, 'view_project_dashboard', 'Xem bảng điều khiển dự án', NULL, 21, '2022-04-21 02:43:19', '2022-04-21 02:43:19', 1, '{\"all\":4, \"none\":5}'),
+(233, 'view_client_dashboard', 'Xem bảng điều khiển khách hàng', NULL, 21, '2022-04-21 02:43:19', '2022-04-21 02:43:19', 1, '{\"all\":4, \"none\":5}'),
+(234, 'view_hr_dashboard', 'Xem bảng điều khiển HR', NULL, 21, '2022-04-21 02:43:21', '2022-04-21 02:43:21', 1, '{\"all\":4, \"none\":5}'),
+(235, 'view_ticket_dashboard', 'Xem bảng điều khiển vé', NULL, 21, '2022-04-21 02:43:21', '2022-04-21 02:43:21', 1, '{\"all\":4, \"none\":5}'),
+(236, 'view_finance_dashboard', 'Xem bảng điều khiển tài chính', NULL, 21, '2022-04-21 02:43:21', '2022-04-21 02:43:21', 1, '{\"all\":4, \"none\":5}'),
+(237, 'add_order', 'Thêm đơn hàng', NULL, 22, NULL, '2022-04-21 02:49:05', 0, '{\"all\":4, \"none\":5}'),
+(238, 'view_order', 'Xem đơn hàng', NULL, 22, NULL, '2022-04-21 02:49:06', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(239, 'edit_order', 'Chỉnh sửa đơn hàng', NULL, 22, NULL, '2022-04-21 02:49:06', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(240, 'delete_order', 'Xóa đơn hàng', NULL, 22, NULL, '2022-04-21 02:49:06', 0, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(241, 'view_project_hourly_rates', 'Xem tỷ lệ hàng giờ của dự án', NULL, 3, '2022-04-21 02:44:43', '2022-04-21 02:44:43', 1, '{\"all\":4, \"none\":5}'),
+(242, 'change_lead_status', 'Thay đổi trạng thái khách hàng tiềm năng', NULL, 14, '2022-04-21 02:44:44', '2022-04-21 02:48:58', 1, '{\"all\":4, \"none\":5}'),
+(243, 'approve_or_reject_leaves', 'Chấp thuận hoặc từ chối nghỉ phép', NULL, 13, '2022-04-21 02:45:14', '2022-04-21 02:45:14', 1, '{\"all\":4, \"none\":5}'),
+(244, 'create_public_project', 'Tạo dự án công cộng', NULL, 3, '2022-04-21 02:45:27', '2022-04-21 02:45:27', 1, '{\"all\":4, \"none\":5}'),
+(245, 'manage_recurring_expense', 'Quản lý chi phí định kỳ', NULL, 17, '2022-04-21 02:46:12', '2022-04-21 02:46:12', 1, '{\"all\":4, \"none\":5}'),
+(246, 'add_knowledgebase', 'Thêm cơ sở kiến ​​thức', NULL, 23, NULL, NULL, 0, '{\"all\":4, \"none\":5}'),
+(247, 'view_knowledgebase', 'Xem cơ sở kiến ​​thức', NULL, 23, NULL, '2022-04-21 02:48:58', 0, '{\"all\":4,\"added\":1,\"none\":5}'),
+(248, 'edit_knowledgebase', 'Chỉnh sửa cơ sở kiến ​​thức', NULL, 23, NULL, '2022-04-21 02:48:58', 0, '{\"all\":4,\"added\":1,\"none\":5}'),
+(249, 'delete_knowledgebase', 'Xóa cơ sở kiến ​​thức', NULL, 23, NULL, '2022-04-21 02:48:58', 0, '{\"all\":4,\"added\":1,\"none\":5}'),
+(250, 'add_lead_note', 'Thêm ghi chú khách hàng tiềm năng', NULL, 14, '2022-04-21 02:47:25', '2022-04-21 02:48:58', 1, '{\"all\":4, \"none\":5}'),
+(251, 'view_lead_note', 'Xem Thêm ghi chú khách hàng tiềm năng', NULL, 14, '2022-04-21 02:47:25', '2022-04-21 02:47:25', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(252, 'edit_lead_note', 'Chỉnh sửa Thêm ghi chú khách hàng tiềm năng', NULL, 14, '2022-04-21 02:47:25', '2022-04-21 02:47:25', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(253, 'delete_lead_note', 'Xóa Thêm ghi chú khách hàng tiềm năng', NULL, 14, '2022-04-21 02:47:26', '2022-04-21 02:47:26', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}'),
+(254, 'change_employee_role', 'Thay đổi chức vụ của nhân viên', NULL, 2, '2022-04-21 02:47:44', '2022-04-21 02:47:44', 1, '{\"all\":4, \"none\":5}'),
+(259, 'add_client_document', 'Thêm tài liệu khách hàng', NULL, 1, '2022-04-21 02:48:05', '2022-04-21 02:48:05', 1, '{\"all\":4, \"none\":5}'),
+(260, 'view_client_document', 'Xem tài liệu khách hàng', NULL, 1, '2022-04-21 02:48:06', '2022-04-21 02:48:06', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(261, 'edit_client_document', 'Chỉnh sửa tài liệu khách hàng', NULL, 1, '2022-04-21 02:48:06', '2022-04-21 02:48:06', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(262, 'delete_client_document', 'Xóa tài liệu khách hàng', NULL, 1, '2022-04-21 02:48:06', '2022-04-21 02:48:06', 1, '{\"all\":4, \"added\":1, \"none\":5}'),
+(263, 'manage_role_permission_setting', 'Quản lý cài đặt phân quyền', NULL, 20, '2022-04-21 02:48:19', '2022-04-21 02:48:19', 1, '{\"all\":4, \"none\":5}'),
+(264, 'manage_module_setting', 'Quản lý cài đặt module', NULL, 20, '2022-04-21 02:48:19', '2022-04-21 02:48:19', 1, '{\"all\":4, \"none\":5}'),
+(265, 'manage_google_calendar_setting', 'Quản lý cài đặt lịch Google', NULL, 20, '2022-04-21 02:48:19', '2022-04-21 02:48:19', 1, '{\"all\":4, \"none\":5}'),
+(266, 'manage_emergency_contact', 'Quản lý liên hệ khẩn cấp', NULL, 2, '2022-04-21 02:49:10', '2022-04-21 02:49:10', 1, '{\"all\":4, \"none\":5}'),
+(267, 'approve_expenses', 'Phê duyệt chi phí', NULL, 17, '2022-04-21 02:49:11', '2022-04-21 02:49:11', 1, '{\"all\":4, \"added\":1, \"owned\":2,\"both\":3, \"none\":5}');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `permission_role`
+-- Table structure for table `permission_role`
 --
 
 CREATE TABLE `permission_role` (
@@ -10655,7 +10806,7 @@ CREATE TABLE `permission_role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `permission_role`
+-- Dumping data for table `permission_role`
 --
 
 INSERT INTO `permission_role` (`permission_id`, `role_id`, `permission_type_id`) VALUES
@@ -11440,7 +11591,7 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`, `permission_type_id`)
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `permission_types`
+-- Table structure for table `permission_types`
 --
 
 CREATE TABLE `permission_types` (
@@ -11451,7 +11602,7 @@ CREATE TABLE `permission_types` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `permission_types`
+-- Dumping data for table `permission_types`
 --
 
 INSERT INTO `permission_types` (`id`, `name`, `created_at`, `updated_at`) VALUES
@@ -11464,7 +11615,7 @@ INSERT INTO `permission_types` (`id`, `name`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `pinned`
+-- Table structure for table `pinned`
 --
 
 CREATE TABLE `pinned` (
@@ -11479,7 +11630,7 @@ CREATE TABLE `pinned` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `products`
+-- Table structure for table `products`
 --
 
 CREATE TABLE `products` (
@@ -11501,10 +11652,17 @@ CREATE TABLE `products` (
   `default_image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `price`, `taxes`, `allow_purchase`, `downloadable`, `downloadable_file`, `created_at`, `updated_at`, `description`, `category_id`, `sub_category_id`, `added_by`, `last_updated_by`, `hsn_sac_code`, `default_image`) VALUES
+(1, 'Laptop', '10000', NULL, 1, 0, NULL, '2022-05-04 02:50:16', '2022-05-04 02:50:16', '', 1, NULL, 1, 1, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `product_category`
+-- Table structure for table `product_category`
 --
 
 CREATE TABLE `product_category` (
@@ -11514,10 +11672,17 @@ CREATE TABLE `product_category` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `product_category`
+--
+
+INSERT INTO `product_category` (`id`, `category_name`, `created_at`, `updated_at`) VALUES
+(1, 'Laptop', '2022-05-04 02:49:57', '2022-05-04 02:49:57');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `product_files`
+-- Table structure for table `product_files`
 --
 
 CREATE TABLE `product_files` (
@@ -11533,7 +11698,7 @@ CREATE TABLE `product_files` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `product_sub_category`
+-- Table structure for table `product_sub_category`
 --
 
 CREATE TABLE `product_sub_category` (
@@ -11547,7 +11712,7 @@ CREATE TABLE `product_sub_category` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `projects`
+-- Table structure for table `projects`
 --
 
 CREATE TABLE `projects` (
@@ -11581,7 +11746,7 @@ CREATE TABLE `projects` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `projects`
+-- Dumping data for table `projects`
 --
 
 INSERT INTO `projects` (`id`, `project_name`, `project_summary`, `project_admin`, `start_date`, `deadline`, `notes`, `category_id`, `client_id`, `team_id`, `feedback`, `manual_timelog`, `client_view_task`, `allow_client_notification`, `completion_percent`, `calculate_task_progress`, `created_at`, `updated_at`, `deleted_at`, `project_budget`, `currency_id`, `hours_allocated`, `status`, `added_by`, `last_updated_by`, `hash`, `public`) VALUES
@@ -11590,7 +11755,7 @@ INSERT INTO `projects` (`id`, `project_name`, `project_summary`, `project_admin`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_activity`
+-- Table structure for table `project_activity`
 --
 
 CREATE TABLE `project_activity` (
@@ -11602,7 +11767,7 @@ CREATE TABLE `project_activity` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `project_activity`
+-- Dumping data for table `project_activity`
 --
 
 INSERT INTO `project_activity` (`id`, `project_id`, `activity`, `created_at`, `updated_at`) VALUES
@@ -11616,7 +11781,7 @@ INSERT INTO `project_activity` (`id`, `project_id`, `activity`, `created_at`, `u
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_category`
+-- Table structure for table `project_category`
 --
 
 CREATE TABLE `project_category` (
@@ -11629,7 +11794,7 @@ CREATE TABLE `project_category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `project_category`
+-- Dumping data for table `project_category`
 --
 
 INSERT INTO `project_category` (`id`, `category_name`, `created_at`, `updated_at`, `added_by`, `last_updated_by`) VALUES
@@ -11639,7 +11804,7 @@ INSERT INTO `project_category` (`id`, `category_name`, `created_at`, `updated_at
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_files`
+-- Table structure for table `project_files`
 --
 
 CREATE TABLE `project_files` (
@@ -11661,7 +11826,7 @@ CREATE TABLE `project_files` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `project_files`
+-- Dumping data for table `project_files`
 --
 
 INSERT INTO `project_files` (`id`, `user_id`, `project_id`, `filename`, `hashname`, `size`, `description`, `google_url`, `dropbox_link`, `created_at`, `updated_at`, `external_link_name`, `external_link`, `added_by`, `last_updated_by`) VALUES
@@ -11670,7 +11835,7 @@ INSERT INTO `project_files` (`id`, `user_id`, `project_id`, `filename`, `hashnam
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_members`
+-- Table structure for table `project_members`
 --
 
 CREATE TABLE `project_members` (
@@ -11685,7 +11850,7 @@ CREATE TABLE `project_members` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `project_members`
+-- Dumping data for table `project_members`
 --
 
 INSERT INTO `project_members` (`id`, `user_id`, `project_id`, `created_at`, `updated_at`, `hourly_rate`, `added_by`, `last_updated_by`) VALUES
@@ -11695,7 +11860,7 @@ INSERT INTO `project_members` (`id`, `user_id`, `project_id`, `created_at`, `upd
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_milestones`
+-- Table structure for table `project_milestones`
 --
 
 CREATE TABLE `project_milestones` (
@@ -11717,7 +11882,7 @@ CREATE TABLE `project_milestones` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_notes`
+-- Table structure for table `project_notes`
 --
 
 CREATE TABLE `project_notes` (
@@ -11738,7 +11903,7 @@ CREATE TABLE `project_notes` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_ratings`
+-- Table structure for table `project_ratings`
 --
 
 CREATE TABLE `project_ratings` (
@@ -11756,7 +11921,7 @@ CREATE TABLE `project_ratings` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_settings`
+-- Table structure for table `project_settings`
 --
 
 CREATE TABLE `project_settings` (
@@ -11770,16 +11935,16 @@ CREATE TABLE `project_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `project_settings`
+-- Dumping data for table `project_settings`
 --
 
 INSERT INTO `project_settings` (`id`, `send_reminder`, `remind_time`, `remind_type`, `remind_to`, `created_at`, `updated_at`) VALUES
-(1, 'no', 5, 'days', '[\"admins\",\"members\"]', '2022-04-21 02:27:28', '2022-04-21 02:27:28');
+(1, 'yes', 5, 'days', '[\"members\",\"admins\"]', '2022-04-21 02:27:28', '2022-05-04 00:52:12');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_templates`
+-- Table structure for table `project_templates`
 --
 
 CREATE TABLE `project_templates` (
@@ -11798,7 +11963,7 @@ CREATE TABLE `project_templates` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `project_templates`
+-- Dumping data for table `project_templates`
 --
 
 INSERT INTO `project_templates` (`id`, `project_name`, `category_id`, `client_id`, `project_summary`, `notes`, `feedback`, `client_view_task`, `allow_client_notification`, `manual_timelog`, `created_at`, `updated_at`) VALUES
@@ -11807,7 +11972,7 @@ INSERT INTO `project_templates` (`id`, `project_name`, `category_id`, `client_id
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_template_members`
+-- Table structure for table `project_template_members`
 --
 
 CREATE TABLE `project_template_members` (
@@ -11821,7 +11986,7 @@ CREATE TABLE `project_template_members` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_template_sub_tasks`
+-- Table structure for table `project_template_sub_tasks`
 --
 
 CREATE TABLE `project_template_sub_tasks` (
@@ -11838,7 +12003,7 @@ CREATE TABLE `project_template_sub_tasks` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_template_tasks`
+-- Table structure for table `project_template_tasks`
 --
 
 CREATE TABLE `project_template_tasks` (
@@ -11855,7 +12020,7 @@ CREATE TABLE `project_template_tasks` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_template_task_users`
+-- Table structure for table `project_template_task_users`
 --
 
 CREATE TABLE `project_template_task_users` (
@@ -11869,7 +12034,7 @@ CREATE TABLE `project_template_task_users` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_time_logs`
+-- Table structure for table `project_time_logs`
 --
 
 CREATE TABLE `project_time_logs` (
@@ -11896,7 +12061,7 @@ CREATE TABLE `project_time_logs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `project_time_logs`
+-- Dumping data for table `project_time_logs`
 --
 
 INSERT INTO `project_time_logs` (`id`, `project_id`, `task_id`, `user_id`, `start_time`, `end_time`, `memo`, `total_hours`, `total_minutes`, `edited_by_user`, `created_at`, `updated_at`, `hourly_rate`, `earnings`, `approved`, `approved_by`, `invoice_id`, `added_by`, `last_updated_by`, `total_break_minutes`) VALUES
@@ -11906,7 +12071,7 @@ INSERT INTO `project_time_logs` (`id`, `project_id`, `task_id`, `user_id`, `star
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_time_log_breaks`
+-- Table structure for table `project_time_log_breaks`
 --
 
 CREATE TABLE `project_time_log_breaks` (
@@ -11926,7 +12091,7 @@ CREATE TABLE `project_time_log_breaks` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `project_user_notes`
+-- Table structure for table `project_user_notes`
 --
 
 CREATE TABLE `project_user_notes` (
@@ -11940,7 +12105,7 @@ CREATE TABLE `project_user_notes` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `proposals`
+-- Table structure for table `proposals`
 --
 
 CREATE TABLE `proposals` (
@@ -11966,10 +12131,19 @@ CREATE TABLE `proposals` (
   `calculate_tax` enum('after_discount','before_discount') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'after_discount'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `proposals`
+--
+
+INSERT INTO `proposals` (`id`, `lead_id`, `valid_till`, `sub_total`, `total`, `currency_id`, `discount_type`, `discount`, `invoice_convert`, `status`, `note`, `description`, `created_at`, `updated_at`, `client_comment`, `signature_approval`, `added_by`, `last_updated_by`, `hash`, `calculate_tax`) VALUES
+(1, 1, '2022-06-03', 10000.00, 10100.00, 1, 'percent', 0, 0, 'waiting', 'Thanks', '<p>d</p>', '2022-05-04 02:51:34', '2022-05-04 02:51:34', NULL, 1, 1, 1, '0qDxVp1qiCnrI3FzMkzQef2SmfTvoyaz', 'after_discount'),
+(2, 2, '2022-06-04', 10000.00, 5050.00, 3, 'percent', 50, 0, 'waiting', 'noice', '<p>test</p>', '2022-05-04 23:24:32', '2022-05-04 23:24:32', NULL, 0, 1, 1, 'Q13kQuWj7rETOkHcuDASj2bmXHAE5sMN', 'after_discount'),
+(3, 3, '2022-06-04', 10000.00, 4000.00, 1, 'percent', 60, 0, 'waiting', 'noiceee', '<p>thue</p>', '2022-05-05 00:47:26', '2022-05-05 00:47:26', NULL, 0, 1, 1, 'wXx8PqNxXVyWtJ6TGyFvcM1Z2Za3va2q', 'after_discount');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `proposal_items`
+-- Table structure for table `proposal_items`
 --
 
 CREATE TABLE `proposal_items` (
@@ -11987,10 +12161,19 @@ CREATE TABLE `proposal_items` (
   `hsn_sac_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `proposal_items`
+--
+
+INSERT INTO `proposal_items` (`id`, `proposal_id`, `item_name`, `type`, `quantity`, `unit_price`, `amount`, `item_summary`, `taxes`, `created_at`, `updated_at`, `hsn_sac_code`) VALUES
+(1, 1, 'Laptop', 'item', 1.00, 10000.00, 10000.00, NULL, '[\"1\"]', '2022-05-04 02:51:34', '2022-05-04 02:51:34', NULL),
+(2, 2, 'Laptop', 'item', 1.00, 10000.00, 10000.00, 'mo ta', '[\"1\"]', '2022-05-04 23:24:32', '2022-05-04 23:24:32', NULL),
+(3, 3, 'Laptop', 'item', 1.00, 10000.00, 10000.00, NULL, NULL, '2022-05-05 00:47:26', '2022-05-05 00:47:26', NULL);
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `proposal_item_images`
+-- Table structure for table `proposal_item_images`
 --
 
 CREATE TABLE `proposal_item_images` (
@@ -12004,10 +12187,19 @@ CREATE TABLE `proposal_item_images` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `proposal_item_images`
+--
+
+INSERT INTO `proposal_item_images` (`id`, `proposal_item_id`, `filename`, `hashname`, `size`, `external_link`, `created_at`, `updated_at`) VALUES
+(1, 1, '828496.jpg', 'f49922014892ee56cd4428400d254502.jpg', '1805875', '', '2022-05-04 02:51:35', '2022-05-04 02:51:35'),
+(2, 2, 'hình ảnh minh họa dãy nhà phố.jpg', 'eca370e57350f6ab9ea14818c46f3448.jpg', '296738', '', '2022-05-04 23:24:35', '2022-05-04 23:24:35'),
+(3, 3, 'hình ảnh minh họa 2 tháp chung cư.jpg', 'b233cb6a4d0e8b20e660ee611b8d7780.jpg', '465708', '', '2022-05-05 00:47:27', '2022-05-05 00:47:27');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `proposal_signs`
+-- Table structure for table `proposal_signs`
 --
 
 CREATE TABLE `proposal_signs` (
@@ -12023,7 +12215,7 @@ CREATE TABLE `proposal_signs` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `purpose_consent`
+-- Table structure for table `purpose_consent`
 --
 
 CREATE TABLE `purpose_consent` (
@@ -12034,10 +12226,17 @@ CREATE TABLE `purpose_consent` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `purpose_consent`
+--
+
+INSERT INTO `purpose_consent` (`id`, `name`, `description`, `created_at`, `updated_at`) VALUES
+(1, 'Dong y 1', 'Khong', '2022-05-04 01:42:05', '2022-05-04 01:42:05');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `purpose_consent_leads`
+-- Table structure for table `purpose_consent_leads`
 --
 
 CREATE TABLE `purpose_consent_leads` (
@@ -12055,7 +12254,7 @@ CREATE TABLE `purpose_consent_leads` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `purpose_consent_users`
+-- Table structure for table `purpose_consent_users`
 --
 
 CREATE TABLE `purpose_consent_users` (
@@ -12073,7 +12272,7 @@ CREATE TABLE `purpose_consent_users` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `pusher_settings`
+-- Table structure for table `pusher_settings`
 --
 
 CREATE TABLE `pusher_settings` (
@@ -12091,7 +12290,7 @@ CREATE TABLE `pusher_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `pusher_settings`
+-- Dumping data for table `pusher_settings`
 --
 
 INSERT INTO `pusher_settings` (`id`, `pusher_app_id`, `pusher_app_key`, `pusher_app_secret`, `pusher_cluster`, `force_tls`, `status`, `created_at`, `updated_at`, `taskboard`, `messages`) VALUES
@@ -12100,7 +12299,7 @@ INSERT INTO `pusher_settings` (`id`, `pusher_app_id`, `pusher_app_key`, `pusher_
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `push_notification_settings`
+-- Table structure for table `push_notification_settings`
 --
 
 CREATE TABLE `push_notification_settings` (
@@ -12114,7 +12313,7 @@ CREATE TABLE `push_notification_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `push_notification_settings`
+-- Dumping data for table `push_notification_settings`
 --
 
 INSERT INTO `push_notification_settings` (`id`, `onesignal_app_id`, `onesignal_rest_api_key`, `notification_logo`, `status`, `created_at`, `updated_at`) VALUES
@@ -12123,7 +12322,7 @@ INSERT INTO `push_notification_settings` (`id`, `onesignal_app_id`, `onesignal_r
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `push_subscriptions`
+-- Table structure for table `push_subscriptions`
 --
 
 CREATE TABLE `push_subscriptions` (
@@ -12139,7 +12338,7 @@ CREATE TABLE `push_subscriptions` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `quotations`
+-- Table structure for table `quotations`
 --
 
 CREATE TABLE `quotations` (
@@ -12158,7 +12357,7 @@ CREATE TABLE `quotations` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `quotation_items`
+-- Table structure for table `quotation_items`
 --
 
 CREATE TABLE `quotation_items` (
@@ -12176,7 +12375,7 @@ CREATE TABLE `quotation_items` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `removal_requests`
+-- Table structure for table `removal_requests`
 --
 
 CREATE TABLE `removal_requests` (
@@ -12192,7 +12391,7 @@ CREATE TABLE `removal_requests` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `removal_requests_lead`
+-- Table structure for table `removal_requests_lead`
 --
 
 CREATE TABLE `removal_requests_lead` (
@@ -12208,7 +12407,7 @@ CREATE TABLE `removal_requests_lead` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `roles`
+-- Table structure for table `roles`
 --
 
 CREATE TABLE `roles` (
@@ -12221,18 +12420,18 @@ CREATE TABLE `roles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `roles`
+-- Dumping data for table `roles`
 --
 
 INSERT INTO `roles` (`id`, `name`, `display_name`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'App Administrator', 'Admin is allowed to manage everything of the app.', '2022-04-21 02:49:24', '2022-04-21 02:49:24'),
-(2, 'employee', 'Employee', 'Employee can see tasks and projects assigned to him.', '2022-04-21 02:49:24', '2022-04-21 02:49:24'),
-(3, 'client', 'Client', 'Client can see own tasks and projects.', '2022-04-21 02:49:24', '2022-04-21 02:49:24');
+(1, 'admin', 'Quản trị viên ', 'Admin is allowed to manage everything of the app.', '2022-04-21 02:49:24', '2022-04-21 02:49:24'),
+(2, 'employee', 'Nhân viên', 'Employee can see tasks and projects assigned to him.', '2022-04-21 02:49:24', '2022-04-21 02:49:24'),
+(3, 'client', 'Khách hàng', 'Client can see own tasks and projects.', '2022-04-21 02:49:24', '2022-04-21 02:49:24');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `role_user`
+-- Table structure for table `role_user`
 --
 
 CREATE TABLE `role_user` (
@@ -12241,7 +12440,7 @@ CREATE TABLE `role_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `role_user`
+-- Dumping data for table `role_user`
 --
 
 INSERT INTO `role_user` (`user_id`, `role_id`) VALUES
@@ -12253,7 +12452,7 @@ INSERT INTO `role_user` (`user_id`, `role_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sessions`
+-- Table structure for table `sessions`
 --
 
 CREATE TABLE `sessions` (
@@ -12268,7 +12467,7 @@ CREATE TABLE `sessions` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `skills`
+-- Table structure for table `skills`
 --
 
 CREATE TABLE `skills` (
@@ -12279,7 +12478,7 @@ CREATE TABLE `skills` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `skills`
+-- Dumping data for table `skills`
 --
 
 INSERT INTO `skills` (`id`, `name`, `created_at`, `updated_at`) VALUES
@@ -12289,7 +12488,7 @@ INSERT INTO `skills` (`id`, `name`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `slack_settings`
+-- Table structure for table `slack_settings`
 --
 
 CREATE TABLE `slack_settings` (
@@ -12302,7 +12501,7 @@ CREATE TABLE `slack_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `slack_settings`
+-- Dumping data for table `slack_settings`
 --
 
 INSERT INTO `slack_settings` (`id`, `slack_webhook`, `slack_logo`, `created_at`, `updated_at`, `status`) VALUES
@@ -12311,7 +12510,7 @@ INSERT INTO `slack_settings` (`id`, `slack_webhook`, `slack_logo`, `created_at`,
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `smtp_settings`
+-- Table structure for table `smtp_settings`
 --
 
 CREATE TABLE `smtp_settings` (
@@ -12331,7 +12530,7 @@ CREATE TABLE `smtp_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `smtp_settings`
+-- Dumping data for table `smtp_settings`
 --
 
 INSERT INTO `smtp_settings` (`id`, `mail_driver`, `mail_host`, `mail_port`, `mail_username`, `mail_password`, `mail_from_name`, `mail_from_email`, `mail_encryption`, `created_at`, `updated_at`, `verified`, `mail_connection`) VALUES
@@ -12340,7 +12539,7 @@ INSERT INTO `smtp_settings` (`id`, `mail_driver`, `mail_host`, `mail_port`, `mai
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `socials`
+-- Table structure for table `socials`
 --
 
 CREATE TABLE `socials` (
@@ -12355,7 +12554,7 @@ CREATE TABLE `socials` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `social_auth_settings`
+-- Table structure for table `social_auth_settings`
 --
 
 CREATE TABLE `social_auth_settings` (
@@ -12377,7 +12576,7 @@ CREATE TABLE `social_auth_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `social_auth_settings`
+-- Dumping data for table `social_auth_settings`
 --
 
 INSERT INTO `social_auth_settings` (`id`, `facebook_client_id`, `facebook_secret_id`, `facebook_status`, `google_client_id`, `google_secret_id`, `google_status`, `twitter_client_id`, `twitter_secret_id`, `twitter_status`, `linkedin_client_id`, `linkedin_secret_id`, `linkedin_status`, `created_at`, `updated_at`) VALUES
@@ -12386,7 +12585,7 @@ INSERT INTO `social_auth_settings` (`id`, `facebook_client_id`, `facebook_secret
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sticky_notes`
+-- Table structure for table `sticky_notes`
 --
 
 CREATE TABLE `sticky_notes` (
@@ -12399,7 +12598,7 @@ CREATE TABLE `sticky_notes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `sticky_notes`
+-- Dumping data for table `sticky_notes`
 --
 
 INSERT INTO `sticky_notes` (`id`, `user_id`, `note_text`, `colour`, `created_at`, `updated_at`) VALUES
@@ -12408,7 +12607,7 @@ INSERT INTO `sticky_notes` (`id`, `user_id`, `note_text`, `colour`, `created_at`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sub_tasks`
+-- Table structure for table `sub_tasks`
 --
 
 CREATE TABLE `sub_tasks` (
@@ -12429,7 +12628,7 @@ CREATE TABLE `sub_tasks` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sub_task_files`
+-- Table structure for table `sub_task_files`
 --
 
 CREATE TABLE `sub_task_files` (
@@ -12451,7 +12650,7 @@ CREATE TABLE `sub_task_files` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `taskboard_columns`
+-- Table structure for table `taskboard_columns`
 --
 
 CREATE TABLE `taskboard_columns` (
@@ -12465,7 +12664,7 @@ CREATE TABLE `taskboard_columns` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `taskboard_columns`
+-- Dumping data for table `taskboard_columns`
 --
 
 INSERT INTO `taskboard_columns` (`id`, `column_name`, `slug`, `label_color`, `priority`, `created_at`, `updated_at`) VALUES
@@ -12475,7 +12674,7 @@ INSERT INTO `taskboard_columns` (`id`, `column_name`, `slug`, `label_color`, `pr
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tasks`
+-- Table structure for table `tasks`
 --
 
 CREATE TABLE `tasks` (
@@ -12513,7 +12712,7 @@ CREATE TABLE `tasks` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tasks`
+-- Dumping data for table `tasks`
 --
 
 INSERT INTO `tasks` (`id`, `heading`, `description`, `due_date`, `start_date`, `project_id`, `task_category_id`, `priority`, `status`, `board_column_id`, `column_priority`, `completed_on`, `created_by`, `recurring_task_id`, `dependent_task_id`, `created_at`, `updated_at`, `milestone_id`, `is_private`, `billable`, `estimate_hours`, `estimate_minutes`, `added_by`, `last_updated_by`, `hash`, `repeat`, `repeat_complete`, `repeat_count`, `repeat_type`, `repeat_cycles`, `event_id`) VALUES
@@ -12523,7 +12722,7 @@ INSERT INTO `tasks` (`id`, `heading`, `description`, `due_date`, `start_date`, `
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `task_category`
+-- Table structure for table `task_category`
 --
 
 CREATE TABLE `task_category` (
@@ -12536,7 +12735,7 @@ CREATE TABLE `task_category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `task_category`
+-- Dumping data for table `task_category`
 --
 
 INSERT INTO `task_category` (`id`, `category_name`, `created_at`, `updated_at`, `added_by`, `last_updated_by`) VALUES
@@ -12545,7 +12744,7 @@ INSERT INTO `task_category` (`id`, `category_name`, `created_at`, `updated_at`, 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `task_comments`
+-- Table structure for table `task_comments`
 --
 
 CREATE TABLE `task_comments` (
@@ -12562,7 +12761,7 @@ CREATE TABLE `task_comments` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `task_files`
+-- Table structure for table `task_files`
 --
 
 CREATE TABLE `task_files` (
@@ -12584,7 +12783,7 @@ CREATE TABLE `task_files` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `task_files`
+-- Dumping data for table `task_files`
 --
 
 INSERT INTO `task_files` (`id`, `user_id`, `task_id`, `filename`, `description`, `google_url`, `hashname`, `size`, `dropbox_link`, `external_link`, `external_link_name`, `created_at`, `updated_at`, `added_by`, `last_updated_by`) VALUES
@@ -12593,7 +12792,7 @@ INSERT INTO `task_files` (`id`, `user_id`, `task_id`, `filename`, `description`,
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `task_history`
+-- Table structure for table `task_history`
 --
 
 CREATE TABLE `task_history` (
@@ -12608,7 +12807,7 @@ CREATE TABLE `task_history` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `task_history`
+-- Dumping data for table `task_history`
 --
 
 INSERT INTO `task_history` (`id`, `task_id`, `sub_task_id`, `user_id`, `details`, `board_column_id`, `created_at`, `updated_at`) VALUES
@@ -12622,7 +12821,7 @@ INSERT INTO `task_history` (`id`, `task_id`, `sub_task_id`, `user_id`, `details`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `task_labels`
+-- Table structure for table `task_labels`
 --
 
 CREATE TABLE `task_labels` (
@@ -12634,7 +12833,7 @@ CREATE TABLE `task_labels` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `task_labels`
+-- Dumping data for table `task_labels`
 --
 
 INSERT INTO `task_labels` (`id`, `label_id`, `task_id`, `created_at`, `updated_at`) VALUES
@@ -12643,7 +12842,7 @@ INSERT INTO `task_labels` (`id`, `label_id`, `task_id`, `created_at`, `updated_a
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `task_label_list`
+-- Table structure for table `task_label_list`
 --
 
 CREATE TABLE `task_label_list` (
@@ -12656,7 +12855,7 @@ CREATE TABLE `task_label_list` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `task_label_list`
+-- Dumping data for table `task_label_list`
 --
 
 INSERT INTO `task_label_list` (`id`, `label_name`, `color`, `description`, `created_at`, `updated_at`) VALUES
@@ -12665,7 +12864,7 @@ INSERT INTO `task_label_list` (`id`, `label_name`, `color`, `description`, `crea
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `task_notes`
+-- Table structure for table `task_notes`
 --
 
 CREATE TABLE `task_notes` (
@@ -12682,7 +12881,7 @@ CREATE TABLE `task_notes` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `task_users`
+-- Table structure for table `task_users`
 --
 
 CREATE TABLE `task_users` (
@@ -12694,7 +12893,7 @@ CREATE TABLE `task_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `task_users`
+-- Dumping data for table `task_users`
 --
 
 INSERT INTO `task_users` (`id`, `task_id`, `user_id`, `created_at`, `updated_at`) VALUES
@@ -12704,7 +12903,7 @@ INSERT INTO `task_users` (`id`, `task_id`, `user_id`, `created_at`, `updated_at`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `taxes`
+-- Table structure for table `taxes`
 --
 
 CREATE TABLE `taxes` (
@@ -12715,10 +12914,17 @@ CREATE TABLE `taxes` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `taxes`
+--
+
+INSERT INTO `taxes` (`id`, `tax_name`, `rate_percent`, `created_at`, `updated_at`) VALUES
+(1, 'Thue 1', '1', '2022-05-04 00:50:58', '2022-05-04 00:50:58');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `teams`
+-- Table structure for table `teams`
 --
 
 CREATE TABLE `teams` (
@@ -12731,7 +12937,7 @@ CREATE TABLE `teams` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `teams`
+-- Dumping data for table `teams`
 --
 
 INSERT INTO `teams` (`id`, `team_name`, `created_at`, `updated_at`, `added_by`, `last_updated_by`) VALUES
@@ -12740,7 +12946,7 @@ INSERT INTO `teams` (`id`, `team_name`, `created_at`, `updated_at`, `added_by`, 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `theme_settings`
+-- Table structure for table `theme_settings`
 --
 
 CREATE TABLE `theme_settings` (
@@ -12757,7 +12963,7 @@ CREATE TABLE `theme_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `theme_settings`
+-- Dumping data for table `theme_settings`
 --
 
 INSERT INTO `theme_settings` (`id`, `panel`, `header_color`, `sidebar_color`, `sidebar_text_color`, `link_color`, `user_css`, `sidebar_theme`, `created_at`, `updated_at`) VALUES
@@ -12769,7 +12975,7 @@ INSERT INTO `theme_settings` (`id`, `panel`, `header_color`, `sidebar_color`, `s
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tickets`
+-- Table structure for table `tickets`
 --
 
 CREATE TABLE `tickets` (
@@ -12792,7 +12998,7 @@ CREATE TABLE `tickets` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `tickets`
+-- Dumping data for table `tickets`
 --
 
 INSERT INTO `tickets` (`id`, `user_id`, `subject`, `status`, `priority`, `agent_id`, `channel_id`, `type_id`, `close_date`, `created_at`, `updated_at`, `deleted_at`, `mobile`, `country_id`, `added_by`, `last_updated_by`) VALUES
@@ -12801,7 +13007,7 @@ INSERT INTO `tickets` (`id`, `user_id`, `subject`, `status`, `priority`, `agent_
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ticket_agent_groups`
+-- Table structure for table `ticket_agent_groups`
 --
 
 CREATE TABLE `ticket_agent_groups` (
@@ -12813,10 +13019,17 @@ CREATE TABLE `ticket_agent_groups` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `ticket_agent_groups`
+--
+
+INSERT INTO `ticket_agent_groups` (`id`, `agent_id`, `group_id`, `status`, `created_at`, `updated_at`) VALUES
+(1, 1, 3, 'enabled', '2022-05-04 00:51:18', '2022-05-04 00:51:18');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ticket_channels`
+-- Table structure for table `ticket_channels`
 --
 
 CREATE TABLE `ticket_channels` (
@@ -12827,7 +13040,7 @@ CREATE TABLE `ticket_channels` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `ticket_channels`
+-- Dumping data for table `ticket_channels`
 --
 
 INSERT INTO `ticket_channels` (`id`, `channel_name`, `created_at`, `updated_at`) VALUES
@@ -12839,7 +13052,7 @@ INSERT INTO `ticket_channels` (`id`, `channel_name`, `created_at`, `updated_at`)
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ticket_custom_forms`
+-- Table structure for table `ticket_custom_forms`
 --
 
 CREATE TABLE `ticket_custom_forms` (
@@ -12855,7 +13068,7 @@ CREATE TABLE `ticket_custom_forms` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `ticket_custom_forms`
+-- Dumping data for table `ticket_custom_forms`
 --
 
 INSERT INTO `ticket_custom_forms` (`id`, `field_display_name`, `field_name`, `field_type`, `field_order`, `status`, `created_at`, `updated_at`, `required`) VALUES
@@ -12869,7 +13082,7 @@ INSERT INTO `ticket_custom_forms` (`id`, `field_display_name`, `field_name`, `fi
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ticket_files`
+-- Table structure for table `ticket_files`
 --
 
 CREATE TABLE `ticket_files` (
@@ -12891,7 +13104,7 @@ CREATE TABLE `ticket_files` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ticket_groups`
+-- Table structure for table `ticket_groups`
 --
 
 CREATE TABLE `ticket_groups` (
@@ -12902,7 +13115,7 @@ CREATE TABLE `ticket_groups` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `ticket_groups`
+-- Dumping data for table `ticket_groups`
 --
 
 INSERT INTO `ticket_groups` (`id`, `group_name`, `created_at`, `updated_at`) VALUES
@@ -12913,7 +13126,7 @@ INSERT INTO `ticket_groups` (`id`, `group_name`, `created_at`, `updated_at`) VAL
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ticket_replies`
+-- Table structure for table `ticket_replies`
 --
 
 CREATE TABLE `ticket_replies` (
@@ -12927,7 +13140,7 @@ CREATE TABLE `ticket_replies` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `ticket_replies`
+-- Dumping data for table `ticket_replies`
 --
 
 INSERT INTO `ticket_replies` (`id`, `ticket_id`, `user_id`, `message`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -12936,7 +13149,7 @@ INSERT INTO `ticket_replies` (`id`, `ticket_id`, `user_id`, `message`, `created_
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ticket_reply_templates`
+-- Table structure for table `ticket_reply_templates`
 --
 
 CREATE TABLE `ticket_reply_templates` (
@@ -12947,10 +13160,17 @@ CREATE TABLE `ticket_reply_templates` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `ticket_reply_templates`
+--
+
+INSERT INTO `ticket_reply_templates` (`id`, `reply_heading`, `reply_text`, `created_at`, `updated_at`) VALUES
+(1, 'Mau 1', '<p>???</p>', '2022-05-04 00:51:52', '2022-05-04 00:51:52');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ticket_tags`
+-- Table structure for table `ticket_tags`
 --
 
 CREATE TABLE `ticket_tags` (
@@ -12964,7 +13184,7 @@ CREATE TABLE `ticket_tags` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ticket_tag_list`
+-- Table structure for table `ticket_tag_list`
 --
 
 CREATE TABLE `ticket_tag_list` (
@@ -12977,7 +13197,7 @@ CREATE TABLE `ticket_tag_list` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ticket_types`
+-- Table structure for table `ticket_types`
 --
 
 CREATE TABLE `ticket_types` (
@@ -12988,7 +13208,7 @@ CREATE TABLE `ticket_types` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `ticket_types`
+-- Dumping data for table `ticket_types`
 --
 
 INSERT INTO `ticket_types` (`id`, `type`, `created_at`, `updated_at`) VALUES
@@ -13000,7 +13220,7 @@ INSERT INTO `ticket_types` (`id`, `type`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `translate_settings`
+-- Table structure for table `translate_settings`
 --
 
 CREATE TABLE `translate_settings` (
@@ -13011,7 +13231,7 @@ CREATE TABLE `translate_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `translate_settings`
+-- Dumping data for table `translate_settings`
 --
 
 INSERT INTO `translate_settings` (`id`, `google_key`, `created_at`, `updated_at`) VALUES
@@ -13020,7 +13240,7 @@ INSERT INTO `translate_settings` (`id`, `google_key`, `created_at`, `updated_at`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `universal_search`
+-- Table structure for table `universal_search`
 --
 
 CREATE TABLE `universal_search` (
@@ -13034,7 +13254,7 @@ CREATE TABLE `universal_search` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `universal_search`
+-- Dumping data for table `universal_search`
 --
 
 INSERT INTO `universal_search` (`id`, `searchable_id`, `module_type`, `title`, `route_name`, `created_at`, `updated_at`) VALUES
@@ -13046,12 +13266,18 @@ INSERT INTO `universal_search` (`id`, `searchable_id`, `module_type`, `title`, `
 (6, 3, 'client', 'Cầu Giấy', 'clients.show', '2022-04-22 18:16:20', '2022-04-22 18:16:20'),
 (7, 1, 'project', 'Quản lý dân cư', 'projects.show', '2022-04-22 18:20:44', '2022-04-22 18:20:44'),
 (8, 2, 'task', 'Shuper', 'tasks.edit', '2022-04-22 18:41:17', '2022-04-22 18:41:17'),
-(9, 1, 'ticket', 'concert', 'tickets.show', '2022-04-22 19:10:22', '2022-04-22 19:10:22');
+(9, 1, 'ticket', 'concert', 'tickets.show', '2022-04-22 19:10:22', '2022-04-22 19:10:22'),
+(10, 2, 'lead', 'Hiếu', 'leads.show', '2022-05-04 19:56:03', '2022-05-04 19:56:03'),
+(11, 2, 'proposal', 'Proposal #2', 'proposals.show', '2022-05-04 23:24:59', '2022-05-04 23:24:59'),
+(12, 3, 'lead', 'Trung Anh', 'leads.show', '2022-05-05 00:46:29', '2022-05-05 00:46:29'),
+(13, 3, 'lead', 'geedme728@gmail.com', 'leads.show', '2022-05-05 00:46:29', '2022-05-05 00:46:29'),
+(14, 3, 'proposal', 'Proposal #3', 'proposals.show', '2022-05-05 00:47:40', '2022-05-05 00:47:40'),
+(15, 1, 'invoice', 'INV#001', 'invoices.show', '2022-05-05 01:42:39', '2022-05-05 01:42:39');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -13087,18 +13313,18 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed`, `two_factor_email_confirmed`, `remember_token`, `image`, `mobile`, `gender`, `salutation`, `locale`, `status`, `login`, `onesignal_player_id`, `created_at`, `updated_at`, `last_login`, `email_notifications`, `country_id`, `dark_theme`, `rtl`, `two_fa_verify_via`, `two_factor_code`, `two_factor_expires_at`, `admin_approval`, `permission_sync`) VALUES
-(1, 'Phạm Tiến Đức', 'cuongnew37@gmail.com', '$2y$10$B7TOco4bpT8bnFnRn4t0.uCePOrww41oXLLxupe5hFEk/8BupaYzC', NULL, NULL, 0, 0, 'QPm937G0aDb65wCDXIWE1f5ATQIpOS0kqjGMGBPtUqRGzwgggxTkVlP07zcK', NULL, '0976947340', 'male', NULL, 'VI', 'active', 'enable', NULL, '2022-04-21 02:52:51', '2022-04-22 18:00:05', '2022-04-22 18:00:05', 1, 232, 0, 0, NULL, NULL, NULL, 1, 1),
+(1, 'Phạm Tiến Đức', 'cuongnew37@gmail.com', '$2y$10$B7TOco4bpT8bnFnRn4t0.uCePOrww41oXLLxupe5hFEk/8BupaYzC', NULL, NULL, 0, 0, 'QPm937G0aDb65wCDXIWE1f5ATQIpOS0kqjGMGBPtUqRGzwgggxTkVlP07zcK', NULL, '0976947340', 'male', NULL, 'vn', 'active', 'enable', NULL, '2022-04-21 02:52:51', '2022-05-04 19:37:14', '2022-05-04 19:37:14', 1, 232, 0, 0, NULL, NULL, NULL, 1, 1),
 (2, 'Nguyễn Xuân Khiêm', 'ducpham0307@gmail.com', '$2y$10$wokiLOPYY9tvjK9M4ul.T./8FMGMwr.xr6/PuC9YSYT3S/6WQea4.', NULL, NULL, 0, 0, NULL, NULL, '13456789645', 'male', NULL, 'en', 'active', 'enable', NULL, '2022-04-22 02:20:11', '2022-04-22 02:20:11', NULL, 0, 1, 0, 0, NULL, NULL, NULL, 1, 1),
 (3, 'Lê Minh Hiếu', 'cuongnew87@gmail.com', '$2y$10$NHHTZWoiMxC4G6x8rQLXY.qKU26uKVnNCt1P8MQp7A.GWuHc3FaHa', NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 'en', 'active', 'disable', NULL, '2022-04-22 18:16:19', '2022-04-22 18:16:19', NULL, 0, NULL, 0, 0, NULL, NULL, NULL, 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users_chat`
+-- Table structure for table `users_chat`
 --
 
 CREATE TABLE `users_chat` (
@@ -13113,10 +13339,20 @@ CREATE TABLE `users_chat` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `users_chat`
+--
+
+INSERT INTO `users_chat` (`id`, `user_one`, `user_id`, `message`, `from`, `to`, `message_seen`, `created_at`, `updated_at`) VALUES
+(1, 1, 2, 'chat 0101', 1, 2, 'no', '2022-05-03 18:54:39', '2022-05-03 18:54:39'),
+(2, 1, 2, 'ggg', 1, 2, 'no', '2022-05-03 18:54:48', '2022-05-03 18:54:48'),
+(3, 1, 2, 'Oke', 1, 2, 'no', '2022-05-03 20:06:46', '2022-05-03 20:06:46'),
+(4, 1, 2, 'ssaaa', 1, 2, 'no', '2022-05-05 02:10:20', '2022-05-05 02:10:20');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users_chat_files`
+-- Table structure for table `users_chat_files`
 --
 
 CREATE TABLE `users_chat_files` (
@@ -13134,10 +13370,18 @@ CREATE TABLE `users_chat_files` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `users_chat_files`
+--
+
+INSERT INTO `users_chat_files` (`id`, `user_id`, `users_chat_id`, `filename`, `description`, `google_url`, `hashname`, `size`, `external_link`, `external_link_name`, `created_at`, `updated_at`) VALUES
+(1, 1, 3, '144565.jpg', NULL, NULL, '005b401cc2c3aabc58f0b17b3c15914a.jpg', '1378395', NULL, NULL, '2022-05-03 20:06:48', '2022-05-03 20:06:48'),
+(2, 1, 4, 'login-bg.jpg', NULL, NULL, '45e8339ca6e8a24739e73a7c18b1954d.jpg', '229622', NULL, NULL, '2022-05-05 02:10:50', '2022-05-05 02:10:50');
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user_activities`
+-- Table structure for table `user_activities`
 --
 
 CREATE TABLE `user_activities` (
@@ -13149,18 +13393,19 @@ CREATE TABLE `user_activities` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `user_activities`
+-- Dumping data for table `user_activities`
 --
 
 INSERT INTO `user_activities` (`id`, `user_id`, `activity`, `created_at`, `updated_at`) VALUES
 (1, 1, 'messages.updatedProfile', '2022-04-21 04:11:01', '2022-04-21 04:11:01'),
 (2, 1, 'modules.tasks.timerStartedTask', '2022-04-22 06:57:50', '2022-04-22 06:57:50'),
-(3, 1, 'modules.tasks.timerStoppedBy', '2022-04-22 06:58:05', '2022-04-22 06:58:05');
+(3, 1, 'modules.tasks.timerStoppedBy', '2022-04-22 06:58:05', '2022-04-22 06:58:05'),
+(4, 1, 'messages.updatedProfile', '2022-05-03 07:57:36', '2022-05-03 07:57:36');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user_invitations`
+-- Table structure for table `user_invitations`
 --
 
 CREATE TABLE `user_invitations` (
@@ -13177,7 +13422,7 @@ CREATE TABLE `user_invitations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `user_invitations`
+-- Dumping data for table `user_invitations`
 --
 
 INSERT INTO `user_invitations` (`id`, `user_id`, `invitation_type`, `email`, `invitation_code`, `status`, `email_restriction`, `message`, `created_at`, `updated_at`) VALUES
@@ -13186,7 +13431,7 @@ INSERT INTO `user_invitations` (`id`, `user_id`, `invitation_type`, `email`, `in
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user_leadboard_settings`
+-- Table structure for table `user_leadboard_settings`
 --
 
 CREATE TABLE `user_leadboard_settings` (
@@ -13201,7 +13446,7 @@ CREATE TABLE `user_leadboard_settings` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user_permissions`
+-- Table structure for table `user_permissions`
 --
 
 CREATE TABLE `user_permissions` (
@@ -13214,7 +13459,7 @@ CREATE TABLE `user_permissions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `user_permissions`
+-- Dumping data for table `user_permissions`
 --
 
 INSERT INTO `user_permissions` (`id`, `user_id`, `permission_id`, `permission_type_id`, `created_at`, `updated_at`) VALUES
@@ -13999,7 +14244,7 @@ INSERT INTO `user_permissions` (`id`, `user_id`, `permission_id`, `permission_ty
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user_taskboard_settings`
+-- Table structure for table `user_taskboard_settings`
 --
 
 CREATE TABLE `user_taskboard_settings` (
@@ -14012,18 +14257,18 @@ CREATE TABLE `user_taskboard_settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `accept_estimates`
+-- Indexes for table `accept_estimates`
 --
 ALTER TABLE `accept_estimates`
   ADD PRIMARY KEY (`id`),
   ADD KEY `accept_estimates_estimate_id_foreign` (`estimate_id`);
 
 --
--- Chỉ mục cho bảng `attendances`
+-- Indexes for table `attendances`
 --
 ALTER TABLE `attendances`
   ADD PRIMARY KEY (`id`),
@@ -14032,19 +14277,19 @@ ALTER TABLE `attendances`
   ADD KEY `attendances_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `attendance_settings`
+-- Indexes for table `attendance_settings`
 --
 ALTER TABLE `attendance_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `client_categories`
+-- Indexes for table `client_categories`
 --
 ALTER TABLE `client_categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `client_contacts`
+-- Indexes for table `client_contacts`
 --
 ALTER TABLE `client_contacts`
   ADD PRIMARY KEY (`id`),
@@ -14053,7 +14298,7 @@ ALTER TABLE `client_contacts`
   ADD KEY `client_contacts_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `client_details`
+-- Indexes for table `client_details`
 --
 ALTER TABLE `client_details`
   ADD PRIMARY KEY (`id`),
@@ -14064,7 +14309,7 @@ ALTER TABLE `client_details`
   ADD KEY `client_details_sub_category_id_foreign` (`sub_category_id`);
 
 --
--- Chỉ mục cho bảng `client_docs`
+-- Indexes for table `client_docs`
 --
 ALTER TABLE `client_docs`
   ADD PRIMARY KEY (`id`),
@@ -14073,7 +14318,7 @@ ALTER TABLE `client_docs`
   ADD KEY `client_docs_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `client_notes`
+-- Indexes for table `client_notes`
 --
 ALTER TABLE `client_notes`
   ADD PRIMARY KEY (`id`),
@@ -14083,14 +14328,14 @@ ALTER TABLE `client_notes`
   ADD KEY `client_notes_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `client_sub_categories`
+-- Indexes for table `client_sub_categories`
 --
 ALTER TABLE `client_sub_categories`
   ADD PRIMARY KEY (`id`),
   ADD KEY `client_sub_categories_category_id_foreign` (`category_id`);
 
 --
--- Chỉ mục cho bảng `client_user_notes`
+-- Indexes for table `client_user_notes`
 --
 ALTER TABLE `client_user_notes`
   ADD PRIMARY KEY (`id`),
@@ -14098,13 +14343,13 @@ ALTER TABLE `client_user_notes`
   ADD KEY `client_user_notes_client_note_id_foreign` (`client_note_id`);
 
 --
--- Chỉ mục cho bảng `company_addresses`
+-- Indexes for table `company_addresses`
 --
 ALTER TABLE `company_addresses`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `contracts`
+-- Indexes for table `contracts`
 --
 ALTER TABLE `contracts`
   ADD PRIMARY KEY (`id`),
@@ -14115,7 +14360,7 @@ ALTER TABLE `contracts`
   ADD KEY `contracts_currency_id_foreign` (`currency_id`);
 
 --
--- Chỉ mục cho bảng `contract_discussions`
+-- Indexes for table `contract_discussions`
 --
 ALTER TABLE `contract_discussions`
   ADD PRIMARY KEY (`id`),
@@ -14125,7 +14370,7 @@ ALTER TABLE `contract_discussions`
   ADD KEY `contract_discussions_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `contract_files`
+-- Indexes for table `contract_files`
 --
 ALTER TABLE `contract_files`
   ADD PRIMARY KEY (`id`),
@@ -14135,7 +14380,7 @@ ALTER TABLE `contract_files`
   ADD KEY `contract_files_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `contract_renews`
+-- Indexes for table `contract_renews`
 --
 ALTER TABLE `contract_renews`
   ADD PRIMARY KEY (`id`),
@@ -14145,20 +14390,20 @@ ALTER TABLE `contract_renews`
   ADD KEY `contract_renews_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `contract_signs`
+-- Indexes for table `contract_signs`
 --
 ALTER TABLE `contract_signs`
   ADD PRIMARY KEY (`id`),
   ADD KEY `contract_signs_contract_id_foreign` (`contract_id`);
 
 --
--- Chỉ mục cho bảng `contract_types`
+-- Indexes for table `contract_types`
 --
 ALTER TABLE `contract_types`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `conversation`
+-- Indexes for table `conversation`
 --
 ALTER TABLE `conversation`
   ADD PRIMARY KEY (`id`),
@@ -14166,7 +14411,7 @@ ALTER TABLE `conversation`
   ADD KEY `conversation_user_two_foreign` (`user_two`);
 
 --
--- Chỉ mục cho bảng `conversation_reply`
+-- Indexes for table `conversation_reply`
 --
 ALTER TABLE `conversation_reply`
   ADD PRIMARY KEY (`id`),
@@ -14174,13 +14419,13 @@ ALTER TABLE `conversation_reply`
   ADD KEY `conversation_reply_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `countries`
+-- Indexes for table `countries`
 --
 ALTER TABLE `countries`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `credit_notes`
+-- Indexes for table `credit_notes`
 --
 ALTER TABLE `credit_notes`
   ADD PRIMARY KEY (`id`),
@@ -14191,40 +14436,40 @@ ALTER TABLE `credit_notes`
   ADD KEY `credit_notes_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `credit_note_items`
+-- Indexes for table `credit_note_items`
 --
 ALTER TABLE `credit_note_items`
   ADD PRIMARY KEY (`id`),
   ADD KEY `credit_note_items_credit_note_id_foreign` (`credit_note_id`);
 
 --
--- Chỉ mục cho bảng `credit_note_item_images`
+-- Indexes for table `credit_note_item_images`
 --
 ALTER TABLE `credit_note_item_images`
   ADD PRIMARY KEY (`id`),
   ADD KEY `credit_note_item_images_credit_note_item_id_foreign` (`credit_note_item_id`);
 
 --
--- Chỉ mục cho bảng `currencies`
+-- Indexes for table `currencies`
 --
 ALTER TABLE `currencies`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `currency_format_settings`
+-- Indexes for table `currency_format_settings`
 --
 ALTER TABLE `currency_format_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `custom_fields`
+-- Indexes for table `custom_fields`
 --
 ALTER TABLE `custom_fields`
   ADD PRIMARY KEY (`id`),
   ADD KEY `custom_fields_custom_field_group_id_foreign` (`custom_field_group_id`);
 
 --
--- Chỉ mục cho bảng `custom_fields_data`
+-- Indexes for table `custom_fields_data`
 --
 ALTER TABLE `custom_fields_data`
   ADD PRIMARY KEY (`id`),
@@ -14232,32 +14477,32 @@ ALTER TABLE `custom_fields_data`
   ADD KEY `custom_fields_data_model_index` (`model`);
 
 --
--- Chỉ mục cho bảng `custom_field_groups`
+-- Indexes for table `custom_field_groups`
 --
 ALTER TABLE `custom_field_groups`
   ADD PRIMARY KEY (`id`),
   ADD KEY `custom_field_groups_model_index` (`model`);
 
 --
--- Chỉ mục cho bảng `dashboard_widgets`
+-- Indexes for table `dashboard_widgets`
 --
 ALTER TABLE `dashboard_widgets`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `database_backups`
+-- Indexes for table `database_backups`
 --
 ALTER TABLE `database_backups`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `database_backup_cron_settings`
+-- Indexes for table `database_backup_cron_settings`
 --
 ALTER TABLE `database_backup_cron_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `designations`
+-- Indexes for table `designations`
 --
 ALTER TABLE `designations`
   ADD PRIMARY KEY (`id`),
@@ -14265,7 +14510,7 @@ ALTER TABLE `designations`
   ADD KEY `designations_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `discussions`
+-- Indexes for table `discussions`
 --
 ALTER TABLE `discussions`
   ADD PRIMARY KEY (`id`),
@@ -14278,13 +14523,13 @@ ALTER TABLE `discussions`
   ADD KEY `discussions_discussion_category_id_foreign` (`discussion_category_id`);
 
 --
--- Chỉ mục cho bảng `discussion_categories`
+-- Indexes for table `discussion_categories`
 --
 ALTER TABLE `discussion_categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `discussion_files`
+-- Indexes for table `discussion_files`
 --
 ALTER TABLE `discussion_files`
   ADD PRIMARY KEY (`id`),
@@ -14293,7 +14538,7 @@ ALTER TABLE `discussion_files`
   ADD KEY `discussion_files_discussion_reply_id_foreign` (`discussion_reply_id`);
 
 --
--- Chỉ mục cho bảng `discussion_replies`
+-- Indexes for table `discussion_replies`
 --
 ALTER TABLE `discussion_replies`
   ADD PRIMARY KEY (`id`),
@@ -14301,13 +14546,13 @@ ALTER TABLE `discussion_replies`
   ADD KEY `discussion_replies_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `email_notification_settings`
+-- Indexes for table `email_notification_settings`
 --
 ALTER TABLE `email_notification_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `emergency_contacts`
+-- Indexes for table `emergency_contacts`
 --
 ALTER TABLE `emergency_contacts`
   ADD PRIMARY KEY (`id`),
@@ -14316,7 +14561,7 @@ ALTER TABLE `emergency_contacts`
   ADD KEY `emergency_contacts_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `employee_details`
+-- Indexes for table `employee_details`
 --
 ALTER TABLE `employee_details`
   ADD PRIMARY KEY (`id`),
@@ -14329,7 +14574,7 @@ ALTER TABLE `employee_details`
   ADD KEY `employee_details_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `employee_docs`
+-- Indexes for table `employee_docs`
 --
 ALTER TABLE `employee_docs`
   ADD PRIMARY KEY (`id`),
@@ -14338,7 +14583,7 @@ ALTER TABLE `employee_docs`
   ADD KEY `employee_docs_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `employee_leave_quotas`
+-- Indexes for table `employee_leave_quotas`
 --
 ALTER TABLE `employee_leave_quotas`
   ADD PRIMARY KEY (`id`),
@@ -14346,7 +14591,7 @@ ALTER TABLE `employee_leave_quotas`
   ADD KEY `employee_leave_quotas_leave_type_id_foreign` (`leave_type_id`);
 
 --
--- Chỉ mục cho bảng `employee_skills`
+-- Indexes for table `employee_skills`
 --
 ALTER TABLE `employee_skills`
   ADD PRIMARY KEY (`id`),
@@ -14354,7 +14599,7 @@ ALTER TABLE `employee_skills`
   ADD KEY `employee_skills_skill_id_foreign` (`skill_id`);
 
 --
--- Chỉ mục cho bảng `employee_teams`
+-- Indexes for table `employee_teams`
 --
 ALTER TABLE `employee_teams`
   ADD PRIMARY KEY (`id`),
@@ -14362,7 +14607,7 @@ ALTER TABLE `employee_teams`
   ADD KEY `employee_teams_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `estimates`
+-- Indexes for table `estimates`
 --
 ALTER TABLE `estimates`
   ADD PRIMARY KEY (`id`),
@@ -14373,21 +14618,21 @@ ALTER TABLE `estimates`
   ADD KEY `estimates_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `estimate_items`
+-- Indexes for table `estimate_items`
 --
 ALTER TABLE `estimate_items`
   ADD PRIMARY KEY (`id`),
   ADD KEY `estimate_items_estimate_id_foreign` (`estimate_id`);
 
 --
--- Chỉ mục cho bảng `estimate_item_images`
+-- Indexes for table `estimate_item_images`
 --
 ALTER TABLE `estimate_item_images`
   ADD PRIMARY KEY (`id`),
   ADD KEY `estimate_item_images_estimate_item_id_foreign` (`estimate_item_id`);
 
 --
--- Chỉ mục cho bảng `events`
+-- Indexes for table `events`
 --
 ALTER TABLE `events`
   ADD PRIMARY KEY (`id`),
@@ -14395,7 +14640,7 @@ ALTER TABLE `events`
   ADD KEY `events_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `event_attendees`
+-- Indexes for table `event_attendees`
 --
 ALTER TABLE `event_attendees`
   ADD PRIMARY KEY (`id`),
@@ -14403,7 +14648,7 @@ ALTER TABLE `event_attendees`
   ADD KEY `event_attendees_event_id_foreign` (`event_id`);
 
 --
--- Chỉ mục cho bảng `expenses`
+-- Indexes for table `expenses`
 --
 ALTER TABLE `expenses`
   ADD PRIMARY KEY (`id`),
@@ -14417,7 +14662,7 @@ ALTER TABLE `expenses`
   ADD KEY `expenses_approver_id_foreign` (`approver_id`);
 
 --
--- Chỉ mục cho bảng `expenses_category`
+-- Indexes for table `expenses_category`
 --
 ALTER TABLE `expenses_category`
   ADD PRIMARY KEY (`id`),
@@ -14425,7 +14670,7 @@ ALTER TABLE `expenses_category`
   ADD KEY `expenses_category_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `expenses_category_roles`
+-- Indexes for table `expenses_category_roles`
 --
 ALTER TABLE `expenses_category_roles`
   ADD PRIMARY KEY (`id`),
@@ -14433,7 +14678,7 @@ ALTER TABLE `expenses_category_roles`
   ADD KEY `expenses_category_roles_role_id_foreign` (`role_id`);
 
 --
--- Chỉ mục cho bảng `expenses_recurring`
+-- Indexes for table `expenses_recurring`
 --
 ALTER TABLE `expenses_recurring`
   ADD PRIMARY KEY (`id`),
@@ -14446,32 +14691,32 @@ ALTER TABLE `expenses_recurring`
   ADD KEY `expenses_recurring_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `failed_jobs`
+-- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
--- Chỉ mục cho bảng `file_storage_settings`
+-- Indexes for table `file_storage_settings`
 --
 ALTER TABLE `file_storage_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `gdpr_settings`
+-- Indexes for table `gdpr_settings`
 --
 ALTER TABLE `gdpr_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `google_calendar_modules`
+-- Indexes for table `google_calendar_modules`
 --
 ALTER TABLE `google_calendar_modules`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `holidays`
+-- Indexes for table `holidays`
 --
 ALTER TABLE `holidays`
   ADD PRIMARY KEY (`id`),
@@ -14479,7 +14724,7 @@ ALTER TABLE `holidays`
   ADD KEY `holidays_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `invoices`
+-- Indexes for table `invoices`
 --
 ALTER TABLE `invoices`
   ADD PRIMARY KEY (`id`),
@@ -14497,21 +14742,21 @@ ALTER TABLE `invoices`
   ADD KEY `invoices_company_address_id_foreign` (`company_address_id`);
 
 --
--- Chỉ mục cho bảng `invoice_items`
+-- Indexes for table `invoice_items`
 --
 ALTER TABLE `invoice_items`
   ADD PRIMARY KEY (`id`),
   ADD KEY `invoice_items_invoice_id_foreign` (`invoice_id`);
 
 --
--- Chỉ mục cho bảng `invoice_item_images`
+-- Indexes for table `invoice_item_images`
 --
 ALTER TABLE `invoice_item_images`
   ADD PRIMARY KEY (`id`),
   ADD KEY `invoice_item_images_invoice_item_id_foreign` (`invoice_item_id`);
 
 --
--- Chỉ mục cho bảng `invoice_recurring`
+-- Indexes for table `invoice_recurring`
 --
 ALTER TABLE `invoice_recurring`
   ADD PRIMARY KEY (`id`),
@@ -14524,27 +14769,27 @@ ALTER TABLE `invoice_recurring`
   ADD KEY `invoice_recurring_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `invoice_recurring_items`
+-- Indexes for table `invoice_recurring_items`
 --
 ALTER TABLE `invoice_recurring_items`
   ADD PRIMARY KEY (`id`),
   ADD KEY `invoice_recurring_items_invoice_recurring_id_foreign` (`invoice_recurring_id`);
 
 --
--- Chỉ mục cho bảng `invoice_recurring_item_images`
+-- Indexes for table `invoice_recurring_item_images`
 --
 ALTER TABLE `invoice_recurring_item_images`
   ADD PRIMARY KEY (`id`),
   ADD KEY `invoice_recurring_item_images_invoice_recurring_item_id_foreign` (`invoice_recurring_item_id`);
 
 --
--- Chỉ mục cho bảng `invoice_settings`
+-- Indexes for table `invoice_settings`
 --
 ALTER TABLE `invoice_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `issues`
+-- Indexes for table `issues`
 --
 ALTER TABLE `issues`
   ADD PRIMARY KEY (`id`),
@@ -14552,39 +14797,39 @@ ALTER TABLE `issues`
   ADD KEY `issues_project_id_foreign` (`project_id`);
 
 --
--- Chỉ mục cho bảng `jobs`
+-- Indexes for table `jobs`
 --
 ALTER TABLE `jobs`
   ADD PRIMARY KEY (`id`),
   ADD KEY `jobs_queue_index` (`queue`);
 
 --
--- Chỉ mục cho bảng `job_batches`
+-- Indexes for table `job_batches`
 --
 ALTER TABLE `job_batches`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `knowledge_bases`
+-- Indexes for table `knowledge_bases`
 --
 ALTER TABLE `knowledge_bases`
   ADD PRIMARY KEY (`id`),
   ADD KEY `knowledge_bases_category_id_foreign` (`category_id`);
 
 --
--- Chỉ mục cho bảng `knowledge_categories`
+-- Indexes for table `knowledge_categories`
 --
 ALTER TABLE `knowledge_categories`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `language_settings`
+-- Indexes for table `language_settings`
 --
 ALTER TABLE `language_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `leads`
+-- Indexes for table `leads`
 --
 ALTER TABLE `leads`
   ADD PRIMARY KEY (`id`),
@@ -14595,7 +14840,7 @@ ALTER TABLE `leads`
   ADD KEY `leads_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `lead_agents`
+-- Indexes for table `lead_agents`
 --
 ALTER TABLE `lead_agents`
   ADD PRIMARY KEY (`id`),
@@ -14604,7 +14849,7 @@ ALTER TABLE `lead_agents`
   ADD KEY `lead_agents_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `lead_category`
+-- Indexes for table `lead_category`
 --
 ALTER TABLE `lead_category`
   ADD PRIMARY KEY (`id`),
@@ -14612,7 +14857,7 @@ ALTER TABLE `lead_category`
   ADD KEY `lead_category_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `lead_custom_forms`
+-- Indexes for table `lead_custom_forms`
 --
 ALTER TABLE `lead_custom_forms`
   ADD PRIMARY KEY (`id`),
@@ -14620,7 +14865,7 @@ ALTER TABLE `lead_custom_forms`
   ADD KEY `lead_custom_forms_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `lead_files`
+-- Indexes for table `lead_files`
 --
 ALTER TABLE `lead_files`
   ADD PRIMARY KEY (`id`),
@@ -14630,7 +14875,7 @@ ALTER TABLE `lead_files`
   ADD KEY `lead_files_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `lead_follow_up`
+-- Indexes for table `lead_follow_up`
 --
 ALTER TABLE `lead_follow_up`
   ADD PRIMARY KEY (`id`),
@@ -14639,7 +14884,7 @@ ALTER TABLE `lead_follow_up`
   ADD KEY `lead_follow_up_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `lead_notes`
+-- Indexes for table `lead_notes`
 --
 ALTER TABLE `lead_notes`
   ADD PRIMARY KEY (`id`),
@@ -14649,7 +14894,7 @@ ALTER TABLE `lead_notes`
   ADD KEY `lead_notes_lead_id_foreign` (`lead_id`);
 
 --
--- Chỉ mục cho bảng `lead_sources`
+-- Indexes for table `lead_sources`
 --
 ALTER TABLE `lead_sources`
   ADD PRIMARY KEY (`id`),
@@ -14658,14 +14903,14 @@ ALTER TABLE `lead_sources`
   ADD KEY `lead_sources_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `lead_status`
+-- Indexes for table `lead_status`
 --
 ALTER TABLE `lead_status`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `lead_status_type_unique` (`type`);
 
 --
--- Chỉ mục cho bảng `lead_user_notes`
+-- Indexes for table `lead_user_notes`
 --
 ALTER TABLE `lead_user_notes`
   ADD PRIMARY KEY (`id`),
@@ -14673,7 +14918,7 @@ ALTER TABLE `lead_user_notes`
   ADD KEY `lead_user_notes_lead_note_id_foreign` (`lead_note_id`);
 
 --
--- Chỉ mục cho bảng `leaves`
+-- Indexes for table `leaves`
 --
 ALTER TABLE `leaves`
   ADD PRIMARY KEY (`id`),
@@ -14683,61 +14928,61 @@ ALTER TABLE `leaves`
   ADD KEY `leaves_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `leave_types`
+-- Indexes for table `leave_types`
 --
 ALTER TABLE `leave_types`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `log_time_for`
+-- Indexes for table `log_time_for`
 --
 ALTER TABLE `log_time_for`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `ltm_translations`
+-- Indexes for table `ltm_translations`
 --
 ALTER TABLE `ltm_translations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `menus`
+-- Indexes for table `menus`
 --
 ALTER TABLE `menus`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `menu_settings`
+-- Indexes for table `menu_settings`
 --
 ALTER TABLE `menu_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `message_settings`
+-- Indexes for table `message_settings`
 --
 ALTER TABLE `message_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `migrations`
+-- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `modules`
+-- Indexes for table `modules`
 --
 ALTER TABLE `modules`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `module_settings`
+-- Indexes for table `module_settings`
 --
 ALTER TABLE `module_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `notices`
+-- Indexes for table `notices`
 --
 ALTER TABLE `notices`
   ADD PRIMARY KEY (`id`),
@@ -14746,7 +14991,7 @@ ALTER TABLE `notices`
   ADD KEY `notices_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `notice_views`
+-- Indexes for table `notice_views`
 --
 ALTER TABLE `notice_views`
   ADD PRIMARY KEY (`id`),
@@ -14754,20 +14999,20 @@ ALTER TABLE `notice_views`
   ADD KEY `notice_views_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `notifications`
+-- Indexes for table `notifications`
 --
 ALTER TABLE `notifications`
   ADD PRIMARY KEY (`id`),
   ADD KEY `notifications_notifiable_type_notifiable_id_index` (`notifiable_type`,`notifiable_id`);
 
 --
--- Chỉ mục cho bảng `offline_payment_methods`
+-- Indexes for table `offline_payment_methods`
 --
 ALTER TABLE `offline_payment_methods`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `orders`
+-- Indexes for table `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`id`),
@@ -14777,7 +15022,7 @@ ALTER TABLE `orders`
   ADD KEY `orders_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `order_items`
+-- Indexes for table `order_items`
 --
 ALTER TABLE `order_items`
   ADD PRIMARY KEY (`id`),
@@ -14785,14 +15030,14 @@ ALTER TABLE `order_items`
   ADD KEY `order_items_product_id_foreign` (`product_id`);
 
 --
--- Chỉ mục cho bảng `order_item_images`
+-- Indexes for table `order_item_images`
 --
 ALTER TABLE `order_item_images`
   ADD PRIMARY KEY (`id`),
   ADD KEY `order_item_images_order_item_id_index` (`order_item_id`);
 
 --
--- Chỉ mục cho bảng `organisation_settings`
+-- Indexes for table `organisation_settings`
 --
 ALTER TABLE `organisation_settings`
   ADD PRIMARY KEY (`id`),
@@ -14801,14 +15046,14 @@ ALTER TABLE `organisation_settings`
   ADD KEY `organisation_settings_default_task_status_foreign` (`default_task_status`);
 
 --
--- Chỉ mục cho bảng `password_resets`
+-- Indexes for table `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`),
   ADD KEY `password_resets_token_index` (`token`);
 
 --
--- Chỉ mục cho bảng `payments`
+-- Indexes for table `payments`
 --
 ALTER TABLE `payments`
   ADD PRIMARY KEY (`id`),
@@ -14825,13 +15070,13 @@ ALTER TABLE `payments`
   ADD KEY `payments_credit_notes_id_foreign` (`credit_notes_id`);
 
 --
--- Chỉ mục cho bảng `payment_gateway_credentials`
+-- Indexes for table `payment_gateway_credentials`
 --
 ALTER TABLE `payment_gateway_credentials`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `permissions`
+-- Indexes for table `permissions`
 --
 ALTER TABLE `permissions`
   ADD PRIMARY KEY (`id`),
@@ -14839,7 +15084,7 @@ ALTER TABLE `permissions`
   ADD KEY `permissions_module_id_foreign` (`module_id`);
 
 --
--- Chỉ mục cho bảng `permission_role`
+-- Indexes for table `permission_role`
 --
 ALTER TABLE `permission_role`
   ADD PRIMARY KEY (`permission_id`,`role_id`),
@@ -14847,13 +15092,13 @@ ALTER TABLE `permission_role`
   ADD KEY `permission_role_permission_type_id_foreign` (`permission_type_id`);
 
 --
--- Chỉ mục cho bảng `permission_types`
+-- Indexes for table `permission_types`
 --
 ALTER TABLE `permission_types`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `pinned`
+-- Indexes for table `pinned`
 --
 ALTER TABLE `pinned`
   ADD PRIMARY KEY (`id`),
@@ -14862,7 +15107,7 @@ ALTER TABLE `pinned`
   ADD KEY `pinned_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `products`
+-- Indexes for table `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
@@ -14872,13 +15117,13 @@ ALTER TABLE `products`
   ADD KEY `products_sub_category_id_foreign` (`sub_category_id`);
 
 --
--- Chỉ mục cho bảng `product_category`
+-- Indexes for table `product_category`
 --
 ALTER TABLE `product_category`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `product_files`
+-- Indexes for table `product_files`
 --
 ALTER TABLE `product_files`
   ADD PRIMARY KEY (`id`),
@@ -14887,14 +15132,14 @@ ALTER TABLE `product_files`
   ADD KEY `product_files_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `product_sub_category`
+-- Indexes for table `product_sub_category`
 --
 ALTER TABLE `product_sub_category`
   ADD PRIMARY KEY (`id`),
   ADD KEY `product_sub_category_category_id_foreign` (`category_id`);
 
 --
--- Chỉ mục cho bảng `projects`
+-- Indexes for table `projects`
 --
 ALTER TABLE `projects`
   ADD PRIMARY KEY (`id`),
@@ -14907,14 +15152,14 @@ ALTER TABLE `projects`
   ADD KEY `projects_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `project_activity`
+-- Indexes for table `project_activity`
 --
 ALTER TABLE `project_activity`
   ADD PRIMARY KEY (`id`),
   ADD KEY `project_activity_project_id_foreign` (`project_id`);
 
 --
--- Chỉ mục cho bảng `project_category`
+-- Indexes for table `project_category`
 --
 ALTER TABLE `project_category`
   ADD PRIMARY KEY (`id`),
@@ -14922,7 +15167,7 @@ ALTER TABLE `project_category`
   ADD KEY `project_category_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `project_files`
+-- Indexes for table `project_files`
 --
 ALTER TABLE `project_files`
   ADD PRIMARY KEY (`id`),
@@ -14932,7 +15177,7 @@ ALTER TABLE `project_files`
   ADD KEY `project_files_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `project_members`
+-- Indexes for table `project_members`
 --
 ALTER TABLE `project_members`
   ADD PRIMARY KEY (`id`),
@@ -14942,7 +15187,7 @@ ALTER TABLE `project_members`
   ADD KEY `project_members_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `project_milestones`
+-- Indexes for table `project_milestones`
 --
 ALTER TABLE `project_milestones`
   ADD PRIMARY KEY (`id`),
@@ -14952,7 +15197,7 @@ ALTER TABLE `project_milestones`
   ADD KEY `project_milestones_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `project_notes`
+-- Indexes for table `project_notes`
 --
 ALTER TABLE `project_notes`
   ADD PRIMARY KEY (`id`),
@@ -14962,7 +15207,7 @@ ALTER TABLE `project_notes`
   ADD KEY `project_notes_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `project_ratings`
+-- Indexes for table `project_ratings`
 --
 ALTER TABLE `project_ratings`
   ADD PRIMARY KEY (`id`),
@@ -14972,13 +15217,13 @@ ALTER TABLE `project_ratings`
   ADD KEY `project_ratings_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `project_settings`
+-- Indexes for table `project_settings`
 --
 ALTER TABLE `project_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `project_templates`
+-- Indexes for table `project_templates`
 --
 ALTER TABLE `project_templates`
   ADD PRIMARY KEY (`id`),
@@ -14986,7 +15231,7 @@ ALTER TABLE `project_templates`
   ADD KEY `project_templates_client_id_foreign` (`client_id`);
 
 --
--- Chỉ mục cho bảng `project_template_members`
+-- Indexes for table `project_template_members`
 --
 ALTER TABLE `project_template_members`
   ADD PRIMARY KEY (`id`),
@@ -14994,14 +15239,14 @@ ALTER TABLE `project_template_members`
   ADD KEY `project_template_members_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `project_template_sub_tasks`
+-- Indexes for table `project_template_sub_tasks`
 --
 ALTER TABLE `project_template_sub_tasks`
   ADD PRIMARY KEY (`id`),
   ADD KEY `project_template_sub_tasks_project_template_task_id_foreign` (`project_template_task_id`);
 
 --
--- Chỉ mục cho bảng `project_template_tasks`
+-- Indexes for table `project_template_tasks`
 --
 ALTER TABLE `project_template_tasks`
   ADD PRIMARY KEY (`id`),
@@ -15009,7 +15254,7 @@ ALTER TABLE `project_template_tasks`
   ADD KEY `project_template_tasks_project_template_task_category_id_foreign` (`project_template_task_category_id`);
 
 --
--- Chỉ mục cho bảng `project_template_task_users`
+-- Indexes for table `project_template_task_users`
 --
 ALTER TABLE `project_template_task_users`
   ADD PRIMARY KEY (`id`),
@@ -15017,7 +15262,7 @@ ALTER TABLE `project_template_task_users`
   ADD KEY `project_template_task_users_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `project_time_logs`
+-- Indexes for table `project_time_logs`
 --
 ALTER TABLE `project_time_logs`
   ADD PRIMARY KEY (`id`),
@@ -15031,7 +15276,7 @@ ALTER TABLE `project_time_logs`
   ADD KEY `project_time_logs_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `project_time_log_breaks`
+-- Indexes for table `project_time_log_breaks`
 --
 ALTER TABLE `project_time_log_breaks`
   ADD PRIMARY KEY (`id`),
@@ -15040,7 +15285,7 @@ ALTER TABLE `project_time_log_breaks`
   ADD KEY `project_time_log_breaks_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `project_user_notes`
+-- Indexes for table `project_user_notes`
 --
 ALTER TABLE `project_user_notes`
   ADD PRIMARY KEY (`id`),
@@ -15048,7 +15293,7 @@ ALTER TABLE `project_user_notes`
   ADD KEY `project_user_notes_project_note_id_foreign` (`project_note_id`);
 
 --
--- Chỉ mục cho bảng `proposals`
+-- Indexes for table `proposals`
 --
 ALTER TABLE `proposals`
   ADD PRIMARY KEY (`id`),
@@ -15058,34 +15303,34 @@ ALTER TABLE `proposals`
   ADD KEY `proposals_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `proposal_items`
+-- Indexes for table `proposal_items`
 --
 ALTER TABLE `proposal_items`
   ADD PRIMARY KEY (`id`),
   ADD KEY `proposal_items_proposal_id_foreign` (`proposal_id`);
 
 --
--- Chỉ mục cho bảng `proposal_item_images`
+-- Indexes for table `proposal_item_images`
 --
 ALTER TABLE `proposal_item_images`
   ADD PRIMARY KEY (`id`),
   ADD KEY `proposal_item_images_proposal_item_id_foreign` (`proposal_item_id`);
 
 --
--- Chỉ mục cho bảng `proposal_signs`
+-- Indexes for table `proposal_signs`
 --
 ALTER TABLE `proposal_signs`
   ADD PRIMARY KEY (`id`),
   ADD KEY `proposal_signs_proposal_id_foreign` (`proposal_id`);
 
 --
--- Chỉ mục cho bảng `purpose_consent`
+-- Indexes for table `purpose_consent`
 --
 ALTER TABLE `purpose_consent`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `purpose_consent_leads`
+-- Indexes for table `purpose_consent_leads`
 --
 ALTER TABLE `purpose_consent_leads`
   ADD PRIMARY KEY (`id`),
@@ -15094,7 +15339,7 @@ ALTER TABLE `purpose_consent_leads`
   ADD KEY `purpose_consent_leads_updated_by_id_foreign` (`updated_by_id`);
 
 --
--- Chỉ mục cho bảng `purpose_consent_users`
+-- Indexes for table `purpose_consent_users`
 --
 ALTER TABLE `purpose_consent_users`
   ADD PRIMARY KEY (`id`),
@@ -15103,19 +15348,19 @@ ALTER TABLE `purpose_consent_users`
   ADD KEY `purpose_consent_users_updated_by_id_foreign` (`updated_by_id`);
 
 --
--- Chỉ mục cho bảng `pusher_settings`
+-- Indexes for table `pusher_settings`
 --
 ALTER TABLE `pusher_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `push_notification_settings`
+-- Indexes for table `push_notification_settings`
 --
 ALTER TABLE `push_notification_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `push_subscriptions`
+-- Indexes for table `push_subscriptions`
 --
 ALTER TABLE `push_subscriptions`
   ADD PRIMARY KEY (`id`),
@@ -15123,48 +15368,48 @@ ALTER TABLE `push_subscriptions`
   ADD KEY `push_subscriptions_user_id_index` (`user_id`);
 
 --
--- Chỉ mục cho bảng `quotations`
+-- Indexes for table `quotations`
 --
 ALTER TABLE `quotations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `quotation_items`
+-- Indexes for table `quotation_items`
 --
 ALTER TABLE `quotation_items`
   ADD PRIMARY KEY (`id`),
   ADD KEY `quotation_items_quotation_id_foreign` (`quotation_id`);
 
 --
--- Chỉ mục cho bảng `removal_requests`
+-- Indexes for table `removal_requests`
 --
 ALTER TABLE `removal_requests`
   ADD PRIMARY KEY (`id`),
   ADD KEY `removal_requests_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `removal_requests_lead`
+-- Indexes for table `removal_requests_lead`
 --
 ALTER TABLE `removal_requests_lead`
   ADD PRIMARY KEY (`id`),
   ADD KEY `removal_requests_lead_lead_id_foreign` (`lead_id`);
 
 --
--- Chỉ mục cho bảng `roles`
+-- Indexes for table `roles`
 --
 ALTER TABLE `roles`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `roles_name_unique` (`name`);
 
 --
--- Chỉ mục cho bảng `role_user`
+-- Indexes for table `role_user`
 --
 ALTER TABLE `role_user`
   ADD PRIMARY KEY (`user_id`,`role_id`),
   ADD KEY `role_user_role_id_foreign` (`role_id`);
 
 --
--- Chỉ mục cho bảng `sessions`
+-- Indexes for table `sessions`
 --
 ALTER TABLE `sessions`
   ADD PRIMARY KEY (`id`),
@@ -15172,44 +15417,44 @@ ALTER TABLE `sessions`
   ADD KEY `sessions_last_activity_index` (`last_activity`);
 
 --
--- Chỉ mục cho bảng `skills`
+-- Indexes for table `skills`
 --
 ALTER TABLE `skills`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `slack_settings`
+-- Indexes for table `slack_settings`
 --
 ALTER TABLE `slack_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `smtp_settings`
+-- Indexes for table `smtp_settings`
 --
 ALTER TABLE `smtp_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `socials`
+-- Indexes for table `socials`
 --
 ALTER TABLE `socials`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `social_auth_settings`
+-- Indexes for table `social_auth_settings`
 --
 ALTER TABLE `social_auth_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `sticky_notes`
+-- Indexes for table `sticky_notes`
 --
 ALTER TABLE `sticky_notes`
   ADD PRIMARY KEY (`id`),
   ADD KEY `sticky_notes_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `sub_tasks`
+-- Indexes for table `sub_tasks`
 --
 ALTER TABLE `sub_tasks`
   ADD PRIMARY KEY (`id`),
@@ -15219,7 +15464,7 @@ ALTER TABLE `sub_tasks`
   ADD KEY `sub_tasks_assigned_to_foreign` (`assigned_to`);
 
 --
--- Chỉ mục cho bảng `sub_task_files`
+-- Indexes for table `sub_task_files`
 --
 ALTER TABLE `sub_task_files`
   ADD PRIMARY KEY (`id`),
@@ -15227,14 +15472,14 @@ ALTER TABLE `sub_task_files`
   ADD KEY `sub_task_files_sub_task_id_foreign` (`sub_task_id`);
 
 --
--- Chỉ mục cho bảng `taskboard_columns`
+-- Indexes for table `taskboard_columns`
 --
 ALTER TABLE `taskboard_columns`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `taskboard_columns_column_name_unique` (`column_name`);
 
 --
--- Chỉ mục cho bảng `tasks`
+-- Indexes for table `tasks`
 --
 ALTER TABLE `tasks`
   ADD PRIMARY KEY (`id`),
@@ -15249,7 +15494,7 @@ ALTER TABLE `tasks`
   ADD KEY `tasks_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `task_category`
+-- Indexes for table `task_category`
 --
 ALTER TABLE `task_category`
   ADD PRIMARY KEY (`id`),
@@ -15257,7 +15502,7 @@ ALTER TABLE `task_category`
   ADD KEY `task_category_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `task_comments`
+-- Indexes for table `task_comments`
 --
 ALTER TABLE `task_comments`
   ADD PRIMARY KEY (`id`),
@@ -15267,7 +15512,7 @@ ALTER TABLE `task_comments`
   ADD KEY `task_comments_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `task_files`
+-- Indexes for table `task_files`
 --
 ALTER TABLE `task_files`
   ADD PRIMARY KEY (`id`),
@@ -15277,7 +15522,7 @@ ALTER TABLE `task_files`
   ADD KEY `task_files_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `task_history`
+-- Indexes for table `task_history`
 --
 ALTER TABLE `task_history`
   ADD PRIMARY KEY (`id`),
@@ -15287,7 +15532,7 @@ ALTER TABLE `task_history`
   ADD KEY `task_history_board_column_id_foreign` (`board_column_id`);
 
 --
--- Chỉ mục cho bảng `task_labels`
+-- Indexes for table `task_labels`
 --
 ALTER TABLE `task_labels`
   ADD PRIMARY KEY (`id`),
@@ -15295,13 +15540,13 @@ ALTER TABLE `task_labels`
   ADD KEY `task_labels_label_id_foreign` (`label_id`);
 
 --
--- Chỉ mục cho bảng `task_label_list`
+-- Indexes for table `task_label_list`
 --
 ALTER TABLE `task_label_list`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `task_notes`
+-- Indexes for table `task_notes`
 --
 ALTER TABLE `task_notes`
   ADD PRIMARY KEY (`id`),
@@ -15310,7 +15555,7 @@ ALTER TABLE `task_notes`
   ADD KEY `task_notes_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `task_users`
+-- Indexes for table `task_users`
 --
 ALTER TABLE `task_users`
   ADD PRIMARY KEY (`id`),
@@ -15318,13 +15563,13 @@ ALTER TABLE `task_users`
   ADD KEY `task_users_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `taxes`
+-- Indexes for table `taxes`
 --
 ALTER TABLE `taxes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `teams`
+-- Indexes for table `teams`
 --
 ALTER TABLE `teams`
   ADD PRIMARY KEY (`id`),
@@ -15332,13 +15577,13 @@ ALTER TABLE `teams`
   ADD KEY `teams_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `theme_settings`
+-- Indexes for table `theme_settings`
 --
 ALTER TABLE `theme_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `tickets`
+-- Indexes for table `tickets`
 --
 ALTER TABLE `tickets`
   ADD PRIMARY KEY (`id`),
@@ -15351,7 +15596,7 @@ ALTER TABLE `tickets`
   ADD KEY `tickets_last_updated_by_foreign` (`last_updated_by`);
 
 --
--- Chỉ mục cho bảng `ticket_agent_groups`
+-- Indexes for table `ticket_agent_groups`
 --
 ALTER TABLE `ticket_agent_groups`
   ADD PRIMARY KEY (`id`),
@@ -15359,20 +15604,20 @@ ALTER TABLE `ticket_agent_groups`
   ADD KEY `ticket_agent_groups_group_id_foreign` (`group_id`);
 
 --
--- Chỉ mục cho bảng `ticket_channels`
+-- Indexes for table `ticket_channels`
 --
 ALTER TABLE `ticket_channels`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `ticket_channels_channel_name_unique` (`channel_name`);
 
 --
--- Chỉ mục cho bảng `ticket_custom_forms`
+-- Indexes for table `ticket_custom_forms`
 --
 ALTER TABLE `ticket_custom_forms`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `ticket_files`
+-- Indexes for table `ticket_files`
 --
 ALTER TABLE `ticket_files`
   ADD PRIMARY KEY (`id`),
@@ -15380,13 +15625,13 @@ ALTER TABLE `ticket_files`
   ADD KEY `ticket_files_ticket_reply_id_foreign` (`ticket_reply_id`);
 
 --
--- Chỉ mục cho bảng `ticket_groups`
+-- Indexes for table `ticket_groups`
 --
 ALTER TABLE `ticket_groups`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `ticket_replies`
+-- Indexes for table `ticket_replies`
 --
 ALTER TABLE `ticket_replies`
   ADD PRIMARY KEY (`id`),
@@ -15394,13 +15639,13 @@ ALTER TABLE `ticket_replies`
   ADD KEY `ticket_replies_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `ticket_reply_templates`
+-- Indexes for table `ticket_reply_templates`
 --
 ALTER TABLE `ticket_reply_templates`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `ticket_tags`
+-- Indexes for table `ticket_tags`
 --
 ALTER TABLE `ticket_tags`
   ADD PRIMARY KEY (`id`),
@@ -15408,32 +15653,32 @@ ALTER TABLE `ticket_tags`
   ADD KEY `ticket_tags_ticket_id_foreign` (`ticket_id`);
 
 --
--- Chỉ mục cho bảng `ticket_tag_list`
+-- Indexes for table `ticket_tag_list`
 --
 ALTER TABLE `ticket_tag_list`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `ticket_types`
+-- Indexes for table `ticket_types`
 --
 ALTER TABLE `ticket_types`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `ticket_types_type_unique` (`type`);
 
 --
--- Chỉ mục cho bảng `translate_settings`
+-- Indexes for table `translate_settings`
 --
 ALTER TABLE `translate_settings`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `universal_search`
+-- Indexes for table `universal_search`
 --
 ALTER TABLE `universal_search`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
@@ -15441,7 +15686,7 @@ ALTER TABLE `users`
   ADD KEY `users_country_id_foreign` (`country_id`);
 
 --
--- Chỉ mục cho bảng `users_chat`
+-- Indexes for table `users_chat`
 --
 ALTER TABLE `users_chat`
   ADD PRIMARY KEY (`id`),
@@ -15451,7 +15696,7 @@ ALTER TABLE `users_chat`
   ADD KEY `users_chat_to_foreign` (`to`);
 
 --
--- Chỉ mục cho bảng `users_chat_files`
+-- Indexes for table `users_chat_files`
 --
 ALTER TABLE `users_chat_files`
   ADD PRIMARY KEY (`id`),
@@ -15459,21 +15704,21 @@ ALTER TABLE `users_chat_files`
   ADD KEY `users_chat_files_users_chat_id_foreign` (`users_chat_id`);
 
 --
--- Chỉ mục cho bảng `user_activities`
+-- Indexes for table `user_activities`
 --
 ALTER TABLE `user_activities`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_activities_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `user_invitations`
+-- Indexes for table `user_invitations`
 --
 ALTER TABLE `user_invitations`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_invitations_user_id_foreign` (`user_id`);
 
 --
--- Chỉ mục cho bảng `user_leadboard_settings`
+-- Indexes for table `user_leadboard_settings`
 --
 ALTER TABLE `user_leadboard_settings`
   ADD PRIMARY KEY (`id`),
@@ -15481,7 +15726,7 @@ ALTER TABLE `user_leadboard_settings`
   ADD KEY `user_leadboard_settings_board_column_id_foreign` (`board_column_id`);
 
 --
--- Chỉ mục cho bảng `user_permissions`
+-- Indexes for table `user_permissions`
 --
 ALTER TABLE `user_permissions`
   ADD PRIMARY KEY (`id`),
@@ -15490,7 +15735,7 @@ ALTER TABLE `user_permissions`
   ADD KEY `user_permissions_permission_type_id_foreign` (`permission_type_id`);
 
 --
--- Chỉ mục cho bảng `user_taskboard_settings`
+-- Indexes for table `user_taskboard_settings`
 --
 ALTER TABLE `user_taskboard_settings`
   ADD PRIMARY KEY (`id`),
@@ -15498,1095 +15743,1095 @@ ALTER TABLE `user_taskboard_settings`
   ADD KEY `user_taskboard_settings_board_column_id_foreign` (`board_column_id`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `accept_estimates`
+-- AUTO_INCREMENT for table `accept_estimates`
 --
 ALTER TABLE `accept_estimates`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `attendances`
+-- AUTO_INCREMENT for table `attendances`
 --
 ALTER TABLE `attendances`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `attendance_settings`
+-- AUTO_INCREMENT for table `attendance_settings`
 --
 ALTER TABLE `attendance_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `client_categories`
+-- AUTO_INCREMENT for table `client_categories`
 --
 ALTER TABLE `client_categories`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `client_contacts`
+-- AUTO_INCREMENT for table `client_contacts`
 --
 ALTER TABLE `client_contacts`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `client_details`
+-- AUTO_INCREMENT for table `client_details`
 --
 ALTER TABLE `client_details`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `client_docs`
+-- AUTO_INCREMENT for table `client_docs`
 --
 ALTER TABLE `client_docs`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `client_notes`
+-- AUTO_INCREMENT for table `client_notes`
 --
 ALTER TABLE `client_notes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `client_sub_categories`
+-- AUTO_INCREMENT for table `client_sub_categories`
 --
 ALTER TABLE `client_sub_categories`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `client_user_notes`
+-- AUTO_INCREMENT for table `client_user_notes`
 --
 ALTER TABLE `client_user_notes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `company_addresses`
+-- AUTO_INCREMENT for table `company_addresses`
 --
 ALTER TABLE `company_addresses`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `contracts`
+--
+ALTER TABLE `contracts`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `contracts`
---
-ALTER TABLE `contracts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT cho bảng `contract_discussions`
+-- AUTO_INCREMENT for table `contract_discussions`
 --
 ALTER TABLE `contract_discussions`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `contract_files`
+-- AUTO_INCREMENT for table `contract_files`
 --
 ALTER TABLE `contract_files`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `contract_renews`
+-- AUTO_INCREMENT for table `contract_renews`
 --
 ALTER TABLE `contract_renews`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `contract_signs`
+-- AUTO_INCREMENT for table `contract_signs`
 --
 ALTER TABLE `contract_signs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `contract_types`
+-- AUTO_INCREMENT for table `contract_types`
 --
 ALTER TABLE `contract_types`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `conversation`
+-- AUTO_INCREMENT for table `conversation`
 --
 ALTER TABLE `conversation`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `conversation_reply`
+-- AUTO_INCREMENT for table `conversation_reply`
 --
 ALTER TABLE `conversation_reply`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `countries`
+-- AUTO_INCREMENT for table `countries`
 --
 ALTER TABLE `countries`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=254;
 
 --
--- AUTO_INCREMENT cho bảng `credit_notes`
+-- AUTO_INCREMENT for table `credit_notes`
 --
 ALTER TABLE `credit_notes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `credit_note_items`
+-- AUTO_INCREMENT for table `credit_note_items`
 --
 ALTER TABLE `credit_note_items`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `credit_note_item_images`
+-- AUTO_INCREMENT for table `credit_note_item_images`
 --
 ALTER TABLE `credit_note_item_images`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `currencies`
+-- AUTO_INCREMENT for table `currencies`
 --
 ALTER TABLE `currencies`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `currency_format_settings`
+-- AUTO_INCREMENT for table `currency_format_settings`
 --
 ALTER TABLE `currency_format_settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `custom_fields`
+-- AUTO_INCREMENT for table `custom_fields`
 --
 ALTER TABLE `custom_fields`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `custom_fields_data`
+-- AUTO_INCREMENT for table `custom_fields_data`
 --
 ALTER TABLE `custom_fields_data`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `custom_field_groups`
+-- AUTO_INCREMENT for table `custom_field_groups`
 --
 ALTER TABLE `custom_field_groups`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT cho bảng `dashboard_widgets`
+-- AUTO_INCREMENT for table `dashboard_widgets`
 --
 ALTER TABLE `dashboard_widgets`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
--- AUTO_INCREMENT cho bảng `database_backups`
+-- AUTO_INCREMENT for table `database_backups`
 --
 ALTER TABLE `database_backups`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `database_backup_cron_settings`
+-- AUTO_INCREMENT for table `database_backup_cron_settings`
 --
 ALTER TABLE `database_backup_cron_settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `designations`
+-- AUTO_INCREMENT for table `designations`
 --
 ALTER TABLE `designations`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `discussions`
+-- AUTO_INCREMENT for table `discussions`
 --
 ALTER TABLE `discussions`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `discussion_categories`
+-- AUTO_INCREMENT for table `discussion_categories`
 --
 ALTER TABLE `discussion_categories`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `discussion_files`
+-- AUTO_INCREMENT for table `discussion_files`
 --
 ALTER TABLE `discussion_files`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `discussion_replies`
+-- AUTO_INCREMENT for table `discussion_replies`
 --
 ALTER TABLE `discussion_replies`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `email_notification_settings`
+-- AUTO_INCREMENT for table `email_notification_settings`
 --
 ALTER TABLE `email_notification_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT cho bảng `emergency_contacts`
+-- AUTO_INCREMENT for table `emergency_contacts`
 --
 ALTER TABLE `emergency_contacts`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `employee_details`
+-- AUTO_INCREMENT for table `employee_details`
 --
 ALTER TABLE `employee_details`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `employee_docs`
+-- AUTO_INCREMENT for table `employee_docs`
 --
 ALTER TABLE `employee_docs`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `employee_leave_quotas`
+-- AUTO_INCREMENT for table `employee_leave_quotas`
 --
 ALTER TABLE `employee_leave_quotas`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT cho bảng `employee_skills`
+-- AUTO_INCREMENT for table `employee_skills`
 --
 ALTER TABLE `employee_skills`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `employee_teams`
+-- AUTO_INCREMENT for table `employee_teams`
 --
 ALTER TABLE `employee_teams`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `estimates`
+-- AUTO_INCREMENT for table `estimates`
 --
 ALTER TABLE `estimates`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `estimate_items`
+-- AUTO_INCREMENT for table `estimate_items`
 --
 ALTER TABLE `estimate_items`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `estimate_item_images`
+-- AUTO_INCREMENT for table `estimate_item_images`
 --
 ALTER TABLE `estimate_item_images`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `events`
+-- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `event_attendees`
+-- AUTO_INCREMENT for table `event_attendees`
 --
 ALTER TABLE `event_attendees`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT cho bảng `expenses`
+-- AUTO_INCREMENT for table `expenses`
 --
 ALTER TABLE `expenses`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `expenses_category`
+-- AUTO_INCREMENT for table `expenses_category`
 --
 ALTER TABLE `expenses_category`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `expenses_category_roles`
+-- AUTO_INCREMENT for table `expenses_category_roles`
 --
 ALTER TABLE `expenses_category_roles`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `expenses_recurring`
+-- AUTO_INCREMENT for table `expenses_recurring`
 --
 ALTER TABLE `expenses_recurring`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `failed_jobs`
+-- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `file_storage_settings`
+-- AUTO_INCREMENT for table `file_storage_settings`
 --
 ALTER TABLE `file_storage_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `gdpr_settings`
+-- AUTO_INCREMENT for table `gdpr_settings`
 --
 ALTER TABLE `gdpr_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `google_calendar_modules`
+-- AUTO_INCREMENT for table `google_calendar_modules`
 --
 ALTER TABLE `google_calendar_modules`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `holidays`
+-- AUTO_INCREMENT for table `holidays`
 --
 ALTER TABLE `holidays`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
--- AUTO_INCREMENT cho bảng `invoices`
+-- AUTO_INCREMENT for table `invoices`
 --
 ALTER TABLE `invoices`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `invoice_items`
+-- AUTO_INCREMENT for table `invoice_items`
 --
 ALTER TABLE `invoice_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `invoice_item_images`
+-- AUTO_INCREMENT for table `invoice_item_images`
 --
 ALTER TABLE `invoice_item_images`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `invoice_recurring`
+-- AUTO_INCREMENT for table `invoice_recurring`
 --
 ALTER TABLE `invoice_recurring`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `invoice_recurring_items`
+-- AUTO_INCREMENT for table `invoice_recurring_items`
 --
 ALTER TABLE `invoice_recurring_items`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `invoice_recurring_item_images`
+-- AUTO_INCREMENT for table `invoice_recurring_item_images`
 --
 ALTER TABLE `invoice_recurring_item_images`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `invoice_settings`
+-- AUTO_INCREMENT for table `invoice_settings`
 --
 ALTER TABLE `invoice_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `issues`
+-- AUTO_INCREMENT for table `issues`
 --
 ALTER TABLE `issues`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `jobs`
+-- AUTO_INCREMENT for table `jobs`
 --
 ALTER TABLE `jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `knowledge_bases`
+-- AUTO_INCREMENT for table `knowledge_bases`
 --
 ALTER TABLE `knowledge_bases`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `knowledge_categories`
+-- AUTO_INCREMENT for table `knowledge_categories`
 --
 ALTER TABLE `knowledge_categories`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `language_settings`
+-- AUTO_INCREMENT for table `language_settings`
 --
 ALTER TABLE `language_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT cho bảng `leads`
+-- AUTO_INCREMENT for table `leads`
 --
 ALTER TABLE `leads`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `lead_agents`
+-- AUTO_INCREMENT for table `lead_agents`
 --
 ALTER TABLE `lead_agents`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `lead_category`
+-- AUTO_INCREMENT for table `lead_category`
 --
 ALTER TABLE `lead_category`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `lead_custom_forms`
+-- AUTO_INCREMENT for table `lead_custom_forms`
 --
 ALTER TABLE `lead_custom_forms`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT cho bảng `lead_files`
+-- AUTO_INCREMENT for table `lead_files`
 --
 ALTER TABLE `lead_files`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `lead_follow_up`
+-- AUTO_INCREMENT for table `lead_follow_up`
 --
 ALTER TABLE `lead_follow_up`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `lead_notes`
+-- AUTO_INCREMENT for table `lead_notes`
 --
 ALTER TABLE `lead_notes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `lead_sources`
+-- AUTO_INCREMENT for table `lead_sources`
 --
 ALTER TABLE `lead_sources`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT cho bảng `lead_status`
+-- AUTO_INCREMENT for table `lead_status`
 --
 ALTER TABLE `lead_status`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `lead_user_notes`
+-- AUTO_INCREMENT for table `lead_user_notes`
 --
 ALTER TABLE `lead_user_notes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `leaves`
+-- AUTO_INCREMENT for table `leaves`
 --
 ALTER TABLE `leaves`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT cho bảng `leave_types`
+-- AUTO_INCREMENT for table `leave_types`
 --
 ALTER TABLE `leave_types`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `log_time_for`
+-- AUTO_INCREMENT for table `log_time_for`
 --
 ALTER TABLE `log_time_for`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `ltm_translations`
+-- AUTO_INCREMENT for table `ltm_translations`
 --
 ALTER TABLE `ltm_translations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6829;
 
 --
--- AUTO_INCREMENT cho bảng `menus`
+-- AUTO_INCREMENT for table `menus`
 --
 ALTER TABLE `menus`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
--- AUTO_INCREMENT cho bảng `menu_settings`
+-- AUTO_INCREMENT for table `menu_settings`
 --
 ALTER TABLE `menu_settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `message_settings`
+-- AUTO_INCREMENT for table `message_settings`
 --
 ALTER TABLE `message_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `migrations`
+-- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=567;
 
 --
--- AUTO_INCREMENT cho bảng `modules`
+-- AUTO_INCREMENT for table `modules`
 --
 ALTER TABLE `modules`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- AUTO_INCREMENT cho bảng `module_settings`
+-- AUTO_INCREMENT for table `module_settings`
 --
 ALTER TABLE `module_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 
 --
--- AUTO_INCREMENT cho bảng `notices`
+-- AUTO_INCREMENT for table `notices`
 --
 ALTER TABLE `notices`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `notice_views`
+-- AUTO_INCREMENT for table `notice_views`
 --
 ALTER TABLE `notice_views`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `offline_payment_methods`
+-- AUTO_INCREMENT for table `offline_payment_methods`
 --
 ALTER TABLE `offline_payment_methods`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `orders`
+-- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `order_items`
+-- AUTO_INCREMENT for table `order_items`
 --
 ALTER TABLE `order_items`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `order_item_images`
+-- AUTO_INCREMENT for table `order_item_images`
 --
 ALTER TABLE `order_item_images`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `organisation_settings`
+-- AUTO_INCREMENT for table `organisation_settings`
 --
 ALTER TABLE `organisation_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `payments`
+-- AUTO_INCREMENT for table `payments`
 --
 ALTER TABLE `payments`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `payment_gateway_credentials`
+-- AUTO_INCREMENT for table `payment_gateway_credentials`
 --
 ALTER TABLE `payment_gateway_credentials`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `permissions`
+-- AUTO_INCREMENT for table `permissions`
 --
 ALTER TABLE `permissions`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=268;
 
 --
--- AUTO_INCREMENT cho bảng `permission_types`
+-- AUTO_INCREMENT for table `permission_types`
 --
 ALTER TABLE `permission_types`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT cho bảng `pinned`
+-- AUTO_INCREMENT for table `pinned`
 --
 ALTER TABLE `pinned`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `products`
+-- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `product_category`
+-- AUTO_INCREMENT for table `product_category`
 --
 ALTER TABLE `product_category`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `product_files`
+-- AUTO_INCREMENT for table `product_files`
 --
 ALTER TABLE `product_files`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `product_sub_category`
+-- AUTO_INCREMENT for table `product_sub_category`
 --
 ALTER TABLE `product_sub_category`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `projects`
+-- AUTO_INCREMENT for table `projects`
 --
 ALTER TABLE `projects`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `project_activity`
+-- AUTO_INCREMENT for table `project_activity`
 --
 ALTER TABLE `project_activity`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT cho bảng `project_category`
+-- AUTO_INCREMENT for table `project_category`
 --
 ALTER TABLE `project_category`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `project_files`
+-- AUTO_INCREMENT for table `project_files`
 --
 ALTER TABLE `project_files`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `project_members`
+-- AUTO_INCREMENT for table `project_members`
 --
 ALTER TABLE `project_members`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `project_milestones`
+-- AUTO_INCREMENT for table `project_milestones`
 --
 ALTER TABLE `project_milestones`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `project_notes`
+-- AUTO_INCREMENT for table `project_notes`
 --
 ALTER TABLE `project_notes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `project_ratings`
+-- AUTO_INCREMENT for table `project_ratings`
 --
 ALTER TABLE `project_ratings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `project_settings`
+-- AUTO_INCREMENT for table `project_settings`
 --
 ALTER TABLE `project_settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `project_templates`
+-- AUTO_INCREMENT for table `project_templates`
 --
 ALTER TABLE `project_templates`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `project_template_members`
+-- AUTO_INCREMENT for table `project_template_members`
 --
 ALTER TABLE `project_template_members`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `project_template_sub_tasks`
+-- AUTO_INCREMENT for table `project_template_sub_tasks`
 --
 ALTER TABLE `project_template_sub_tasks`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `project_template_tasks`
+-- AUTO_INCREMENT for table `project_template_tasks`
 --
 ALTER TABLE `project_template_tasks`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `project_template_task_users`
+-- AUTO_INCREMENT for table `project_template_task_users`
 --
 ALTER TABLE `project_template_task_users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `project_time_logs`
+-- AUTO_INCREMENT for table `project_time_logs`
 --
 ALTER TABLE `project_time_logs`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `project_time_log_breaks`
+-- AUTO_INCREMENT for table `project_time_log_breaks`
 --
 ALTER TABLE `project_time_log_breaks`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `project_user_notes`
+-- AUTO_INCREMENT for table `project_user_notes`
 --
 ALTER TABLE `project_user_notes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `proposals`
+-- AUTO_INCREMENT for table `proposals`
 --
 ALTER TABLE `proposals`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `proposal_items`
+-- AUTO_INCREMENT for table `proposal_items`
 --
 ALTER TABLE `proposal_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `proposal_item_images`
+-- AUTO_INCREMENT for table `proposal_item_images`
 --
 ALTER TABLE `proposal_item_images`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `proposal_signs`
+-- AUTO_INCREMENT for table `proposal_signs`
 --
 ALTER TABLE `proposal_signs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `purpose_consent`
+-- AUTO_INCREMENT for table `purpose_consent`
 --
 ALTER TABLE `purpose_consent`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `purpose_consent_leads`
+-- AUTO_INCREMENT for table `purpose_consent_leads`
 --
 ALTER TABLE `purpose_consent_leads`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `purpose_consent_users`
+-- AUTO_INCREMENT for table `purpose_consent_users`
 --
 ALTER TABLE `purpose_consent_users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `pusher_settings`
+-- AUTO_INCREMENT for table `pusher_settings`
 --
 ALTER TABLE `pusher_settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `push_notification_settings`
+-- AUTO_INCREMENT for table `push_notification_settings`
 --
 ALTER TABLE `push_notification_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `push_subscriptions`
+-- AUTO_INCREMENT for table `push_subscriptions`
 --
 ALTER TABLE `push_subscriptions`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `quotations`
+-- AUTO_INCREMENT for table `quotations`
 --
 ALTER TABLE `quotations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `quotation_items`
+-- AUTO_INCREMENT for table `quotation_items`
 --
 ALTER TABLE `quotation_items`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `removal_requests`
+-- AUTO_INCREMENT for table `removal_requests`
 --
 ALTER TABLE `removal_requests`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `removal_requests_lead`
+-- AUTO_INCREMENT for table `removal_requests_lead`
 --
 ALTER TABLE `removal_requests_lead`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `roles`
+-- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `skills`
+-- AUTO_INCREMENT for table `skills`
 --
 ALTER TABLE `skills`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `slack_settings`
+-- AUTO_INCREMENT for table `slack_settings`
 --
 ALTER TABLE `slack_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `smtp_settings`
+-- AUTO_INCREMENT for table `smtp_settings`
 --
 ALTER TABLE `smtp_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `socials`
+-- AUTO_INCREMENT for table `socials`
 --
 ALTER TABLE `socials`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `social_auth_settings`
+-- AUTO_INCREMENT for table `social_auth_settings`
 --
 ALTER TABLE `social_auth_settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `sticky_notes`
+-- AUTO_INCREMENT for table `sticky_notes`
 --
 ALTER TABLE `sticky_notes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `sub_tasks`
+-- AUTO_INCREMENT for table `sub_tasks`
 --
 ALTER TABLE `sub_tasks`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `sub_task_files`
+-- AUTO_INCREMENT for table `sub_task_files`
 --
 ALTER TABLE `sub_task_files`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `taskboard_columns`
+-- AUTO_INCREMENT for table `taskboard_columns`
 --
 ALTER TABLE `taskboard_columns`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `tasks`
+-- AUTO_INCREMENT for table `tasks`
 --
 ALTER TABLE `tasks`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `task_category`
+-- AUTO_INCREMENT for table `task_category`
 --
 ALTER TABLE `task_category`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `task_comments`
+-- AUTO_INCREMENT for table `task_comments`
 --
 ALTER TABLE `task_comments`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `task_files`
+-- AUTO_INCREMENT for table `task_files`
 --
 ALTER TABLE `task_files`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `task_history`
+-- AUTO_INCREMENT for table `task_history`
 --
 ALTER TABLE `task_history`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT cho bảng `task_labels`
+-- AUTO_INCREMENT for table `task_labels`
 --
 ALTER TABLE `task_labels`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `task_label_list`
+-- AUTO_INCREMENT for table `task_label_list`
 --
 ALTER TABLE `task_label_list`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `task_notes`
+-- AUTO_INCREMENT for table `task_notes`
 --
 ALTER TABLE `task_notes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `task_users`
+-- AUTO_INCREMENT for table `task_users`
 --
 ALTER TABLE `task_users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `taxes`
+-- AUTO_INCREMENT for table `taxes`
 --
 ALTER TABLE `taxes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `teams`
+-- AUTO_INCREMENT for table `teams`
 --
 ALTER TABLE `teams`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `theme_settings`
+-- AUTO_INCREMENT for table `theme_settings`
 --
 ALTER TABLE `theme_settings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `tickets`
+-- AUTO_INCREMENT for table `tickets`
 --
 ALTER TABLE `tickets`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `ticket_agent_groups`
+-- AUTO_INCREMENT for table `ticket_agent_groups`
 --
 ALTER TABLE `ticket_agent_groups`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `ticket_channels`
+-- AUTO_INCREMENT for table `ticket_channels`
 --
 ALTER TABLE `ticket_channels`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `ticket_custom_forms`
+-- AUTO_INCREMENT for table `ticket_custom_forms`
 --
 ALTER TABLE `ticket_custom_forms`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT cho bảng `ticket_files`
+-- AUTO_INCREMENT for table `ticket_files`
 --
 ALTER TABLE `ticket_files`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `ticket_groups`
+-- AUTO_INCREMENT for table `ticket_groups`
 --
 ALTER TABLE `ticket_groups`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `ticket_replies`
+-- AUTO_INCREMENT for table `ticket_replies`
 --
 ALTER TABLE `ticket_replies`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `ticket_reply_templates`
+-- AUTO_INCREMENT for table `ticket_reply_templates`
 --
 ALTER TABLE `ticket_reply_templates`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `ticket_tags`
+-- AUTO_INCREMENT for table `ticket_tags`
 --
 ALTER TABLE `ticket_tags`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `ticket_tag_list`
+-- AUTO_INCREMENT for table `ticket_tag_list`
 --
 ALTER TABLE `ticket_tag_list`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `ticket_types`
+-- AUTO_INCREMENT for table `ticket_types`
 --
 ALTER TABLE `ticket_types`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `translate_settings`
+-- AUTO_INCREMENT for table `translate_settings`
 --
 ALTER TABLE `translate_settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `universal_search`
+-- AUTO_INCREMENT for table `universal_search`
 --
 ALTER TABLE `universal_search`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT cho bảng `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `users_chat`
+-- AUTO_INCREMENT for table `users_chat`
 --
 ALTER TABLE `users_chat`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `users_chat_files`
+-- AUTO_INCREMENT for table `users_chat_files`
 --
 ALTER TABLE `users_chat_files`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `user_activities`
+-- AUTO_INCREMENT for table `user_activities`
 --
 ALTER TABLE `user_activities`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `user_invitations`
+-- AUTO_INCREMENT for table `user_invitations`
 --
 ALTER TABLE `user_invitations`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `user_leadboard_settings`
+-- AUTO_INCREMENT for table `user_leadboard_settings`
 --
 ALTER TABLE `user_leadboard_settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `user_permissions`
+-- AUTO_INCREMENT for table `user_permissions`
 --
 ALTER TABLE `user_permissions`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=778;
 
 --
--- AUTO_INCREMENT cho bảng `user_taskboard_settings`
+-- AUTO_INCREMENT for table `user_taskboard_settings`
 --
 ALTER TABLE `user_taskboard_settings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `accept_estimates`
+-- Constraints for table `accept_estimates`
 --
 ALTER TABLE `accept_estimates`
   ADD CONSTRAINT `accept_estimates_estimate_id_foreign` FOREIGN KEY (`estimate_id`) REFERENCES `estimates` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `attendances`
+-- Constraints for table `attendances`
 --
 ALTER TABLE `attendances`
   ADD CONSTRAINT `attendances_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16594,7 +16839,7 @@ ALTER TABLE `attendances`
   ADD CONSTRAINT `attendances_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `client_contacts`
+-- Constraints for table `client_contacts`
 --
 ALTER TABLE `client_contacts`
   ADD CONSTRAINT `client_contacts_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16602,7 +16847,7 @@ ALTER TABLE `client_contacts`
   ADD CONSTRAINT `client_contacts_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `client_details`
+-- Constraints for table `client_details`
 --
 ALTER TABLE `client_details`
   ADD CONSTRAINT `client_details_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16612,7 +16857,7 @@ ALTER TABLE `client_details`
   ADD CONSTRAINT `client_details_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `client_docs`
+-- Constraints for table `client_docs`
 --
 ALTER TABLE `client_docs`
   ADD CONSTRAINT `client_docs_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16620,7 +16865,7 @@ ALTER TABLE `client_docs`
   ADD CONSTRAINT `client_docs_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `client_notes`
+-- Constraints for table `client_notes`
 --
 ALTER TABLE `client_notes`
   ADD CONSTRAINT `client_notes_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16629,20 +16874,20 @@ ALTER TABLE `client_notes`
   ADD CONSTRAINT `client_notes_member_id_foreign` FOREIGN KEY (`member_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `client_sub_categories`
+-- Constraints for table `client_sub_categories`
 --
 ALTER TABLE `client_sub_categories`
   ADD CONSTRAINT `client_sub_categories_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `client_categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `client_user_notes`
+-- Constraints for table `client_user_notes`
 --
 ALTER TABLE `client_user_notes`
   ADD CONSTRAINT `client_user_notes_client_note_id_foreign` FOREIGN KEY (`client_note_id`) REFERENCES `client_notes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `client_user_notes_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `contracts`
+-- Constraints for table `contracts`
 --
 ALTER TABLE `contracts`
   ADD CONSTRAINT `contracts_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16652,7 +16897,7 @@ ALTER TABLE `contracts`
   ADD CONSTRAINT `contracts_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `contract_discussions`
+-- Constraints for table `contract_discussions`
 --
 ALTER TABLE `contract_discussions`
   ADD CONSTRAINT `contract_discussions_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16661,7 +16906,7 @@ ALTER TABLE `contract_discussions`
   ADD CONSTRAINT `contract_discussions_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `contract_files`
+-- Constraints for table `contract_files`
 --
 ALTER TABLE `contract_files`
   ADD CONSTRAINT `contract_files_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16670,7 +16915,7 @@ ALTER TABLE `contract_files`
   ADD CONSTRAINT `contract_files_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `contract_renews`
+-- Constraints for table `contract_renews`
 --
 ALTER TABLE `contract_renews`
   ADD CONSTRAINT `contract_renews_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16679,27 +16924,27 @@ ALTER TABLE `contract_renews`
   ADD CONSTRAINT `contract_renews_renewed_by_foreign` FOREIGN KEY (`renewed_by`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `contract_signs`
+-- Constraints for table `contract_signs`
 --
 ALTER TABLE `contract_signs`
   ADD CONSTRAINT `contract_signs_contract_id_foreign` FOREIGN KEY (`contract_id`) REFERENCES `contracts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `conversation`
+-- Constraints for table `conversation`
 --
 ALTER TABLE `conversation`
   ADD CONSTRAINT `conversation_user_one_foreign` FOREIGN KEY (`user_one`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `conversation_user_two_foreign` FOREIGN KEY (`user_two`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `conversation_reply`
+-- Constraints for table `conversation_reply`
 --
 ALTER TABLE `conversation_reply`
   ADD CONSTRAINT `conversation_reply_conversation_id_foreign` FOREIGN KEY (`conversation_id`) REFERENCES `conversation` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `conversation_reply_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `credit_notes`
+-- Constraints for table `credit_notes`
 --
 ALTER TABLE `credit_notes`
   ADD CONSTRAINT `credit_notes_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16709,38 +16954,38 @@ ALTER TABLE `credit_notes`
   ADD CONSTRAINT `credit_notes_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `credit_note_items`
+-- Constraints for table `credit_note_items`
 --
 ALTER TABLE `credit_note_items`
   ADD CONSTRAINT `credit_note_items_credit_note_id_foreign` FOREIGN KEY (`credit_note_id`) REFERENCES `credit_notes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `credit_note_item_images`
+-- Constraints for table `credit_note_item_images`
 --
 ALTER TABLE `credit_note_item_images`
   ADD CONSTRAINT `credit_note_item_images_credit_note_item_id_foreign` FOREIGN KEY (`credit_note_item_id`) REFERENCES `credit_note_items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `custom_fields`
+-- Constraints for table `custom_fields`
 --
 ALTER TABLE `custom_fields`
   ADD CONSTRAINT `custom_fields_custom_field_group_id_foreign` FOREIGN KEY (`custom_field_group_id`) REFERENCES `custom_field_groups` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `custom_fields_data`
+-- Constraints for table `custom_fields_data`
 --
 ALTER TABLE `custom_fields_data`
   ADD CONSTRAINT `custom_fields_data_custom_field_id_foreign` FOREIGN KEY (`custom_field_id`) REFERENCES `custom_fields` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `designations`
+-- Constraints for table `designations`
 --
 ALTER TABLE `designations`
   ADD CONSTRAINT `designations_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `designations_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `discussions`
+-- Constraints for table `discussions`
 --
 ALTER TABLE `discussions`
   ADD CONSTRAINT `discussions_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16752,7 +16997,7 @@ ALTER TABLE `discussions`
   ADD CONSTRAINT `discussions_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `discussion_files`
+-- Constraints for table `discussion_files`
 --
 ALTER TABLE `discussion_files`
   ADD CONSTRAINT `discussion_files_discussion_id_foreign` FOREIGN KEY (`discussion_id`) REFERENCES `discussions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -16760,14 +17005,14 @@ ALTER TABLE `discussion_files`
   ADD CONSTRAINT `discussion_files_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `discussion_replies`
+-- Constraints for table `discussion_replies`
 --
 ALTER TABLE `discussion_replies`
   ADD CONSTRAINT `discussion_replies_discussion_id_foreign` FOREIGN KEY (`discussion_id`) REFERENCES `discussions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `discussion_replies_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `emergency_contacts`
+-- Constraints for table `emergency_contacts`
 --
 ALTER TABLE `emergency_contacts`
   ADD CONSTRAINT `emergency_contacts_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16775,7 +17020,7 @@ ALTER TABLE `emergency_contacts`
   ADD CONSTRAINT `emergency_contacts_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `employee_details`
+-- Constraints for table `employee_details`
 --
 ALTER TABLE `employee_details`
   ADD CONSTRAINT `employee_details_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16785,7 +17030,7 @@ ALTER TABLE `employee_details`
   ADD CONSTRAINT `employee_details_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `employee_docs`
+-- Constraints for table `employee_docs`
 --
 ALTER TABLE `employee_docs`
   ADD CONSTRAINT `employee_docs_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16793,28 +17038,28 @@ ALTER TABLE `employee_docs`
   ADD CONSTRAINT `employee_docs_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `employee_leave_quotas`
+-- Constraints for table `employee_leave_quotas`
 --
 ALTER TABLE `employee_leave_quotas`
   ADD CONSTRAINT `employee_leave_quotas_leave_type_id_foreign` FOREIGN KEY (`leave_type_id`) REFERENCES `leave_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `employee_leave_quotas_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `employee_skills`
+-- Constraints for table `employee_skills`
 --
 ALTER TABLE `employee_skills`
   ADD CONSTRAINT `employee_skills_skill_id_foreign` FOREIGN KEY (`skill_id`) REFERENCES `skills` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `employee_skills_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `employee_teams`
+-- Constraints for table `employee_teams`
 --
 ALTER TABLE `employee_teams`
   ADD CONSTRAINT `employee_teams_team_id_foreign` FOREIGN KEY (`team_id`) REFERENCES `teams` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `employee_teams_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `estimates`
+-- Constraints for table `estimates`
 --
 ALTER TABLE `estimates`
   ADD CONSTRAINT `estimates_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16823,33 +17068,33 @@ ALTER TABLE `estimates`
   ADD CONSTRAINT `estimates_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `estimate_items`
+-- Constraints for table `estimate_items`
 --
 ALTER TABLE `estimate_items`
   ADD CONSTRAINT `estimate_items_estimate_id_foreign` FOREIGN KEY (`estimate_id`) REFERENCES `estimates` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `estimate_item_images`
+-- Constraints for table `estimate_item_images`
 --
 ALTER TABLE `estimate_item_images`
   ADD CONSTRAINT `estimate_item_images_estimate_item_id_foreign` FOREIGN KEY (`estimate_item_id`) REFERENCES `estimate_items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `events`
+-- Constraints for table `events`
 --
 ALTER TABLE `events`
   ADD CONSTRAINT `events_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `events_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `event_attendees`
+-- Constraints for table `event_attendees`
 --
 ALTER TABLE `event_attendees`
   ADD CONSTRAINT `event_attendees_event_id_foreign` FOREIGN KEY (`event_id`) REFERENCES `events` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `event_attendees_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `expenses`
+-- Constraints for table `expenses`
 --
 ALTER TABLE `expenses`
   ADD CONSTRAINT `expenses_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16862,21 +17107,21 @@ ALTER TABLE `expenses`
   ADD CONSTRAINT `expenses_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `expenses_category`
+-- Constraints for table `expenses_category`
 --
 ALTER TABLE `expenses_category`
   ADD CONSTRAINT `expenses_category_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `expenses_category_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `expenses_category_roles`
+-- Constraints for table `expenses_category_roles`
 --
 ALTER TABLE `expenses_category_roles`
   ADD CONSTRAINT `expenses_category_roles_expenses_category_id_foreign` FOREIGN KEY (`expenses_category_id`) REFERENCES `expenses_category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `expenses_category_roles_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `expenses_recurring`
+-- Constraints for table `expenses_recurring`
 --
 ALTER TABLE `expenses_recurring`
   ADD CONSTRAINT `expenses_recurring_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16888,14 +17133,14 @@ ALTER TABLE `expenses_recurring`
   ADD CONSTRAINT `expenses_recurring_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `holidays`
+-- Constraints for table `holidays`
 --
 ALTER TABLE `holidays`
   ADD CONSTRAINT `holidays_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `holidays_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `invoices`
+-- Constraints for table `invoices`
 --
 ALTER TABLE `invoices`
   ADD CONSTRAINT `invoices_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16911,19 +17156,19 @@ ALTER TABLE `invoices`
   ADD CONSTRAINT `invoices_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `invoice_items`
+-- Constraints for table `invoice_items`
 --
 ALTER TABLE `invoice_items`
   ADD CONSTRAINT `invoice_items_invoice_id_foreign` FOREIGN KEY (`invoice_id`) REFERENCES `invoices` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `invoice_item_images`
+-- Constraints for table `invoice_item_images`
 --
 ALTER TABLE `invoice_item_images`
   ADD CONSTRAINT `invoice_item_images_invoice_item_id_foreign` FOREIGN KEY (`invoice_item_id`) REFERENCES `invoice_items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `invoice_recurring`
+-- Constraints for table `invoice_recurring`
 --
 ALTER TABLE `invoice_recurring`
   ADD CONSTRAINT `invoice_recurring_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16935,32 +17180,32 @@ ALTER TABLE `invoice_recurring`
   ADD CONSTRAINT `invoice_recurring_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `invoice_recurring_items`
+-- Constraints for table `invoice_recurring_items`
 --
 ALTER TABLE `invoice_recurring_items`
   ADD CONSTRAINT `invoice_recurring_items_invoice_recurring_id_foreign` FOREIGN KEY (`invoice_recurring_id`) REFERENCES `invoice_recurring` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `invoice_recurring_item_images`
+-- Constraints for table `invoice_recurring_item_images`
 --
 ALTER TABLE `invoice_recurring_item_images`
   ADD CONSTRAINT `invoice_recurring_item_images_invoice_recurring_item_id_foreign` FOREIGN KEY (`invoice_recurring_item_id`) REFERENCES `invoice_recurring_items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `issues`
+-- Constraints for table `issues`
 --
 ALTER TABLE `issues`
   ADD CONSTRAINT `issues_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `issues_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `knowledge_bases`
+-- Constraints for table `knowledge_bases`
 --
 ALTER TABLE `knowledge_bases`
   ADD CONSTRAINT `knowledge_bases_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `knowledge_categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `leads`
+-- Constraints for table `leads`
 --
 ALTER TABLE `leads`
   ADD CONSTRAINT `leads_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16970,7 +17215,7 @@ ALTER TABLE `leads`
   ADD CONSTRAINT `leads_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `lead_agents`
+-- Constraints for table `lead_agents`
 --
 ALTER TABLE `lead_agents`
   ADD CONSTRAINT `lead_agents_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -16978,21 +17223,21 @@ ALTER TABLE `lead_agents`
   ADD CONSTRAINT `lead_agents_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `lead_category`
+-- Constraints for table `lead_category`
 --
 ALTER TABLE `lead_category`
   ADD CONSTRAINT `lead_category_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `lead_category_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `lead_custom_forms`
+-- Constraints for table `lead_custom_forms`
 --
 ALTER TABLE `lead_custom_forms`
   ADD CONSTRAINT `lead_custom_forms_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `lead_custom_forms_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `lead_files`
+-- Constraints for table `lead_files`
 --
 ALTER TABLE `lead_files`
   ADD CONSTRAINT `lead_files_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17001,7 +17246,7 @@ ALTER TABLE `lead_files`
   ADD CONSTRAINT `lead_files_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `lead_follow_up`
+-- Constraints for table `lead_follow_up`
 --
 ALTER TABLE `lead_follow_up`
   ADD CONSTRAINT `lead_follow_up_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17009,7 +17254,7 @@ ALTER TABLE `lead_follow_up`
   ADD CONSTRAINT `lead_follow_up_lead_id_foreign` FOREIGN KEY (`lead_id`) REFERENCES `leads` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `lead_notes`
+-- Constraints for table `lead_notes`
 --
 ALTER TABLE `lead_notes`
   ADD CONSTRAINT `lead_notes_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17018,21 +17263,21 @@ ALTER TABLE `lead_notes`
   ADD CONSTRAINT `lead_notes_member_id_foreign` FOREIGN KEY (`member_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `lead_sources`
+-- Constraints for table `lead_sources`
 --
 ALTER TABLE `lead_sources`
   ADD CONSTRAINT `lead_sources_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `lead_sources_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `lead_user_notes`
+-- Constraints for table `lead_user_notes`
 --
 ALTER TABLE `lead_user_notes`
   ADD CONSTRAINT `lead_user_notes_lead_note_id_foreign` FOREIGN KEY (`lead_note_id`) REFERENCES `lead_notes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `lead_user_notes_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `leaves`
+-- Constraints for table `leaves`
 --
 ALTER TABLE `leaves`
   ADD CONSTRAINT `leaves_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17041,7 +17286,7 @@ ALTER TABLE `leaves`
   ADD CONSTRAINT `leaves_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `notices`
+-- Constraints for table `notices`
 --
 ALTER TABLE `notices`
   ADD CONSTRAINT `notices_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17049,14 +17294,14 @@ ALTER TABLE `notices`
   ADD CONSTRAINT `notices_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `notice_views`
+-- Constraints for table `notice_views`
 --
 ALTER TABLE `notice_views`
   ADD CONSTRAINT `notice_views_notice_id_foreign` FOREIGN KEY (`notice_id`) REFERENCES `notices` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `notice_views_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `orders`
+-- Constraints for table `orders`
 --
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17065,20 +17310,20 @@ ALTER TABLE `orders`
   ADD CONSTRAINT `orders_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `order_items`
+-- Constraints for table `order_items`
 --
 ALTER TABLE `order_items`
   ADD CONSTRAINT `order_items_order_id_foreign` FOREIGN KEY (`order_id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `order_items_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `order_item_images`
+-- Constraints for table `order_item_images`
 --
 ALTER TABLE `order_item_images`
   ADD CONSTRAINT `order_item_images_order_item_id_foreign` FOREIGN KEY (`order_item_id`) REFERENCES `order_items` (`id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `organisation_settings`
+-- Constraints for table `organisation_settings`
 --
 ALTER TABLE `organisation_settings`
   ADD CONSTRAINT `organisation_settings_currency_id_foreign` FOREIGN KEY (`currency_id`) REFERENCES `currencies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -17086,7 +17331,7 @@ ALTER TABLE `organisation_settings`
   ADD CONSTRAINT `organisation_settings_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `payments`
+-- Constraints for table `payments`
 --
 ALTER TABLE `payments`
   ADD CONSTRAINT `payments_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17099,13 +17344,13 @@ ALTER TABLE `payments`
   ADD CONSTRAINT `payments_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `permissions`
+-- Constraints for table `permissions`
 --
 ALTER TABLE `permissions`
   ADD CONSTRAINT `permissions_module_id_foreign` FOREIGN KEY (`module_id`) REFERENCES `modules` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `permission_role`
+-- Constraints for table `permission_role`
 --
 ALTER TABLE `permission_role`
   ADD CONSTRAINT `permission_role_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -17113,7 +17358,7 @@ ALTER TABLE `permission_role`
   ADD CONSTRAINT `permission_role_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `pinned`
+-- Constraints for table `pinned`
 --
 ALTER TABLE `pinned`
   ADD CONSTRAINT `pinned_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -17121,7 +17366,7 @@ ALTER TABLE `pinned`
   ADD CONSTRAINT `pinned_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `products`
+-- Constraints for table `products`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `products_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17130,7 +17375,7 @@ ALTER TABLE `products`
   ADD CONSTRAINT `products_sub_category_id_foreign` FOREIGN KEY (`sub_category_id`) REFERENCES `product_sub_category` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `product_files`
+-- Constraints for table `product_files`
 --
 ALTER TABLE `product_files`
   ADD CONSTRAINT `product_files_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17138,13 +17383,13 @@ ALTER TABLE `product_files`
   ADD CONSTRAINT `product_files_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `product_sub_category`
+-- Constraints for table `product_sub_category`
 --
 ALTER TABLE `product_sub_category`
   ADD CONSTRAINT `product_sub_category_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `product_category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `projects`
+-- Constraints for table `projects`
 --
 ALTER TABLE `projects`
   ADD CONSTRAINT `projects_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17156,20 +17401,20 @@ ALTER TABLE `projects`
   ADD CONSTRAINT `projects_team_id_foreign` FOREIGN KEY (`team_id`) REFERENCES `teams` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_activity`
+-- Constraints for table `project_activity`
 --
 ALTER TABLE `project_activity`
   ADD CONSTRAINT `project_activity_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_category`
+-- Constraints for table `project_category`
 --
 ALTER TABLE `project_category`
   ADD CONSTRAINT `project_category_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `project_category_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_files`
+-- Constraints for table `project_files`
 --
 ALTER TABLE `project_files`
   ADD CONSTRAINT `project_files_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17178,7 +17423,7 @@ ALTER TABLE `project_files`
   ADD CONSTRAINT `project_files_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_members`
+-- Constraints for table `project_members`
 --
 ALTER TABLE `project_members`
   ADD CONSTRAINT `project_members_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17187,7 +17432,7 @@ ALTER TABLE `project_members`
   ADD CONSTRAINT `project_members_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_milestones`
+-- Constraints for table `project_milestones`
 --
 ALTER TABLE `project_milestones`
   ADD CONSTRAINT `project_milestones_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17196,7 +17441,7 @@ ALTER TABLE `project_milestones`
   ADD CONSTRAINT `project_milestones_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_notes`
+-- Constraints for table `project_notes`
 --
 ALTER TABLE `project_notes`
   ADD CONSTRAINT `project_notes_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17205,7 +17450,7 @@ ALTER TABLE `project_notes`
   ADD CONSTRAINT `project_notes_project_id_foreign` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_ratings`
+-- Constraints for table `project_ratings`
 --
 ALTER TABLE `project_ratings`
   ADD CONSTRAINT `project_ratings_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17214,41 +17459,41 @@ ALTER TABLE `project_ratings`
   ADD CONSTRAINT `project_ratings_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_templates`
+-- Constraints for table `project_templates`
 --
 ALTER TABLE `project_templates`
   ADD CONSTRAINT `project_templates_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `project_category` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `project_templates_client_id_foreign` FOREIGN KEY (`client_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_template_members`
+-- Constraints for table `project_template_members`
 --
 ALTER TABLE `project_template_members`
   ADD CONSTRAINT `project_template_members_project_template_id_foreign` FOREIGN KEY (`project_template_id`) REFERENCES `project_templates` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `project_template_members_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_template_sub_tasks`
+-- Constraints for table `project_template_sub_tasks`
 --
 ALTER TABLE `project_template_sub_tasks`
   ADD CONSTRAINT `project_template_sub_tasks_project_template_task_id_foreign` FOREIGN KEY (`project_template_task_id`) REFERENCES `project_template_tasks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_template_tasks`
+-- Constraints for table `project_template_tasks`
 --
 ALTER TABLE `project_template_tasks`
   ADD CONSTRAINT `project_template_tasks_project_template_id_foreign` FOREIGN KEY (`project_template_id`) REFERENCES `project_templates` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `project_template_tasks_project_template_task_category_id_foreign` FOREIGN KEY (`project_template_task_category_id`) REFERENCES `task_category` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_template_task_users`
+-- Constraints for table `project_template_task_users`
 --
 ALTER TABLE `project_template_task_users`
   ADD CONSTRAINT `project_template_task_users_project_template_task_id_foreign` FOREIGN KEY (`project_template_task_id`) REFERENCES `project_template_tasks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `project_template_task_users_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_time_logs`
+-- Constraints for table `project_time_logs`
 --
 ALTER TABLE `project_time_logs`
   ADD CONSTRAINT `project_time_logs_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17261,7 +17506,7 @@ ALTER TABLE `project_time_logs`
   ADD CONSTRAINT `project_time_logs_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_time_log_breaks`
+-- Constraints for table `project_time_log_breaks`
 --
 ALTER TABLE `project_time_log_breaks`
   ADD CONSTRAINT `project_time_log_breaks_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17269,14 +17514,14 @@ ALTER TABLE `project_time_log_breaks`
   ADD CONSTRAINT `project_time_log_breaks_project_time_log_id_foreign` FOREIGN KEY (`project_time_log_id`) REFERENCES `project_time_logs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `project_user_notes`
+-- Constraints for table `project_user_notes`
 --
 ALTER TABLE `project_user_notes`
   ADD CONSTRAINT `project_user_notes_project_note_id_foreign` FOREIGN KEY (`project_note_id`) REFERENCES `project_notes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `project_user_notes_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `proposals`
+-- Constraints for table `proposals`
 --
 ALTER TABLE `proposals`
   ADD CONSTRAINT `proposals_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17285,25 +17530,25 @@ ALTER TABLE `proposals`
   ADD CONSTRAINT `proposals_lead_id_foreign` FOREIGN KEY (`lead_id`) REFERENCES `leads` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `proposal_items`
+-- Constraints for table `proposal_items`
 --
 ALTER TABLE `proposal_items`
   ADD CONSTRAINT `proposal_items_proposal_id_foreign` FOREIGN KEY (`proposal_id`) REFERENCES `proposals` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `proposal_item_images`
+-- Constraints for table `proposal_item_images`
 --
 ALTER TABLE `proposal_item_images`
   ADD CONSTRAINT `proposal_item_images_proposal_item_id_foreign` FOREIGN KEY (`proposal_item_id`) REFERENCES `proposal_items` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `proposal_signs`
+-- Constraints for table `proposal_signs`
 --
 ALTER TABLE `proposal_signs`
   ADD CONSTRAINT `proposal_signs_proposal_id_foreign` FOREIGN KEY (`proposal_id`) REFERENCES `proposals` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `purpose_consent_leads`
+-- Constraints for table `purpose_consent_leads`
 --
 ALTER TABLE `purpose_consent_leads`
   ADD CONSTRAINT `purpose_consent_leads_lead_id_foreign` FOREIGN KEY (`lead_id`) REFERENCES `leads` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -17311,7 +17556,7 @@ ALTER TABLE `purpose_consent_leads`
   ADD CONSTRAINT `purpose_consent_leads_updated_by_id_foreign` FOREIGN KEY (`updated_by_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `purpose_consent_users`
+-- Constraints for table `purpose_consent_users`
 --
 ALTER TABLE `purpose_consent_users`
   ADD CONSTRAINT `purpose_consent_users_client_id_foreign` FOREIGN KEY (`client_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -17319,44 +17564,44 @@ ALTER TABLE `purpose_consent_users`
   ADD CONSTRAINT `purpose_consent_users_updated_by_id_foreign` FOREIGN KEY (`updated_by_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `push_subscriptions`
+-- Constraints for table `push_subscriptions`
 --
 ALTER TABLE `push_subscriptions`
   ADD CONSTRAINT `push_subscriptions_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `quotation_items`
+-- Constraints for table `quotation_items`
 --
 ALTER TABLE `quotation_items`
   ADD CONSTRAINT `quotation_items_quotation_id_foreign` FOREIGN KEY (`quotation_id`) REFERENCES `quotations` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `removal_requests`
+-- Constraints for table `removal_requests`
 --
 ALTER TABLE `removal_requests`
   ADD CONSTRAINT `removal_requests_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `removal_requests_lead`
+-- Constraints for table `removal_requests_lead`
 --
 ALTER TABLE `removal_requests_lead`
   ADD CONSTRAINT `removal_requests_lead_lead_id_foreign` FOREIGN KEY (`lead_id`) REFERENCES `leads` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `role_user`
+-- Constraints for table `role_user`
 --
 ALTER TABLE `role_user`
   ADD CONSTRAINT `role_user_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `role_user_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `sticky_notes`
+-- Constraints for table `sticky_notes`
 --
 ALTER TABLE `sticky_notes`
   ADD CONSTRAINT `sticky_notes_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `sub_tasks`
+-- Constraints for table `sub_tasks`
 --
 ALTER TABLE `sub_tasks`
   ADD CONSTRAINT `sub_tasks_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17365,14 +17610,14 @@ ALTER TABLE `sub_tasks`
   ADD CONSTRAINT `sub_tasks_task_id_foreign` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `sub_task_files`
+-- Constraints for table `sub_task_files`
 --
 ALTER TABLE `sub_task_files`
   ADD CONSTRAINT `sub_task_files_sub_task_id_foreign` FOREIGN KEY (`sub_task_id`) REFERENCES `sub_tasks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `sub_task_files_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `tasks`
+-- Constraints for table `tasks`
 --
 ALTER TABLE `tasks`
   ADD CONSTRAINT `tasks_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17386,14 +17631,14 @@ ALTER TABLE `tasks`
   ADD CONSTRAINT `tasks_task_category_id_foreign` FOREIGN KEY (`task_category_id`) REFERENCES `task_category` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `task_category`
+-- Constraints for table `task_category`
 --
 ALTER TABLE `task_category`
   ADD CONSTRAINT `task_category_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `task_category_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `task_comments`
+-- Constraints for table `task_comments`
 --
 ALTER TABLE `task_comments`
   ADD CONSTRAINT `task_comments_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17402,7 +17647,7 @@ ALTER TABLE `task_comments`
   ADD CONSTRAINT `task_comments_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `task_files`
+-- Constraints for table `task_files`
 --
 ALTER TABLE `task_files`
   ADD CONSTRAINT `task_files_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17411,7 +17656,7 @@ ALTER TABLE `task_files`
   ADD CONSTRAINT `task_files_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `task_history`
+-- Constraints for table `task_history`
 --
 ALTER TABLE `task_history`
   ADD CONSTRAINT `task_history_board_column_id_foreign` FOREIGN KEY (`board_column_id`) REFERENCES `taskboard_columns` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17420,14 +17665,14 @@ ALTER TABLE `task_history`
   ADD CONSTRAINT `task_history_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `task_labels`
+-- Constraints for table `task_labels`
 --
 ALTER TABLE `task_labels`
   ADD CONSTRAINT `task_labels_label_id_foreign` FOREIGN KEY (`label_id`) REFERENCES `task_label_list` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `task_tags_task_id_foreign` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `task_notes`
+-- Constraints for table `task_notes`
 --
 ALTER TABLE `task_notes`
   ADD CONSTRAINT `task_notes_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17435,21 +17680,21 @@ ALTER TABLE `task_notes`
   ADD CONSTRAINT `task_notes_task_id_foreign` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `task_users`
+-- Constraints for table `task_users`
 --
 ALTER TABLE `task_users`
   ADD CONSTRAINT `task_users_task_id_foreign` FOREIGN KEY (`task_id`) REFERENCES `tasks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `task_users_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `teams`
+-- Constraints for table `teams`
 --
 ALTER TABLE `teams`
   ADD CONSTRAINT `teams_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
   ADD CONSTRAINT `teams_last_updated_by_foreign` FOREIGN KEY (`last_updated_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `tickets`
+-- Constraints for table `tickets`
 --
 ALTER TABLE `tickets`
   ADD CONSTRAINT `tickets_added_by_foreign` FOREIGN KEY (`added_by`) REFERENCES `users` (`id`) ON DELETE SET NULL ON UPDATE CASCADE,
@@ -17461,41 +17706,41 @@ ALTER TABLE `tickets`
   ADD CONSTRAINT `tickets_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `ticket_agent_groups`
+-- Constraints for table `ticket_agent_groups`
 --
 ALTER TABLE `ticket_agent_groups`
   ADD CONSTRAINT `ticket_agent_groups_agent_id_foreign` FOREIGN KEY (`agent_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `ticket_agent_groups_group_id_foreign` FOREIGN KEY (`group_id`) REFERENCES `ticket_groups` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `ticket_files`
+-- Constraints for table `ticket_files`
 --
 ALTER TABLE `ticket_files`
   ADD CONSTRAINT `ticket_files_ticket_reply_id_foreign` FOREIGN KEY (`ticket_reply_id`) REFERENCES `ticket_replies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `ticket_files_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `ticket_replies`
+-- Constraints for table `ticket_replies`
 --
 ALTER TABLE `ticket_replies`
   ADD CONSTRAINT `ticket_replies_ticket_id_foreign` FOREIGN KEY (`ticket_id`) REFERENCES `tickets` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `ticket_replies_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `ticket_tags`
+-- Constraints for table `ticket_tags`
 --
 ALTER TABLE `ticket_tags`
   ADD CONSTRAINT `ticket_tags_tag_id_foreign` FOREIGN KEY (`tag_id`) REFERENCES `ticket_tag_list` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `ticket_tags_ticket_id_foreign` FOREIGN KEY (`ticket_id`) REFERENCES `tickets` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `users`
+-- Constraints for table `users`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `users_country_id_foreign` FOREIGN KEY (`country_id`) REFERENCES `countries` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `users_chat`
+-- Constraints for table `users_chat`
 --
 ALTER TABLE `users_chat`
   ADD CONSTRAINT `users_chat_from_foreign` FOREIGN KEY (`from`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -17504,33 +17749,33 @@ ALTER TABLE `users_chat`
   ADD CONSTRAINT `users_chat_user_one_foreign` FOREIGN KEY (`user_one`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `users_chat_files`
+-- Constraints for table `users_chat_files`
 --
 ALTER TABLE `users_chat_files`
   ADD CONSTRAINT `users_chat_files_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `users_chat_files_users_chat_id_foreign` FOREIGN KEY (`users_chat_id`) REFERENCES `users_chat` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `user_activities`
+-- Constraints for table `user_activities`
 --
 ALTER TABLE `user_activities`
   ADD CONSTRAINT `user_activities_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `user_invitations`
+-- Constraints for table `user_invitations`
 --
 ALTER TABLE `user_invitations`
   ADD CONSTRAINT `user_invitations_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `user_leadboard_settings`
+-- Constraints for table `user_leadboard_settings`
 --
 ALTER TABLE `user_leadboard_settings`
   ADD CONSTRAINT `user_leadboard_settings_board_column_id_foreign` FOREIGN KEY (`board_column_id`) REFERENCES `lead_status` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `user_leadboard_settings_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `user_permissions`
+-- Constraints for table `user_permissions`
 --
 ALTER TABLE `user_permissions`
   ADD CONSTRAINT `user_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -17538,7 +17783,7 @@ ALTER TABLE `user_permissions`
   ADD CONSTRAINT `user_permissions_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `user_taskboard_settings`
+-- Constraints for table `user_taskboard_settings`
 --
 ALTER TABLE `user_taskboard_settings`
   ADD CONSTRAINT `user_taskboard_settings_board_column_id_foreign` FOREIGN KEY (`board_column_id`) REFERENCES `taskboard_columns` (`id`) ON UPDATE CASCADE,

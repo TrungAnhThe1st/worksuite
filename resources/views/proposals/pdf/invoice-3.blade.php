@@ -35,7 +35,7 @@
             margin: 0;
             padding: 0;
             border: 0;
-            font-family: Verdana, Arial, Helvetica, sans-serif;
+            /* font-family: Verdana, Arial, Helvetica, sans-serif; */
             vertical-align: baseline;
         }
 

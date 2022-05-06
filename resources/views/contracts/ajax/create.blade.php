@@ -33,7 +33,11 @@ $addClientPermission = user()->permission('add_clients');
                     </div>
 
                     <div class="col-md-6 col-lg-3">
+<<<<<<< HEAD
                         <x-forms.datepicker fieldId="end_date" fieldRequired="true
+=======
+                        <x-forms.datepicker fieldId="end_date" fieldRequired="true"
+>>>>>>> b6fd2dcd5b35d82ac81200b7b770287c355dee53
                             :fieldValue="($contract ? ($contract->end_date==null ? $contract->end_date : $contract->end_date->timezone($global->timezone)->format($global->date_format)) : '')"
                             :fieldLabel="__('modules.timeLogs.endDate')" fieldName="end_date"
                             :fieldPlaceholder="__('placeholders.date')" />

@@ -263,7 +263,7 @@ $projectBudgetPermission = user()->permission('view_project_budget');
         <!-- PROJECT DETAILS START -->
         <div class="row">
             <div class="col-md-12 mb-4">
-                <x-cards.data :title="__('app.project') . ' ' . __('app.details')"
+                <x-cards.data :title="__('app.details') . ' ' . __('app.project')"
                     otherClasses="d-flex justify-content-between align-items-center">
                     @if (is_null($project->project_summary))
                         <x-cards.no-record icon="align-left" :message="__('messages.projectDetailsNotAdded')" />

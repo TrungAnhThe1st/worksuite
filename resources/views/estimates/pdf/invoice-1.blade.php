@@ -21,7 +21,7 @@
             color: #555555;
             background: #FFFFFF;
             font-size: 13px;
-            font-family: Verdana, Arial, Helvetica, sans-serif;
+            /* font-family: Verdana, Arial, Helvetica, sans-serif; */
         }
 
         h2 {

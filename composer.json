@@ -11,7 +11,7 @@
     "require": {
         "php": "^7.3|^8.0",
         "authorizenet/authorizenet": "^2.0",
-        "barryvdh/laravel-dompdf": "^0.9.0",
+        "barryvdh/laravel-dompdf": "^1.0",
         "barryvdh/laravel-translation-manager": "^0.5.9",
         "billowapp/payfast": "^0.4.0",
         "craftsys/msg91-laravel-notification-channel": "^0.5.0",

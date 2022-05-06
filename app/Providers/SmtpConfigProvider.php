@@ -39,6 +39,7 @@ class SmtpConfigProvider extends ServiceProvider
 
                 if (is_null($settings->logo)) {
                     Config::set('app.logo', asset('img/worksuite-logo.png'));
+                    // Config::set('app.logo', 'https://gamek.mediacdn.vn/133514250583805952/2020/10/21/photo-15-160329958494679380425.jpg');
                 }
                 else {
                     Config::set('app.logo', asset_url('app-logo/' . $settings->logo));

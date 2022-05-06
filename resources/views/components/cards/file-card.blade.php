@@ -11,7 +11,7 @@
                  @endisset
              </div>
              <div class="card-date f-11 text-lightest">
-                 {{ $dateAdded }}
+                 {{-- {{ $dateAdded }} --}}
              </div>
          </div>
      </div>

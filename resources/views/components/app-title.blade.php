@@ -17,7 +17,7 @@
                         <a href="<?= $_ENV["APP_URL"] . '/' . $_ENV["ROOT_FOLDER_NAME"] . '/public' . $link ?>" class="text-lightest">@lang('app.menu.' . str_replace('-', '', Request::segment($i)))</a> &bull;
                         @endif
                     @else
-                        <!-- @lang('app.menu.' . $pageTitle) -->
+                        {{-- <!-- @lang('app.menu.' . $pageTitle) --> --}}
                         {{ $pageTitle }}
                     @endif
                 @endfor
@@ -32,4 +32,3 @@
     </div>
 </div>
 <!-- PAGE TITLE END -->
-

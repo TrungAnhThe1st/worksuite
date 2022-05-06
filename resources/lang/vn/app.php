@@ -115,6 +115,7 @@ return array (
     'messages' => 'Tin nhắn',
     'customFields' => 'Trường tùy chỉnh',
     'Events' => 'Sự kiện',
+    'events' => 'Sự kiện',
     'products' => 'Sản phẩm',
     'orders' => 'Đơn đặt hàng',
     'profileSettings' => 'Cài đặt hồ sơ',
@@ -217,7 +218,7 @@ return array (
     'rightToDataPortability' => 'Quyền được di chuyển dữ liệu',
     'rightToErasure' => 'Quyền được xóa',
     'rightToBeInformed' => 'Quyền được nhận thông báo',
-    'rightOfRectification' => 'Right of Access/Rectification',
+    'rightOfRectification' => 'Quyền truy cập/Xác nhận',
     'consent' => 'Đồng ý',
     'proposal' => 'Đề xuất',
     'socialAuthSettings' => 'Đăng nhập mạng xã hộ',
@@ -248,6 +249,8 @@ return array (
     'currency settings' => 'Cài đặt tiền tệ',
     'lead notes' => 'Ghi chú khách hàng tiềm năng',
     'proposals' => 'Đề xuất',
+    'custommodules' => 'Mô-đun tùy chỉnh',
+    'creditnotes' => 'Ghi chú tín dụng',
   ),
   'language' => 'Ngôn ngữ',
   'delete' => 'Xóa',
@@ -814,8 +817,10 @@ return array (
     'sick' => 'Ốm',
     'earned' => 'Được phép',
   ),
+  'leadvalue' => 'Giá trị khách hàng tiềm năng',
 //   'required' =>
 //   array (
 //     'Description' => 'Mô tả',
 //   ),
 );
+?>

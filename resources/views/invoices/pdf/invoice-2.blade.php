@@ -32,7 +32,7 @@
             margin: 0;
             padding: 0;
             border: 0;
-            font-family: Verdana, Arial, Helvetica, sans-serif;
+            /* font-family: Verdana, Arial, Helvetica, sans-serif; */
             /* font-size: 80%; */
             vertical-align: baseline;
         }

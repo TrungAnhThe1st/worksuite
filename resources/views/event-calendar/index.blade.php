@@ -95,7 +95,8 @@ $addEventsPermission = user()->permission('add_events');
         </div>
 
         <x-cards.data>
-            <div id="calendar"></div>
+            <div id="calendar">
+            </div>
         </x-cards.data>
     </div>
 @endsection
@@ -131,6 +132,7 @@ $addEventsPermission = user()->permission('add_events');
         });
 
         var initialLocaleCode = '{{ user()->locale }}';
+        if(initialLocaleCode == "vn") initialLocaleCode = "vi";
         var calendarEl = document.getElementById('calendar');
 
         var calendar = new FullCalendar.Calendar(calendarEl, {
