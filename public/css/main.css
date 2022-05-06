@@ -15843,7 +15843,7 @@ table h5 a:hover {
 }
 
 .table [contenteditable=true]:hover::after {
-  content: "Click to edit";
+  content: "click vào để sửa";
   display: block;
   font-size: 11px;
   color: #99A5B5;

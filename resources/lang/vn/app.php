@@ -342,7 +342,7 @@ return array (
   'day' => 'Ngày',
   'week' => 'Tuần',
   'filterBy' => 'Lọc theo',
-  'others' => 'Những người khác',
+  'others' => 'Khác',
   'value' => 'Giá trị',
   'monday' => 'Thứ Hai',
   'tuesday' => 'Thứ Ba',
