@@ -9,7 +9,6 @@ $deleteContractDiscussionPermission = user()->permission('delete_contract_discus
 
     <x-cards.data :title="__('modules.contracts.discussion')">
         @if ($addContractDiscussionPermission == 'all' || $addContractDiscussionPermission == 'added')
-
             <div class="row">
                 <div class="col-md-12">
                     <a class="f-15 f-w-500" href="javascript:;" id="add-comment"><i
@@ -59,6 +58,7 @@ $deleteContractDiscussionPermission = user()->permission('delete_contract_discus
                                             href="{{ route('employees.show', $discussion->user->id) }}">{{ ucwords($discussion->user->name) }}</a>
                                     </h4>
                                     <p class="card-date f-11 text-lightest mb-0">
+                                        <?php \Carbon\Carbon::setLocale('vi'); ?>
                                         {{ ucfirst($discussion->created_at->diffForHumans()) }}
                                     </p>
                                     <div class="dropdown ml-auto comment-action">
