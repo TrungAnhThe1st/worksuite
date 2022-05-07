@@ -185,7 +185,7 @@ return array (
     'creditAmountUsed' => 'Số tiền Tín dụng đã Sử dụng',
     'applyToInvoice' => 'Áp dụng Tín dụng cho Hóa đơn',
     'noInvoicesFound' => 'Không có hóa đơn nào cho dự án này.',
-    'closed' => 'Đã đóng cửa',
+    'closed' => 'Đã đóng',
     'open' => 'Mở',
     'paid' => 'Đã trả tiền',
     'unpaid' => 'Chưa thanh toán',

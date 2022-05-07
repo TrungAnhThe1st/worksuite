@@ -636,7 +636,7 @@ return array (
   'contractFiles' => 'Các tệp hợp đồng',
   'preview' => 'Bản xem trước',
   'fields' => 'Khoảng trống',
-  'closed' => 'Đã đóng cửa',
+  'closed' => 'Đã đóng',
   'cancelEstimate' => 'Hủy ước tính',
   'weeks' =>
   array (
