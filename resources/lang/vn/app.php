@@ -252,6 +252,7 @@ return array (
     'proposals' => 'Đề xuất',
     'custommodules' => 'Mô-đun tùy chỉnh',
     'creditnotes' => 'Ghi chú tín dụng',
+    'recurringexpenses' => 'Chi phí định kỳ',
   ),
   'language' => 'Ngôn ngữ',
   'delete' => 'Xóa',
